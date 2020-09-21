@@ -23,7 +23,8 @@
     background-color: #ddd;
   }
   
-  li a.active {
+  .active {
+    background: #ffdf3e;
+    border-bottom: 1px solid #ffdf3e;
     color: white;
-    background-color: #4CAF50;
   }

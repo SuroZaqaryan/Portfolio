@@ -4,8 +4,12 @@
     box-sizing: border-box;
 }
 
+textarea:focus, input:focus{
+    outline: none;
+}
+
 .main {
-    background-image: url("../../backgrounds/wave.png");
+    background-image: url("../../backgrounds/image.png");
     background-color: #ffffff;
     height: 100vh;
     background-position: left;
@@ -50,6 +54,32 @@
     margin-top: 5px;
 }
 
+.custom_checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+.custom_checkbox+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+  }
+  .custom_checkbox+label::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #adb5bd;
+    border-radius: 0.25em;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+  }
+
+
 .btn {
     background-color: #f8ffa7;
     color: #000000;
@@ -62,8 +92,8 @@
     cursor: pointer;
     border: 1px solid #5e5e78;
     border-radius: 10px;
-    font-weight: 500;
-    font-family: emoji;
+    font-weight: 600;
+    font-family: system-ui;
 }
 
 .registerNow {
@@ -148,7 +178,7 @@
     input[type=text], select, textarea {
         width: 500px;
         padding: 18px;
-        border: 1px solid #ccc;
+        border: 1px solid #5f5f5f;
         border-radius: 4px;
         resize: vertical;
         margin-bottom: 15px;
@@ -159,9 +189,16 @@
     input[type=text], select, textarea {
         width: 100%;
         padding: 18px;
-        border: 1px solid #ccc;
+        border: 1px solid #5f5f5f;
         border-radius: 4px;
         resize: vertical;
         margin-bottom: 15px;
     }
 }
+
+
+
+
+
+
+

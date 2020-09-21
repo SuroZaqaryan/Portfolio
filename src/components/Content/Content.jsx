@@ -5,6 +5,7 @@ export const Content = (props) => {
         <Fragment>
             <div>
                 <p>Content</p>
+                {props.isAuth ? <p>{props.login}</p> : <p>Your are not autorized</p>}
             </div>
         </Fragment>
     );

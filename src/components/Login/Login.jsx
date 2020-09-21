@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import LoginStyle from "./Login.module.css";
-import ipad from "../../backgrounds/bg.svg"
+import ipad from "../../backgrounds/FAVPNG_graphic-design.png"
 import { NavLink } from "react-router-dom";
 import { Header } from '../Header/Header';
 
@@ -23,8 +23,9 @@ export const Login = (props) => {
                                 <input placeholder="Password" type="text" />
                             </div>
                             <div className={LoginStyle.checkbox}>
-                                <input type="checkbox" />
-                                <label htmlFor="vehicle1"> Remember me</label><br />
+                                <input type="checkbox" className={LoginStyle.checkboxInput} />
+
+                                <label style={{ fontSize: '16px' }} htmlFor="vehicle1"> Remember me</label><br />
                             </div>
                             <div>
                                 <button className={LoginStyle.btn}>Get Started</button>
@@ -34,7 +35,7 @@ export const Login = (props) => {
                                     <p>Not registered yet? <span className={LoginStyle.register}><a href="/#">register</a></span></p>
                                 </div>
                                 <div>
-                                    <NavLink to="/content" className={LoginStyle.withoutRegistration} href={"/#"}>Continue without registration</NavLink>
+                                    {/* <NavLink to="/content" className={LoginStyle.withoutRegistration} href={"/#"}>Continue without registration</NavLink> */}
                                 </div>
                             </div>
                         </div>
