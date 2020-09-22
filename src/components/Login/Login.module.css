@@ -10,7 +10,7 @@ textarea:focus, input:focus{
 
 .main {
     background-image: url("../../backgrounds/image.png");
-    background-color: #ffffff;
+    background-color: #9d9d9d30;
     height: 100vh;
     background-position: left;
     background-repeat: no-repeat;
@@ -28,16 +28,40 @@ textarea:focus, input:focus{
 }
 
 .introduction {
-    flex: 1;
+    width: 540px;
+    max-width: 100%;
+    height: 780px;
+    background: white;
+    display: flex;
+    align-items: center;
+    flex: 0;
+    padding: 50px;
+    padding-top: 0;
+    border: 1px solid #0000004f;
+    /* flex: 1; */
 }
 
 .intro_text {
+    max-width: 100%;
     text-align: left;
+}
+
+.avatarBlock {
+    margin-bottom: 40px;
+}
+
+.avatar {
+    width: 135px;
+    max-width: 100%;
+    display: flex;
+    margin: auto;
+    border: 1px solid #b7b7b7;
+    border-radius: 100%;
 }
 
 .intro_text h1 {
     margin-bottom: 40px;
-    font-size: 36px;
+    font-size: 34px;
     font-weight: 400;
     /*background: linear-gradient(to right, #494964, #6f6f89);*/
     /*-webkit-background-clip: text;*/
@@ -177,8 +201,9 @@ textarea:focus, input:focus{
 @media screen and (min-width: 500px) {
     input[type=text], select, textarea {
         width: 500px;
+        max-width: 100%;
         padding: 18px;
-        border: 1px solid #5f5f5f;
+        border: 1px solid #8c8c8c;
         border-radius: 4px;
         resize: vertical;
         margin-bottom: 15px;
@@ -188,8 +213,9 @@ textarea:focus, input:focus{
 @media screen and (max-width: 500px) {
     input[type=text], select, textarea {
         width: 100%;
+        max-width: 100%;
         padding: 18px;
-        border: 1px solid #5f5f5f;
+        border: 1px solid #8c8c8c;
         border-radius: 4px;
         resize: vertical;
         margin-bottom: 15px;

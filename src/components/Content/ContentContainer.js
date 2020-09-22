@@ -1,7 +1,7 @@
 import React from 'react';
 import {Content} from "./Content";
 import {setAuthUserData} from "../Redux/auth-reducer";
-import * as axios from "axios";
+import axios from "axios";
 import {connect} from "react-redux";
 
 

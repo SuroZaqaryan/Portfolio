@@ -1,9 +1,8 @@
 import React, { Fragment } from 'react';
 import LoginStyle from "./Login.module.css";
 import ipad from "../../backgrounds/FAVPNG_graphic-design.png"
-import { NavLink } from "react-router-dom";
+import avatar from "../../backgrounds/man.png"
 import { Header } from '../Header/Header';
-
 
 export const Login = (props) => {
     return (
@@ -13,6 +12,9 @@ export const Login = (props) => {
                 <div className={LoginStyle.presentation}>
                     <div className={LoginStyle.introduction}>
                         <div className={LoginStyle.intro_text}>
+                            <div className={LoginStyle.avatarBlock}>
+                                <img className={LoginStyle.avatar} src={avatar} alt=""/>
+                            </div>
                             <div style={{ marginBottom: '15px' }}>
                                 <h1>
                                     Register now and discover a new store of knowledge
