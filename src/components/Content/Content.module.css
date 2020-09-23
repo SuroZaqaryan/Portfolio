@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+}
+
+.container div {
+    padding: 10px;
+}
+
+.leftColumn {
+    flex: 1;
+}
+
+.centerColumn {
+    flex: 3;
+}
+
+.rightColumn {
+    flex: 1;
+}
+
+@media screen and (max-width: 850px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+}

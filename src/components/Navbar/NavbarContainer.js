@@ -1,10 +1,10 @@
 import React from 'react';
-import {Content} from "./Content";
-import {AuthUserThunk} from "../Redux/auth-reducer";
 import {connect} from "react-redux";
+import {Navbar} from "./Navbar";
+import {AuthUserThunk} from "../Redux/auth-reducer";
 
 
-class ContentContainer extends React.Component {
+class NavbarContainer extends React.Component {
 
     componentDidMount() {
         this.props.AuthUserThunk();
@@ -12,7 +12,7 @@ class ContentContainer extends React.Component {
 
     render() {
         return (
-            <Content {...this.props}/>
+            <Navbar {...this.props}/>
         );
     }
 }
@@ -22,4 +22,4 @@ let mapStateToProps = (state) => ({
     login: state.auth.login,
 })
 
-export default connect(mapStateToProps, {AuthUserThunk})(ContentContainer);
+export default connect(mapStateToProps, {AuthUserThunk})(NavbarContainer);
