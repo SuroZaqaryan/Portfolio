@@ -1,12 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Users } from './Users';
+import {Users} from './Users';
 import {getUsers, setCurrentPage, setTotalUsersCount, setUsers} from "../Redux/users-reducer";
 
 class UsersContainer extends React.Component {
 
     componentDidMount() {
         this.props.getUsers(this.props.currentPage, this.props.pageSize);
+    }
+
+    onPageChanged = (pageNumber) => {
+        const {pageSize} = this.props;
+        this.props.getUsers(pageNumber, pageSize);
     }
 
     render() {
@@ -19,13 +24,15 @@ class UsersContainer extends React.Component {
         }
 
         return(
-            <Users {...this.props} {...this.props.users} />
+            <>
+                <Users {...this.props} {...this.props.user} onPageChanged={this.onPageChanged}/>
+            </>
         )
     }
 }
 
 let mapStateToProps = (state) => ({
-    users: state.usersPage.users,
+    user: state.usersPage.users,
     totalUsersCount: state.usersPage.totalUsersCount,
     currentPage: state.usersPage.currentPage,
     pageSize: state.usersPage.pageSize,

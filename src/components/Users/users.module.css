@@ -1,5 +1,5 @@
 .avatar {
-    width: 75px;
+    width: 60px;
     max-width: 100%;
     border-radius: 15px;
 }
@@ -8,10 +8,15 @@
     font-weight: 600;
 }
 
-.selectedPage {
-    font-weight: bold;
-}
-
-.pagination {
-
-}
+#page_numbers {
+    list-style: none;
+    display: flex;
+  }
+  
+  #page_numbers > li {
+    margin-right: 0.3em;
+    color: blue;
+    user-select: none;
+    cursor: pointer;
+  }
+  

@@ -118,6 +118,19 @@ header {
   color: #edf0f1;
 }
 
+.user_name {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+
+.home {
+  width: 20px;
+  border-bottom: 2px solid #ff7b77;
+  padding-bottom: 5px;
+  padding-top: 10px;
+}
+
 @media screen and (max-height: 450px) {
   .overlay a {
     font-size: 20px;

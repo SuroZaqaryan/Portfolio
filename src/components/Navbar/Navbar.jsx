@@ -2,12 +2,13 @@ import React, { Fragment } from 'react';
 import n from './Navbar.module.css';
 import logo from '../../backgrounds/logo.svg'
 import home from './icons/home.png'
-import search from './icons/magnifiying-glass.png'
+import search from './icons/search.png'
 import notification from './icons/notification.png'
+import { NavLink } from 'react-router-dom';
 
 export const Navbar = (props) => {
     return (
-        <Fragment>
+        <Fragment> 
             <div>
                 <header>
                     <div style={{ flex: '1' }}>
@@ -17,7 +18,7 @@ export const Navbar = (props) => {
                         <nav>
                             <ul className={n.nav__links}>
                                 <a className={n.navElements} href="/#">
-                                    <img style={{ width: '20px' }} src={home} alt="home" />
+                                    <img className={n.home} src={home} alt="home" />
                                 </a>
                                 <li><a style={{color: 'black'}} href="/#">Main Stream</a></li>
                             </ul>
@@ -36,7 +37,7 @@ export const Navbar = (props) => {
                     </div>
                     <div style={{ flex: '1' }}>
                         <p style={{ color: 'yellow' }} className="menu cta">
-                            {props.isAuth ? <a href="/#">{props.login}</a> : <a href="/#">Login</a>}
+                            {props.isAuth ? <NavLink to="/#" className={n.user_name}>{props.login}</NavLink> : <NavLink to="/#">Login</NavLink>}
                         </p>
                     </div>
                 </header>
