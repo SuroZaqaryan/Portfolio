@@ -1,11 +1,29 @@
+.userContainer {
+  margin-bottom: 20px;
+  border-radius: 40px;
+  padding: 20px;
+  box-shadow: 0 2px 1px #fbd7d24f, 0 4px 2px #fbd7d24f, 0 8px 0px #fbd7d24f, 0 10px 8px #fbd7d24f, 0 15px 25px #fbd7d24f;
+}
+
 .avatar {
-    width: 60px;
-    max-width: 100%;
+    width: 55px;
     border-radius: 15px;
 }
 
 .userName {
-    font-weight: 600;
+  text-decoration: none;
+  color: #33324b;
+  font-weight: 600;
+  font-family: sans-serif;
+  font-size: 15px;
+}
+
+.userStatus {
+  margin-top: 5px;
+  font-family: revert;
+  color: #9392a0;
+  font-size: 15px;
+  letter-spacing: 0.3px;
 }
 
 #page_numbers {

@@ -1,28 +1,30 @@
 import React from 'react';
 import Paginator from "../Paginator/Paginator";
 import userStyle from "./users.module.css";
-import avatar from '../../backgrounds/tt_avatar_small.jpg'
+import avatar from '../../backgrounds/20980408.png'
+import { NavLink } from "react-router-dom";
+import { MoreText } from "./ShowMoreText/ShowMoreText";
 
 export let Users = ({ currentPage, totalUsersCount, pageSize, onPageChanged, users, ...props }) => {
-
     const list = props.user.map((user, index) => {
-        return <div>
-            <div style={{ display: 'flex' }}>
-                <div>
-                    <img className={userStyle.avatar} src={avatar} alt="avatar" />
+        return <div className={userStyle.userContainer}>
+            <div>
+                <div style={{ display: 'flex', alignItems: 'center', padding: '0', cursor: 'pointer'}} key={index}>
+                    <div>
+                        <NavLink to={'/profile/' + user.id}>
+                            <img className={userStyle.avatar} src={avatar} alt="avatar" />
+                        </NavLink>
+                    </div>
+
+                    <div style={{marginLeft: '13px'}}>
+                        <NavLink className={userStyle.userName} to={'/profile/' + user.id}>
+                            {user.name}
+                        </NavLink>
+                    </div>
                 </div>
 
-                <div style={{ textAlign: 'left' }}>
-                    <p className={userStyle.userName}>{user.name}</p>
-
-                    {
-                        user.status ? user.status :
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Blanditiis tempora eum harum maxime laborum nesciunt, mollitia eius eaque illo cupiditate
-                                doloribus molestias perspiciatis. Quidem
-                        </p>
-                    }
+                <div style={{ textAlign: 'left', paddingTop: '10px', marginRight: '10px'}}>
+                    <MoreText {...props} />
                 </div>
             </div>
         </div>
@@ -31,7 +33,7 @@ export let Users = ({ currentPage, totalUsersCount, pageSize, onPageChanged, use
 
     return (
         <>
-            <div>
+            <div style={{padding: '15px'}}>
                 {list}
             </div>
             <div>

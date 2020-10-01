@@ -1,0 +1,13 @@
+a {
+    display: flex;
+    justify-content: flex-end;
+    color: #ff7b77;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+span {
+    color: #9e9ea7;
+    font-size: 15px;
+}

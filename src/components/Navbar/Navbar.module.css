@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,8 +10,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 0%;
-  background-color: #b0b0b0;
+  padding: 10px 0%;
 }
 
 .logo {
@@ -19,7 +20,8 @@ header {
 .nav__links a,
 .cta,
 .overlay__content a {
-  font-family: "Montserrat", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
+  font-size: 17px;
   font-weight: 500;
   color: #edf0f1;
   text-decoration: none;
@@ -118,7 +120,15 @@ header {
   color: #edf0f1;
 }
 
+.avatar_and_user_text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
 .user_name {
+  margin-right: 15px;
   text-decoration: none;
   color: black;
   font-weight: 600;

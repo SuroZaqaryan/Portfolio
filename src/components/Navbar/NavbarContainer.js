@@ -20,6 +20,7 @@ class NavbarContainer extends React.Component {
 let mapStateToProps = (state) => ({
     isAuth: state.auth.isAuth,
     login: state.auth.login,
+    id: state.auth.id,
 })
 
 export default connect(mapStateToProps, {AuthUserThunk})(NavbarContainer);

@@ -1,13 +1,21 @@
+* {
+    font-weight: 500;
+}
+
 .container {
     display: flex;
 }
 
-.container div {
-    padding: 10px;
+.languagesTitle p {
+    text-align: left;
+    margin-left: 25px;
 }
 
 .leftColumn {
     flex: 1;
+    margin-top: 20px;
+    box-shadow: 10px 20px 40px #ffddd3;
+    border-radius: 45px;
 }
 
 .centerColumn {
@@ -16,6 +24,9 @@
 
 .rightColumn {
     flex: 1;
+    background: #ffe7e485;
+    margin-top: 20px;
+    border-radius: 45px;
 }
 
 @media screen and (max-width: 850px) {

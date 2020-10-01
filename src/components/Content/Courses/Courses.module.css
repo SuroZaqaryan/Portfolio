@@ -1,0 +1,24 @@
+.languagesBlock {
+    display: flex;
+    justify-content: flex-start;
+    margin: 40px;
+    margin-top: 40px;
+    border-bottom: 1px solid #d9d9d9;
+    padding-bottom: 35px;
+    cursor: pointer;
+}
+
+.programLanguages img {
+    width: 80px;
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+.languageName {
+    width: 100%;
+    margin-left: 15px;
+}
+
+.languageName div p {
+    text-align: left;
+}
