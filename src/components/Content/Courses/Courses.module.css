@@ -22,3 +22,14 @@
 .languageName div p {
     text-align: left;
 }
+
+@media only screen and (max-width: 1370px) {
+
+    .languagesBlock {
+      margin: 25px;
+    }
+
+    .languageName div p {
+        font-size: 14px;
+    }
+  }

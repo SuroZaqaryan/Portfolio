@@ -3,7 +3,8 @@ import ContentStyle from "./Content.module.css";
 import NavbarContainer from "../Navbar/NavbarContainer";
 import UsersContainer from "../Users/UsersContainer";
 import { Courses } from "./Courses/Courses";
-import {Achievements} from "./Achievements/Achievements";
+import { Achievements } from "./Achievements/Achievements";
+import { AboutInfo } from "./About_App/About_Info";
 
 export class Content extends React.Component {
 
@@ -15,9 +16,8 @@ export class Content extends React.Component {
     }
 
     render() {
-
         return (
-            <div id={ContentStyle.content}>
+            <div>
                 <NavbarContainer />
                 <div className={ContentStyle.container}>
                     <div className={ContentStyle.leftColumn}>
@@ -28,7 +28,13 @@ export class Content extends React.Component {
                         <Courses />
                     </div>
                     <div className={ContentStyle.centerColumn}>
-                        <Achievements />
+                        <div>
+                            <Achievements />
+                        </div>
+
+                        <div>
+                            <AboutInfo />
+                        </div>
                     </div>
                     <div className={ContentStyle.rightColumn}>
                         <div>

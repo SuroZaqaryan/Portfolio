@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import LoginStyle from "./Login.module.css";
 import ipad from "../../backgrounds/FAVPNG_graphic-design.png"
 import avatar from "../../backgrounds/man.png"

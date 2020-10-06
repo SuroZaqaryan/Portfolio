@@ -1,13 +1,33 @@
-
 .paginator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
     cursor: pointer;
 }
 .pageNumber {
     font-size: 17px;
     padding: 5px;
-    margin: 3px;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-weight: 500;
 }
 
 .pageNumber.selectedPage {
     font-weight: bold;
+}
+
+.pageNumber.selectedPage {
+    font-weight: bold;
+    border-color: black;
+}
+
+.next {
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.prev {
+    margin-right: 10px;
+    font-size: 15px;
 }

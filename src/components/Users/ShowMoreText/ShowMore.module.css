@@ -1,13 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 a {
     display: flex;
     justify-content: flex-end;
     color: #ff7b77;
-    font-size: 13px;
+    font-size: 12px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 span {
-    color: #9e9ea7;
+    color: #535353;
     font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.userStatus {
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
 }

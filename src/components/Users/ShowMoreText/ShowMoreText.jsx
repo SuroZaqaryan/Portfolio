@@ -1,7 +1,6 @@
 import React from 'react';
-import userStyle from "../users.module.css";
+import userStyle from "./ShowMore.module.css";
 import ShowMoreText from 'react-show-more-text';
-import moreStyle from "./ShowMore.module.css";
 
 export const MoreText = (props) => {
     function firstExecuteOnClick(isExpanded) {
