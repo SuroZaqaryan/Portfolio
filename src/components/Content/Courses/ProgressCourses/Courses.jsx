@@ -5,6 +5,7 @@ import CSS from "./LanguagesIcons/css-3.png"
 import JavaScript from "./LanguagesIcons/javascript.png"
 import ReactImage from "./LanguagesIcons/react.png"
 import Node from "./LanguagesIcons/nodejs.png"
+import swift from "./LanguagesIcons/swift.png"
 
 import ProgressBar from '@ramonak/react-progress-bar';
 
@@ -50,12 +51,21 @@ export class Courses extends React.Component {
                     }
                 },
                 {
-                    languageName: "Node",
+                    languageName: "Swift",
                     img: Node,
 
                     progress: {
                         completed: 40,
                         bgcolor: "#4EB328"
+                    }
+                },
+                {
+                    languageName: "Swift",
+                    img: swift,
+
+                    progress: {
+                        completed: 55,
+                        bgcolor: "#fc8b2c"
                     }
                 },
             ]
@@ -69,7 +79,7 @@ export class Courses extends React.Component {
                         <img src={item.img} alt="" />
                     </div>
                     <div className={ContentStyle.languageName}>
-                        <div style={{ marginBottom: '10px' }}>
+                        <div className={ContentStyle.medium_languageName_block}>
                             <p>{item.languageName}</p>
                         </div>
                         <div>
@@ -85,6 +95,7 @@ export class Courses extends React.Component {
         return (
             <Fragment>
                 <div>
+
                     {list}
                 </div>
             </Fragment>

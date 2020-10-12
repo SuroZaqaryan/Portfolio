@@ -17,13 +17,14 @@ header {
   cursor: pointer;
 }
 
+
 .nav__links a,
 .cta,
 .overlay__content a {
   /* font-family: "Montserrat", sans-serif; */
   font-size: 17px;
   font-weight: 500;
-  color: #edf0f1;
+  color: #383838;
   text-decoration: none;
 }
 
@@ -44,6 +45,11 @@ header {
   color: #0088a9;
 }
 
+.center_links li a {
+  font-size: 15px;
+  color: rgb(0 0 0 / 65%);
+}
+
 .navElements {
   display: flex;
   align-items: center;
@@ -60,6 +66,8 @@ header {
 .cta {
   padding: 9px 25px;
   background-color: #ff7b77;
+  color: #ffffff;
+  font-weight: 400;
   font-size: 14px;
   border: none;
   border-radius: 50px;

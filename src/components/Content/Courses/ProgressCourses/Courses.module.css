@@ -14,6 +14,14 @@
     border-radius: 15px;
 }
 
+.medium_languageName_block {
+    margin-bottom: 10px;
+}
+
+.medium_languageName_block p {
+    font-weight: 500;
+}
+
 .languageName {
     width: 100%;
     margin-left: 15px;

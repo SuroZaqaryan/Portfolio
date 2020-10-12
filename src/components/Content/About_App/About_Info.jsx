@@ -34,8 +34,8 @@ export class AboutInfo extends React.Component {
 
         return (
             <Fragment>
-                <div style={{ marginTop: '65px' }}>
-                    <div style={{ display: 'flex', justifyContent: 'center' }}>
+                <div>
+                    <div>
                         <img src={Daco} style={{ width: '530px', maxWidth: '100%' }} alt="" />
                     </div>
 

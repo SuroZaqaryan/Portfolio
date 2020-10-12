@@ -20,6 +20,10 @@
     margin-left: 10px;
 }
 
+.aboutTitle {
+    text-align: center;
+}
+
 @media only screen and (max-width: 1370px) {
     .moreInfo p {
         font-size: 14px;
@@ -31,6 +35,7 @@
     }
 
     .aboutTitle {
+        text-align: center;
         font-size: 15px;
     }
   }

@@ -22,6 +22,8 @@
     flex: 3;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
+    margin-top: 60px;
 }
 
 .rightColumn {
@@ -36,7 +38,6 @@
         flex: 3;
         display: flex;
         justify-content: space-evenly;
-        padding: 25px;
         padding-top: 0;
     }
 }

@@ -5,7 +5,9 @@ import Route from "react-router-dom/es/Route";
 import { Header } from './components/Header/Header';
 import ContentContainer from './components/Content/ContentContainer';
 import ProfileContainer from "./components/Profile/ProfileContainer";
+import NewsContainer from "./components/News/NewsContainer";
 import './index.css'
+
 function App() {
     return (
         <div className="App">
@@ -13,6 +15,7 @@ function App() {
             <Route path='/content' render={() => <ContentContainer />}/>
             <Route path='/header' render={() => <Header /> }/>
             <Route path='/profile/:userId' render={() => <ProfileContainer /> }/>
+            <Route path='/news' render={() => <NewsContainer /> }/>
         </div>
     );
 }

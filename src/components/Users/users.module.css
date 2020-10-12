@@ -19,6 +19,10 @@
   font-size: 16px;
 }
 
+.userName p {
+  font-weight: 500;
+}
+
 .userStatus {
   margin-top: 5px;
   font-family: revert;

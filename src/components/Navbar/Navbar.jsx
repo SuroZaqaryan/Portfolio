@@ -15,16 +15,27 @@ export const Navbar = (props) => {
                     <div style={{ flex: '1' }}>
                         <a className={n.logo} href="/#"><img style={{margin: 'auto'}} src={logo} alt="logo" /></a>
                     </div>
-                    <div style={{ flex: '2' }}>
+                    <div style={{ flex: '1' }}>
                         <nav>
                             <ul className={n.nav__links}>
                                 <a className={n.navElements} href="/#">
                                     <img className={n.home} src={home} alt="home" />
                                 </a>
-                                <li><a style={{ color: 'black' }} href="/#">Main Stream</a></li>
+                                <li><a href="/#">Main Stream</a></li>
                             </ul>
                         </nav>
                     </div>
+
+                    <div style={{ flex: '2', display: 'flex', justifyContent: 'center' }}>
+                        <nav style={{marginLeft: '20px'}}>
+                            <ul  className={`${n.nav__links} ${n.center_links}`}>
+                                <li> <NavLink to={'/news'}>News</NavLink> </li>
+                                <li> <NavLink to={'/#'}>Blog</NavLink> </li>
+                                <li> <NavLink to={'/#'}>Log out</NavLink> </li>
+                            </ul>
+                        </nav>
+                    </div>
+
                     <div style={{ flex: '1', display: 'flex', justifyContent: 'flex-end' }}>
                         <a className={`${n.navElements} ${n.search}`} href="/#">
                             <img style={{ width: '20px' }} src={search} alt="search" />
