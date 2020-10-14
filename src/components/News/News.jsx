@@ -15,7 +15,7 @@ export class News extends React.Component {
                             return (
                                 <div className={index % 2 === 0 ? newsStyle.leftContentNews : newsStyle.rightContentNews} key={index}>
                                     <div>
-                                    <img style={{width: '300px', maxWidth: '100%'}} src={news.urlToImage} alt=""/>
+                                    <img style={{maxWidth: '100%'}} src={news.urlToImage} alt=""/>
                                     </div>
                                     <div className={newsStyle.name_data}>
                                         <p className={newsStyle.news_name}>{news.source.name}</p>
