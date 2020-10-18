@@ -26,5 +26,9 @@ export const authAPI = {
 export const newsAPI = {
     getNews() {
         return axios.get(`https://newsapi.org/v2/top-headlines?country=gb&category=business&apiKey=22acb0d726df43638b6f11de2ed1bf6d`);
+    },
+
+    getCountryNews() {
+        return axios.get(`http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=22acb0d726df43638b6f11de2ed1bf6d`);
     }
 }

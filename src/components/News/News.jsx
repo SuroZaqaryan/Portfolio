@@ -1,58 +1,81 @@
 import React from 'react';
-import newsStyle from './News.module.css';
+import newsStyle from './styles/News.module.css';
+import "./styles/Masonry.css";
+import Masonry from "react-masonry-css";
+import ShowMoreText from 'react-show-more-text';
+import {NavBarNews} from "./NavbarNews/NavbarNews";
+
+export class NewsCountry extends React.Component {
+    render() {
+        const newsCountryList = this.props.newsCountry.map((item, index) => {
+            return (
+                <div key={index}>
+                    <img style={{maxWidth: '100%', border: '3px solid red'}} src={item.urlToImage} alt=""/>
+                </div>
+            );
+        })
+        return (
+            <>
+                <div>
+                    {newsCountryList}
+                </div>
+            </>
+        );
+    }
+}
 
 export class News extends React.Component {
     render() {
 
-        const resultsRender = [];
+        const breakpointColumnsObj = {
+            default: 4,
+            1100: 3,
+            700: 2,
+            500: 1
+        };
 
+        const newsList = this.props.news.map((post, index) => {
+            return (
+                <div style={{background: 'rgb(214 214 214 / 6%)'}} key={index}>
+                    <div className="Author_And_Data">
+                        <div className="author">
+                            <p>{post.author}</p>
+                        </div>
 
-        for (var i = 0; i < this.props.news.length; i += 2) {
-            resultsRender.push(
-                <div className={newsStyle.block}>
-                    {
-                        this.props.news.slice(i, i + 2).map((news, index) => {
-                            return (
-                                <div className={index % 2 === 0 ? newsStyle.leftContentNews : newsStyle.rightContentNews} key={index}>
-                                    <div>
-                                    <img style={{maxWidth: '100%'}} src={news.urlToImage} alt=""/>
-                                    </div>
-                                    <div className={newsStyle.name_data}>
-                                        <p className={newsStyle.news_name}>{news.source.name}</p>
-                                        <p className={newsStyle.news_publishedAt}>{news.publishedAt}</p>
-                                    </div>
-                                    <div>
-                                    <p className={newsStyle.newsTitle}>{news.title}</p>
-                                    <p className={index % 2 === 0 ? newsStyle.leftDescription : newsStyle.rightDescription}>{news.description}</p>
-                                    </div>
-                                </div>
-                            );
-                        }
-
-                        )
-                    }
-                </div>
-            );
-        }
-
-        return (
-            <div>
-                <div className={newsStyle.headlineSecond}>
-                    <div className={newsStyle.navBar}>
-                        <div>
-                            <ul>
-                                <li><a class="active" href="#home">Home</a></li>
-                                <li><a href="#news">News</a></li>
-                                <li><a href="#contact">Contact</a></li>
-                                <li><a href="#about">About</a></li>
-                            </ul>
+                        <div className="publishedAt">
+                            <p>{post.publishedAt}</p>
                         </div>
                     </div>
 
-                    <div className={newsStyle.Second}>
-                        {resultsRender}
+                    <div class="container">
+                        <a href={post.url} target="_blank"><img style={{maxWidth: '100%'}} src={post.urlToImage}
+                                                                alt=""/></a>
+                        <div class="bottom-left"><p>{post.source.name}</p></div>
                     </div>
+
+                    <div className="title_description">
+                        <a href={post.url} target="_blank" className="title">{post.title}</a>
+                        <p className="description">{post.description}</p>
+                    </div>
+
+                    <ShowMoreText lines={1} more='Show more' less='Show less' anchorClass='' expanded={false}
+                                  width={280}>
+                        {post.content}
+                    </ShowMoreText>
                 </div>
+            );
+        })
+
+        return (
+            <div className={newsStyle.headlineSecond}>
+                <NavBarNews/>
+                <Masonry
+                    breakpointCols={breakpointColumnsObj}
+                    className="my-masonry-grid"
+                    columnClassName="my-masonry-grid_column"
+                >
+                    {newsList}
+                </Masonry>
             </div>
         );
     }

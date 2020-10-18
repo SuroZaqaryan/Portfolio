@@ -1,7 +1,7 @@
 .headlineSecond {
     display: flex;
     justify-content: space-between;
-    height: 100vh;
+    background-image: linear-gradient(190deg, #a1faef36 10%, #6dbae929 45%);
 }
 
 .block {
@@ -69,37 +69,3 @@
     margin-top: 0;
 
 }
-
-
-/* Navbar */
-
-.navBar {
-    width: 150px;
-    max-width: 100%;
-    background-color: rgb(39, 39, 38);
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow: auto;
-  }
-  
-  li a {
-    display: block;
-    color: #ffffff;
-    padding: 8px 16px;
-    text-decoration: none;
-  }
-  
-  li a.active {
-    background-color: #4CAF50;
-    color: white;
-  }
-  
-  li a:hover:not(.active) {
-    background-color: #555;
-    color: white;
-  }

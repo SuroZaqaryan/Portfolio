@@ -91,8 +91,7 @@ export class ContentCourses extends React.Component {
             resultsRender.push(
                 <div className={cnStyle.clearfix}>
                     {
-                        this.state.languageInfo.slice(i, i + 2)
-                            .map((item, index) => {
+                        this.state.languageInfo.slice(i, i + 2).map((item, index) => {
                                 return (
                                     <div key={index} className={cnStyle.ContentVeryHeadlineBlock}>
                                         <div className={cnStyle.ContentHeadlineBlock}>
