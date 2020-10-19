@@ -12,7 +12,7 @@
   margin-top: 15px;
 }
 .my-masonry-grid_column {
-  padding-left: 30px; /* gutter size */
+  padding-left: 15px; /* gutter size */
   background-clip: padding-box;
 }
 
@@ -22,7 +22,7 @@
   padding: 25px;
   padding-top: 20px;
   border-radius: 1px;
-  border: 1px solid #a5a5a59c;
+  border: 1px solid #9d9d9de3;
 }
 
 @media (max-width: 800px) {
@@ -95,10 +95,14 @@
   color: white;
 }
 
-.bottom-left {
+.bottom-left-title {
   position: absolute;
   bottom: 0px;
   background: #000000a8;
   padding: 6px 11px 6px 11px;
   font-size: 14px;
+}
+
+.dont-title-name {
+  position: static;
 }

@@ -4,6 +4,7 @@ import "./styles/Masonry.css";
 import Masonry from "react-masonry-css";
 import ShowMoreText from 'react-show-more-text';
 import { NavBarNews } from "./NavbarNews/NavbarNews";
+import NEWSIMAGE from "./Vector_Backgrounds/5914.jpg"
 
 export class NewsCountry extends React.Component {
     render() {
@@ -53,10 +54,10 @@ export class News extends React.Component {
                             post.urlToImage ?
                                 <>
                                     <a href={post.url} target="_blank">
-                                        <img style={{ maxWidth: '100%' }} src={post.urlToImage} alt="" />
+                                        <img style={{ maxWidth: '100%', borderRadius: '2px', border: '1px solid #adadad' }} src={post.urlToImage} alt="" />
                                     </a>
 
-                                    <div class="bottom-left"><p>{post.source.name}</p></div>
+                                    <div class="bottom-left-title"><p>{post.source.name}</p></div>
                                 </>
                                 :
                                 <>
@@ -64,7 +65,7 @@ export class News extends React.Component {
                                         <img style={{ maxWidth: '100%' }} src={post.urlToImage} alt="" />
                                     </a>
 
-                                    <div class="bottom-left"><p>{post.source.name}</p></div>
+                                    <div class="bottom-left-title dont-title-name"><p>{post.source.name}</p></div>
                                 </>
                         }
 
@@ -85,14 +86,25 @@ export class News extends React.Component {
 
         return (
             <div className={newsStyle.headlineSecond}>
-                <NavBarNews />
-                <Masonry
-                    breakpointCols={breakpointColumnsObj}
-                    className="my-masonry-grid"
-                    columnClassName="my-masonry-grid_column"
-                >
-                    {newsList}
-                </Masonry>
+                <div>
+                    <NavBarNews />
+                </div>
+                <div>
+                    <div className={newsStyle.newsTitleContent}>
+                        <div>
+                            <img style={{maxWidth: '100%'}} src={NEWSIMAGE} alt=""/>
+                        </div>
+                    </div>
+                    <div>
+                        <Masonry
+                            breakpointCols={breakpointColumnsObj}
+                            className="my-masonry-grid"
+                            columnClassName="my-masonry-grid_column"
+                        >
+                            {newsList}
+                        </Masonry>
+                    </div>
+                </div>
             </div>
         );
     }

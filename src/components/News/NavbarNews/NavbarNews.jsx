@@ -1,7 +1,7 @@
 import React from "react";
 import "./NavBarStyle.css";
 import HOME from "./NavbarIcons/home-icon.png";
-import DOWN from "./NavbarIcons/down.png";
+import LIST from "./NavbarIcons/list.png";
 
 export const NavBarNews = (props) => {
     return (
@@ -19,7 +19,7 @@ export const NavBarNews = (props) => {
                         <div>
                         <li className="nav__list_li">
                             <div>
-                                <img src={DOWN} alt=""/>
+                                <img src={LIST} alt=""/>
                                 <label htmlFor="group-2"><span className="fa fa-angle-right"></span> News categories</label>
                             </div>
 
