@@ -2,6 +2,7 @@ import React from "react";
 import "./NavBarStyle.css";
 import HOME from "./NavbarIcons/home-icon.png";
 import LIST from "./NavbarIcons/list.png";
+import API from "./NavbarIcons/api.png";
 
 export const NavBarNews = (props) => {
     return (
@@ -36,8 +37,8 @@ export const NavBarNews = (props) => {
 
                         <div>
                             <li className="nav__list_li">
-                                <input id="group-3" type="checkbox" hidden/>
-                                <label htmlFor="group-3"><span className="fa fa-angle-right"></span> 3First level</label>
+                                <img src={LIST} alt=""/>
+                                <label htmlFor="group-3"> API</label>
                             </li>
                         </div>
 

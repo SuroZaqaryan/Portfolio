@@ -4,7 +4,6 @@ import "./styles/Masonry.css";
 import Masonry from "react-masonry-css";
 import ShowMoreText from 'react-show-more-text';
 import { NavBarNews } from "./NavbarNews/NavbarNews";
-import NEWSIMAGE from "./Vector_Backgrounds/5914.jpg"
 
 export class NewsCountry extends React.Component {
     render() {
@@ -90,9 +89,16 @@ export class News extends React.Component {
                     <NavBarNews />
                 </div>
                 <div>
-                    <div className={newsStyle.newsTitleContent}>
-                        <div>
-                            <img style={{maxWidth: '100%'}} src={NEWSIMAGE} alt=""/>
+                    <div style={{paddingLeft: '15px'}}>
+                        <div className={newsStyle.newsTitleContent}>
+                            <div className={newsStyle.newsTitleDesign}>
+                                <div style={{position: "relative"}}>
+                                <h1>Daily News</h1>
+                                <p>
+                                Read about the news of the day choose a news category for you
+                                </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div>

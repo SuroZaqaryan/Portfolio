@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap');
+
 .headlineSecond {
     display: flex;
     justify-content: space-between;
@@ -67,5 +69,41 @@
 .Second {
     margin: auto;
     margin-top: 0;
+}
 
+.newsTitleContent {
+    width: 85%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.newsTitleDesign {
+    width: 420px;
+    height: 220px;
+    max-width: 100%;
+    background-image: linear-gradient( 135deg, #5ec2fc 10%, #f65d5d 100%);
+    border-radius: 40px;
+}
+
+.newsTitleDesign div {
+    position: relative;
+    top: 48%;
+    transform: translateY(-50%);
+    margin-left: 25px;
+}
+
+.newsTitleDesign div h1 {
+    margin-bottom: 10px;
+    font-family: 'Noto Sans TC', sans-serif;
+    color: white;
+    font-weight: 500;
+    font-size: 43px;
+}
+
+.newsTitleDesign div p {
+    font-size: 16px;
+    color: white;
+    font-family: 'Roboto';
+    letter-spacing: 0.3px;
 }
