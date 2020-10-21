@@ -88,14 +88,14 @@ export class News extends React.Component {
                 <div>
                     <NavBarNews />
                 </div>
-                <div>
-                    <div style={{paddingLeft: '15px'}}>
+                <div style={{ width: '100%', marginLeft: '200px' }}>
+                    <div style={{ paddingLeft: '15px' }}>
                         <div className={newsStyle.newsTitleContent}>
                             <div className={newsStyle.newsTitleDesign}>
-                                <div style={{position: "relative"}}>
-                                <h1>Daily News</h1>
-                                <p>
-                                Read about the news of the day choose a news category for you
+                                <div style={{ position: "relative" }}>
+                                    <h1>Daily News</h1>
+                                    <p>
+                                        Read about the news of the day choose a news category for you
                                 </p>
                                 </div>
                             </div>
