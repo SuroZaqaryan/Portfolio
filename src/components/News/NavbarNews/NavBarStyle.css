@@ -21,7 +21,7 @@ body{
 .wrapper .sidebar{
   width: 200px;
   height: 100%;
-  background: #4b4276;
+  background: #282c35;
   padding: 30px 0px;
   position: fixed;
 }
@@ -35,14 +35,21 @@ body{
 
 .wrapper .sidebar ul li{
   padding: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border-bottom: 1px solid #bdb8d7;
   border-bottom: 1px solid rgba(0,0,0,0.05);
   border-top: 1px solid rgba(255,255,255,0.05);
 }    
 
 .wrapper .sidebar ul li a{
-  color: #bdb8d7;
+  color: #e0e0e0;
   display: block;
+  text-align: left;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: ui-serif;
+  font-weight: 400;
 }
 
 .wrapper .sidebar ul li a .fas{
@@ -50,11 +57,15 @@ body{
 }
 
 .wrapper .sidebar ul li:hover{
-  background-color: #594f8d;
 }
     
 .wrapper .sidebar ul li:hover a{
-  color: #fff;
+}
+
+.navbarIcon {
+  font-size: 18px;
+  color: white;
+  margin-right: 10px;
 }
  
 .wrapper .sidebar .social_media{
@@ -63,19 +74,6 @@ body{
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-}
-
-.wrapper .sidebar .social_media a{
-  display: block;
-  width: 40px;
-  background: #594f8d;
-  height: 40px;
-  line-height: 45px;
-  text-align: center;
-  margin: 0 5px;
-  color: #bdb8d7;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
 }
 
 .wrapper .main_content{

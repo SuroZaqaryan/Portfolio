@@ -1,18 +1,34 @@
 import React from "react";
 import "./NavBarStyle.css";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faAppleAlt, faChartBar, faNewspaper, faProjectDiagram,} from "@fortawesome/free-solid-svg-icons";
+
 export const NavBarNews = (props) => {
     return (
         <div class="wrapper">
             <div class="sidebar">
                 <h2>Sidebar</h2>
                 <ul>
-                    <li><a href="#"><i className="fas fa-user"></i>Home</a></li>
-                    <li><a href="#"><i class="fas fa-user"></i>Profile</a></li>
-                    <li><a href="#"><i class="fas fa-address-card"></i>About</a></li>
-                    <li><a href="#"><i class="fas fa-project-diagram"></i>portfolio</a></li>
-                    <li><a href="#"><i class="fas fa-blog"></i>Blogs</a></li>
-                    <li><a href="#"><i class="fas fa-address-book"></i>Contact</a></li>
-                    <li><a href="#"><i class="fas fa-map-pin"></i>Map</a></li>
+                    <li>
+                        <a href="#">
+                            <FontAwesomeIcon className="navbarIcon" icon={faChartBar}/>Business
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <FontAwesomeIcon className="navbarIcon" icon={faAppleAlt}/>Apple
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <FontAwesomeIcon className="navbarIcon" icon={faProjectDiagram}/>TechCrunch
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <FontAwesomeIcon className="navbarIcon" icon={faNewspaper}/>Wall Street
+                        </a>
+                    </li>
                 </ul>
                 <div class="social_media">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>

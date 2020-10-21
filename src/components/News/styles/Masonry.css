@@ -75,7 +75,7 @@
 
 .title:hover {
   text-decoration: underline;
-  -webkit-text-decoration-color: #4d4d4d; /* Safari */  
+  -webkit-text-decoration-color: #4d4d4d; /* Safari */
   text-decoration-color: #4d4d4d;
   transition: 0.3s ease;
 }
