@@ -84,26 +84,20 @@
 }
 
 .newsTitleDesign {
-<<<<<<< HEAD
     width: 450px;
     max-width: 100%;
     background-image: linear-gradient( 135deg, #5ec2fc 10%, #f65d5d 100%);
     border-radius: 25px;
-=======
     width: 370px;
     max-width: 100%;
     background-image: linear-gradient( 135deg, #5ec2fc 10%, #f65d5d 100%);
     border-radius: 20px;
->>>>>>> 909997c37c50099ef588c04e3e4a5e0edaf9862e
 }
 
 .newsTitleDesign div {
     position: relative;
-<<<<<<< HEAD
     top: 68%;
-=======
     top: 67%;
->>>>>>> 909997c37c50099ef588c04e3e4a5e0edaf9862e
     transform: translateY(-50%);
     height: 170px;
     margin-left: 25px;
