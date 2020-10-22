@@ -102,9 +102,9 @@ export class News extends React.Component {
                                     </p>
                                 </div>
                             </div>
-                            <div style={{width: '100%', display: 'flex'}}>
-                                <img style={{maxWidth: '100%', marginLeft: '15px', borderRadius: '10px', width: '50%'}} src={NEWS1} alt=""/>
-                                <img style={{maxWidth: '100%', marginLeft: '15px', borderRadius: '10px', width: '50%'}} src={NEWS2} alt=""/>
+
+                            <div style={{width: '65%', background: 'black'}}>
+                                <div className="banner"></div>
                             </div>
                         </div>
                     </div>
