@@ -102,8 +102,14 @@ export class News extends React.Component {
                                     </p>
                                 </div>
                             </div>
+<<<<<<< HEAD
                             <div className={newsStyle.banner} style={{ }}>
                                 <h1 style={{color: 'white', fontSize: '35px'}}>Read about the news of the day</h1>
+=======
+
+                            <div style={{width: '65%', background: 'black'}}>
+                                <div className="banner"></div>
+>>>>>>> 909997c37c50099ef588c04e3e4a5e0edaf9862e
                             </div>
                         </div>
                     </div>
