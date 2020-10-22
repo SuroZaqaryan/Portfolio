@@ -1,7 +1,7 @@
 import React from "react";
 import "./NavBarStyle.css";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faAppleAlt, faChartBar, faNewspaper, faProjectDiagram,} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAppleAlt, faChartBar, faNewspaper, faProjectDiagram, faHome} from "@fortawesome/free-solid-svg-icons";
 
 export const NavBarNews = (props) => {
     return (
@@ -11,22 +11,27 @@ export const NavBarNews = (props) => {
                 <ul>
                     <li>
                         <a href="#">
-                            <FontAwesomeIcon className="navbarIcon" icon={faChartBar}/>Business
+                            <FontAwesomeIcon className="navbarIcon" icon={faHome} />Home
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <FontAwesomeIcon className="navbarIcon" icon={faAppleAlt}/>Apple
+                            <FontAwesomeIcon className="navbarIcon" icon={faChartBar} />Business
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <FontAwesomeIcon className="navbarIcon" icon={faProjectDiagram}/>TechCrunch
+                            <FontAwesomeIcon className="navbarIcon" icon={faAppleAlt} />Apple
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <FontAwesomeIcon className="navbarIcon" icon={faNewspaper}/>Wall Street
+                            <FontAwesomeIcon className="navbarIcon" icon={faProjectDiagram} />TechCrunch
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <FontAwesomeIcon className="navbarIcon" icon={faNewspaper} />Wall Street
                         </a>
                     </li>
                 </ul>
