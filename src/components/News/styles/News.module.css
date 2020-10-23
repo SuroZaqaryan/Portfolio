@@ -3,7 +3,7 @@
 .headlineSecond {
     display: flex;
     justify-content: space-between;
-    background-image: linear-gradient(190deg, #a1faef36 10%, #6dbae929 45%);
+    background-image: linear-gradient(190deg, #7afaea0f 10%, #6dbae917 45%);
 }
 
 .block {
@@ -77,7 +77,7 @@
     width: 85%;
     margin: auto;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     padding: 15px;
     padding-bottom: 0;
     padding-right: 0;
@@ -105,7 +105,6 @@
 }
 
 .newsTitleDesign div h1 {
-    margin-bottom: 10px;
     font-family: 'Noto Sans TC', sans-serif;
     color: white;
     font-weight: 500;
@@ -120,7 +119,8 @@
 }
 
 .banner {
-    background-image: url("../Vector_Backgrounds/3181.jpg");
+    background-image: url("../Vector_Backgrounds/31812.jpg");
+    border-radius: 20px;
     width: 63%;
     margin-left: 40px;
     display: flex;

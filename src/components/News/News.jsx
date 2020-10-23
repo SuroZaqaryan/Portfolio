@@ -3,16 +3,15 @@ import newsStyle from './styles/News.module.css';
 import "./styles/Masonry.css";
 import Masonry from "react-masonry-css";
 import ShowMoreText from 'react-show-more-text';
-import { NavBarNews } from "./NavbarNews/NavbarNews";
+import {NavBarNews} from "./NavbarNews/NavbarNews";
 import NEWS1 from "./Vector_Backgrounds/29493.jpg"
-import NEWS2 from "./Vector_Backgrounds/3181.jpg"
 
 export class NewsCountry extends React.Component {
     render() {
         const newsCountryList = this.props.newsCountry.map((item, index) => {
             return (
                 <div key={index}>
-                    <img style={{ maxWidth: '100%', border: '3px solid red' }} src={item.urlToImage} alt="" />
+                    <img style={{maxWidth: '100%', border: '3px solid red'}} src={item.urlToImage} alt=""/>
                 </div>
             );
         })
@@ -38,7 +37,7 @@ export class News extends React.Component {
 
         const newsList = this.props.news.map((post, index) => {
             return (
-                <div style={{ background: '#ffffff' }} key={index}>
+                <div style={{background: '#ffffff'}} key={index}>
                     <div className="Author_And_Data">
                         <div className="author">
                             <p>{post.author}</p>
@@ -56,8 +55,8 @@ export class News extends React.Component {
                                 <>
                                     <a href={post.url} target="_blank">
                                         <img
-                                            style={{ maxWidth: '100%', borderRadius: '2px', border: '1px solid #adadad' }}
-                                            src={post.urlToImage} alt="" />
+                                            style={{maxWidth: '100%', borderRadius: '2px', border: '1px solid #adadad'}}
+                                            src={post.urlToImage} alt=""/>
                                     </a>
 
                                     <div class="bottom-left-title"><p>{post.source.name}</p></div>
@@ -65,7 +64,7 @@ export class News extends React.Component {
                                 :
                                 <>
                                     <a href={post.url} target="_blank">
-                                        <img style={{ maxWidth: '100%' }} src={post.urlToImage} alt="" />
+                                        <img style={{maxWidth: '100%'}} src={post.urlToImage} alt=""/>
                                     </a>
 
                                     <div class="bottom-left-title dont-title-name"><p>{post.source.name}</p></div>
@@ -79,7 +78,8 @@ export class News extends React.Component {
                         <p className="description">{post.description}</p>
                     </div>
 
-                    <ShowMoreText lines={1} more='Show more' less='Show less' anchorClass='' expanded={false} width={280}>
+                    <ShowMoreText lines={1} more='Show more' less='Show less' anchorClass='' expanded={false}
+                                  width={280}>
                         {post.content}
                     </ShowMoreText>
                 </div>
@@ -89,37 +89,33 @@ export class News extends React.Component {
         return (
             <div className={newsStyle.headlineSecond}>
                 <div>
-                    <NavBarNews />
+                    <NavBarNews/>
                 </div>
-                <div style={{ width: '100%', marginLeft: '200px' }}>
+                <div style={{width: '100%', marginLeft: '200px'}}>
                     <div>
                         <div className={newsStyle.newsTitleContent}>
                             <div className={newsStyle.newsTitleDesign}>
-                                <div style={{ position: "relative" }}>
+                                <div style={{position: "relative"}}>
                                     <h1>Daily News</h1>
                                     <p>
                                         Read about the news of the day choose a news category for you
                                     </p>
                                 </div>
                             </div>
-                            <div className={newsStyle.banner} style={{ }}>
+                            <div className={newsStyle.banner} style={{}}>
                                 <h1 style={{color: 'white', fontSize: '35px'}}>Read about the news of the day</h1>
-
-                            <div style={{width: '65%', background: 'black'}}>
-                                <div className="banner"></div>
                             </div>
                         </div>
+                        <div>
+                            <Masonry
+                                breakpointCols={breakpointColumnsObj}
+                                className="my-masonry-grid"
+                                columnClassName="my-masonry-grid_column"
+                            >
+                                {newsList}
+                            </Masonry>
+                        </div>
                     </div>
-                    <div>
-                        <Masonry
-                            breakpointCols={breakpointColumnsObj}
-                            className="my-masonry-grid"
-                            columnClassName="my-masonry-grid_column"
-                        >
-                            {newsList}
-                        </Masonry>
-                    </div>
-                </div>
                 </div>
             </div>
         );
