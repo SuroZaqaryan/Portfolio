@@ -2,6 +2,7 @@ import React from "react";
 import "./NavBarStyle.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAppleAlt, faChartBar, faNewspaper, faProjectDiagram, faHome} from "@fortawesome/free-solid-svg-icons";
+import {NavLink} from "react-router-dom";
 
 export const NavBarNews = (props) => {
     return (
@@ -15,9 +16,9 @@ export const NavBarNews = (props) => {
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <NavLink to={"/Business"}>
                             <FontAwesomeIcon className="navbarIcon" icon={faChartBar} />Business
-                        </a>
+                        </NavLink>
                     </li>
                     <li>
                         <a href="#">

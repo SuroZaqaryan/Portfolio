@@ -4,26 +4,6 @@ import "./styles/Masonry.css";
 import Masonry from "react-masonry-css";
 import ShowMoreText from 'react-show-more-text';
 import {NavBarNews} from "./NavbarNews/NavbarNews";
-import NEWS1 from "./Vector_Backgrounds/29493.jpg"
-
-export class NewsCountry extends React.Component {
-    render() {
-        const newsCountryList = this.props.newsCountry.map((item, index) => {
-            return (
-                <div key={index}>
-                    <img style={{maxWidth: '100%', border: '3px solid red'}} src={item.urlToImage} alt=""/>
-                </div>
-            );
-        })
-        return (
-            <>
-                <div>
-                    {newsCountryList}
-                </div>
-            </>
-        );
-    }
-}
 
 export class News extends React.Component {
     render() {

@@ -25,7 +25,7 @@ export const authAPI = {
 
 export const newsAPI = {
     getNews() {
-        return axios.get(`https://newsapi.org/v2/top-headlines?country=gb&category=business&apiKey=22acb0d726df43638b6f11de2ed1bf6d`);
+        return axios.get(`http://newsapi.org/v2/everything?q=bitcoin&from=2020-09-23&sortBy=publishedAt&apiKey=22acb0d726df43638b6f11de2ed1bf6d`);
     },
 
     getCountryNews() {
