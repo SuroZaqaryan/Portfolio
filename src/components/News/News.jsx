@@ -1,9 +1,9 @@
 import React from 'react';
-import newsStyle from './styles/News.module.css';
+import news from './styles/News.module.css';
 import "./styles/Masonry.css";
 import Masonry from "react-masonry-css";
 import ShowMoreText from 'react-show-more-text';
-import Bitcoin from "./Icons_And_Backgrounds/Icons/bitcoin.png"
+import Bitcoin from "./Icons_And_Backgrounds/Icons/bitcoin2.png"
 import NavbarNewsContainer from "./NavbarNews/NavbarNewsContainer";
 
 export class News extends React.Component {
@@ -18,7 +18,7 @@ export class News extends React.Component {
 
         const newsList = this.props.news.map((post, index) => {
             return (
-                <div style={{background: '#ffffff'}} key={index}>
+                <div className={news.cover_news} key={index}>
                     <div className="Author_And_Data">
                         <div className="author">
                             <p>{post.author}</p>
@@ -29,18 +29,16 @@ export class News extends React.Component {
                         </div>
                     </div>
 
-                    <div class="container">
+                    <div className="container">
 
                         {
                             post.urlToImage ?
                                 <>
                                     <a href={post.url} target="_blank">
-                                        <img
-                                            style={{maxWidth: '100%', borderRadius: '2px', border: '1px solid #adadad', width: '100%'}}
-                                            src={post.urlToImage} alt=""/>
+                                        <img className={news.image_url} src={post.urlToImage} alt=""/>
                                     </a>
 
-                                    <div class="bottom-left-title"><p>{post.source.name}</p></div>
+                                    <div className="bottom-left-title"><p>{post.source.name}</p></div>
                                 </>
                                 :
                                 <>
@@ -48,7 +46,7 @@ export class News extends React.Component {
                                         <img style={{maxWidth: '100%'}} src={post.urlToImage} alt=""/>
                                     </a>
 
-                                    <div class="bottom-left-title dont-title-name"><p>{post.source.name}</p></div>
+                                    <div className="bottom-left-title dont-title-name"><p>{post.source.name}</p></div>
                                 </>
                         }
 
@@ -68,17 +66,16 @@ export class News extends React.Component {
         })
 
         return (
-            <div className={newsStyle.headlineSecond}>
+            <div className={news.headlineSecond}>
                 <div>
                     <NavbarNewsContainer/>
                 </div>
-                <div style={{width: '100%', marginLeft: '200px'}}>
+                <div className={news.content_size}>
                     <div>
-                        <div className={newsStyle.newsTitleContent}>
+                        <div className={news.newsTitleContent}>
                             <div>
-
-                                <div className={newsStyle.newsTitleDesign}>
-                                    <div style={{position: "relative"}}>
+                                <div className={news.newsTitleDesign}>
+                                    <div className={news.title_banner}>
                                         <h1>Daily News</h1>
                                         <p>
                                             Read about the news of the day choose a news category for you
@@ -86,27 +83,18 @@ export class News extends React.Component {
                                     </div>
                                 </div>
 
-                                <div style={{
-                                    margin: 'auto',
-                                    marginTop: '10px',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    borderTop: '1px solid #c2c2c2a6',
-                                    padding: '20px',
-                                    backgroundImage: 'linear-gradient( 135deg, #5ec2fc 10%, #f65d5d 100%)',
-                                    borderRadius: '20px',
-                                }}>
-                                    <div style={{marginRight: '10px'}}>
-                                        <h2 style={{fontSize: '30px', color: 'white'}}>Bitcoin</h2>
+                                <div className={news.news_title_category}>
+                                    <div className={news.category_name}>
+                                        <h2>Bitcoin</h2>
                                     </div>
-                                    <div>
-                                        <img style={{width: '40px', maxWidth: '100%'}} src={Bitcoin} alt=""/>
+                                    <div className={news.category_icon}>
+                                        <img src={Bitcoin} alt=""/>
                                     </div>
                                 </div>
                             </div>
 
 
-                            <div className={newsStyle.banner} style={{}}>
+                            <div className={news.banner} style={{}}>
                                 {/* <div>
                                     <h1 style={{
                                         color: 'black',

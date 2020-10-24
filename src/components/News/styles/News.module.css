@@ -1,5 +1,54 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap');
 
+.cover_news {
+    background: #ffffff;
+}
+
+.author {
+    max-width: 100%;
+}
+
+.image_url {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 2px;
+    border: 1px solid #adadad;
+}
+
+.content_size {
+    width: 100%;
+    margin-left: 200px;
+}
+
+.title_banner {
+    position: relative;
+}
+
+.news_title_category {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #c2c2c2a6;
+    padding: 20px;
+    background-image: linear-gradient( 135deg, #5ec2fc 10%, #f65d5d 100%);
+    border-radius: 20px;
+    justify-content: space-between;
+}
+
+.category_name {
+    margin-right: 10px;
+}
+
+.category_name h2 {
+    font-size: 30px;
+    color: white;
+}
+
+.category_icon img {
+    width: 40px;
+    max-width: 100%;
+}
+
 .headlineSecond {
     display: flex;
     justify-content: space-between;
@@ -79,7 +128,6 @@
     margin-top: 20px;
     margin-bottom: 25px;
     padding: 15px;
-    padding-bottom: 0;
     padding-right: 0;
     padding-bottom: 30px;
     border-bottom: 1px solid #d7d7d7;
@@ -96,11 +144,9 @@
 .newsTitleDesign div {
     position: relative;
     top: 68%;
-    top: 67%;
     transform: translateY(-50%);
     height: 170px;
     margin-left: 25px;
-    height: 150px;
 }
 
 .newsTitleDesign div h1 {
@@ -113,7 +159,6 @@
 .newsTitleDesign div p {
     font-size: 16px;
     color: white;
-    font-family: 'Roboto';
     letter-spacing: 0.3px;
 }
 
