@@ -10,7 +10,7 @@ export class News extends React.Component {
     render() {
 
         const breakpointColumnsObj = {
-            default: 4,
+            default: 3,
             1100: 3,
             700: 2,
             500: 1

@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import n from './Navbar.module.css';
-import logo from '../../backgrounds/myLogo.png'
+import logo from '../../backgrounds/myLogo2.png'
 import home from './icons/home.png'
 import search from './icons/search.png'
 import notification from './icons/notification.png'
@@ -13,7 +13,7 @@ export const Navbar = (props) => {
             <div>
                 <header>
                     <div style={{ flex: '1' }}>
-                        <a className={n.logo} href="/#"><img style={{ margin: 'auto' }} src={logo} alt="logo" /></a>
+                        <a className={n.logo} href="/#"><img style={{ margin: 'auto', marginTop: '3px' }} src={logo} alt="logo" /></a>
                     </div>
                     <div style={{ flex: '1' }}>
                         <nav>

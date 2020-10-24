@@ -106,3 +106,10 @@
 .dont-title-name {
   position: static;
 }
+
+@media only screen and (max-width: 800px) {
+  .my-masonry-grid {
+    width: 100%;
+    margin-left: 0;
+  }
+}

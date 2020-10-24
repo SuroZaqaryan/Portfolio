@@ -4,7 +4,7 @@
 }
 
 .ContentVeryHeadlineBlock {
-    background: rgb(170 170 170 / 25%);
+    background: rgb(170 170 170 / 15%);
     border: 1px solid #dbdbdb99;
     max-width: 100%;
     margin: 15px;
@@ -12,6 +12,8 @@
 }
 
 .ContentHeadlineBlock {
+    width: 450px;
+    max-width: 100%;
     padding: 20px;
     padding-bottom: 17px;
     border-bottom: 1px solid #b0b0b04f;

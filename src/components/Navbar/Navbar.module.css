@@ -9,7 +9,7 @@
 header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: self-start;
   padding: 10px 0%;
 }
 
@@ -147,7 +147,6 @@ header {
   width: 20px;
   border-bottom: 2px solid #ff7b77;
   padding-bottom: 5px;
-  padding-top: 10px;
 }
 
 @media screen and (max-height: 450px) {
