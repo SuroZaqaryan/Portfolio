@@ -3,7 +3,8 @@ import newsStyle from './styles/News.module.css';
 import "./styles/Masonry.css";
 import Masonry from "react-masonry-css";
 import ShowMoreText from 'react-show-more-text';
-import {NavBarNews} from "./NavbarNews/NavbarNews";
+import Bitcoin from "./Icons_And_Backgrounds/Icons/bitcoin.png"
+import NavbarNewsContainer from "./NavbarNews/NavbarNewsContainer";
 
 export class News extends React.Component {
     render() {
@@ -35,7 +36,7 @@ export class News extends React.Component {
                                 <>
                                     <a href={post.url} target="_blank">
                                         <img
-                                            style={{maxWidth: '100%', borderRadius: '2px', border: '1px solid #adadad'}}
+                                            style={{maxWidth: '100%', borderRadius: '2px', border: '1px solid #adadad', width: '100%'}}
                                             src={post.urlToImage} alt=""/>
                                     </a>
 
@@ -69,21 +70,51 @@ export class News extends React.Component {
         return (
             <div className={newsStyle.headlineSecond}>
                 <div>
-                    <NavBarNews/>
+                    <NavbarNewsContainer/>
                 </div>
                 <div style={{width: '100%', marginLeft: '200px'}}>
                     <div>
                         <div className={newsStyle.newsTitleContent}>
-                            <div className={newsStyle.newsTitleDesign}>
-                                <div style={{position: "relative"}}>
-                                    <h1>Daily News</h1>
-                                    <p>
-                                        Read about the news of the day choose a news category for you
-                                    </p>
+                            <div>
+
+                                <div className={newsStyle.newsTitleDesign}>
+                                    <div style={{position: "relative"}}>
+                                        <h1>Daily News</h1>
+                                        <p>
+                                            Read about the news of the day choose a news category for you
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div style={{
+                                    margin: 'auto',
+                                    marginTop: '10px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    borderTop: '1px solid #c2c2c2a6',
+                                    padding: '20px',
+                                    backgroundImage: 'linear-gradient( 135deg, #5ec2fc 10%, #f65d5d 100%)',
+                                    borderRadius: '20px',
+                                }}>
+                                    <div style={{marginRight: '10px'}}>
+                                        <h2 style={{fontSize: '30px', color: 'white'}}>Bitcoin</h2>
+                                    </div>
+                                    <div>
+                                        <img style={{width: '40px', maxWidth: '100%'}} src={Bitcoin} alt=""/>
+                                    </div>
                                 </div>
                             </div>
+
+
                             <div className={newsStyle.banner} style={{}}>
-                                <h1 style={{color: 'white', fontSize: '35px'}}>Read about the news of the day</h1>
+                                {/* <div>
+                                    <h1 style={{
+                                        color: 'black',
+                                        fontSize: '35px',
+                                        background: '#00000030',
+                                        padding: '10px'
+                                    }}>Bitcoin</h1>
+                                </div> */}
                             </div>
                         </div>
                         <div>

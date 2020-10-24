@@ -81,16 +81,15 @@
     padding: 15px;
     padding-bottom: 0;
     padding-right: 0;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #d7d7d7;
 }
 
 .newsTitleDesign {
-    width: 450px;
     max-width: 100%;
     background-image: linear-gradient( 135deg, #5ec2fc 10%, #f65d5d 100%);
-    border-radius: 25px;
     width: 370px;
-    max-width: 100%;
-    background-image: linear-gradient( 135deg, #5ec2fc 10%, #f65d5d 100%);
+    height: 160px;
     border-radius: 20px;
 }
 
@@ -108,7 +107,7 @@
     font-family: 'Noto Sans TC', sans-serif;
     color: white;
     font-weight: 500;
-    font-size: 34px;
+    font-size: 32px;
 }
 
 .newsTitleDesign div p {
@@ -119,9 +118,10 @@
 }
 
 .banner {
-    background-image: url("../Vector_Backgrounds/31812.jpg");
+    background-image: url("../Icons_And_Backgrounds/Vector_Backgrounds/13574.jpg");
     border-radius: 20px;
-    width: 63%;
+    height: 255px;
+    width: 70%;
     margin-left: 40px;
     display: flex;
     justify-content: center;

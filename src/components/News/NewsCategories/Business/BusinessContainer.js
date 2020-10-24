@@ -3,7 +3,7 @@ import {connect} from "react-redux";
 import {Business} from "./Bussines";
 import {getNewsCountryThunk} from "../../../Redux/news-reducer";
 
-class NewsContainer extends React.Component {
+class BusinesContainer extends React.Component {
 
     componentDidMount() {
         this.props.getNewsCountryThunk();
@@ -22,4 +22,4 @@ let mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps, {getNewsCountryThunk})(NewsContainer);
+export default connect(mapStateToProps, {getNewsCountryThunk})(BusinesContainer);

@@ -13,7 +13,7 @@ export const Navbar = (props) => {
             <div>
                 <header>
                     <div style={{ flex: '1' }}>
-                        <a className={n.logo} href="/#"><img style={{margin: 'auto'}} src={logo} alt="logo" /></a>
+                        <a className={n.logo} href="/#"><img style={{ margin: 'auto' }} src={logo} alt="logo" /></a>
                     </div>
                     <div style={{ flex: '1' }}>
                         <nav>
@@ -27,8 +27,8 @@ export const Navbar = (props) => {
                     </div>
 
                     <div style={{ flex: '2', display: 'flex', justifyContent: 'center' }}>
-                        <nav style={{marginLeft: '20px'}}>
-                            <ul  className={`${n.nav__links} ${n.center_links}`}>
+                        <nav style={{ marginLeft: '20px' }}>
+                            <ul className={`${n.nav__links} ${n.center_links}`}>
                                 <li> <NavLink to={'/news'}>News</NavLink> </li>
                                 <li> <NavLink to={'/#'}>Blog</NavLink> </li>
                                 <li> <NavLink to={'/#'}>Log out</NavLink> </li>
