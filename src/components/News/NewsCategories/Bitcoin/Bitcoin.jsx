@@ -1,41 +1,41 @@
-import React from "react";
-import news from "../../styles/News.module.css";
-import {NewsCover} from "../../NewsCover/NewsCover";
+import React from 'react';
+import news from '../../styles/News.module.css';
+import Masonry from "react-masonry-css";
 import NavbarNewsContainer from "../../NavbarNews/NavbarNewsContainer";
 import {NewsTitleCategory} from "../../NewsTitleCategory/NewsTitleCategory";
-import Masonry from "react-masonry-css";
-import "./css/Masonry.css";
-import Bitcoin from "../../Icons_And_Backgrounds/Icons/bitcoin2.png";
-import backgroundImage from "../../Icons_And_Backgrounds/Vector_Backgrounds/Business.jpg";
+import {NewsCover} from "../../NewsCover/NewsCover";
+import "../../styles/Masonry.css";
+import BitcoinImage from "../../Icons_And_Backgrounds/Icons/bitcoin2.png";
+import backgroundImage from "../../Icons_And_Backgrounds/Vector_Backgrounds/Bitcoin.png";
 
-export class Business extends React.Component {
+export class Bitcoin extends React.Component {
+
     constructor() {
         super();
         this.state = {
             bannerInfo: [
                 {
-                    titleName: "Business",
-                    icon: Bitcoin,
+                    titleName: "Bitcoin",
+                    icon: BitcoinImage,
                     banner: backgroundImage,
-                    bannerTitle: "Business"
+                    bannerTitle: "Bitcoin"
                 }
             ]
         }
     }
+
     render() {
-
-        const bannerInfo = this.state.bannerInfo.map((item, index) => {
-                return (
-                    <NewsTitleCategory
-                        titleName={item.titleName}
-                        icon={item.icon}
-                        banner={item.banner}
-                        bannerTitle={item.bannerTitle}
-                    />
-                );
-            }
-        )
-
+            const bannerInfo = this.state.bannerInfo.map((item, index) => {
+                    return (
+                        <NewsTitleCategory
+                            titleName={item.titleName}
+                            icon={item.icon}
+                            banner={item.banner}
+                            bannerTitle={item.bannerTitle}
+                        />
+                    );
+                }
+            )
         const breakpointColumnsObj = {
             default: 4,
             1500: 3,
@@ -43,7 +43,7 @@ export class Business extends React.Component {
             750: 1
         };
 
-        const newsCountryList = this.props.newsCountry.map((post, index) => {
+        const newsList = this.props.news.map((post, index) => {
             return (
                 <div className={news.cover_news} key={index}>
                     <NewsCover
@@ -60,6 +60,7 @@ export class Business extends React.Component {
                 </div>
             );
         })
+
         return (
             <div className={news.headlineSecond}>
                 <NavbarNewsContainer/>
@@ -67,8 +68,9 @@ export class Business extends React.Component {
                     <div>
                         {bannerInfo}
                         <div>
-                            <Masonry breakpointCols={breakpointColumnsObj} className="my-masonry-grid" columnClassName="my-masonry-grid_column">
-                                {newsCountryList}
+                            <Masonry breakpointCols={breakpointColumnsObj} className="my-masonry-grid"
+                                     columnClassName="my-masonry-grid_column">
+                                {newsList}
                             </Masonry>
                         </div>
                     </div>
@@ -77,3 +79,4 @@ export class Business extends React.Component {
         );
     }
 }
+

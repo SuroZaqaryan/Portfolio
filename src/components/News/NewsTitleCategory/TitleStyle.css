@@ -19,7 +19,7 @@
 
 .newsTitleDesign {
     max-width: 100%;
-    background-image: linear-gradient( 135deg, #63b7fc 10%, #ad5df6 100%);
+    background-image: linear-gradient( 135deg, #63a7fc 10%, #ad5df6 100%);
     width: 370px;
     height: 160px;
     border-radius: 20px;
@@ -56,7 +56,7 @@
     align-items: center;
     border-top: 1px solid #c2c2c2a6;
     padding: 20px;
-    background-image: linear-gradient( 135deg, #63b7fc 10%, #ad5df6 100%);
+    background-image: linear-gradient( 135deg, #63a7fc 10%, #ad5df6 100%);
     border-radius: 20px;
     justify-content: space-between;
 }
@@ -75,8 +75,12 @@
     max-width: 100%;
 }
 
+.dont-title-name {
+    position: static;
+}
+
 .banner {
-    background-image: url("../Icons_And_Backgrounds/Vector_Backgrounds/2.png");
+    /*background-image: url("../Icons_And_Backgrounds/Vector_Backgrounds/2.png");*/
     border-radius: 20px;
     height: 255px;
     width: 70%;

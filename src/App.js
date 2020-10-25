@@ -5,7 +5,7 @@ import Route from "react-router-dom/es/Route";
 import { Header } from './components/Header/Header';
 import ContentContainer from './components/Content/ContentContainer';
 import ProfileContainer from "./components/Profile/ProfileContainer";
-import NewsContainer from "./components/News/NewsContainer";
+import NewsContainer from "./components/News/NewsCategories/Bitcoin/NewsContainer";
 import './index.css'
 import BusinessContainer from "./components/News/NewsCategories/Business/BusinessContainer";
 
@@ -16,7 +16,7 @@ function App() {
             <Route path='/content' render={() => <ContentContainer />}/>
             <Route path='/header' render={() => <Header /> }/>
             <Route path='/profile/:userId' render={() => <ProfileContainer /> }/>
-            <Route path='/news' render={() => <NewsContainer /> }/>
+            <Route path='/Bitcoin' render={() => <NewsContainer /> }/>
             <Route path='/Business' render={() => <BusinessContainer />}/>
         </div>
     );

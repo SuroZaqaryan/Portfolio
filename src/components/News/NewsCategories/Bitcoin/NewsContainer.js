@@ -1,6 +1,6 @@
 import React from "react";
-import {News, NewsCountry} from "./News";
-import {getNewsThunk} from "../Redux/news-reducer";
+import {Bitcoin} from "./Bitcoin";
+import {getNewsThunk} from "../../../Redux/news-reducer";
 import {connect} from "react-redux";
 
 class NewsContainer extends React.Component {
@@ -11,7 +11,7 @@ class NewsContainer extends React.Component {
 
     render() {
         return <>
-            <News {...this.props} />
+            <Bitcoin {...this.props} />
         </>
     }
 }
@@ -19,7 +19,6 @@ class NewsContainer extends React.Component {
 let mapStateToProps = (state) => {
     return {
         news: state.news.news,
-        newsCountry: state.news.newsCountry,
     }
 }
 
