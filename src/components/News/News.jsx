@@ -5,6 +5,7 @@ import Masonry from "react-masonry-css";
 import ShowMoreText from 'react-show-more-text';
 import Bitcoin from "./Icons_And_Backgrounds/Icons/bitcoin2.png"
 import NavbarNewsContainer from "./NavbarNews/NavbarNewsContainer";
+import {NewsTitleCategory} from "./NewsTitleCategory/NewsTitleCategory";
 
 export class News extends React.Component {
     render() {
@@ -35,7 +36,7 @@ export class News extends React.Component {
                             post.urlToImage ?
                                 <>
                                     <a href={post.url} target="_blank">
-                                        <img className={news.image_url} src={post.urlToImage} alt="" />
+                                        <img className={news.image_url} src={post.urlToImage} alt=""/>
                                     </a>
 
                                     <div className="bottom-left-title"><p>{post.source.name}</p></div>
@@ -43,7 +44,7 @@ export class News extends React.Component {
                                 :
                                 <>
                                     <a href={post.url} target="_blank">
-                                        <img style={{ maxWidth: '100%' }} src={post.urlToImage} alt="" />
+                                        <img style={{maxWidth: '100%'}} src={post.urlToImage} alt=""/>
                                     </a>
 
                                     <div className="bottom-left-title dont-title-name"><p>{post.source.name}</p></div>
@@ -58,7 +59,7 @@ export class News extends React.Component {
                     </div>
 
                     <ShowMoreText lines={1} more='Show more' less='Show less' anchorClass='' expanded={false}
-                        width={280}>
+                                  width={280}>
                         {post.content}
                     </ShowMoreText>
                 </div>
@@ -67,50 +68,12 @@ export class News extends React.Component {
 
         return (
             <div className={news.headlineSecond}>
-                <div>
-                    <NavbarNewsContainer />
-                </div>
+                <NavbarNewsContainer/>
                 <div className={news.content_size}>
                     <div>
-                        <div className={news.newsTitleContent}>
-                            <div>
-                                <div className={news.newsTitleDesign}>
-                                    <div className={news.title_banner}>
-                                        <h1>Daily News</h1>
-                                        <p>
-                                            Read about the news of the day choose a news category for you
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className={news.news_title_category}>
-                                    <div className={news.category_name}>
-                                        <h2>Bitcoin</h2>
-                                    </div>
-                                    <div className={news.category_icon}>
-                                        <img src={Bitcoin} alt="" />
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div className={news.banner} style={{}}>
-                                {/* <div>
-                                    <h1 style={{
-                                        color: 'black',
-                                        fontSize: '35px',
-                                        background: '#00000030',
-                                        padding: '10px'
-                                    }}>Bitcoin</h1>
-                                </div> */}
-                            </div>
-                        </div>
+                        <NewsTitleCategory/>
                         <div>
-                            <Masonry
-                                breakpointCols={breakpointColumnsObj}
-                                className="my-masonry-grid"
-                                columnClassName="my-masonry-grid_column"
-                            >
+                            <Masonry breakpointCols={breakpointColumnsObj} className="my-masonry-grid" columnClassName="my-masonry-grid_column">
                                 {newsList}
                             </Masonry>
                         </div>
