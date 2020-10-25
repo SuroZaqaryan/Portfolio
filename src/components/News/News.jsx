@@ -10,10 +10,10 @@ export class News extends React.Component {
     render() {
 
         const breakpointColumnsObj = {
-            default: 3,
-            1100: 3,
-            700: 2,
-            500: 1
+            default: 4,
+            1500: 3,
+            1050: 2,
+            750: 1
         };
 
         const newsList = this.props.news.map((post, index) => {
@@ -35,7 +35,7 @@ export class News extends React.Component {
                             post.urlToImage ?
                                 <>
                                     <a href={post.url} target="_blank">
-                                        <img className={news.image_url} src={post.urlToImage} alt=""/>
+                                        <img className={news.image_url} src={post.urlToImage} alt="" />
                                     </a>
 
                                     <div className="bottom-left-title"><p>{post.source.name}</p></div>
@@ -43,7 +43,7 @@ export class News extends React.Component {
                                 :
                                 <>
                                     <a href={post.url} target="_blank">
-                                        <img style={{maxWidth: '100%'}} src={post.urlToImage} alt=""/>
+                                        <img style={{ maxWidth: '100%' }} src={post.urlToImage} alt="" />
                                     </a>
 
                                     <div className="bottom-left-title dont-title-name"><p>{post.source.name}</p></div>
@@ -58,7 +58,7 @@ export class News extends React.Component {
                     </div>
 
                     <ShowMoreText lines={1} more='Show more' less='Show less' anchorClass='' expanded={false}
-                                  width={280}>
+                        width={280}>
                         {post.content}
                     </ShowMoreText>
                 </div>
@@ -68,7 +68,7 @@ export class News extends React.Component {
         return (
             <div className={news.headlineSecond}>
                 <div>
-                    <NavbarNewsContainer/>
+                    <NavbarNewsContainer />
                 </div>
                 <div className={news.content_size}>
                     <div>
@@ -88,7 +88,7 @@ export class News extends React.Component {
                                         <h2>Bitcoin</h2>
                                     </div>
                                     <div className={news.category_icon}>
-                                        <img src={Bitcoin} alt=""/>
+                                        <img src={Bitcoin} alt="" />
                                     </div>
                                 </div>
                             </div>

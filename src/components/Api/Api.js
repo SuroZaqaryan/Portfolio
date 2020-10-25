@@ -25,10 +25,10 @@ export const authAPI = {
 
 export const newsAPI = {
     getNews() {
-        return axios.get(`http://newsapi.org/v2/everything?q=bitcoin&from=2020-09-23&sortBy=publishedAt&apiKey=22acb0d726df43638b6f11de2ed1bf6d`);
+        return axios.get(`http://newsapi.org/v2/everything?q=bitcoin&sortBy=publishedAt&apiKey=c867f8e027f44cada97083bf1d5a8a86`);
     },
 
     getCountryNews() {
-        return axios.get(`http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=22acb0d726df43638b6f11de2ed1bf6d`);
+        return axios.get(`http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=c867f8e027f44cada97083bf1d5a8a86`);
     }
 }

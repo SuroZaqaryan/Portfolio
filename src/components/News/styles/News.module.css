@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap');
 
 .cover_news {
-    background: #ffffff;
+    background: #e6e6e647;
 }
 
 .author {
@@ -30,7 +30,7 @@
     align-items: center;
     border-top: 1px solid #c2c2c2a6;
     padding: 20px;
-    background-image: linear-gradient( 135deg, #5ec2fc 10%, #f65d5d 100%);
+    background-image: linear-gradient( 135deg, #63b7fc 10%, #ad5df6 100%);
     border-radius: 20px;
     justify-content: space-between;
 }
@@ -135,7 +135,7 @@
 
 .newsTitleDesign {
     max-width: 100%;
-    background-image: linear-gradient( 135deg, #5ec2fc 10%, #f65d5d 100%);
+    background-image: linear-gradient( 135deg, #63b7fc 10%, #ad5df6 100%);
     width: 370px;
     height: 160px;
     border-radius: 20px;
@@ -163,7 +163,7 @@
 }
 
 .banner {
-    background-image: url("../Icons_And_Backgrounds/Vector_Backgrounds/13574.jpg");
+    background-image: url("../Icons_And_Backgrounds/Vector_Backgrounds/2.png");
     border-radius: 20px;
     height: 255px;
     width: 70%;
@@ -174,4 +174,10 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+@media (max-width: 1200px) {
+    .newsTitleContent {
+        width: 95%;
+    }
 }
