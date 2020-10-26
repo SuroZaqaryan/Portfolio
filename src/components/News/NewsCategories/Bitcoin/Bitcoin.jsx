@@ -18,7 +18,8 @@ export class Bitcoin extends React.Component {
                     titleName: "Bitcoin",
                     icon: BitcoinImage,
                     banner: backgroundImage,
-                    bannerTitle: "Bitcoin"
+                    bannerTitle: "Bitcoin",
+                    left: "red",
                 }
             ]
         }
@@ -32,6 +33,7 @@ export class Bitcoin extends React.Component {
                             icon={item.icon}
                             banner={item.banner}
                             bannerTitle={item.bannerTitle}
+                            left={item.left}
                         />
                     );
                 }

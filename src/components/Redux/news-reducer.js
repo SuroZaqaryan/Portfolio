@@ -2,10 +2,12 @@ import { newsAPI } from '../Api/Api';
 
 const GET_NEWS = 'GET_NEWS';
 const GET_NEWS_COUNTRY = 'GET_NEWS_COUNTRY';
+const GET_APPLE = 'GET_APPLE';
 
 let initialState = {
     news: [],
     newsCountry: [],
+    newsApple: [],
 }
 
 export const newsReducer = (state = initialState, action) => {
@@ -22,6 +24,12 @@ export const newsReducer = (state = initialState, action) => {
             }
         }
 
+        case GET_APPLE: {
+            return {
+                ...state, newsApple: action.newsApple
+            }
+        }
+
         default:
             return state;
     }
@@ -33,6 +41,10 @@ export const newsAC = (news) => ({
 
 export const newsACountry = (newsCountry) => ({
     type: GET_NEWS_COUNTRY, newsCountry
+})
+
+export const newsApple = (newsApple) => ({
+    type: GET_APPLE, newsApple
 })
 
 
@@ -48,6 +60,14 @@ export const getNewsCountryThunk = () => {
     return (dispatch) => {
         newsAPI.getCountryNews().then(response => {
             dispatch(newsACountry(response.data.articles));
+        })
+    }
+}
+
+export const getNewsAppleThunk = () => {
+    return (dispatch) => {
+        newsAPI.getApple().then(response => {
+            dispatch(newsApple(response.data.articles));
         })
     }
 }
