@@ -6,7 +6,7 @@ import {NewsTitleCategory} from "../../NewsTitleCategory/NewsTitleCategory";
 import {NewsCover} from "../../NewsCover/NewsCover";
 import "../../styles/Masonry.css";
 import BitcoinImage from "../../Icons_And_Backgrounds/Icons/appleMulticolor.png";
-import backgroundImage from "../../Icons_And_Backgrounds/Vector_Backgrounds/Bitcoin.png";
+import backgroundImage from "../../Icons_And_Backgrounds/Vector_Backgrounds/3.jpg";
 
 export class Apple extends React.Component {
 
