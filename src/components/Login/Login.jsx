@@ -21,12 +21,11 @@ export const Login = (props) => {
                             </h1>
                             </div>
                             <div>
-                                <input placeholder="E-mail" type="text" />
-                                <input placeholder="Password" type="text" />
+                                <input className={LoginStyle.loginInputStyle} placeholder="E-mail" type="text" />
+                                <input className={LoginStyle.loginInputStyle} placeholder="Password" type="text" />
                             </div>
                             <div className={LoginStyle.checkbox}>
-                                <input type="checkbox" className={LoginStyle.checkboxInput} />
-
+                                <input type="checkbox" className={`${LoginStyle.checkboxInput} ${LoginStyle.loginInputStyle}`} />                               
                                 <label style={{ fontSize: '16px' }} htmlFor="vehicle1"> Remember me</label><br />
                             </div>
                             <div>

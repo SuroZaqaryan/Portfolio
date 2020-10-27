@@ -2,8 +2,8 @@ import React from "react";
 import "./TitleStyle.css";
 
 export const NewsTitleCategory = (props) => {
-
     return (
+
         <div className={"newsTitleContent"}>
             <div>
                 <div className={"newsTitleDesign"}>

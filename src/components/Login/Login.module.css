@@ -200,7 +200,7 @@ textarea:focus, input:focus{
 
 
 @media screen and (min-width: 500px) {
-    input[type=text], select, textarea {
+    .loginInputStyle, select, textarea {
         width: 500px;
         max-width: 100%;
         padding: 18px;
@@ -212,7 +212,7 @@ textarea:focus, input:focus{
 }
 
 @media screen and (max-width: 500px) {
-    input[type=text], select, textarea {
+    .loginInputStyle, select, textarea {
         width: 100%;
         max-width: 100%;
         padding: 18px;
