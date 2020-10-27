@@ -7,7 +7,8 @@ const GET_APPLE = 'GET_APPLE';
 let initialState = {
     news: [],
     newsCountry: [],
-    newsApple: [],
+    newsApple: [
+    ],
 }
 
 export const newsReducer = (state = initialState, action) => {

@@ -20,8 +20,15 @@ export class Apple extends React.Component {
                     banner: backgroundImage,
                     bannerTitle: "Apple",
                 }
-            ]
+            ],
+
+            search: null
         }
+    }
+
+    searchSpace = (event) => {
+        let keyword = event.target.value;
+        this.setState({search: keyword})
     }
 
     render() {
@@ -36,6 +43,7 @@ export class Apple extends React.Component {
                 );
             }
         )
+
         const breakpointColumnsObj = {
             default: 4,
             1500: 3,
@@ -43,22 +51,29 @@ export class Apple extends React.Component {
             750: 1
         };
 
-        const newsList = this.props.apple.map((post, index) => {
+        const newsList = this.props.apple.filter((data) => {
+            if (this.state.search == null) {
+                return data
+            } else if (data.title.toLowerCase().includes(this.state.search.toLowerCase())
+                || data.description.toLowerCase().includes(this.state.search.toLowerCase()) || data.source.name.toLowerCase().includes(this.state.search.toLowerCase())) {
+                return data
+            }
+        }).map(data => {
             return (
-                <div className={news.cover_news} key={index}>
+                <div className={news.cover_news}>
                     <NewsCover
-                        author={post.author}
-                        publishedAt={post.publishedAt}
-                        url={post.url}
-                        urlTitle={post.urlTitle}
-                        urlToImage={post.urlToImage}
-                        sourceName={post.source.name}
-                        title={post.title}
-                        description={post.description}
-                        content={post.content}
+                        author={data.author}
+                        publishedAt={data.publishedAt}
+                        url={data.url}
+                        urlTitle={data.urlTitle}
+                        urlToImage={data.urlToImage}
+                        sourceName={data.source.name}
+                        title={data.title}
+                        description={data.description}
+                        content={data.content}
                     />
                 </div>
-            );
+            )
         })
 
         return (
@@ -66,7 +81,12 @@ export class Apple extends React.Component {
                 <NavbarNewsContainer/>
                 <div className={news.content_size}>
                     <div>
+                        <div>
                         {bannerInfo}
+
+                            <input type="text" placeholder="Enter item to be searched"
+                                   onChange={(e) => this.searchSpace(e)}/>
+                        </div>
                         <div>
                             <Masonry breakpointCols={breakpointColumnsObj} className="my-masonry-grid"
                                      columnClassName="my-masonry-grid_column">
