@@ -82,7 +82,7 @@ export class Apple extends React.Component {
                 <NavbarNewsContainer />
                 <div className={news.content_size}>
                     <div>
-                        <div style={{width: "85%", margin: "auto", padding: "15px", padding: "15px 15px 7px 15px"}}>
+                        <div style={{width: "85%", margin: "auto", padding: "15px 15px 7px 15px"}}>
                                 {bannerInfo}
                             <div
                             style={{marginTop: "15px", borderTop: "1px solid #d7d7d7",paddingTop: "20px", alignItems: "center"}}>
