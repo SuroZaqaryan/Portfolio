@@ -81,18 +81,18 @@ export class Apple extends React.Component {
             <div className={news.headlineSecond}>
                 <NavbarNewsContainer />
                 <div className={news.content_size}>
-                    <div>
-                        <div style={{width: "85%", margin: "auto", padding: "15px 15px 7px 15px"}}>
-                                {bannerInfo}
+                    <div style={{width: "90%", margin: "auto"}}>
+                        <div style={{ margin: "auto", padding: "7px"}}>
+                            {bannerInfo}
                             <div
-                            style={{marginTop: "15px", borderTop: "1px solid #d7d7d7",paddingTop: "20px", alignItems: "center"}}>
+                                style={{ marginTop: "15px", borderTop: "1px solid #d7d7d7", paddingTop: "20px", alignItems: "center" }}>
                                 {/* <div style={{marginRight: "10px"}}>
                                     <img style={{width: "30px"}} src={Search} alt=""/>
                                 </div> */}
-                                <div style={{width: "100%", marginBotttom: "10px", display: "flex", justifyContent: "flex-end"}}>
-                                <img className={news.searchIcon} src={Search} alt=""/>
-                                <input type="text" className={news.search} 
-                                    onChange={(e) => this.searchSpace(e)} placeholder="Search news" />
+                                <div style={{ width: "100%", marginBotttom: "10px", display: "flex", justifyContent: "flex-end" }}>
+                                    <img className={news.searchIcon} src={Search} alt="" />
+                                    <input type="text" className={news.search}
+                                        onChange={(e) => this.searchSpace(e)} placeholder="Search news" />
                                 </div>
                             </div>
                         </div>

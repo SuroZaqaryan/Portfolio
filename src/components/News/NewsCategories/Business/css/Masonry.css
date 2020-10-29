@@ -6,13 +6,13 @@
   display: -ms-flexbox; /* Not needed if autoprefixing */
   display: flex;
   margin: 15px;
-  width: 85%;
   margin: auto;
   flex-wrap: wrap;
   margin-top: 15px;
 }
 .my-masonry-grid_column {
-  padding-left: 15px; /* gutter size */
+  padding-left: 7px; /* gutter size */
+  padding-right: 7px; /* gutter size */
   background-clip: padding-box;
 }
 
