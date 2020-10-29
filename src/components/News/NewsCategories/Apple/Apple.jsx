@@ -1,6 +1,7 @@
 import React from 'react';
 import news from '../../styles/News.module.css';
 import Masonry from "react-masonry-css";
+import '../../styles/news_Inside_block.css';
 import NavbarNewsContainer from "../../NavbarNews/NavbarNewsContainer";
 import {NewsTitleCategory} from "../../NewsTitleCategory/NewsTitleCategory";
 import {NewsCover} from "../../NewsCover/NewsCover";
@@ -23,7 +24,11 @@ export class Apple extends React.Component {
                 }
             ],
 
-            search: null
+            search: null,
+
+            BackgroundGradient: {
+                backgroundImage: "linear-gradient(109.6deg, #edc781 11.2%, #e3ac8e 52%, #f280b6 100.2%)",
+            },
         }
     }
 
@@ -40,6 +45,7 @@ export class Apple extends React.Component {
                         icon={item.icon}
                         banner={item.banner}
                         bannerTitle={item.bannerTitle}
+                        newsTitleDesignBackground={this.state.BackgroundGradient}
                     />
                 );
             }
@@ -72,6 +78,7 @@ export class Apple extends React.Component {
                         title={data.title}
                         description={data.description}
                         content={data.content}
+                        newsTitleDesign={data.newsTitleDesign}
                     />
                 </div>
             )
@@ -82,15 +89,10 @@ export class Apple extends React.Component {
                 <NavbarNewsContainer/>
                 <div className={news.content_size}>
                     <div style={{width: "90%", margin: "auto"}}>
-                        <div style={{margin: "auto", paddingLeft: "15px"}}>
+                        <div className={"headlineSearchBlock"}>
                             {bannerInfo}
-                            <div
-                                style={{
-                                    marginTop: "15px",
-                                    borderTop: "1px solid #d7d7d7",
-                                    paddingTop: "20px",
-                                    alignItems: "center"
-                                }}>
+                            <hr className={"hr"}/>
+                            <div className={"searchBlock"}>
                                 {/* <div style={{marginRight: "10px"}}>
                                     <img style={{width: "30px"}} src={Search} alt=""/>
                                 </div> */}
@@ -100,8 +102,8 @@ export class Apple extends React.Component {
                                     display: "flex",
                                     justifyContent: "flex-end"
                                 }}>
-                                    <img className={news.searchIcon} src={Search} alt=""/>
-                                    <input type="text" className={news.search}
+                                    <img className={"searchIcon"} src={Search} alt=""/>
+                                    <input type="text" className={"search"}
                                            onChange={(e) => this.searchSpace(e)} placeholder="Search news"/>
                                 </div>
                             </div>

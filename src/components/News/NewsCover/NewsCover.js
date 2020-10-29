@@ -44,8 +44,7 @@ export const NewsCover = (props) => {
                 <p className="description">{props.description}</p>
             </div>
 
-            <ShowMoreText lines={1} more='Show more' less='Show less' anchorClass='' expanded={false}
-                          width={280}>
+            <ShowMoreText lines={1} more='Show more' less='Show less' anchorClass='' expanded={false} width={280}>
                 {props.content}
             </ShowMoreText>
         </>

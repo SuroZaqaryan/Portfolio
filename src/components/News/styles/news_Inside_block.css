@@ -1,0 +1,32 @@
+.headlineSearchBlock {
+    padding-left: 15px;
+    margin-top: 20px;
+}
+
+.hr {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-top: 1px solid #d7d7d7;
+}
+
+.searchIcon {
+    width: 40px;
+    position: absolute;
+    min-width: 40px;
+    padding: 13px 10px 0px 10px;
+}
+
+.search {
+    padding: 16px;
+    border: 1px solid #9f9f9f;
+    border-radius: 4px;
+    resize: vertical;
+    width: 500px;
+    max-width: 100%;
+}
+
+@media (max-width: 1200px) {
+    .headlineSearchBlock {
+        width: 95%;
+    }
+}

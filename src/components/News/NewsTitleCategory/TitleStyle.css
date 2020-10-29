@@ -1,3 +1,8 @@
+.text {
+    font-size: 60px;
+    margin: 0;
+}
+
 .newsTitleContent {
     display: flex;
     justify-content: space-between;
@@ -5,15 +10,8 @@
     margin: auto;
 }
 
-@media (max-width: 1200px) {
-    .newsTitleContent {
-        width: 95%;
-    }
-}
-
 .newsTitleDesign {
     max-width: 100%;
-    background-image: linear-gradient( 135deg, #63a7fc 10%, #ad5df6 100%);
     width: 370px;
     height: 160px;
     border-radius: 20px;
@@ -28,6 +26,7 @@
 }
 
 .newsTitleDesign div h1 {
+    margin-bottom: 4px;
     font-family: 'Noto Sans TC', sans-serif;
     color: white;
     font-weight: 500;
@@ -50,7 +49,6 @@
     align-items: center;
     border-top: 1px solid #c2c2c2a6;
     padding: 20px;
-    background-image: linear-gradient( 135deg, #63a7fc 10%, #ad5df6 100%);
     border-radius: 20px;
     justify-content: space-between;
 }
@@ -76,7 +74,6 @@
 .banner {
     /*background-image: url("../Icons_And_Backgrounds/Vector_Backgrounds/2.png");*/
     border-radius: 20px;
-    height: 255px;
     width: 70%;
     margin-left: 40px;
     display: flex;
