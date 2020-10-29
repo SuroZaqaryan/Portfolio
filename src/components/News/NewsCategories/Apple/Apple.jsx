@@ -2,8 +2,8 @@ import React from 'react';
 import news from '../../styles/News.module.css';
 import Masonry from "react-masonry-css";
 import NavbarNewsContainer from "../../NavbarNews/NavbarNewsContainer";
-import { NewsTitleCategory } from "../../NewsTitleCategory/NewsTitleCategory";
-import { NewsCover } from "../../NewsCover/NewsCover";
+import {NewsTitleCategory} from "../../NewsTitleCategory/NewsTitleCategory";
+import {NewsCover} from "../../NewsCover/NewsCover";
 import "../../styles/Masonry.css";
 import BitcoinImage from "../../Icons_And_Backgrounds/Icons/appleMulticolor.png";
 import backgroundImage from "../../Icons_And_Backgrounds/Vector_Backgrounds/3.jpg";
@@ -29,20 +29,20 @@ export class Apple extends React.Component {
 
     searchSpace = (event) => {
         let keyword = event.target.value;
-        this.setState({ search: keyword })
+        this.setState({search: keyword})
     }
 
     render() {
         const bannerInfo = this.state.bannerInfo.map((item, index) => {
-            return (
-                <NewsTitleCategory
-                    titleName={item.titleName}
-                    icon={item.icon}
-                    banner={item.banner}
-                    bannerTitle={item.bannerTitle}
-                />
-            );
-        }
+                return (
+                    <NewsTitleCategory
+                        titleName={item.titleName}
+                        icon={item.icon}
+                        banner={item.banner}
+                        bannerTitle={item.bannerTitle}
+                    />
+                );
+            }
         )
 
         const breakpointColumnsObj = {
@@ -66,7 +66,7 @@ export class Apple extends React.Component {
                         author={data.author}
                         publishedAt={data.publishedAt}
                         url={data.url}
-                        urlTitle={data.urlTitle}
+                        urlTitle={data.url}
                         urlToImage={data.urlToImage}
                         sourceName={data.source.name}
                         title={data.title}
@@ -79,26 +79,36 @@ export class Apple extends React.Component {
 
         return (
             <div className={news.headlineSecond}>
-                <NavbarNewsContainer />
+                <NavbarNewsContainer/>
                 <div className={news.content_size}>
-                    <div style={{ width: "90%", margin: "auto" }}>
-                        <div style={{ margin: "auto", padding: "7px" }}>
+                    <div style={{width: "90%", margin: "auto"}}>
+                        <div style={{margin: "auto", paddingLeft: "15px"}}>
                             {bannerInfo}
                             <div
-                                style={{ marginTop: "15px", borderTop: "1px solid #d7d7d7", paddingTop: "20px", alignItems: "center" }}>
+                                style={{
+                                    marginTop: "15px",
+                                    borderTop: "1px solid #d7d7d7",
+                                    paddingTop: "20px",
+                                    alignItems: "center"
+                                }}>
                                 {/* <div style={{marginRight: "10px"}}>
                                     <img style={{width: "30px"}} src={Search} alt=""/>
                                 </div> */}
-                                <div style={{ width: "100%", marginBotttom: "10px", display: "flex", justifyContent: "flex-end" }}>
-                                    <img className={news.searchIcon} src={Search} alt="" />
+                                <div style={{
+                                    width: "100%",
+                                    marginBotttom: "10px",
+                                    display: "flex",
+                                    justifyContent: "flex-end"
+                                }}>
+                                    <img className={news.searchIcon} src={Search} alt=""/>
                                     <input type="text" className={news.search}
-                                        onChange={(e) => this.searchSpace(e)} placeholder="Search news" />
+                                           onChange={(e) => this.searchSpace(e)} placeholder="Search news"/>
                                 </div>
                             </div>
                         </div>
                         <div>
                             <Masonry breakpointCols={breakpointColumnsObj} className="my-masonry-grid"
-                                columnClassName="my-masonry-grid_column">
+                                     columnClassName="my-masonry-grid_column">
                                 {newsList}
                             </Masonry>
                         </div>

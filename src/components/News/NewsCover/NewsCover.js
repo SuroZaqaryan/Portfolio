@@ -31,14 +31,16 @@ export const NewsCover = (props) => {
                             <a href={props.url} target="_blank">
                                 <img style={{maxWidth: '100%'}} src={props.urlToImage} alt=""/>
                             </a>
-                            <div className="bottom-left-title dont-title-name"><p>{props.sourceName}</p></div>
+                            <div className="bottom-left-title dont-title-name">
+                                <p>{props.sourceName}</p>
+                            </div>
                         </>
                 }
 
             </div>
 
             <div className="title_description">
-                <a href={props.urlTitle} target="_blank" className="title">{props.title}</a>
+                <a href={props.url} target="_blank" className="title">{props.title}</a>
                 <p className="description">{props.description}</p>
             </div>
 

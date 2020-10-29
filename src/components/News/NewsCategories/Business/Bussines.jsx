@@ -83,7 +83,7 @@ export class Business extends React.Component {
                 <NavbarNewsContainer />
                 <div className={news.content_size}>
                     <div style={{ width: "90%", margin: "auto" }}>
-                        <div style={{ margin: "auto", padding: "7px" }}>
+                        <div style={{ margin: "auto", paddingLeft: "15px" }}>
                             {bannerInfo}
                             <div
                                 style={{ marginTop: "15px", borderTop: "1px solid #d7d7d7", paddingTop: "20px", alignItems: "center" }}>
