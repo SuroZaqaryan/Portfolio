@@ -41,6 +41,7 @@ export class Apple extends React.Component {
         const bannerInfo = this.state.bannerInfo.map((item, index) => {
                 return (
                     <NewsTitleCategory
+                        key={index}
                         titleName={item.titleName}
                         icon={item.icon}
                         banner={item.banner}

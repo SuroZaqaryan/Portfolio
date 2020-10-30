@@ -1,6 +1,8 @@
 import React from "react";
 import "./NavBarStyle.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {Gradient} from 'react-gradient';
+
 import {
     faAppleAlt,
     faChartBar,
@@ -14,14 +16,14 @@ import avatar from '../../../backgrounds/tt_avatar_small.jpg'
 
 export const NavBarNews = (props) => {
     return (
-        <div class="wrapper">
-            <div class="sidebar">
+        <div className="wrapper">
+            <div className="sidebar">
                 <div style={{textAlign: 'center'}}>
-                    <div style={{marginBottom: '10px'}}>
-                        <img style={{maxWidth: '100%', width: '55px', borderRadius: '100%'}} src={avatar} alt=""/>
+                    <div>
+                        <img style={{maxWidth: '100%', width: '60px', borderRadius: '100%'}} src={avatar} alt=""/>
                     </div>
                     <div>
-                        <h2>{props.login}</h2>
+                        <h2 className={"profileName"}>{props.login}</h2>
                     </div>
                 </div>
                 <ul>

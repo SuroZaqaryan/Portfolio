@@ -28,5 +28,6 @@
 @media (max-width: 1200px) {
     .headlineSearchBlock {
         width: 95%;
+        margin: auto;
     }
 }
