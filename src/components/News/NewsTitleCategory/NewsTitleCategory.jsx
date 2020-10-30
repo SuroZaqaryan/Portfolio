@@ -13,8 +13,8 @@ export class NewsTitleCategory extends React.Component {
     render() {
 
         return (
-            
-                <div className={"newsTitleContent"}>
+
+            <div className={"newsTitleContent"}>
                 <div>
                     <div style={this.props.newsTitleDesignBackground} className={"newsTitleDesign"}>
                         <div className={"title_banner"}>
@@ -46,7 +46,7 @@ export class NewsTitleCategory extends React.Component {
                     </div>
                 </div>
             </div>
-           
+
         );
     }
 

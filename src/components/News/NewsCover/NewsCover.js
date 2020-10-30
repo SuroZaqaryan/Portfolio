@@ -1,6 +1,6 @@
 import React from "react";
-import news from "../styles/News.module.css";
-import "./css/Masonry.css";
+import "../styles/Masonry.css"
+import "./style/NewsCover.css"
 import ShowMoreText from "react-show-more-text";
 
 export const NewsCover = (props) => {
@@ -21,7 +21,7 @@ export const NewsCover = (props) => {
                     props.urlToImage ?
                         <>
                             <a href={props.url} target="_blank">
-                                <img className={news.image_url} src={props.urlToImage} alt=""/>
+                                <img className={"image_url"} src={props.urlToImage} alt=""/>
                             </a>
 
                             <div className="bottom-left-title"><p>{props.sourceName}</p></div>

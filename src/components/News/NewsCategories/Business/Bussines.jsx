@@ -1,6 +1,6 @@
 import React from 'react';
 import news from '../../styles/News.module.css';
-import '../../styles/news_Inside_block.css';
+import '../../styles/Search.css';
 
 import Masonry from "react-masonry-css";
 import NavbarNewsContainer from "../../NavbarNews/NavbarNewsContainer";
@@ -41,16 +41,16 @@ export class Business extends React.Component {
 
     render() {
         const bannerInfo = this.state.bannerInfo.map((item, index) => {
-            return (
-                <NewsTitleCategory
-                    titleName={item.titleName}
-                    icon={item.icon}
-                    banner={item.banner}
-                    bannerTitle={item.bannerTitle}
-                    newsTitleDesignBackground={this.state.BackgroundGradient}
-                />
-            );
-        }
+                return (
+                    <NewsTitleCategory
+                        titleName={item.titleName}
+                        icon={item.icon}
+                        banner={item.banner}
+                        bannerTitle={item.bannerTitle}
+                        newsTitleDesignBackground={this.state.BackgroundGradient}
+                    />
+                );
+            }
         )
 
         const breakpointColumnsObj = {
@@ -92,7 +92,7 @@ export class Business extends React.Component {
                     <div style={{ width: "90%", margin: "auto" }}>
                         <div className={"headlineSearchBlock"}>
                             {bannerInfo}
-                            <hr className={"hr"}/>
+                            <hr className={news.hr}/>
                             <div className={"searchBlock"}>
                                 {/* <div style={{marginRight: "10px"}}>
                                     <img style={{width: "30px"}} src={Search} alt=""/>
@@ -100,13 +100,13 @@ export class Business extends React.Component {
                                 <div style={{ width: "100%", marginBotttom: "10px", display: "flex", justifyContent: "flex-end" }}>
                                     <img className={"searchIcon"} src={Search} alt="" />
                                     <input type="text" className={"search"}
-                                        onChange={(e) => this.searchSpace(e)} placeholder="Search news" />
+                                           onChange={(e) => this.searchSpace(e)} placeholder="Search news" />
                                 </div>
                             </div>
                         </div>
                         <div>
                             <Masonry breakpointCols={breakpointColumnsObj} className="my-masonry-grid"
-                                columnClassName="my-masonry-grid_column">
+                                     columnClassName="my-masonry-grid_column">
                                 {newsList}
                             </Masonry>
                         </div>
@@ -116,4 +116,3 @@ export class Business extends React.Component {
         );
     }
 }
-

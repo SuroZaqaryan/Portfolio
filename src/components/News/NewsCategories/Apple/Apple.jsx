@@ -1,7 +1,7 @@
 import React from 'react';
 import news from '../../styles/News.module.css';
 import Masonry from "react-masonry-css";
-import '../../styles/news_Inside_block.css';
+import '../../styles/Search.css';
 import NavbarNewsContainer from "../../NavbarNews/NavbarNewsContainer";
 import {NewsTitleCategory} from "../../NewsTitleCategory/NewsTitleCategory";
 import {NewsCover} from "../../NewsCover/NewsCover";
@@ -92,7 +92,7 @@ export class Apple extends React.Component {
                     <div style={{width: "90%", margin: "auto"}}>
                         <div className={"headlineSearchBlock"}>
                             {bannerInfo}
-                            <hr className={"hr"}/>
+                            <hr className={news.hr}/>
                             <div className={"searchBlock"}>
                                 {/* <div style={{marginRight: "10px"}}>
                                     <img style={{width: "30px"}} src={Search} alt=""/>
@@ -121,4 +121,3 @@ export class Apple extends React.Component {
         );
     }
 }
-

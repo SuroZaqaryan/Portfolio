@@ -3,12 +3,6 @@
     margin-top: 20px;
 }
 
-.hr {
-    margin-top: 15px;
-    margin-bottom: 15px;
-    border-top: 1px solid #d7d7d7;
-}
-
 .searchIcon {
     width: 40px;
     position: absolute;
@@ -23,11 +17,4 @@
     resize: vertical;
     width: 500px;
     max-width: 100%;
-}
-
-@media (max-width: 1200px) {
-    .headlineSearchBlock {
-        width: 95%;
-        margin: auto;
-    }
 }

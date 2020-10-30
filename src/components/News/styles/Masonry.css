@@ -1,14 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
-
 .my-masonry-grid {
   display: -webkit-box; /* Not needed if autoprefixing */
   display: -ms-flexbox; /* Not needed if autoprefixing */
   display: flex;
-  margin: 15px;
-  margin: auto;
+  margin: 15px auto;
   flex-wrap: wrap;
-  margin-top: 15px;
 }
 .my-masonry-grid_column {
   padding-left: 15px; /* gutter size */
@@ -18,8 +13,7 @@
 /* Style your items */
 .my-masonry-grid_column > div { /* change div to reference your elements you put in <Masonry> */
   margin-bottom: 30px;
-  padding: 25px;
-  padding-top: 20px;
+  padding: 20px 25px 25px 25px;
   border-radius: 1px;
   border: 1px solid #b4b4b4;
 }
@@ -34,76 +28,6 @@
   .my-masonry-grid_column > div {
     margin-bottom: 15px; /* space between items */
   }
-}
-
-.Author_And_Data {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  line-height: 1.7;
-  align-items: center;
-  margin-bottom: 15px;
-}
-
-.author {
-  font-size: 14px;
-  color: #41a4ff;
-}
-
-.author p {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-}
-
-.publishedAt {
-  font-size: 12px;
-  color: #969696;
-}
-
-.title_description {
-  margin-top: 15px;
-}
-
-.title {
-  font-family: 'Noto Sans JP', sans-serif;
-  font-weight: 500;
-  margin-bottom: 15px;
-  color: #282828;
-  font-size: 16px;
-}
-
-.title:hover {
-  text-decoration: underline;
-  -webkit-text-decoration-color: #4d4d4d; /* Safari */
-  text-decoration-color: #4d4d4d;
-  transition: 0.3s ease;
-}
-
-.title:hover {
-  color: black;
-}
-
-.description {
-  margin-bottom: 10px;
-  letter-spacing: 0.5px;
-}
-
-.container {
-  position: relative;
-  text-align: center;
-  color: white;
-}
-
-.bottom-left-title {
-  position: absolute;
-  bottom: 0px;
-  background: #000000a8;
-  padding: 6px 11px 6px 11px;
-  font-size: 14px;
-}
-
-.dont-title-name {
-  position: static;
 }
 
 @media only screen and (max-width: 800px) {
