@@ -34,5 +34,9 @@ export const newsAPI = {
 
     getApple() {
         return axios.get(`http://newsapi.org/v2/everything?q=apple&from=2020-10-25&to=2020-10-25&sortBy=popularity&apiKey=22acb0d726df43638b6f11de2ed1bf6d`);
+    },
+
+    getTechCrunch() {
+        return axios.get(`http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=c867f8e027f44cada97083bf1d5a8a86`);
     }
 }

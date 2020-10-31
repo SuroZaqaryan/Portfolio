@@ -18,7 +18,7 @@ class AppleContainer extends React.Component {
 
 let mapStateToProps = (state) => {
     return {
-        apple: state.news.newsApple,
+        apple: state.news.News_Apple,
     }
 }
 

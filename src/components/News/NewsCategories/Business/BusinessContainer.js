@@ -18,7 +18,7 @@ class BusinesContainer extends React.Component {
 
 let mapStateToProps = (state) => {
     return {
-        newsCountry: state.news.newsCountry,
+        newsCountry: state.news.News_Country,
     }
 }
 

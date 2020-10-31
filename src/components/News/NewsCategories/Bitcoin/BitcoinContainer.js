@@ -3,7 +3,7 @@ import {Bitcoin} from "./Bitcoin";
 import {getNewsThunk} from "../../../Redux/news-reducer";
 import {connect} from "react-redux";
 
-class NewsContainer extends React.Component {
+class BitcoinContainer extends React.Component {
 
     componentDidMount() {
         this.props.getNewsThunk();
@@ -18,8 +18,8 @@ class NewsContainer extends React.Component {
 
 let mapStateToProps = (state) => {
     return {
-        news: state.news.news,
+        news: state.news.News_Bitcoin,
     }
 }
 
-export default connect(mapStateToProps, {getNewsThunk})(NewsContainer);
+export default connect(mapStateToProps, {getNewsThunk})(BitcoinContainer);

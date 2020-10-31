@@ -5,10 +5,11 @@ import Route from "react-router-dom/es/Route";
 import { Header } from './components/Header/Header';
 import ContentContainer from './components/Content/ContentContainer';
 import ProfileContainer from "./components/Profile/ProfileContainer";
-import NewsContainer from "./components/News/NewsCategories/Bitcoin/NewsContainer";
+import NewsContainer from "./components/News/NewsCategories/Bitcoin/BitcoinContainer";
 import './index.css'
 import BusinessContainer from "./components/News/NewsCategories/Business/BusinessContainer";
 import AppleContainer from "./components/News/NewsCategories/Apple/AppleContainer";
+import TechCrunchContainer from "./components/News/NewsCategories/TechCrunch/TechCrunchContainer";
 
 function App() {
     return (
@@ -20,6 +21,7 @@ function App() {
             <Route path='/Bitcoin' render={() => <NewsContainer /> }/>
             <Route path='/Business' render={() => <BusinessContainer />}/>
             <Route path='/Apple' render={() => <AppleContainer />}/>
+            <Route path='/TechCrunch' render={() => <TechCrunchContainer />}/>
         </div>
     );
 }
