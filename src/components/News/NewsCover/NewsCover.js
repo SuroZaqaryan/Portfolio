@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/Masonry.css"
 import "./style/NewsCover.css"
 import ShowMoreText from "react-show-more-text";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export const NewsCover = (props) => {
     return (
@@ -29,7 +30,7 @@ export const NewsCover = (props) => {
                         :
                         <>
                             <a href={props.url} target="_blank">
-                                <img style={{maxWidth: '100%'}} src={props.urlToImage} alt=""/>
+                                <LazyLoadImage style={{maxWidth: "100%"}} src={props.urlToImage} />
                             </a>
                             <div className="bottom-left-title dont-title-name">
                                 <p>{props.sourceName}</p>

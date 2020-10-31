@@ -11,7 +11,6 @@ import backgroundImage from "../../Icons_And_Backgrounds/Vector_Backgrounds/3.jp
 import Search from "../../Icons_And_Backgrounds/Icons/search.png"
 
 export class Apple extends React.Component {
-
     constructor() {
         super();
         this.state = {
@@ -62,8 +61,9 @@ export class Apple extends React.Component {
         const newsList = this.props.apple.filter((data) => {
             if (this.state.search == null) {
                 return data
-            } else if (data.title.toLowerCase().includes(this.state.search.toLowerCase())
-                || data.description.toLowerCase().includes(this.state.search.toLowerCase()) || data.source.name.toLowerCase().includes(this.state.search.toLowerCase())) {
+            }   else if (data.title.toLowerCase().includes(this.state.search.toLowerCase())
+                || data.description.toLowerCase().includes(this.state.search.toLowerCase())
+                || data.source.name.toLowerCase().includes(this.state.search.toLowerCase())) {
                 return data
             }
         }).map(data => {

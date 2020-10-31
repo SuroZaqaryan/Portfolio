@@ -6,9 +6,9 @@ import NavbarNewsContainer from "../../NavbarNews/NavbarNewsContainer";
 import {NewsTitleCategory} from "../../NewsTitleCategory/NewsTitleCategory";
 import {NewsCover} from "../../NewsCover/NewsCover";
 import "../../styles/Masonry.css";
-import BitcoinImage from "../../Icons_And_Backgrounds/Icons/appleMulticolor.png";
-import backgroundImage from "../../Icons_And_Backgrounds/Vector_Backgrounds/Covid-19.jpg";
+import BitcoinImage from "../../Icons_And_Backgrounds/Icons/fingerprint.png";
 import Search from "../../Icons_And_Backgrounds/Icons/search.png"
+import backgroundImage from "../../Icons_And_Backgrounds/Vector_Backgrounds/3396.jpg";
 
 export class TechCrunch extends React.Component {
 
@@ -25,9 +25,8 @@ export class TechCrunch extends React.Component {
             ],
 
             search: null,
-
             BackgroundGradient: {
-                backgroundImage: "linear-gradient(109.6deg, #edc781 11.2%, #e3ac8e 52%, #f280b6 100.2%)",
+                backgroundImage: "linear-gradient(109.6deg, #eaa1c3 11.2%, #d5a398 52%, #fad581 100.2%)",
             },
         }
     }

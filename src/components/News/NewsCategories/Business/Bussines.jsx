@@ -74,12 +74,13 @@ export class Business extends React.Component {
                         author={data.author}
                         publishedAt={data.publishedAt}
                         url={data.url}
-                        urlTitle={data.urlTitle}
+                        urlTitle={data.url}
                         urlToImage={data.urlToImage}
                         sourceName={data.source.name}
                         title={data.title}
                         description={data.description}
                         content={data.content}
+                        newsTitleDesign={data.newsTitleDesign}
                     />
                 </div>
             )
