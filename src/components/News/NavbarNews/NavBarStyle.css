@@ -45,6 +45,11 @@ body{
   border-top: 1px solid rgba(255,255,255,0.05);
 }
 
+.wrapper .sidebar ul li:hover {
+  background: #262a33;
+  transition: 0.2s;
+}
+
 .wrapper .sidebar ul li a{
   color: #e0e0e0;
   display: block;
