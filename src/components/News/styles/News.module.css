@@ -15,13 +15,16 @@
     margin-left: 170px;
 }
 
+.content_inside_size {
+    width: 90%;
+    margin: auto;
+}
+
 .hr {
     margin-top: 15px;
     margin-bottom: 15px;
     border-top: 1px solid #d7d7d7;
 }
-
-/* */
 
 .author {
     max-width: 100%;
@@ -90,4 +93,20 @@
 .Second {
     margin: auto;
     margin-top: 0;
+}
+
+/* Mobile */
+
+@media only screen and (max-width: 850px) {
+    .headlineSecond {
+        display: block;
+    }
+
+    .content_size {
+        margin-left: 0px;
+    }
+
+    .content_inside_size {
+        width: 95%;
+    }
 }

@@ -55,7 +55,7 @@ export class Apple extends React.Component {
             default: 4,
             1500: 3,
             1060: 2,
-            750: 1
+            620: 1
         };
 
         const newsList = this.props.apple.filter((data) => {
@@ -89,7 +89,7 @@ export class Apple extends React.Component {
             <div className={news.headlineSecond}>
                 <NavbarNewsContainer/>
                 <div className={news.content_size}>
-                    <div style={{width: "90%", margin: "auto"}}>
+                    <div className={news.content_inside_size}>
                         <div className={"headlineSearchBlock"}>
                             {bannerInfo}
                             <hr className={news.hr}/>

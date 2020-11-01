@@ -56,8 +56,8 @@ export class Bitcoin extends React.Component {
         const breakpointColumnsObj = {
             default: 4,
             1500: 3,
-            1060: 2,
-            750: 1
+            1100: 2,
+            620: 1
         };
 
         const newsList = this.props.news.filter((data) => {
@@ -89,7 +89,7 @@ export class Bitcoin extends React.Component {
             <div className={news.headlineSecond}>
                 <NavbarNewsContainer />
                 <div className={news.content_size}>
-                    <div style={{ width: "90%", margin: "auto" }}>
+                    <div className={news.content_inside_size}>
                         <div className={"headlineSearchBlock"}>
                             {bannerInfo}
                             <hr className={news.hr}/>

@@ -3,8 +3,8 @@ import news from '../../styles/News.module.css';
 import Masonry from "react-masonry-css";
 import '../../styles/Search.css';
 import NavbarNewsContainer from "../../NavbarNews/NavbarNewsContainer";
-import {NewsTitleCategory} from "../../NewsTitleCategory/NewsTitleCategory";
-import {NewsCover} from "../../NewsCover/NewsCover";
+import { NewsTitleCategory } from "../../NewsTitleCategory/NewsTitleCategory";
+import { NewsCover } from "../../NewsCover/NewsCover";
 import "../../styles/Masonry.css";
 import BitcoinImage from "../../Icons_And_Backgrounds/Icons/fingerprint.png";
 import Search from "../../Icons_And_Backgrounds/Icons/search.png"
@@ -26,36 +26,36 @@ export class TechCrunch extends React.Component {
 
             search: null,
             BackgroundGradient: {
-                backgroundImage: "linear-gradient(109.6deg, #eaa1c3 11.2%, #d5a398 52%, #fad581 100.2%)",
+                backgroundImage: "linear-gradient(109.6deg, #cfc4f7 11.2%, #9aa3ee 52%, #9dcaea 100.2%)",
             },
         }
     }
 
     searchSpace = (event) => {
         let keyword = event.target.value;
-        this.setState({search: keyword})
+        this.setState({ search: keyword })
     }
 
     render() {
         const bannerInfo = this.state.bannerInfo.map((item, index) => {
-                return (
-                    <NewsTitleCategory
-                        key={index}
-                        titleName={item.titleName}
-                        icon={item.icon}
-                        banner={item.banner}
-                        bannerTitle={item.bannerTitle}
-                        newsTitleDesignBackground={this.state.BackgroundGradient}
-                    />
-                );
-            }
+            return (
+                <NewsTitleCategory
+                    key={index}
+                    titleName={item.titleName}
+                    icon={item.icon}
+                    banner={item.banner}
+                    bannerTitle={item.bannerTitle}
+                    newsTitleDesignBackground={this.state.BackgroundGradient}
+                />
+            );
+        }
         )
 
         const breakpointColumnsObj = {
             default: 4,
             1500: 3,
             1060: 2,
-            750: 1
+            620: 1
         };
 
         const newsList = this.props.TechCrunch.filter((data) => {
@@ -86,12 +86,12 @@ export class TechCrunch extends React.Component {
 
         return (
             <div className={news.headlineSecond}>
-                <NavbarNewsContainer/>
+                <NavbarNewsContainer />
                 <div className={news.content_size}>
-                    <div style={{width: "90%", margin: "auto"}}>
+                    <div className={news.content_inside_size}>
                         <div className={"headlineSearchBlock"}>
                             {bannerInfo}
-                            <hr className={news.hr}/>
+                            <hr className={news.hr} />
                             <div className={"searchBlock"}>
                                 {/* <div style={{marginRight: "10px"}}>
                                     <img style={{width: "30px"}} src={Search} alt=""/>
@@ -102,15 +102,15 @@ export class TechCrunch extends React.Component {
                                     display: "flex",
                                     justifyContent: "flex-end"
                                 }}>
-                                    <img className={"searchIcon"} src={Search} alt=""/>
+                                    <img className={"searchIcon"} src={Search} alt="" />
                                     <input type="text" className={"search"}
-                                           onChange={(e) => this.searchSpace(e)} placeholder="Search news"/>
+                                        onChange={(e) => this.searchSpace(e)} placeholder="Search news" />
                                 </div>
                             </div>
                         </div>
                         <div>
                             <Masonry breakpointCols={breakpointColumnsObj} className="my-masonry-grid"
-                                     columnClassName="my-masonry-grid_column">
+                                columnClassName="my-masonry-grid_column">
                                 {newsList}
                             </Masonry>
                         </div>

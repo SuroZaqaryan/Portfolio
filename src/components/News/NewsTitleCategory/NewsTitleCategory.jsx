@@ -15,7 +15,7 @@ export class NewsTitleCategory extends React.Component {
         return (
 
             <div className={"newsTitleContent"}>
-                <div>
+                <div className={"newsTitle_Inside_Content"}>
                     <div style={this.props.newsTitleDesignBackground} className={"newsTitleDesign"}>
                         <div className={"title_banner"}>
                             <h1>Daily News</h1>
@@ -37,12 +37,7 @@ export class NewsTitleCategory extends React.Component {
 
                 <div className={"banner"} style={{ backgroundImage: `url(${this.props.banner})` }}>
                     <div style={{ width: '100%', textAlign: 'center' }}>
-                        <h1 style={{
-                            color: 'white',
-                            fontSize: '50px',
-                            background: "rgb(0 0 0 / 16%)",
-                            padding: '13px'
-                        }}>{this.props.bannerTitle}</h1>
+                        <h1>{this.props.bannerTitle}</h1>
                     </div>
                 </div>
             </div>
