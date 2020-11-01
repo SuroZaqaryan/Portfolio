@@ -137,6 +137,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0px 20px 0px 20px;
   }
 
   .wrapper .sidebar {
@@ -164,7 +165,7 @@ body{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 13px 0px;
+    padding: 15px 15px 12px 25px;
     position: static;
   }
 
@@ -174,6 +175,9 @@ body{
 
   .my-masonry-grid_column, .headlineSearchBlock {
     padding-left: 0;
+    padding: 15px;
+    padding-top: 0;
+    padding-right: 5px;
   }
 
   .login_name {
