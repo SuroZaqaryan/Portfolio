@@ -1,0 +1,39 @@
+.wrapper_home {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../../../Icons_And_Backgrounds/Vector_Backgrounds/bgWrapper.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.content_home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.firstColumn, .secondColumn, .thirdColumn {
+    margin: 10px;
+}
+
+.firstColumn {
+    flex: 1;
+    background: red;
+}
+
+.secondColumn {
+    flex: 2;
+    background: orange;
+}
+
+.thirdColumn {
+    flex: 2;
+    background: #1cb5e0;
+}
+
+.bg {
+    width: 300px;
+    max-width: 100%;
+}

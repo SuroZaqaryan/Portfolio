@@ -176,14 +176,22 @@ body{
 
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 420px) {
+  .my-masonry-grid_column, .headlineSearchBlock {
+    padding: 5px;
+  }
+}
 
+@media screen and (max-width: 850px) and (min-width: 420px) {
   .my-masonry-grid_column, .headlineSearchBlock {
     padding-left: 0;
     padding: 15px;
     padding-top: 0;
     padding-right: 5px;
   }
+}
+
+@media only screen and (max-width: 850px) {
 
   .login_name {
     display: none;
