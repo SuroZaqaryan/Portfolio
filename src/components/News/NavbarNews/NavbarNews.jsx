@@ -67,7 +67,7 @@ export const NavBarNews = (props) => {
                 >
                     <ul className="navbar">
                         <li>
-                            <NavLink to={"/Home"}>
+                            <NavLink to={"/content"}>
                                 <FontAwesomeIcon className="navbarIcon" icon={faHome}/>Home
                             </NavLink>
                         </li>

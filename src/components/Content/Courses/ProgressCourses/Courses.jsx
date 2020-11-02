@@ -20,7 +20,7 @@ export class Courses extends React.Component {
 
                     progress: {
                         completed: 60,
-                        bgcolor: "#f6c54f"
+                        bgcolor: "#ff7816cf"
                     }
                 },
                 {
@@ -29,7 +29,7 @@ export class Courses extends React.Component {
 
                     progress: {
                         completed: 45,
-                        bgcolor: "#ABFD7E"
+                        bgcolor: "#46a5f0"
                     }
                 },
                 {
@@ -38,7 +38,7 @@ export class Courses extends React.Component {
 
                     progress: {
                         completed: 75,
-                        bgcolor: "#FD7E7E"
+                        bgcolor: "#f6c54f"
                     }
                 },
                 {
@@ -47,16 +47,16 @@ export class Courses extends React.Component {
 
                     progress: {
                         completed: 35,
-                        bgcolor: "#83CAFF"
+                        bgcolor: "#1ec6e4"
                     }
                 },
                 {
-                    languageName: "Swift",
+                    languageName: "Node JS",
                     img: Node,
 
                     progress: {
                         completed: 40,
-                        bgcolor: "#4EB328"
+                        bgcolor: "#6dac5c"
                     }
                 },
                 {
@@ -65,7 +65,7 @@ export class Courses extends React.Component {
 
                     progress: {
                         completed: 55,
-                        bgcolor: "#fc8b2c"
+                        bgcolor: "#ffa375"
                     }
                 },
             ]
