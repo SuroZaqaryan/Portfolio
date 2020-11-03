@@ -14,7 +14,7 @@ export const Navbar = (props) => {
                 <header>
                     <div style={{flex: '1'}}>
                         <a className={n.logo} href="/#">
-                            <img style={{margin: 'auto', marginTop: '3px', width: "150px", maxWidth: "100%"}} src={logo} alt="logo"/>
+                            <img style={{margin: 'auto', marginTop: "0", width: "150px", maxWidth: "100%"}} src={logo} alt="logo"/>
                         </a>
                     </div>
                     <div style={{flex: '1'}}>

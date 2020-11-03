@@ -6,6 +6,7 @@ import JavaScript from "./LanguagesIcons/javascript.png"
 import ReactImage from "./LanguagesIcons/react.png"
 import Node from "./LanguagesIcons/nodejs.png"
 import swift from "./LanguagesIcons/swift.png"
+import php from "./LanguagesIcons/php.png"
 
 import ProgressBar from '@ramonak/react-progress-bar';
 
@@ -66,6 +67,15 @@ export class Courses extends React.Component {
                     progress: {
                         completed: 55,
                         bgcolor: "#ffa375"
+                    }
+                },
+                {
+                    languageName: "PHP",
+                    img: php,
+
+                    progress: {
+                        completed: 25,
+                        bgcolor: "#7489cf"
                     }
                 },
             ]

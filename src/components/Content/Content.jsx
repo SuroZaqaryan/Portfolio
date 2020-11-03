@@ -6,6 +6,7 @@ import {Courses} from "./Courses/ProgressCourses/Courses";
 import {Achievements} from "./Achievements/Achievements";
 import {AboutInfo} from "./About_App/About_Info";
 import {ContentCourses} from "./Courses/ContentCourses/ContentCourses";
+import {ImageGallery} from "./Courses/Ilustration_Images/ImageGallery";
 
 export class Content extends React.Component {
 
@@ -26,11 +27,21 @@ export class Content extends React.Component {
                             <p>My Courses</p>
                         </div>
 
-                        <Courses/>
+                        <div>
+                            <Courses/>
+                        </div>
+
+                        <div>
+                            <ImageGallery />
+                        </div>
                     </div>
 
                     <div style={{flex: '3', marginLeft: '25px'}}>
                         <ContentCourses/>
+
+                        <div style={{marginTop: "83px"}}>
+                            <hr/>
+                        </div>
 
                         <div className={ContentStyle.centerColumn}>
 

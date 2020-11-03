@@ -75,6 +75,7 @@ export class Achievements extends React.Component {
             ],
         }
     }
+
     render() {
 
         const resultsRender = [];
@@ -85,37 +86,36 @@ export class Achievements extends React.Component {
                     {
                         this.state.CoursesPage.slice(i, i + 2)
                             .map((user, index) => {
-                                return(
-                                    <div key={index}>
-                                        <div className={`${"card"} ${user.cardColorStyle}`}>
-                                            <div className="card__image_container">
-                                                <img src={user.img} alt="Eevee" className="card__image" />
-                                            </div>
-                                            <figcaption className="card__caption">
-                                                <h1 className="card__name">{user.cardName}</h1>
-
-                                                <h4 className="card__type">{user.cardType}</h4>
-
-                                                <table className="card__stats">
-                                                    <tbody>
-                                                    <tr>
-                                                        <th><p className="card__info">{user.cardInfo}</p></th>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-
-                                                <div className="card__abilities">
-                                                    <h4 className="card__ability">
-                                                        <span className="card__label">{user.Ability}</span>
-                                                        <p className="card__label__info">{user.cardLabelInfo}</p>
-                                                    </h4>
+                                    return (
+                                        <div key={index}>
+                                            <div className={`${"card"} ${user.cardColorStyle}`}>
+                                                <div className="card__image_container">
+                                                    <img src={user.img} alt="Eevee" className="card__image"/>
                                                 </div>
-                                            </figcaption>
-                                        </div>
-                                    </div>
-                                );
-                                }
+                                                <figcaption className="card__caption">
+                                                    <h1 className="card__name">{user.cardName}</h1>
 
+                                                    <h4 className="card__type">{user.cardType}</h4>
+
+                                                    <table className="card__stats">
+                                                        <tbody>
+                                                        <tr>
+                                                            <th><p className="card__info">{user.cardInfo}</p></th>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+
+                                                    <div className="card__abilities">
+                                                        <h4 className="card__ability">
+                                                            <span className="card__label">{user.Ability}</span>
+                                                            <p className="card__label__info">{user.cardLabelInfo}</p>
+                                                        </h4>
+                                                    </div>
+                                                </figcaption>
+                                            </div>
+                                        </div>
+                                    );
+                                }
                             )
                     }
                 </div>
@@ -130,7 +130,7 @@ export class Achievements extends React.Component {
                     </div>
 
                     <div className="iconBannerBlock">
-                        <img src={achievements} alt="" />
+                        <img src={achievements} alt=""/>
                     </div>
                 </div>
 
