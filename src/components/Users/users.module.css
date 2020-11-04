@@ -44,10 +44,31 @@
 }
 
 .subscribeContainer {
+    margin-top: 4px;
 }
 
+.follow {
+    background-image: linear-gradient( 135deg, #fe7979 10%, #f08c51 80%);
+}
+
+.follow:hover {
+    background-image: linear-gradient( 135deg, #da8383 10%, #f08c51 80%);
+    transition: 0.3s ease;
+}
+
+.unfollow {
+    background-image: linear-gradient( 135deg, #f5cb66 10%, #d7a52c 100%);
+}
+
+.unfollow:hover {
+    background-image: linear-gradient( 135deg, #ffd05d 10%, #d7a52c 80%);
+    transition: 0.3s ease;
+}
+
+
 .subscribeContainer div button {
-  background-image: linear-gradient( 135deg, #9c94fb 10%, #7e73f9 100%);
+  outline: none;
+  cursor: pointer;
   color: white;
   border-radius: 20px;
   padding: 7px 15px 5px 15px;

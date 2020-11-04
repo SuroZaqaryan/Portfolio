@@ -5,7 +5,6 @@ import UsersContainer from "../Users/UsersContainer";
 import {Courses} from "./Courses/ProgressCourses/Courses";
 import {AboutInfo} from "./About_App/About_Info";
 import {ContentCourses} from "./Courses/ContentCourses/ContentCourses";
-import {ImageGallery} from "./Courses/Ilustration_Images/ImageGallery";
 
 export class Content extends React.Component {
 
@@ -29,29 +28,12 @@ export class Content extends React.Component {
                         <div>
                             <Courses/>
                         </div>
-
-                        <div>
-                            <ImageGallery />
-                        </div>
                     </div>
 
                     <div style={{flex: '3', marginLeft: '25px'}}>
                         <ContentCourses/>
-
-                        <div style={{marginTop: "83px"}}>
-                            <hr/>
-                        </div>
-
-                        <div className={ContentStyle.centerColumn}>
-                            <div>
-                                <AboutInfo/>
-                            </div>
-                        </div>
                     </div>
                     <div className={ContentStyle.rightColumn}>
-                        <div>
-                            <p style={{textAlign: 'left', fontWeight: '600'}}>Popular users</p>
-                        </div>
                         <UsersContainer/>
                     </div>
                 </div>

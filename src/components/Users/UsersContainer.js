@@ -1,7 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import {Users} from './Users';
-import {getUsers, setCurrentPage, setTotalUsersCount, setUsers} from "../Redux/users-reducer";
+import {
+    followThunk,
+    getUsers,
+    setCurrentPage,
+    setTotalUsersCount,
+    setUsers,
+    unfollowThunk
+} from "../Redux/users-reducer";
 
 class UsersContainer extends React.Component {
 
@@ -25,7 +32,8 @@ class UsersContainer extends React.Component {
 
         return(
             <>
-                <Users {...this.props} {...this.props.user} onPageChanged={this.onPageChanged}/>
+                <Users {...this.props} {...this.props.user} onPageChanged={this.onPageChanged}
+                       follow={this.props.followThunk} unfollow={this.props.unfollowThunk}/>
             </>
         )
     }
@@ -38,4 +46,4 @@ let mapStateToProps = (state) => ({
     pageSize: state.usersPage.pageSize,
 })
 
-export default connect(mapStateToProps, {getUsers, setCurrentPage, setTotalUsersCount, setUsers})(UsersContainer);
+export default connect(mapStateToProps, {getUsers, setCurrentPage, setTotalUsersCount, setUsers, followThunk, unfollowThunk})(UsersContainer);
