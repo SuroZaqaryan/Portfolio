@@ -1,0 +1,84 @@
+.navbarProfileUl {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.navbarProfileUl li {
+    float: left;
+}
+
+.navbarProfileUl li a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 12px;
+    text-decoration: none;
+}
+
+.navbarProfileUl li a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+.navbarProfileUl li a.active {
+    color: white;
+    background-color: #4CAF50;
+}
+
+.profileContainer {
+    display: flex;
+    height: 100vh;
+}
+
+.firstProfileColumn {
+    flex: 1 100px;
+    height: 100%;
+    background: #f2dcdc;
+}
+
+.profileAccountInfo {
+    display: flex;
+    margin-top: 35px;
+
+}
+
+.insideProfileColumn {
+    margin: 10px 20px 0px 20px;
+}
+
+.fullName {
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+.iconContainer {
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.socialIcon {
+    margin-right: 13px;
+}
+
+.avatarDefault {
+    width: 65px;
+    max-width: 100%;
+    border-radius: 100%;
+}
+
+.userInfoText div {
+    width: 360px;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.secondAchivementColumn {
+    background: #9494fd;
+    flex: 2;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 100%;
+}

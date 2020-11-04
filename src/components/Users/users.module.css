@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 
 .userContainer {
-  margin-bottom: 20px;
-  border-radius: 40px;
-  padding: 20px;
-  box-shadow: 0 2px 1px #fbd7d24f, 0 4px 2px #fbd7d24f, 0 8px 0px #fbd7d24f, 0 10px 8px #fbd7d24f, 0 15px 25px #fbd7d24f;
+    margin-bottom: 20px;
+    border-radius: 40px;
+    padding: 20px;
+    box-shadow: 0 2px 1px #fbd7d24f, 0 4px 2px #fbd7d24f, 0 8px 0px #fbd7d24f, 0 10px 8px #fbd7d24f, 0 15px 25px #fbd7d24f;
 }
 
 .avatar {
@@ -13,39 +13,49 @@
 }
 
 .userName {
-  text-decoration: none;
-  color: #33324b;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+    text-decoration: none;
+    color: #33324b;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
 }
 
 .userName p {
-  font-weight: 500;
+    font-weight: 500;
 }
 
 .userStatus {
-  margin-top: 5px;
-  font-family: revert;
-  color: #9392a0;
-  font-size: 15px;
-  letter-spacing: 0.3px;
+    margin-top: 5px;
+    font-family: revert;
+    color: #9392a0;
+    font-size: 15px;
+    letter-spacing: 0.3px;
 }
 
 #page_numbers {
     list-style: none;
     display: flex;
-  }
-  
-  #page_numbers > li {
+}
+
+#page_numbers > li {
     margin-right: 0.3em;
     color: blue;
     user-select: none;
     cursor: pointer;
-  }
-  
+}
 
-  @media only screen and (max-width: 1370px) {
+.subscribeContainer {
+}
+
+.subscribeContainer div button {
+  background-image: linear-gradient( 135deg, #9c94fb 10%, #7e73f9 100%);
+  color: white;
+  border-radius: 20px;
+  padding: 7px 15px 5px 15px;
+  border: none;
+}
+
+@media only screen and (max-width: 1370px) {
     .avatar {
-      width: 45px;
+        width: 45px;
     }
-  }
+}

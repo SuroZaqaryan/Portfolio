@@ -1,76 +1,101 @@
 import React from 'react';
-import Modal from 'react-modal';
-import { NavLink } from "react-router-dom";
+import { NavbarProfile } from "./ProfileNavbar/ProfileNavbar";
+import avatarDefault from "../../backgrounds/20980408.png"
+import girlNotebook from "../../backgrounds/girlNotebook.jpg"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook, faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { Achievements } from '../Content/Achievements/Achievements';
 
-const customStyles = {
-    content: {
-        top: '50%',
-        left: '50%',
-        right: 'auto',
-        bottom: 'auto',
-        marginRight: '-50%',
-        transform: 'translate(-50%, -50%)'
-    }
-};
-
-Modal.setAppElement('#root')
 
 export const Profile = (props) => {
-    var subtitle;
-    const [modalIsOpen, setIsOpen] = React.useState(true);
-    function openModal() {
-        setIsOpen(true);
-    }
-
-    function afterOpenModal() {
-        // references are now sync'd and can be accessed.
-        subtitle.style.color = '#f00';
-    }
-
-    function closeModal() {
-        setIsOpen(false);
-    }
-
     if (!props.profile) {
         return <p>Loading...</p>
     }
 
     return (
-        <div>
-            <Modal
-                isOpen={modalIsOpen}
-                onAfterOpen={afterOpenModal}
-                onRequestClose={closeModal}
-                style={customStyles}
-                contentLabel="Example Modal"
-            >
+        <div className={"profileContainer"}>
+            <div className={"firstProfileColumn"}>
+                <div className={"insideProfileColumn"}>
+                    <div>
+                        <NavbarProfile />
+                    </div>
 
-                <h2 ref={_subtitle => (subtitle = _subtitle)}>Hello</h2>
-                <NavLink onClick={closeModal} to={'/content'}>
-                    close123
-                        </NavLink>
-                <p>{props.profile.fullName}</p>
-                <form>
-                    <input />
-                    <button>tab navigation</button>
-                    <button>stays</button>
-                    <button>inside</button>
-                    <button>the modal</button>
-                </form>
-            </Modal>
+                    <div className={"profileAccountInfo"}>
+                        <div>
+                            {props.profile.photos.large ? <img src={props.profile.photos.large} alt="" /> :
+                                <img className={"avatarDefault"} src={avatarDefault} alt="" />}
+                        </div>
+
+                        <div className={"fullName"}>
+                            <div>
+                                <h3>{props.profile.fullName}</h3>
+                            </div>
+
+                            <div className={"iconContainer"}>
+                                <FontAwesomeIcon className={"socialIcon"} icon={faTwitter} />
+                                <FontAwesomeIcon className={"socialIcon"} icon={faInstagram} />
+                                <FontAwesomeIcon className={"socialIcon"} icon={faFacebook} />
+                            </div>
+
+                            <div className={"userInfoText"}>
+                                <div>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consequatur
+                                        cupiditate debitis deleniti,
+                                        dicta error eum fuga illum inventore maxime mollitia nesciunt
+                                        officiis pariatur perspiciatis quidem quo, quod sequi, tempore.
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consequatur
+                                        cupiditate debitis deleniti,
+                                        dicta error eum fuga illum inventore maxime mollitia nesciunt
+                                        officiis pariatur perspiciatis quidem quo, quod sequi, tempore. officiis
+                                        pariatur perspiciatis quidem quo, quod sequi, tempore.
+                                        officiis pariatur perspiciatis quidem quo, quod sequi, tempore.
+                                        officiis pariatur perspiciatis quidem quo, quod sequi, tempore.
+
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        Beatae consequatur cupiditate debitis deleniti,
+                                        dicta error eum fuga illum inventore maxime mollitia nesciunt
+                                        officiis pariatur perspiciatis quidem quo, quod sequi, tempore.
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquid
+                                        amet
+                                        delectus dicta distinctio dolorem doloribus ea illo, molestiae necessitatibus,
+                                        nihil
+                                        nostrum odio officia officiis omnis placeat recusandae vel, voluptatem.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div className="secondAchivementColumn">
+                <div style={{ margin: "32px 25px 0px 25px" }}>
+                    <div>
+                        <Achievements />
+                    </div>
+                </div>
+            </div>
+
+            <div style={{ background: "orange", height: "100%", flex: "1" }}>
+                <div>
+                    <h2>123</h2>
+                </div>
+            </div>
         </div>
     );
 }
-
-// import React, { Fragment } from 'react';
-
-// export const Profile = (props) => {
-//     if(!props.profile) {
-//         return <p>Loading...</p>
-//     }
-//     return(
-//         <Fragment>
-//             <p>{props.profile.fullName}</p>
-//         </Fragment>
-//     );
-// }

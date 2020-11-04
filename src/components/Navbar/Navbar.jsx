@@ -32,7 +32,7 @@ export const Navbar = (props) => {
                         <nav style={{marginLeft: '20px'}}>
                             <ul className={`${n.nav__links} ${n.center_links}`}>
                                 <li><NavLink to={'/Bitcoin'}>News</NavLink></li>
-                                <li><NavLink to={'/#'}>Blog</NavLink></li>
+                                <li><NavLink to={'/#'}>Profile</NavLink></li>
                                 <li><NavLink to={'/#'}>Log out</NavLink></li>
                             </ul>
                         </nav>

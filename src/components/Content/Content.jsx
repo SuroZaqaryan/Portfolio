@@ -3,7 +3,6 @@ import ContentStyle from "./Content.module.css";
 import NavbarContainer from "../Navbar/NavbarContainer";
 import UsersContainer from "../Users/UsersContainer";
 import {Courses} from "./Courses/ProgressCourses/Courses";
-import {Achievements} from "./Achievements/Achievements";
 import {AboutInfo} from "./About_App/About_Info";
 import {ContentCourses} from "./Courses/ContentCourses/ContentCourses";
 import {ImageGallery} from "./Courses/Ilustration_Images/ImageGallery";
@@ -44,11 +43,6 @@ export class Content extends React.Component {
                         </div>
 
                         <div className={ContentStyle.centerColumn}>
-
-                            <div>
-                                <Achievements/>
-                            </div>
-
                             <div>
                                 <AboutInfo/>
                             </div>
