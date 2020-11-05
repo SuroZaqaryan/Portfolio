@@ -13,14 +13,10 @@
 
 .navbarProfileUl li a {
     display: block;
-    color: #666;
+    color: #2d2d2d;
     text-align: center;
     padding: 14px 12px;
     text-decoration: none;
-}
-
-.navbarProfileUl li a:hover:not(.active) {
-    background-color: #ddd;
 }
 
 .navbarProfileUl li a.active {
@@ -41,7 +37,7 @@
 
 .profileAccountInfo {
     display: flex;
-    margin-top: 35px;
+    margin-top: 30px;
 
 }
 
@@ -81,4 +77,30 @@
     overflow: scroll;
     overflow-x: hidden;
     height: 100%;
+}
+
+.achievementsTitle {
+    margin: 0px 12px 10px;
+}
+
+.achievementsTitle div a {
+    display: block;
+    color: black;
+    font-size: 14px;
+}
+
+.achievementsTitle div a:hover {
+    text-decoration: revert;
+}
+
+.achievementsTitle h1 {
+    font-size: 55px;
+    font-family: fantasy;
+    color: #3b3b3b;
+  }
+
+.backArrow {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
 }

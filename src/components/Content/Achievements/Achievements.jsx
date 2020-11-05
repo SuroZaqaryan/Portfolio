@@ -1,5 +1,6 @@
 import React from 'react';
 import "./Achievements.css";
+
 import crown from "./icons/crown.png"
 import brain from "./icons/brain.png";
 import money from "./icons/money.png"
@@ -75,35 +76,35 @@ export class Achievements extends React.Component {
                     cardColorStyle: 'card__electric',
                 },
 
-                {
-                    img: macbook,
-                    cardName: "Vaporeon",
-                    cardType: "water",
-                    cardInfo: "Complete 3 courses",
-                    cardLabel: "Ability",
-                    cardLabelInfo: "Absorb",
-                    cardColorStyle: 'card__electric',
-                },
-
-                {
-                    img: book,
-                    cardName: "Vaporeon",
-                    cardType: "water",
-                    cardInfo: "Complete 3 courses",
-                    cardLabel: "Ability",
-                    cardLabelInfo: "Absorb",
-                    cardColorStyle: 'card__electric',
-                },
-
-                {
-                    img: coffee,
-                    cardName: "Vaporeon",
-                    cardType: "water",
-                    cardInfo: "Complete 3 courses",
-                    cardLabel: "Ability",
-                    cardLabelInfo: "Absorb",
-                    cardColorStyle: 'card__electric',
-                },
+                // {
+                //     img: macbook,
+                //     cardName: "Vaporeon",
+                //     cardType: "water",
+                //     cardInfo: "Complete 3 courses",
+                //     cardLabel: "Ability",
+                //     cardLabelInfo: "Absorb",
+                //     cardColorStyle: 'card__electric',
+                // },
+                //
+                // {
+                //     img: book,
+                //     cardName: "Vaporeon",
+                //     cardType: "water",
+                //     cardInfo: "Complete 3 courses",
+                //     cardLabel: "Ability",
+                //     cardLabelInfo: "Absorb",
+                //     cardColorStyle: 'card__electric',
+                // },
+                //
+                // {
+                //     img: coffee,
+                //     cardName: "Vaporeon",
+                //     cardType: "water",
+                //     cardInfo: "Complete 3 courses",
+                //     cardLabel: "Ability",
+                //     cardLabelInfo: "Absorb",
+                //     cardColorStyle: 'card__electric',
+                // },
             ],
         }
     }
@@ -154,18 +155,10 @@ export class Achievements extends React.Component {
             );
         }
 
+
         return (
             <div id="cards">
                 <div className="bannerBlock">
-                    <div className="achievementsTitle">
-                        <div style={{marginBottom: "30px"}}>
-                            <p>Go Back</p>
-                        </div>
-                        <div>
-                            <h1>Achievements</h1>
-                        </div>
-                    </div>
-
                     {/* <div className="iconBannerBlock">
                         <img src={achievements} alt=""/>
                     </div> */}

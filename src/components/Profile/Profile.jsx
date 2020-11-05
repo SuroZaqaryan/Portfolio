@@ -1,11 +1,12 @@
 import React from 'react';
 import { NavbarProfile } from "./ProfileNavbar/ProfileNavbar";
 import avatarDefault from "../../backgrounds/20980408.png"
-import girlNotebook from "../../backgrounds/girlNotebook.jpg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { Achievements } from '../Content/Achievements/Achievements';
-
+import { NavLink } from 'react-router-dom';
+import { leftArrow } from "../Profile/ProfileNavbar/icon/left-arrow.png"
+import {faLongArrowAltLeft} from "@fortawesome/free-solid-svg-icons";
 
 export const Profile = (props) => {
     if (!props.profile) {
@@ -84,7 +85,20 @@ export const Profile = (props) => {
             </div>
 
             <div className="secondAchivementColumn">
-                <div style={{ margin: "32px 25px 0px 25px" }}>
+                <div style={{ margin: "30px 25px 0px 25px" }}>
+                    <div className="achievementsTitle">
+                        <div className={"backArrow"}>
+                            <div>
+                                <FontAwesomeIcon className={"socialIcon"} icon={faLongArrowAltLeft} />
+                            </div>
+                            <div>
+                                <NavLink to={"/content"}>Go Back</NavLink>
+                            </div>
+                        </div>
+                        <div>
+                            <h1>Achievements</h1>
+                        </div>
+                    </div>
                     <div>
                         <Achievements />
                     </div>
