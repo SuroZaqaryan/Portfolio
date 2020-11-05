@@ -89,7 +89,7 @@ export const Profile = (props) => {
                     <div className="achievementsTitle">
                         <div className={"backArrow"}>
                             <div>
-                                <FontAwesomeIcon className={"socialIcon"} icon={faLongArrowAltLeft} />
+                                <FontAwesomeIcon className={"LongArrowAltLeft"} icon={faLongArrowAltLeft} />
                             </div>
                             <div>
                                 <NavLink to={"/content"}>Go Back</NavLink>

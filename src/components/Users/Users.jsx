@@ -32,11 +32,13 @@ export let Users = ({ currentPage, totalUsersCount, pageSize, onPageChanged, use
                         <div>
                             {
                                 user.followed ?
-                                    <button className={userStyle.follow} onClick={() => { props.unfollow(user.id) }}>Unfollow</button>
+                                    <button className={userStyle.follow}
+                                    onClick={() => { props.unfollow(user.id); alert(user.name) }}>Unfollow</button>
                                     :
                                     <button className={userStyle.unfollow} onClick={() => { props.follow(user.id) }}>Follow</button>
                             }
                         </div>
+                        
                     </div>
                 </div>
             </div>
