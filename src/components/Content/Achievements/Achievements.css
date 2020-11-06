@@ -6,6 +6,7 @@ body {
 .clearfix {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .card__image {

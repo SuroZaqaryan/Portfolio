@@ -76,25 +76,25 @@ export class Achievements extends React.Component {
                     cardColorStyle: 'card__electric',
                 },
 
-                // {
-                //     img: macbook,
-                //     cardName: "Vaporeon",
-                //     cardType: "water",
-                //     cardInfo: "Complete 3 courses",
-                //     cardLabel: "Ability",
-                //     cardLabelInfo: "Absorb",
-                //     cardColorStyle: 'card__electric',
-                // },
-                //
-                // {
-                //     img: book,
-                //     cardName: "Vaporeon",
-                //     cardType: "water",
-                //     cardInfo: "Complete 3 courses",
-                //     cardLabel: "Ability",
-                //     cardLabelInfo: "Absorb",
-                //     cardColorStyle: 'card__electric',
-                // },
+                {
+                    img: macbook,
+                    cardName: "Vaporeon",
+                    cardType: "water",
+                    cardInfo: "Complete 3 courses",
+                    cardLabel: "Ability",
+                    cardLabelInfo: "Absorb",
+                    cardColorStyle: 'card__electric',
+                },
+                
+                {
+                    img: book,
+                    cardName: "Vaporeon",
+                    cardType: "water",
+                    cardInfo: "Complete 3 courses",
+                    cardLabel: "Ability",
+                    cardLabelInfo: "Absorb",
+                    cardColorStyle: 'card__electric',
+                },
                 //
                 // {
                 //     img: coffee,
@@ -113,11 +113,11 @@ export class Achievements extends React.Component {
 
         const resultsRender = [];
 
-        for (var i = 0; i < this.state.CoursesPage.length; i += 3) {
+        for (var i = 0; i < this.state.CoursesPage.length; i += 4) {
             resultsRender.push(
                 <div className="clearfix">
                     {
-                        this.state.CoursesPage.slice(i, i + 3)
+                        this.state.CoursesPage.slice(i, i + 4)
                             .map((user, index) => {
                                 return (
                                     <div key={index}>

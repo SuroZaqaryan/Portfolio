@@ -85,7 +85,7 @@ export const Profile = (props) => {
             </div>
 
             <div className="secondAchivementColumn">
-                <div style={{ margin: "30px 25px 0px 25px" }}>
+                <div style={{ margin: "30px 20px 0px 25px" }}>
                     <div className="achievementsTitle">
                         <div className={"backArrow"}>
                             <div>
