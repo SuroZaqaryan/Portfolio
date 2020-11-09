@@ -1,6 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
+    params: {category: 'love'},
     withCredentials: true,
     baseURL: 'https://social-network.samuraijs.com/api/1.0/',
     headers: {
@@ -34,7 +35,7 @@ export const authAPI = {
 
 export const newsAPI = {
     getNews() {
-        return axios.get(`http://newsapi.org/v2/everything?q=bitcoin&sortBy=publishedAt&apiKey=c867f8e027f44cada97083bf1d5a8a86`);
+        return axios.get(`https://ajith-messages.p.rapidapi.com/getMsgs`);
     },
 
     getCountryNews() {

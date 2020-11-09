@@ -1,6 +1,6 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { Profile } from './Profile';
+import {connect} from 'react-redux';
+import {Profile} from './Profile';
 import {profileAC} from "../Redux/profile-reduer";
 import * as axios from "axios";
 import withRouter from "react-router-dom/es/withRouter";
@@ -14,7 +14,9 @@ class ProfileReducer extends React.Component {
     }
 
     render() {
-        return <Profile {...this.props} />
+        return <>
+            <Profile {...this.props} />
+        </>
     }
 }
 

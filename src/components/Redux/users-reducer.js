@@ -1,4 +1,4 @@
-import { usersAPI } from "../Api/Api";
+import {usersAPI} from "../Api/Api";
 
 const SET_USERS = 'SET_USERS';
 const SET_CURRENT_PAGE = 'SET_CURRENT_PAGE';
@@ -18,15 +18,15 @@ let initialState = {
 export let usersReducer = (state = initialState, action) => {
     switch (action.type) {
         case SET_USERS: {
-            return { ...state, users: action.users }
+            return {...state, users: action.users}
         }
 
         case SET_CURRENT_PAGE: { // текущая страница
-            return { ...state, currentPage: action.currentPage }
+            return {...state, currentPage: action.currentPage}
         }
 
         case SET_TOTAL_USERS_COUNT: { // общее кол-во юзеров
-            return { ...state, totalUsersCount: action.count }
+            return {...state, totalUsersCount: action.count}
         }
 
         case FOLLOW:
@@ -34,7 +34,7 @@ export let usersReducer = (state = initialState, action) => {
                 ...state,
                 users: state.users.map(u => {
                     if (u.id === action.userID) {
-                        return { ...u, followed: true }
+                        return {...u, followed: true}
                     }
                     return u;
                 })
@@ -45,27 +45,29 @@ export let usersReducer = (state = initialState, action) => {
                 ...state,
                 users: state.users.map(u => {
                     if (u.id === action.userID) {
-                        return { ...u, followed: false }
+                        return {...u, followed: false}
                     }
                     return u;
                 })
             }
+
 
         default:
             return state;
     }
 }
 
-export const setUsers = (users) => ({ type: SET_USERS, users });
-export const setCurrentPage = (currentPage) => ({ type: SET_CURRENT_PAGE, currentPage });
-export const setTotalUsersCount = (totalUsersCount) => ({ type: SET_TOTAL_USERS_COUNT, count: totalUsersCount });
+export const setUsers = (users) => ({type: SET_USERS, users});
+export const setCurrentPage = (currentPage) => ({type: SET_CURRENT_PAGE, currentPage});
+export const setTotalUsersCount = (totalUsersCount) => ({type: SET_TOTAL_USERS_COUNT, count: totalUsersCount});
 export const follow = (userID) => ({type: FOLLOW, userID});
 export const unfollow = (userID) => ({type: UNFOLLOW, userID});
+
 
 export const followThunk = (userID) => {
     return (dispatch) => {
         usersAPI.follow(userID).then(response => {
-            if(response.data.resultCode == 0) {
+            if (response.data.resultCode == 0) {
                 dispatch(follow(userID))
             }
         })
@@ -75,7 +77,7 @@ export const followThunk = (userID) => {
 export const unfollowThunk = (userID) => {
     return (dispatch) => {
         usersAPI.unfollow(userID).then(response => {
-            if(response.data.resultCode == 0) {
+            if (response.data.resultCode == 0) {
                 dispatch(unfollow(userID))
             }
         })
