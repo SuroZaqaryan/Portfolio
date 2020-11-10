@@ -7,7 +7,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {
     faUser
 } from "@fortawesome/free-solid-svg-icons";
-import {MonthBox} from "./Month/Month";
+import { MonthBox } from './Month/Month';
 
 export class Profile extends React.Component {
 
@@ -24,6 +24,9 @@ export class Profile extends React.Component {
         if (!this.props.profile) {
             return <p>Loading...</p>
         }
+
+        const d = new Date();
+        const n = d.getMonth();
 
         return (
             <div>
@@ -150,11 +153,15 @@ export class Profile extends React.Component {
                                         id illum ipsam laborum maiores maxime nemo neque nihil nostrum quasi similique
                                         soluta totam ullam, unde vel!</p>
                                 </div>
+
+                                <div className="achivementsText">
+                                    <MonthBox />
+                                </div>
                             </div>
                         </div>
 
                         <div className="UserAchivements">
-                            <MonthBox />
+
                         </div>
                     </div>
 

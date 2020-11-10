@@ -1,179 +1,86 @@
 import React, {Component} from 'react';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
-import Picker from 'react-month-picker'
-import 'react-month-picker/css/month-picker.css';
+import {
+    faUser
+} from "@fortawesome/free-solid-svg-icons";
+import {faFacebook, faGithub} from "@fortawesome/free-brands-svg-icons";
+import {Github} from "react-color/lib/components/github/Github";
 
-export class MonthBox extends Component {
-    constructor(props, context) {
-        super(props, context)
-        this.state = {
-            value: this.props.value || 'N/A',
-        }
-        this._handleClick = this._handleClick.bind(this);
-    }
-
-    componentWillReceiveProps(nextProps){
-        this.setState({
-            value: nextProps.value || 'N/A',
-        })
-    }
+export class MonthBox extends React.Component {
 
     render() {
+
+        const month = new Array();
+        month[0] = "January";
+        month[1] = "February";
+        month[2] = "March";
+        month[3] = "April";
+        month[4] = "May";
+        month[5] = "June";
+        month[6] = "July";
+        month[7] = "August";
+        month[8] = "September";
+        month[9] = "October";
+        month[10] = "November";
+        month[11] = "December";
+
+        const d = new Date();
+        const n = month[d.getMonth()];
+        const c = d.getMonth();
+
+        const headlineDateStyle = {
+            display: "flex",
+            alignItems: "center",
+        }
+
+        const dateStyle = {
+            display: "flex",
+            alignItems: "center",
+            marginTop: "15px",
+            background: "yellow",
+            width: "Max-Content",
+            padding: "5px 10px 5px 10px",
+            marginRight: "10px",
+        }
+
+        const dateInsideBlockStyle = {
+            paddingRight: "10px",
+        }
+
+
         return (
-            <div className="box" onClick={this._handleClick}>
-                <label>{this.state.value}</label>
+            <div style={headlineDateStyle}>
+                <div style={dateStyle}>
+                    <div style={dateInsideBlockStyle}>
+                        <FontAwesomeIcon icon={faUser}/>
+                    </div>
+
+                    <div>
+                        <p>Deadline: {n}, {c}</p>
+                    </div>
+                </div>
+
+                <div style={dateStyle}>
+                    <div style={dateInsideBlockStyle}>
+                        <FontAwesomeIcon icon={faFacebook}/>
+                    </div>
+
+                    <div>
+                        <p>Facebook</p>
+                    </div>
+                </div>
+
+                <div style={dateStyle}>
+                    <div style={dateInsideBlockStyle}>
+                        <FontAwesomeIcon icon={faGithub}/>
+                    </div>
+
+                    <div>
+                        <p>GitHub</p>
+                    </div>
+                </div>
             </div>
         );
     }
-
-    _handleClick(e) {
-        this.props.onClick && this.props.onClick(e);
-    }
-}
-
-
-class List extends Component {
-    constructor(props, context) {
-        super(props, context)
-
-        this.state = {
-            mvalue: {year: 2014, month: 11},
-            mvalue2: {year: 2016, month: 7},
-            mrange: {from: {year: 2014, month: 8}, to: {year: 2015, month: 5}},
-            mrange2: {from: {year: 2013, month: 11}, to: {year: 2016, month: 3}},
-        }
-
-        this.handleClickMonthBox = this.handleClickMonthBox.bind(this)
-        this.handleAMonthChange = this.handleAMonthChange.bind(this)
-        this.handleAMonthDissmis = this.handleAMonthDissmis.bind(this)
-
-        this.handleClickMonthBox2 = this.handleClickMonthBox2.bind(this)
-        this.handleAMonthChange2 = this.handleAMonthChange2.bind(this)
-        this.handleAMonthDissmis2 = this.handleAMonthDissmis2.bind(this)
-
-        this._handleClickRangeBox = this._handleClickRangeBox.bind(this)
-        this.handleRangeChange = this.handleRangeChange.bind(this)
-        this.handleRangeDissmis = this.handleRangeDissmis.bind(this)
-
-        this._handleClickRangeBox2 = this._handleClickRangeBox2.bind(this)
-        this.handleRangeChange2 = this.handleRangeChange2.bind(this)
-        this.handleRangeDissmis2 = this.handleRangeDissmis2.bind(this)
-    }
-
-    componentWillReceiveProps(nextProps){
-        this.setState({
-            value: nextProps.value || 'N/A',
-        })
-    }
-
-    render() {
-
-        const pickerLang = {
-            months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-            from: 'From', to: 'To',
-        }
-        const mvalue = this.state.mvalue
-            , mvalue2 = this.state.mvalue2
-            , mrange = this.state.mrange
-            , mrange2 = this.state.mrange2
-
-        const makeText = m => {
-            if (m && m.year && m.month) return (pickerLang.months[m.month-1] + '. ' + m.year)
-            return '?'
-        }
-
-        return (
-            <ul>
-                <li>
-                    <label><b>Pick A Month</b><span>(Available years: 2008, 2011, 2012, 2014, 2016)</span></label>
-                    <div className="edit">
-                        <Picker
-                            ref="pickAMonth"
-                            years={[2008, 2011, 2012, 2014, 2016]}
-                            value={mvalue}
-                            lang={pickerLang.months}
-                            onChange={this.handleAMonthChange}
-                            onDismiss={this.handleAMonthDissmis}
-                        >
-                            <MonthBox value={makeText(mvalue)} onClick={this.handleClickMonthBox} />
-                        </Picker>
-                    </div>
-                </li>
-
-            </ul>
-        )
-    }
-
-    handleClickMonthBox(e) {
-        this.refs.pickAMonth.show()
-    }
-    handleAMonthChange(value, text) {
-        //
-    }
-    handleAMonthDissmis(value) {
-        this.setState( {mvalue: value} )
-    }
-
-    handleClickMonthBox2(e) {
-        this.refs.pickAMonth2.show()
-    }
-    handleAMonthChange2(value, text) {
-        //
-    }
-    handleAMonthDissmis2(value) {
-        this.setState( {mvalue2: value} )
-    }
-
-    _handleClickRangeBox(e) {
-        this.refs.pickRange.show()
-    }
-    handleRangeChange(value, text, listIndex) {
-        //
-    }
-    handleRangeDissmis(value) {
-        this.setState( {mrange: value} )
-    }
-
-    _handleClickRangeBox2(e) {
-        this.refs.pickRange2.show()
-    }
-    handleRangeChange2(value, text, listIndex) {
-        //
-    }
-    handleRangeDissmis2(value) {
-        this.setState( {mrange2: value} )
-    }
-}
-
-class Main extends Component {
-    constructor(props, context) {
-        super(props, context)
-
-        this.state = {
-            value: this.props.value
-        }
-    }
-
-    componentWillReceiveProps(nextProps){
-        this.setState({
-            value: nextProps.value
-        })
-    }
-
-    render() {
-
-        return (
-            <div className="list-area">
-                <List />
-            </div>
-        )
-    }
-}
-
-
-
-export default () => {
-
-    return (<Main/>);
-
 }
