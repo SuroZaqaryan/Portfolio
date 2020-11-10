@@ -95,16 +95,6 @@ export class Achievements extends React.Component {
                     cardLabelInfo: "Absorb",
                     cardColorStyle: 'card__electric',
                 },
-                //
-                // {
-                //     img: coffee,
-                //     cardName: "Vaporeon",
-                //     cardType: "water",
-                //     cardInfo: "Complete 3 courses",
-                //     cardLabel: "Ability",
-                //     cardLabelInfo: "Absorb",
-                //     cardColorStyle: 'card__electric',
-                // },
             ],
         }
     }

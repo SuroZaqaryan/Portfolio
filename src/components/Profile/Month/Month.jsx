@@ -1,13 +1,36 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 import {
     faUser
 } from "@fortawesome/free-solid-svg-icons";
 import {faFacebook, faGithub} from "@fortawesome/free-brands-svg-icons";
-import {Github} from "react-color/lib/components/github/Github";
+import {NavLink} from "react-router-dom";
 
 export class MonthBox extends React.Component {
+
+    constructor() {
+        super();
+        this.state = {
+            profileData: [
+                {
+                    link: "/link1",
+                    icon: faFacebook,
+                    iconTitle: "Facebook",
+                },
+
+                {
+                    link: "/link2",
+                    icon: faGithub,
+                    iconTitle: "GitHub",
+                }
+            ],
+
+            month: [
+
+            ]
+        }
+    }
 
     render() {
 
@@ -32,7 +55,7 @@ export class MonthBox extends React.Component {
         const headlineDateStyle = {
             display: "flex",
             alignItems: "center",
-        }
+        };
 
         const dateStyle = {
             display: "flex",
@@ -42,12 +65,34 @@ export class MonthBox extends React.Component {
             width: "Max-Content",
             padding: "5px 10px 5px 10px",
             marginRight: "10px",
-        }
+            fontSize: "14px",
+        };
 
         const dateInsideBlockStyle = {
             paddingRight: "10px",
-        }
+        };
 
+        const profileNavLinkStyle = {
+            fontSize: "14px",
+            color: "black",
+        };
+
+        const list = this.state.profileData.map((item, index) => {
+                return (
+                    <NavLink to={item.link} style={profileNavLinkStyle}>
+                        <div style={dateStyle}>
+                            <div style={dateInsideBlockStyle}>
+                                <FontAwesomeIcon icon={item.icon}/>
+                            </div>
+
+                            <div>
+                                <p>{item.iconTitle}</p>
+                            </div>
+                        </div>
+                    </NavLink>
+                );
+            }
+        );
 
         return (
             <div style={headlineDateStyle}>
@@ -61,25 +106,7 @@ export class MonthBox extends React.Component {
                     </div>
                 </div>
 
-                <div style={dateStyle}>
-                    <div style={dateInsideBlockStyle}>
-                        <FontAwesomeIcon icon={faFacebook}/>
-                    </div>
-
-                    <div>
-                        <p>Facebook</p>
-                    </div>
-                </div>
-
-                <div style={dateStyle}>
-                    <div style={dateInsideBlockStyle}>
-                        <FontAwesomeIcon icon={faGithub}/>
-                    </div>
-
-                    <div>
-                        <p>GitHub</p>
-                    </div>
-                </div>
+                {list}
             </div>
         );
     }
