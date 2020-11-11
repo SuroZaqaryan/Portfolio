@@ -95,8 +95,9 @@
 /* achivements */
 
 .achivementsTitleContainer {
-    padding: 15px;
+    padding: 15px 15px 25px 15px;
     background: darkolivegreen;
+    border-bottom: 1px solid black;
     line-height: 1.6;
 }
 
@@ -110,7 +111,26 @@
 }
 
 .UserAchivements {
+    padding: 15px;
     background: rebeccapurple;
+}
+
+.TitleAchivementsContainer {
+    display: flex;
+}
+
+.TitleAchivements {
+    margin-right: 30px;
+    background: wheat;
+    width: fit-content;
+    padding: 10px 10px 15px 10px;
+    border-bottom: 3px solid #70c2dd;
+    margin-bottom: 30px;
+}
+
+.TitleAchivements p {
+    font-size: 12px;
+    text-transform: uppercase;
 }
 
 .AchivementsTitleDescription p {
