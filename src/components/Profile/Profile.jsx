@@ -5,6 +5,7 @@ import avatarDefault from "../../backgrounds/20980408.png"
 import { MonthBox } from './Month/Month';
 import { AchievementsBeta } from "../Content/Achievements/BetaAchievements";
 import { UserSettings } from './ProfileContent/UserSettings/UserSettings';
+import UsersContainer from '../Users/UsersContainer';
 
 export class Profile extends React.Component {
 
@@ -12,12 +13,6 @@ export class Profile extends React.Component {
         if (!this.props.profile) {
             return <p>Loading...</p>
         }
-
-        const list = this.props.user.map((item, index) => {
-            return <div>
-                <p>{item.name}</p>
-            </div>
-        });
 
         return (
             <div>
@@ -105,8 +100,8 @@ export class Profile extends React.Component {
                         </div>
                     </div>
 
-                    <div className="messages">
-                        {list}
+                    <div className="messages"> 
+                        <UsersContainer />
                     </div>
                 </div>
             </div>
