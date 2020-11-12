@@ -1,15 +1,12 @@
 import React from 'react';
 import "./Achievements.css";
 
-import crown from "./icons/crown.png"
-// import brain from "./icons/brain.png";
-// import money from "./icons/money.png"
-// import book from "./icons/open-book.png"
-// import success from "./icons/success.png"
-// import target from "./icons/target.png"
-// import macbook from "./icons/macbook.png"
-// import headset from "./icons/headset.png"
-// import coffee from "./icons/coffee.png"
+import crown from "./icons/online-course.png"
+import goal from "./icons/goal.png"
+import money from "./icons/money.png"
+import target from "./icons/target.png"
+import clipboard from "./icons/clipboard.png"
+import climbing from "./icons/climbing.png"
 
 export class AchievementsBeta extends React.Component {
     constructor() {
@@ -18,22 +15,43 @@ export class AchievementsBeta extends React.Component {
             CoursesPage: [
                 {
                     img: crown,
-                    cardInfo: "Complete 3 courses",
-                    cardLabel: "Earn 500 XP",
-                    cardColorStyle: 'card__fire',
-                },
-                
-                {
-                    img: crown,
-                    cardInfo: "Complete 3 courses",
-                    cardLabel: "Earn 500 XP",
+                    cardInfo: "Engaged in!",
+                    cardLabel: "Complete the lesson",
                     cardColorStyle: 'card__fire',
                 },
 
                 {
-                    img: crown,
-                    cardInfo: "Complete 3 courses",
-                    cardLabel: "Earn 500 XP",
+                    img: goal,
+                    cardInfo: "The first path to victory",
+                    cardLabel: "complete five courses",
+                    cardColorStyle: 'card__fire',
+                },
+
+                {
+                    img: money,
+                    cardInfo: "Piggy bank",
+                    cardLabel: "Earn 100 XP",
+                    cardColorStyle: 'card__fire',
+                },
+
+                {
+                    img: target,
+                    cardInfo: "Sniper",
+                    cardLabel: "Complete the course without errors",
+                    cardColorStyle: 'card__fire',
+                },
+
+                {
+                    img: clipboard,
+                    cardInfo: "Dear Citizen",
+                    cardLabel: "Fill in all credentials",
+                    cardColorStyle: 'card__fire',
+                },
+
+                {
+                    img: climbing,
+                    cardInfo: "My first avatar",
+                    cardLabel: "Set avatar",
                     cardColorStyle: 'card__fire',
                 },
             ],
@@ -56,7 +74,7 @@ export class AchievementsBeta extends React.Component {
                                 <p>{user.cardInfo}</p>
                             </div>
 
-                            <div>
+                            <div className="cardDescription">
                                 <p>{user.cardLabel}</p>
                             </div>
                         </div>

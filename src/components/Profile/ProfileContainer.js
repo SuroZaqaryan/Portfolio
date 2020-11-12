@@ -4,6 +4,7 @@ import {Profile} from './Profile';
 import {profileAC} from "../Redux/profile-reduer";
 import * as axios from "axios";
 import withRouter from "react-router-dom/es/withRouter";
+import {setUsers} from "../Redux/users-reducer";
 
 class ProfileReducer extends React.Component {
     componentDidMount() {
@@ -22,7 +23,8 @@ class ProfileReducer extends React.Component {
 
 let mapStateToProps = (state) => ({
     profile: state.profile.profile,
+    user: state.usersPage.users,
 })
 
 let urlDataRouter = withRouter(ProfileReducer)
-export default connect(mapStateToProps, {profileAC})(urlDataRouter);
+export default connect(mapStateToProps, {profileAC, setUsers})(urlDataRouter);

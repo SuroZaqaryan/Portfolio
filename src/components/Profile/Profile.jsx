@@ -13,6 +13,12 @@ export class Profile extends React.Component {
             return <p>Loading...</p>
         }
 
+        const list = this.props.user.map((item, index) => {
+            return <div>
+                <p>{item.name}</p>
+            </div>
+        });
+
         return (
             <div>
                 <div>
@@ -100,7 +106,7 @@ export class Profile extends React.Component {
                     </div>
 
                     <div className="messages">
-
+                        {list}
                     </div>
                 </div>
             </div>

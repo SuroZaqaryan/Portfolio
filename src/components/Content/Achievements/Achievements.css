@@ -22,6 +22,15 @@ body {
   margin-bottom: 5px;
 }
 
+.cardInfo p {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.cardDescription p {
+  font-size: 14px;
+}
+
 .Beta div img {
   width: 45px;
   max-width: 100%;
