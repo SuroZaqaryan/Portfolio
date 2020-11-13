@@ -5,9 +5,11 @@ const SET_CURRENT_PAGE = 'SET_CURRENT_PAGE';
 const SET_TOTAL_USERS_COUNT = 'SET_TOTAL_USERS_COUNT';
 const FOLLOW = 'FOLLOW';
 const UNFOLLOW = 'UNFOLLOW';
+const FOLLOW_USERS = 'FOLLOW_USERS';
 
 let initialState = {
     users: [],
+    followedUsers: [],
     pageSize: 5, // сколько юзеров будет отоброжать на странице
     totalUsersCount: 0, // общее кол-во юзеров
     currentPage: 1, // текущая страница
@@ -19,6 +21,10 @@ export let usersReducer = (state = initialState, action) => {
     switch (action.type) {
         case SET_USERS: {
             return {...state, users: action.users}
+        }
+
+        case FOLLOW_USERS: {
+            return {...state, followedUsers: action.followedUsers}
         }
 
         case SET_CURRENT_PAGE: { // текущая страница
@@ -57,12 +63,20 @@ export let usersReducer = (state = initialState, action) => {
     }
 }
 
+export const followUsers = (followedUsers) => ({type: FOLLOW_USERS, followedUsers});
 export const setUsers = (users) => ({type: SET_USERS, users});
 export const setCurrentPage = (currentPage) => ({type: SET_CURRENT_PAGE, currentPage});
 export const setTotalUsersCount = (totalUsersCount) => ({type: SET_TOTAL_USERS_COUNT, count: totalUsersCount});
 export const follow = (userID) => ({type: FOLLOW, userID});
 export const unfollow = (userID) => ({type: UNFOLLOW, userID});
 
+export const followUsersThunk = () => {
+    return (dispatch) => {
+        usersAPI.getUsers().then(data => {
+            dispatch(followUsers(data.items));
+        });
+    }
+}
 
 export const followThunk = (userID) => {
     return (dispatch) => {

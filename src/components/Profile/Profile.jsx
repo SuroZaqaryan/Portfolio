@@ -1,10 +1,10 @@
 import React from 'react';
-import { Navbar } from '../Navbar/Navbar';
+import {Navbar} from '../Navbar/Navbar';
 import "./css/style.css"
 import avatarDefault from "../../backgrounds/20980408.png"
-import { MonthBox } from './Month/Month';
-import { AchievementsBeta } from "../Content/Achievements/BetaAchievements";
-import { UserSettings } from './ProfileContent/UserSettings/UserSettings';
+import {MonthBox} from './Month/Month';
+import {AchievementsBeta} from "../Content/Achievements/BetaAchievements";
+import {UserSettings} from './ProfileContent/UserSettings/UserSettings';
 import UsersContainer from '../Users/UsersContainer';
 
 export class Profile extends React.Component {
@@ -14,10 +14,23 @@ export class Profile extends React.Component {
             return <p>Loading...</p>
         }
 
+        const list = this.props.followedUsers.map((item, index) => {
+            return (
+                <div>
+                    {
+                        item.followed ?
+                            <p> {item.name} </p>
+                            :
+                            null
+                    }
+                </div>
+            );
+        });
+
         return (
             <div>
                 <div>
-                    <Navbar />
+                    <Navbar/>
                 </div>
 
                 <div className="contentProfile">
@@ -25,7 +38,7 @@ export class Profile extends React.Component {
 
                         <div className="avatarInfo">
                             <div>
-                                <img className="avatarDefault" src={avatarDefault} alt="" />
+                                <img className="avatarDefault" src={avatarDefault} alt=""/>
                             </div>
 
                             <div>
@@ -50,7 +63,7 @@ export class Profile extends React.Component {
                         </div>
 
                         <div className="profileHrContainer">
-                            <hr className={"profileHR"} />
+                            <hr className={"profileHR"}/>
                         </div>
 
                         <div className="accountSettings">
@@ -73,13 +86,13 @@ export class Profile extends React.Component {
 
                                 <div className="achivementsText">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem doloribus eos
-                                    expedita fugit
-                                    id illum ipsam laborum maiores maxime nemo neque nihil nostrum quasi similique
+                                        expedita fugit
+                                        id illum ipsam laborum maiores maxime nemo neque nihil nostrum quasi similique
                                         soluta totam ullam, unde vel!</p>
                                 </div>
 
                                 <div className="achivementsText">
-                                    <MonthBox />
+                                    <MonthBox/>
                                 </div>
                             </div>
                         </div>
@@ -96,12 +109,12 @@ export class Profile extends React.Component {
                                 </div>
                             </div>
 
-                            <AchievementsBeta />
+                            <AchievementsBeta/>
                         </div>
                     </div>
 
-                    <div className="messages"> 
-                        <UsersContainer />
+                    <div className="messages">
+                        {list}
                     </div>
                 </div>
             </div>

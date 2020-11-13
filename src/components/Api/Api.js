@@ -18,6 +18,10 @@ export const usersAPI = {
             })
     },
 
+    getUsersProfile() {
+        return instance.get(`users`)
+    },
+
     follow(userId) {
         return instance.post(`follow/${userId}`, {}, {})
     },

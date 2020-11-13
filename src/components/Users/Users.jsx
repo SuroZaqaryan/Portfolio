@@ -8,15 +8,15 @@ import {MoreText} from "./ShowMoreText/ShowMoreText";
 export let Users = ({currentPage, totalUsersCount, pageSize, onPageChanged, users, ...props}) => {
     const list = props.user.map((user, index) => {
             return <div key={index} className={userStyle.userContainer}>
-                                            <div>
-                                {
-                                    user.followed ?
-                                        <p> {user.name} </p>
-                                        :
-                                        null
-                                }
-                            </div>
-                {/* <div>
+                <div>
+                    {
+                        user.followed ?
+                            <p> {user.name} </p>
+                            :
+                            null
+                    }
+                </div>
+                <div>
                     <div style={{display: 'flex', alignItems: 'center', padding: '0', cursor: 'pointer'}} key={index}>
                         <div>
                             <NavLink to={'/profile/' + user.id}>
@@ -53,7 +53,7 @@ export let Users = ({currentPage, totalUsersCount, pageSize, onPageChanged, user
                             </div>
                         </div>
                     </div>
-                </div> */}
+                </div>
             </div>
         }
     )
