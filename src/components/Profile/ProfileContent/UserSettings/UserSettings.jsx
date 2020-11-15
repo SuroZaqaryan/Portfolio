@@ -2,8 +2,11 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import {
+    faFingerprint,
+    faPenSquare,
     faUser
 } from "@fortawesome/free-solid-svg-icons";
+import {faBriefcase} from "@fortawesome/free-solid-svg-icons/faBriefcase";
 
 export class UserSettings extends React.Component {
 
@@ -21,19 +24,19 @@ export class UserSettings extends React.Component {
                 {
                     titleSettings: "Looking for a job",
                     dataSettings: lookingForAJob,
-                    icon: faUser,
+                    icon: faBriefcase,
                 },
 
                 {
                     titleSettings: "Looking for a job description",
                     dataSettings: lookingForAJobDescription,
-                    icon: faUser,
+                    icon: faPenSquare,
                 },
 
                 {
                     titleSettings: "User ID",
                     dataSettings: userId,
-                    icon: faUser,
+                    icon: faFingerprint,
                 },
             ]
         };
@@ -46,16 +49,16 @@ export class UserSettings extends React.Component {
             return (
                 <div key={index} className="accountSettingsContainer">
                     <div className="titleSettings">
-                        <p> {item.titleSettings} </p>
+                        <p style={{color: "#b4b8bd"}}> {item.titleSettings} </p>
                     </div>
 
                     <div className="accountInfoAndIcon">
                         <div>
-                            <p>{item.dataSettings ? item.dataSettings : "Not filled"}</p>
+                            <p style={{fontWeight: "600", fontSize: "17px", fontFamily: "system-ui"}}>{item.dataSettings ? item.dataSettings : "Not filled"}</p>
                         </div>
 
                         <div>
-                            <FontAwesomeIcon icon={item.icon} />
+                            <FontAwesomeIcon style={{fontSize: "19px"}} icon={item.icon} />
                         </div>
                     </div>
                 </div>

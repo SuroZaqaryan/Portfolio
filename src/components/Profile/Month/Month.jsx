@@ -61,7 +61,6 @@ export class MonthBox extends React.Component {
             display: "flex",
             alignItems: "center",
             marginTop: "15px",
-            background: "yellow",
             width: "Max-Content",
             padding: "5px 10px 5px 10px",
             marginRight: "10px",

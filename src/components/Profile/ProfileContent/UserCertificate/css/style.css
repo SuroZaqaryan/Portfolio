@@ -1,0 +1,13 @@
+
+.UserCertificateContainer {
+    margin-top: 40px;
+}
+
+.UserCertificateInsideeContainer {
+    display: flex;
+    align-items: center;
+}
+
+.Report {
+    padding-right: 10px;
+}

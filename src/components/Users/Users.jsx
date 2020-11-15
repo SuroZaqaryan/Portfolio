@@ -16,7 +16,7 @@ export let Users = ({currentPage, totalUsersCount, pageSize, onPageChanged, user
                             null
                     }
                 </div>
-                <div>
+                 <div>
                     <div style={{display: 'flex', alignItems: 'center', padding: '0', cursor: 'pointer'}} key={index}>
                         <div>
                             <NavLink to={'/profile/' + user.id}>

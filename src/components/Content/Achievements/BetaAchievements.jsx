@@ -7,6 +7,7 @@ import money from "./icons/money.png"
 import target from "./icons/target.png"
 import clipboard from "./icons/clipboard.png"
 import climbing from "./icons/climbing.png"
+import {ColorCard} from "./RandomColors/Colors";
 
 export class AchievementsBeta extends React.Component {
     constructor() {
@@ -55,7 +56,26 @@ export class AchievementsBeta extends React.Component {
                     cardColorStyle: 'card__fire',
                 },
             ],
+
+            bgColor: [
+                '#1ec891',
+                '#ff725e',
+                '#ffd05b',
+            ],
+
+            selectedColor: '',
         }
+    }
+
+    componentDidMount() {
+        this._getRandomColor()
+    }
+
+    _getRandomColor(){
+        const item = this.state.bgColor[Math.floor(Math.random()*this.state.bgColor.length)];
+        this.setState({
+            selectedColor: item,
+        })
     }
 
     render() {
@@ -63,10 +83,14 @@ export class AchievementsBeta extends React.Component {
         const resultsRender = this.state.CoursesPage.map((user, index) => {
             return (
 
-                <div style={{ width: "100%", marginBottom: "25px" }} key={index}>
-                    <div className={`${"Beta"} ${user.cardColorStyle}`}>
+                <div style={{ width: "100%", marginBottom: "35px" }} key={index}>
+                    <div className={`${"Beta"} ${"card__fire"}`}>
                         <div className={"imgContainer"}>
-                            <img src={user.img} alt="" />
+                                <ColorCard />
+
+                            <div>
+                                <img src={user.img} alt="" />
+                            </div>
                         </div>
 
                         <div>
@@ -93,3 +117,5 @@ export class AchievementsBeta extends React.Component {
         );
     }
 }
+
+
