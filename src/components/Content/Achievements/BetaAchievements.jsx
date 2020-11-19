@@ -8,6 +8,9 @@ import target from "./icons/target.png"
 import clipboard from "./icons/clipboard.png"
 import climbing from "./icons/climbing.png"
 import {ColorCard} from "./RandomColors/Colors";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faCheckCircle} from "@fortawesome/free-solid-svg-icons/faCheckCircle";
+import {faTimesCircle} from "@fortawesome/free-solid-svg-icons/faTimesCircle";
 
 export class AchievementsBeta extends React.Component {
     constructor() {
@@ -57,6 +60,8 @@ export class AchievementsBeta extends React.Component {
                 },
             ],
 
+            checked: false,
+
             bgColor: [
                 '#1ec891',
                 '#ff725e',
@@ -71,8 +76,8 @@ export class AchievementsBeta extends React.Component {
         this._getRandomColor()
     }
 
-    _getRandomColor(){
-        const item = this.state.bgColor[Math.floor(Math.random()*this.state.bgColor.length)];
+    _getRandomColor() {
+        const item = this.state.bgColor[Math.floor(Math.random() * this.state.bgColor.length)];
         this.setState({
             selectedColor: item,
         })
@@ -81,37 +86,55 @@ export class AchievementsBeta extends React.Component {
     render() {
 
         const resultsRender = this.state.CoursesPage.map((user, index) => {
-            return (
+                return (
 
-                <div style={{ width: "100%", marginBottom: "35px" }} key={index}>
-                    <div className={`${"Beta"} ${"card__fire"}`}>
-                        <div className={"imgContainer"}>
-                                <ColorCard />
+                    <div key={index}>
+                        <div className={"card_ac_container"}>
+                            <div className={`${"Beta"} ${"card__fire"}`}>
+                                <div className={"imgContainer"}>
+                                    <ColorCard/>
+                                    <div>
+                                        <img src={user.img} alt=""/>
+                                    </div>
+                                </div>
 
+                                <div>
+                                    <div className="cardInfo">
+                                        <p>{user.cardInfo}</p>
+                                    </div>
+
+                                    <div className="cardDescription">
+                                        <p>{user.cardLabel}</p>
+                                    </div>
+                                </div>
+                            </div>
                             <div>
-                                <img src={user.img} alt="" />
-                            </div>
-                        </div>
-
-                        <div>
-                            <div className="cardInfo">
-                                <p>{user.cardInfo}</p>
-                            </div>
-
-                            <div className="cardDescription">
-                                <p>{user.cardLabel}</p>
+                                {
+                                    this.state.checked ?
+                                        <FontAwesomeIcon style={{fontSize: "20px", color: "#9dffb6"}} icon={faCheckCircle}/>
+                                        :
+                                        <FontAwesomeIcon style={{fontSize: "20px", color: "#ff7b77"}} icon={faTimesCircle}/>
+                                }
                             </div>
                         </div>
                     </div>
-                </div>
 
-            );
-        }
-
+                );
+            }
         );
 
         return (
             <div>
+                <div className="TitleAchivementsContainer">
+                    <div className="TitleAchivements">
+                        <p>Achivements</p>
+                    </div>
+
+                    <div className="TitleAchivements">
+                        <p>Achivements</p>
+                    </div>
+                </div>
+
                 {resultsRender}
             </div>
         );

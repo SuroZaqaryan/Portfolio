@@ -3,6 +3,14 @@ body {
     font-family: "Open Sans", Helvetica, sans-serif;
 }
 
+.card_ac_container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
 .clearfix {
     display: flex;
     justify-content: space-between;
@@ -19,20 +27,45 @@ body {
 }
 
 .cardInfo {
-    margin-bottom: 5px;
+    margin-bottom: 4px;
 }
 
 .cardInfo p {
     font-weight: 600;
     font-size: 15px;
+    font-family: serif;
+    color: #383838;
 }
 
 .cardDescription p {
     font-size: 14px;
+    color: #4590ff;
+    font-weight: 600;
+    font-family: system-ui;
 }
 
 .Beta div img {
-    width: 45px;
+    width: 40px;
     max-width: 100%;
 }
 
+.achivementsTitleProfileContainer {
+    margin-bottom: 6px;
+}
+
+.achivements_Title_Profile_Description {
+    margin-top: 8px;
+}
+
+.TitleAchivementsContainer {
+    display: flex;
+}
+
+.TitleAchivements {
+    margin-right: 30px;
+    color: #2c81fd;
+    width: fit-content;
+    padding: 10px 10px 15px 10px;
+    border-bottom: 3px solid #2c81fd;
+    margin-bottom: 35px;
+}

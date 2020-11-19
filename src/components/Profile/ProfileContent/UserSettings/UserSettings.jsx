@@ -49,12 +49,12 @@ export class UserSettings extends React.Component {
             return (
                 <div key={index} className="accountSettingsContainer">
                     <div className="titleSettings">
-                        <p style={{color: "#b4b8bd"}}> {item.titleSettings} </p>
+                        <p style={{color: "#a9adb3"}}> {item.titleSettings} </p>
                     </div>
 
                     <div className="accountInfoAndIcon">
                         <div>
-                            <p style={{fontWeight: "600", fontSize: "17px", fontFamily: "system-ui"}}>{item.dataSettings ? item.dataSettings : "Not filled"}</p>
+                            <p style={{fontWeight: "600", fontSize: "16px", fontFamily: "system-ui"}}>{item.dataSettings ? item.dataSettings : "Not filled"}</p>
                         </div>
 
                         <div>

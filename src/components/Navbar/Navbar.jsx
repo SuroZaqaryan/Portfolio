@@ -13,9 +13,10 @@ export const Navbar = (props) => {
             <div>
                 <header>
                     <div style={{flex: '1'}}>
-                        <a className={n.logo} href="/#">
-                            <img style={{margin: 'auto', marginTop: "0", width: "150px", maxWidth: "100%"}} src={logo} alt="logo"/>
-                        </a>
+                        <NavLink className={n.logo} to={'/content'}>
+                            <img style={{margin: 'auto', marginTop: "0", width: "150px", maxWidth: "100%"}} src={logo}
+                                 alt="logo"/>
+                        </NavLink>
                     </div>
                     <div style={{flex: '1'}}>
                         <nav>

@@ -3,13 +3,13 @@
     justify-content: flex-start;
     margin: 40px;
     margin-top: 40px;
-    border-bottom: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9ba;
     padding-bottom: 35px;
     cursor: pointer;
 }
 
 .programLanguages img {
-    width: 80px;
+    width: 70px;
     max-width: 100%;
     border-radius: 15px;
 }

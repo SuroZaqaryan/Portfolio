@@ -65,6 +65,7 @@ export class MonthBox extends React.Component {
             padding: "5px 10px 5px 10px",
             marginRight: "10px",
             fontSize: "14px",
+            paddingLeft: "0",
         };
 
         const dateInsideBlockStyle = {
@@ -78,7 +79,7 @@ export class MonthBox extends React.Component {
 
         const list = this.state.profileData.map((item, index) => {
                 return (
-                    <NavLink to={item.link} style={profileNavLinkStyle}>
+                    <NavLink to={item.link} style={profileNavLinkStyle} key={index}>
                         <div style={dateStyle}>
                             <div style={dateInsideBlockStyle}>
                                 <FontAwesomeIcon icon={item.icon}/>

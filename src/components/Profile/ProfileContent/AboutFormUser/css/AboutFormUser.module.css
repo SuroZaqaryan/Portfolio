@@ -1,0 +1,40 @@
+.aboutFormContainer {
+    margin-top: 50px;
+}
+
+.aboutUser {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.textarea {
+    width: 100%;
+    padding: 10px;
+    height: 170px;
+    border-radius: 5px;
+    border: 1px solid #4ba0ffb3;
+    outline: none;
+    resize: none;
+}
+
+.textarea:focus {
+    border: 1px solid #4ba0ff61;
+    box-shadow: 0 0 5px #4ba0ff6b;
+    outline: none;
+}
+
+.btn_ProfileAbout {
+    background: #008cbad9;
+    border: none;
+    color: white;
+    padding: 10px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.profileAboutUserSubmit {background-color: #008CBA;} /* Blue */

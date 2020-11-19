@@ -16,9 +16,7 @@ export const Login = (props) => {
                                 <img className={LoginStyle.avatar} src={avatar} alt=""/>
                             </div>
                             <div style={{ marginBottom: '15px' }}>
-                                <h1>
-                                    Register now and discover a new store of knowledge
-                            </h1>
+                                <h1>Register now and discover a new store of knowledge</h1>
                             </div>
                             <div>
                                 <input className={LoginStyle.loginInputStyle} placeholder="E-mail" type="text" />

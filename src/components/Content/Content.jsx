@@ -3,7 +3,6 @@ import ContentStyle from "./Content.module.css";
 import NavbarContainer from "../Navbar/NavbarContainer";
 import UsersContainer from "../Users/UsersContainer";
 import {Courses} from "./Courses/ProgressCourses/Courses";
-import {AboutInfo} from "./About_App/About_Info";
 import {ContentCourses} from "./Courses/ContentCourses/ContentCourses";
 
 export class Content extends React.Component {

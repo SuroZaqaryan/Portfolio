@@ -4,8 +4,7 @@
     margin-bottom: 20px;
     border-radius: 40px;
     padding: 20px;
-    box-shadow: 0 2px 1px #fbd7d24f, 0 4px 2px #fbd7d24f, 0 8px 0px #fbd7d24f, 0 10px 8px #fbd7d24f, 0 15px 25px #fbd7d24f;
-}
+    box-shadow: 0 0 0 #fbd7d24f, 0 15px 15px #fbd7d24f, 0 8px 110px #fbd7d24f, 0 110px 80px #fbd7d24f, 0 100px 125px #fbd7d24f;}
 
 .avatar {
     width: 50px;

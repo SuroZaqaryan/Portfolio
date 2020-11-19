@@ -21,7 +21,7 @@ export class ColorCard extends React.Component {
 
     render() {
         return (
-            <div className=".color-card" style={{backgroundColor: this.state.selectedColor, width: "5px", marginRight: "13px"}}> </div>
+            <div className=".color-card" style={{backgroundColor: this.state.selectedColor, width: "5px", marginRight: "11px"}}> </div>
         );
     }
 }

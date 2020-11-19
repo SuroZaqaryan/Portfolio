@@ -1,13 +1,22 @@
 import axios from "axios";
 
 const instance = axios.create({
-    params: {category: 'love'},
     withCredentials: true,
     baseURL: 'https://social-network.samuraijs.com/api/1.0/',
     headers: {
         "API-KEY": "6bec01a1-e00c-42ca-ab9d-a03ad2e730cc",
     }
-})
+});
+
+export const profileAPI = {
+    getUserProfileStatus(userID) {
+        return instance.get(`/profile/status/` + userID);
+    },
+
+    updateStatus(status) {
+        return instance.put(`profile/status`, { status: status });
+    }
+};
 
 export const usersAPI = {
 
@@ -39,7 +48,7 @@ export const authAPI = {
 
 export const newsAPI = {
     getNews() {
-        return axios.get(`https://ajith-messages.p.rapidapi.com/getMsgs`);
+        return axios.get(`http://newsapi.org/v2/everything?q=bitcoin&sortBy=publishedAt&apiKey=c867f8e027f44cada97083bf1d5a8a86`);
     },
 
     getCountryNews() {

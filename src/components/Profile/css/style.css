@@ -8,7 +8,7 @@
     display: flex;
     flex-wrap: wrap;
     height: 100vh;
-    background: #d2d2d27d;
+    background: #d2d2d278;
 }
 
 .userProfileInfo, .achivements, .messages {
@@ -17,20 +17,22 @@
 
 .achivements {
     background: #ffffff;
+    box-shadow: 1px 1px 5px rgb(0 0 0 / 6%);
 }
 
 .messages {
-    padding: 20px 20px 15px 20px;
+    padding: 15px 30px 15px 30px;
     background: pink;
 }
 
 .userProfileInfo {
+    box-shadow: 1px 1px 5px rgb(0 0 0 / 6%);
     flex: 1;
     background: #ffffff;
 }
 
 .avatarInfo {
-    margin-top: 35px;
+    margin-top: 30px;
     text-align: center;
     line-height: 2;
 }
@@ -72,11 +74,18 @@
     height: 1px;
 }
 
-/* accountSettings */
-
-.accountSettings {
-    margin: 20px;
+.centerColumnLine {
+    width: 95%;
+    margin: auto;
 }
+
+.centerColumnLine hr {
+    border: none;
+    background-color: #dfdfdfd9;
+    height: 1px;
+}
+
+/* accountSettings */
 
 .accountSettingsContainer {
     margin-bottom: 25px;
@@ -95,9 +104,8 @@
 /* achivements */
 
 .achivementsTitleContainer {
-    padding: 15px 15px 25px 15px;
+    padding: 15px 15px 20px 25px;
     background: #ffffff;
-    border-bottom: 1px solid #e2e6eb;
     line-height: 1.6;
 }
 
@@ -115,21 +123,8 @@
 }
 
 .UserAchivements {
-    padding: 15px;
+    padding: 15px 15px 15px 25px;
     background: #ffffff;
-}
-
-.TitleAchivementsContainer {
-    display: flex;
-}
-
-.TitleAchivements {
-    margin-right: 30px;
-    color: #2c81fd;
-    width: fit-content;
-    padding: 10px 10px 15px 10px;
-    border-bottom: 3px solid #2c81fd;
-    margin-bottom: 30px;
 }
 
 .TitleAchivements p {
@@ -142,7 +137,7 @@
 }
 
 .AchivementsTitleDescription p {
-    font-size: 12px;
+    font-size: 10px;
     text-transform: uppercase;
     border-radius: 3px;
     background: #fff3ca;
@@ -150,11 +145,18 @@
     padding: 5px 12px 2px 10px;
 }
 
-.achivementsTitle h3 {
+.achivements_Title_Profile h3 {
     color: #383838;
     font-family: system-ui;
     font-weight: 600;
-    font-size: 22px;
+    font-size: 21px;
+}
+
+.achivements_Title_Profile_Description p {
+    font-family: 'Roboto';
+    font-size: 15px;
+    font-weight: 400;
+    color: #484848;
 }
 
 .achivements {
@@ -163,6 +165,7 @@
 
 .messages {
     background: #ffffff;
+    box-shadow: 1px 1px 5px rgb(0 0 0 / 6%);
     flex: 1;
 }
 
