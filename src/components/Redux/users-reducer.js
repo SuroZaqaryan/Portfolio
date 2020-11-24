@@ -10,7 +10,7 @@ const FOLLOW_USERS = 'FOLLOW_USERS';
 let initialState = {
     users: [],
     followedUsers: [],
-    pageSize: 5, // сколько юзеров будет отоброжать на странице
+    pageSize: 4, // сколько юзеров будет отоброжать на странице
     totalUsersCount: 0, // общее кол-во юзеров
     currentPage: 1, // текущая страница
     follow: false,

@@ -28,6 +28,16 @@ export const getStatusProfile = (status) => ({
     type: SET_STATUS, status
 });
 
+export const profileAC = (profile) => ({
+    type: ADD_PROFILE, profile
+});
+
+export const getProfileThunk = (userId) => (dispatch) => {
+    profileAPI.getProfile(userId).then(response => {
+        dispatch(profileAC(response.data));
+    });
+};
+
 export const updateStatus = (status) => (dispatch) => {
     profileAPI.updateStatus(status)
         .then(response => {
@@ -36,10 +46,6 @@ export const updateStatus = (status) => (dispatch) => {
             }
         });
 };
-
-export const profileAC = (profile) => ({
-    type: ADD_PROFILE, profile
-});
 
 export const getStatusProfileStatusThunk = (userID) => {
     return (dispatch) => {

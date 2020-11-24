@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    background-color: #f3f5f9;
+}
+
+.wrapper{
+    display: flex;
+    position: relative;
+}
+
+.wrapper .sidebar{
+    width: 240px;
+    height: 100%;
+    background: #2d2d2d;
+    padding: 15px 0px;
+    position: fixed;
+}
+
+.wrapper .sidebar ul li{
+    padding: 15px;
+    border-bottom: 1px solid #bdb8d7;
+    border-bottom: 1px solid rgb(252 252 252 / 2%);
+    border-top: 1px solid rgb(255 255 255 / 0%);
+}
+
+.wrapper .sidebar ul li a{
+    color: #bdb8d7;
+    display: block;
+    padding: 5px 15px;
+    font-size: 13px;
+    font-family: 'Noto Sans TC';
+    letter-spacing: 0.5px;
+}
+
+.wrapper .sidebar ul li a .fas{
+    width: 25px;
+}
+
+.wrapper .sidebar ul li:hover{
+    background-color: #594f8d;
+}
+
+.wrapper .sidebar ul li:hover a{
+    color: #fff;
+}
+
+.wrapper .main_content{
+    width: 100%;
+    margin-left: 245px;
+}
+
+.main_inside_content {
+    width: 80%;
+    margin: auto;
+}
+
+.wrapper .main_content .header{
+    padding: 20px;
+    background: #fff;
+    color: #717171;
+    border-bottom: 1px solid #e0e4e8;
+}
+
+.wrapper .main_content .info{
+    margin: 20px;
+    color: #717171;
+    line-height: 25px;
+}
+
+.wrapper .main_content .info div {
+    margin-bottom: 20px;
+}
+
+.avatar_block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.logo_container {
+    padding-right: 20px;
+}
+
+.user_name h3 {
+    font-size: 18px;
+    color: #e4e4e4;
+    font-weight: 500;
+    font-family: -webkit-body;
+}
+
+.sidebar_list {
+    display: flex;
+}
+
+.sidebar_list:hover {
+    cursor: pointer;
+}
+
+.logo {
+    max-width: 100%;
+    width: 40px;
+    border-radius: 10px;
+}
+
+.item_icon {
+    font-size: 11px;
+    margin-right: 10px;
+    color: #25b676;
+}
+
+.containers {
+    width: 240px;
+    height: 100vh;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    background: inherit;
+    overflow: hidden;
+}
+
+.containers:before {
+    content: "";
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: blur(10px);
+    margin: -20px;
+}

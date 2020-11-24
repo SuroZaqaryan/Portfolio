@@ -44,6 +44,6 @@ let mapStateToProps = (state) => ({
     totalUsersCount: state.usersPage.totalUsersCount,
     currentPage: state.usersPage.currentPage,
     pageSize: state.usersPage.pageSize,
-})
+});
 
 export default connect(mapStateToProps, {getUsers, setCurrentPage, setTotalUsersCount, setUsers, followThunk, unfollowThunk})(UsersContainer);

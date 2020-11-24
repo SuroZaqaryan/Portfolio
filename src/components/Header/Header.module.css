@@ -10,7 +10,7 @@
     float: right;
   }
   
-  li a {
+  .ul li a {
     display: block;
     color: #666;
     text-align: center;

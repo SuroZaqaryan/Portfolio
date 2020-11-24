@@ -12,7 +12,11 @@ export class UserSettings extends React.Component {
 
     constructor(props) {
         super(props);
+        if (!props.profile) {
+            return null;
+        }
         const { fullName, lookingForAJob, lookingForAJobDescription, userId } = this.props.profile;
+
         this.state = {
             accountSettings: [
                 {

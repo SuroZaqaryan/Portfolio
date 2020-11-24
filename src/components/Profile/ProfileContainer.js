@@ -1,8 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {Profile} from './Profile';
-import {getStatusProfileStatusThunk, profileAC, updateStatus} from "../Redux/profile-reduer";
-import * as axios from "axios";
+import {getProfileThunk, getStatusProfileStatusThunk, updateStatus} from "../Redux/profile-reduer";
 import withRouter from "react-router-dom/es/withRouter";
 import {followUsersThunk} from "../Redux/users-reducer";
 
@@ -14,12 +13,9 @@ class ProfileReducer extends React.Component {
             userId = 9344;
         }
 
-        axios.get('https://social-network.samuraijs.com/api/1.0/profile/' + userId).then(response => {
-            this.props.profileAC(response.data);
-        });
-
         this.props.followUsersThunk();
         this.props.getStatusProfileStatusThunk(userId);
+        this.props.getProfileThunk(userId);
     }
 
     render() {
@@ -35,5 +31,5 @@ let mapStateToProps = (state) => ({
     status: state.profile.status,
 });
 
-let urlDataRouter = withRouter(ProfileReducer)
-export default connect(mapStateToProps, {profileAC, followUsersThunk, getStatusProfileStatusThunk, updateStatus})(urlDataRouter);
+let urlDataRouter = withRouter(ProfileReducer);
+export default connect(mapStateToProps, {getProfileThunk, followUsersThunk, getStatusProfileStatusThunk, updateStatus})(urlDataRouter);

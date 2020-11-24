@@ -30,8 +30,8 @@ export const authReducer = (state = initialState, action) => {
 }
 
 
-export const setAuthUserData = (id, email, login) => ({type: SET_USER_DATA, data: {id, email, login}})
-export const setProgressCount = (progressCount) => ({type: GET_PROGRESS_COUNT, progressCount})
+export const setAuthUserData = (id, email, login) => ({type: SET_USER_DATA, data: {id, email, login}});
+export const setProgressCount = (progressCount) => ({type: GET_PROGRESS_COUNT, progressCount});
 
 export const AuthUserThunk = () => (dispatch) => {
     authAPI.authMe()

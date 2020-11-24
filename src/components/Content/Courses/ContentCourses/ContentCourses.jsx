@@ -1,3 +1,4 @@
+
 import React from "react";
 import cnStyle from "./ContentCourses.module.css"
 import python from "./Icons/pyhton.png"
@@ -135,7 +136,7 @@ export class ContentCourses extends React.Component {
                                 );
                             }
 
-                            )
+                        )
                     }
                 </div>
             );

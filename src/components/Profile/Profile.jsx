@@ -14,7 +14,6 @@ import {UserAvatarBlock} from "./ProfileContent/UserAvatarBlock/UserAvatarBlock"
 export const Profile = (props) => {
 
     const [value, onChange] = useState(new Date());
-    const [inputValue, setInputValue] = useState('');
 
     if (!props.profile) {
         return <p>Loading...</p>
@@ -41,7 +40,7 @@ export const Profile = (props) => {
                         </div>
 
                         <div>
-                            <AboutFormUsers {...props} onChangeInput={setInputValue} status={props.status} updateStatus={props.updateStatus}/>
+                            <AboutFormUsers {...props} status={props.status} updateStatus={props.updateStatus}/>
                         </div>
                     </div>
                 </div>

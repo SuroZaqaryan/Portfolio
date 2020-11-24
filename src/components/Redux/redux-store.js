@@ -4,11 +4,13 @@ import {authReducer} from "./auth-reducer";
 import { profileReducer } from "./profile-reduer";
 import { usersReducer } from "./users-reducer";
 import {newsReducer} from "./news-reducer";
+import {lessonReducer} from "./lesson-reducer";
 
 let reducers = combineReducers({
     auth: authReducer,
     profile: profileReducer,
     usersPage: usersReducer,
+    lessonReducer: lessonReducer,
     news: newsReducer,
 });
 

@@ -69,15 +69,15 @@ export class Courses extends React.Component {
                         bgcolor: "#ffa375"
                     }
                 },
-                {
-                    languageName: "PHP",
-                    img: php,
+                // {
+                //     languageName: "PHP",
+                //     img: php,
 
-                    progress: {
-                        completed: 25,
-                        bgcolor: "#7489cf"
-                    }
-                },
+                //     progress: {
+                //         completed: 25,
+                //         bgcolor: "#7489cf"
+                //     }
+                // },
             ]
         }
     }
@@ -105,7 +105,6 @@ export class Courses extends React.Component {
         return (
             <Fragment>
                 <div>
-
                     {list}
                 </div>
             </Fragment>

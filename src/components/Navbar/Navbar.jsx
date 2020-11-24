@@ -34,7 +34,7 @@ export const Navbar = (props) => {
                             <ul className={`${n.nav__links} ${n.center_links}`}>
                                 <li><NavLink to={'/Bitcoin'}>News</NavLink></li>
                                 <li><NavLink to={'/#'}>Profile</NavLink></li>
-                                <li><NavLink to={'/#'}>Log out</NavLink></li>
+                                <li><NavLink to={'/Lessons'}>Lessons</NavLink></li>
                             </ul>
                         </nav>
                     </div>
@@ -64,7 +64,7 @@ export const Navbar = (props) => {
                                         <NavLink to={"/profile/" + props.id}
                                                  className={n.user_name}>{props.login}</NavLink>
                                         :
-                                        <NavLink to="/#">Login</NavLink>
+                                        <NavLink to="/#">{"login"}</NavLink>
                                 }
                             </p>
                         </div>

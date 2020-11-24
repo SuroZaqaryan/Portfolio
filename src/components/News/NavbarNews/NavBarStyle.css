@@ -58,6 +58,7 @@ body{
   font-size: 14px;
   font-family: ui-serif;
   font-weight: 400;
+  padding: 10px;
 }
 
 .avatar_login div img {

@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from "react";
 import "./NavBarStyle.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {Gradient} from 'react-gradient';
 
 import {
     faAppleAlt,
@@ -13,7 +12,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import {NavLink} from "react-router-dom";
 import avatar from '../../../backgrounds/tt_avatar_small.jpg'
-import CSSTransition from "react-transition-group/cjs/CSSTransition";
 
 export const NavBarNews = (props) => {
 
@@ -60,11 +58,7 @@ export const NavBarNews = (props) => {
                         </li>
                     </div>
                 </div>
-                <CSSTransition
-                    in={!isSmallScreen || isNavVisible}
-                    classNames="NavAnimation"
-                    unmountOnExit
-                >
+
                     <ul className="navbar">
                         <li>
                             <NavLink to={"/content"}>
@@ -97,11 +91,10 @@ export const NavBarNews = (props) => {
                             </NavLink>
                         </li>
                     </ul>
-                </CSSTransition>
-                <div class="social_media">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                <div className="social_media">
+                    <NavLink to={"/#"}><i className="fab fa-facebook-f"></i></NavLink>
+                    <NavLink to={"/#"}><i className="fab fa-twitter"></i></NavLink>
+                    <NavLink to={"/#"}><i className="fab fa-instagram"></i></NavLink>
                 </div>
             </div>
         </div>
