@@ -13,10 +13,13 @@ header {
   padding: 10px 0%;
 }
 
+.LogoDivContainer {
+  flex: 1;
+}
+
 .logo {
   cursor: pointer;
 }
-
 
 .nav__links a,
 .cta,
@@ -138,13 +141,6 @@ header {
   right: 45px;
   font-size: 60px;
   color: #edf0f1;
-}
-
-.avatar_and_user_text {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
 }
 
 .user_name {

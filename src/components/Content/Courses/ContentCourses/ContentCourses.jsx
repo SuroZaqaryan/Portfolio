@@ -93,48 +93,48 @@ export class ContentCourses extends React.Component {
                 <div className={cnStyle.clearfix}>
                     {
                         this.state.languageInfo.slice(i, i + 2).map((item, index) => {
-                                return (
-                                    <div key={index} className={cnStyle.ContentVeryHeadlineBlock}>
-                                        <div className={cnStyle.ContentHeadlineBlock}>
-                                            <div className={cnStyle.ContentCoursesBlock}>
-                                                <div style={{ marginRight: '25px' }} className={cnStyle.courseIconBlock}>
-                                                    <img className={cnStyle.courseIcon} src={item.icon} alt="" />
-                                                </div>
+                            return (
+                                <div key={index} className={cnStyle.ContentVeryHeadlineBlock}>
+                                    <div className={cnStyle.ContentHeadlineBlock}>
+                                        <div className={cnStyle.ContentCoursesBlock}>
+                                            <div style={{ marginRight: '25px' }} className={cnStyle.courseIconBlock}>
+                                                <img className={cnStyle.courseIcon} src={item.icon} alt="" />
+                                            </div>
 
+                                            <div>
+                                                <div className={cnStyle.courseName}>
+                                                    <h3>{item.languageName}</h3>
+                                                </div>
                                                 <div>
-                                                    <div className={cnStyle.courseName}>
-                                                        <h3>{item.languageName}</h3>
-                                                    </div>
-                                                    <div>
-                                                        <p style={{color: 'dimgrey'}}>
-                                                            {item.about}
-                                                        </p>
-                                                    </div>
+                                                    <p style={{ color: 'dimgrey' }}>
+                                                        {item.about}
+                                                    </p>
                                                 </div>
-
                                             </div>
 
-                                            <div className={cnStyle.buttonMoreBlock}>
-                                                <button>More</button>
-                                            </div>
                                         </div>
-                                        <div className={cnStyle.moreInformation}>
-                                            <div>
-                                                <p>Learners</p>
-                                                <p className={cnStyle.learnQuantity}>{item.Learners}</p>
-                                            </div>
-                                            <div>
-                                                <p>Lessons</p>
-                                                <p className={cnStyle.learnQuantity}>{item.Lessons}</p>
-                                            </div>
-                                            <div>
-                                                <p>Quizzes</p>
-                                                <p className={cnStyle.learnQuantity}>{item.Quizzes}</p>
-                                            </div>
+
+                                        <div className={cnStyle.buttonMoreBlock}>
+                                            <button>More</button>
                                         </div>
                                     </div>
-                                );
-                            }
+                                    <div className={cnStyle.moreInformation}>
+                                        <div>
+                                            <p>Learners</p>
+                                            <p className={cnStyle.learnQuantity}>{item.Learners}</p>
+                                        </div>
+                                        <div>
+                                            <p>Lessons</p>
+                                            <p className={cnStyle.learnQuantity}>{item.Lessons}</p>
+                                        </div>
+                                        <div>
+                                            <p>Quizzes</p>
+                                            <p className={cnStyle.learnQuantity}>{item.Quizzes}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            );
+                        }
 
                         )
                     }

@@ -1,15 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
 
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
-}
-
-body{
-    background-color: #f3f5f9;
+    font-family: system-ui;
 }
 
 .wrapper{
@@ -20,16 +18,13 @@ body{
 .wrapper .sidebar{
     width: 240px;
     height: 100%;
-    background: #2d2d2d;
+    background: #ffffff;
     padding: 15px 0px;
     position: fixed;
 }
 
 .wrapper .sidebar ul li{
-    padding: 15px;
-    border-bottom: 1px solid #bdb8d7;
-    border-bottom: 1px solid rgb(252 252 252 / 2%);
-    border-top: 1px solid rgb(255 255 255 / 0%);
+    padding: 12px 15px 15px 20px;
 }
 
 .wrapper .sidebar ul li a{
@@ -37,47 +32,47 @@ body{
     display: block;
     padding: 5px 15px;
     font-size: 13px;
-    font-family: 'Noto Sans TC';
     letter-spacing: 0.5px;
 }
 
-.wrapper .sidebar ul li a .fas{
-    width: 25px;
-}
-
 .wrapper .sidebar ul li:hover{
-    background-color: #594f8d;
-}
-
-.wrapper .sidebar ul li:hover a{
-    color: #fff;
+    background-color: #d6d6d6;
 }
 
 .wrapper .main_content{
     width: 100%;
-    margin-left: 245px;
 }
 
 .main_inside_content {
-    width: 80%;
-    margin: auto;
+    width: 55%;
+    margin: 5px auto;
 }
 
 .wrapper .main_content .header{
-    padding: 20px;
+    padding: 20px 0px 20px 0px;
     background: #fff;
     color: #717171;
     border-bottom: 1px solid #e0e4e8;
 }
 
+.wrapper .main_content .header h2 {
+    font-weight: 500;
+    font-family: serif;
+    color: #273849;
+}
+
 .wrapper .main_content .info{
-    margin: 20px;
+    margin: 20px 0px 20px 0px;
     color: #717171;
     line-height: 25px;
 }
 
 .wrapper .main_content .info div {
     margin-bottom: 20px;
+}
+
+.wrapper .main_content .info div p {
+    color: #304455;
 }
 
 .avatar_block {
@@ -87,8 +82,9 @@ body{
     padding-bottom: 10px;
 }
 
-.logo_container {
-    padding-right: 20px;
+.logo {
+    padding-left: 15px;
+    padding-bottom: 20px;
 }
 
 .user_name h3 {
@@ -100,22 +96,21 @@ body{
 
 .sidebar_list {
     display: flex;
+    align-items: baseline;
 }
 
 .sidebar_list:hover {
     cursor: pointer;
 }
 
-.logo {
-    max-width: 100%;
-    width: 40px;
-    border-radius: 10px;
+.titleName {
+    color: #4f5959;
 }
 
 .item_icon {
     font-size: 11px;
     margin-right: 10px;
-    color: #25b676;
+    color: #25b676ba;
 }
 
 .containers {

@@ -1,6 +1,6 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import "./NavBarStyle.css";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import {
     faAppleAlt,
@@ -10,7 +10,7 @@ import {
     faHome,
     faCoins, faBars
 } from "@fortawesome/free-solid-svg-icons";
-import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import avatar from '../../../backgrounds/tt_avatar_small.jpg'
 
 export const NavBarNews = (props) => {
@@ -45,7 +45,7 @@ export const NavBarNews = (props) => {
             <div className="sidebar">
                 <div className="avatar_login">
                     <div>
-                        <img src={avatar} alt=""/>
+                        <img src={avatar} alt="" />
                     </div>
                     <div>
                         <div className="login_name">
@@ -53,44 +53,44 @@ export const NavBarNews = (props) => {
                         </div>
                         <li className={"btnMobile"}>
                             <div>
-                                <FontAwesomeIcon onClick={toggleNav} className="navbarIconBar" icon={faBars}/>
+                                <FontAwesomeIcon onClick={toggleNav} className="navbarIconBar" icon={faBars} />
                             </div>
                         </li>
                     </div>
                 </div>
 
-                    <ul className="navbar">
-                        <li>
-                            <NavLink to={"/content"}>
-                                <FontAwesomeIcon className="navbarIcon" icon={faHome}/>Home
+                <ul className="navbar">
+                    <li>
+                        <NavLink to={"/content"}>
+                            <FontAwesomeIcon className="navbarIcon" icon={faHome} />Home
                             </NavLink>
-                        </li>
-                        <li>
-                            <NavLink to={"/Bitcoin"}>
-                                <FontAwesomeIcon className="navbarIcon" icon={faCoins}/>Bitcoin
+                    </li>
+                    <li>
+                        <NavLink to={"/Bitcoin"}>
+                            <FontAwesomeIcon className="navbarIcon" icon={faCoins} />Bitcoin
                             </NavLink>
-                        </li>
-                        <li>
-                            <NavLink to={"/Business"}>
-                                <FontAwesomeIcon className="navbarIcon" icon={faChartBar}/>Business
+                    </li>
+                    <li>
+                        <NavLink to={"/Business"}>
+                            <FontAwesomeIcon className="navbarIcon" icon={faChartBar} />Business
                             </NavLink>
-                        </li>
-                        <li>
-                            <NavLink to={"/Apple"}>
-                                <FontAwesomeIcon className="navbarIcon" icon={faAppleAlt}/>Apple
+                    </li>
+                    <li>
+                        <NavLink to={"/Apple"}>
+                            <FontAwesomeIcon className="navbarIcon" icon={faAppleAlt} />Apple
                             </NavLink>
-                        </li>
-                        <li>
-                            <NavLink to={"/TechCrunch"}>
-                                <FontAwesomeIcon className="navbarIcon" icon={faProjectDiagram}/>TechCrunch
+                    </li>
+                    <li>
+                        <NavLink to={"/TechCrunch"}>
+                            <FontAwesomeIcon className="navbarIcon" icon={faProjectDiagram} />TechCrunch
                             </NavLink>
-                        </li>
-                        <li>
-                            <NavLink to={"/WallSreet"}>
-                                <FontAwesomeIcon className="navbarIcon" icon={faNewspaper}/>Wall Street
+                    </li>
+                    <li>
+                        <NavLink to={"/WallSreet"}>
+                            <FontAwesomeIcon className="navbarIcon" icon={faNewspaper} />Wall Street
                             </NavLink>
-                        </li>
-                    </ul>
+                    </li>
+                </ul>
                 <div className="social_media">
                     <NavLink to={"/#"}><i className="fab fa-facebook-f"></i></NavLink>
                     <NavLink to={"/#"}><i className="fab fa-twitter"></i></NavLink>

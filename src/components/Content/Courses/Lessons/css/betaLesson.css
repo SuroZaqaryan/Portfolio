@@ -1,0 +1,33 @@
+.LogoDivContainer-blue {
+    display: flex;
+    padding-left: 20px;
+}
+
+.avatar_and_user_text-tomato {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+    flex: 1 1;
+}
+
+.centerNavbarColumn-flex {
+    flex: 0;
+}
+
+.navbarHomePage-Home {
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+  }
+
+.navbarSearchPage-Search {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.centerHeadlineNavbarColumn-center {
+    width: 55%;
+}
