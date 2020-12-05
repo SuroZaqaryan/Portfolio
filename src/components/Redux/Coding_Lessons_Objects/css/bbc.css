@@ -1,0 +1,36 @@
+.hal {
+    font-weight: 600;
+    color: #ff7b77;
+}
+
+.br_description {
+    content: "";
+    margin: 2em;
+    display: block;
+    font-size: 45%;
+}
+
+.title_description {
+    margin-bottom: 12px;
+    margin-top: 20px;
+    color: #282c35f0;
+    font-size: 21px;
+    font-family: 'Roboto';
+    letter-spacing: 0.2px;
+    font-weight: 500;
+}
+
+.js_ul_list {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.js_ul_list li {
+    margin-bottom: 15px;
+    list-style-type: disc;
+}
+
+.link_description {
+    display: block;
+    font-size: 15px;
+}

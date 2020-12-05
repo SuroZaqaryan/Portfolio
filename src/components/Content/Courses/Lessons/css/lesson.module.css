@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
 
-
 *{
     margin: 0;
     padding: 0;
@@ -16,7 +15,7 @@
 }
 
 .wrapper .sidebar{
-    width: 240px;
+    overflow: scroll;
     height: 100%;
     background: #ffffff;
     padding: 15px 0px;
@@ -24,7 +23,7 @@
 }
 
 .wrapper .sidebar ul li{
-    padding: 12px 15px 15px 20px;
+    padding: 10px 15px 10px 20px;
 }
 
 .wrapper .sidebar ul li a{
@@ -36,7 +35,7 @@
 }
 
 .wrapper .sidebar ul li:hover{
-    background-color: #d6d6d6;
+    background-color: #d6d6d68c;
 }
 
 .wrapper .main_content{
@@ -56,9 +55,9 @@
 }
 
 .wrapper .main_content .header h2 {
-    font-weight: 500;
-    font-family: serif;
-    color: #273849;
+    font-weight: 400;
+    font-family: 'Roboto';
+    color: #ff7571;
 }
 
 .wrapper .main_content .info{
@@ -72,6 +71,7 @@
 }
 
 .wrapper .main_content .info div p {
+    line-height: 1.5;
     color: #304455;
 }
 
@@ -96,21 +96,28 @@
 
 .sidebar_list {
     display: flex;
-    align-items: baseline;
+    align-items: center;
 }
 
 .sidebar_list:hover {
     cursor: pointer;
 }
 
+.courseTitle {
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    background-image: linear-gradient(to right, #e8e8e8d4, #e8e8e8d9);
+}
+
 .titleName {
+    font-size: 15px;
     color: #4f5959;
 }
 
 .item_icon {
-    font-size: 11px;
+    font-size: 9px;
     margin-right: 10px;
-    color: #25b676ba;
+    color: #ff7b77e0;
 }
 
 .containers {
@@ -120,7 +127,6 @@
     position: relative;
     z-index: 1;
     background: inherit;
-    overflow: hidden;
 }
 
 .containers:before {

@@ -1,0 +1,13 @@
+.list_active {
+    background: #ff7b77fa;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.list_active div p {
+    color:  white;
+}
+
+.list_active div svg {
+    color:  white;
+}
