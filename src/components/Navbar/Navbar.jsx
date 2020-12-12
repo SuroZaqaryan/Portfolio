@@ -7,6 +7,8 @@ import search from './icons/search.png'
 import notification from './icons/notification.png'
 import { NavLink } from 'react-router-dom';
 import avatar from '../../backgrounds/tt_avatar_small.jpg'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faCheckCircle} from "@fortawesome/free-solid-svg-icons/faCheckCircle";
 
 export const Navbar = (props) => {
     const style = props.style;
@@ -15,8 +17,11 @@ export const Navbar = (props) => {
             <div>
                 <header>
                     <div style={style} className={"LogoDivContainer LogoDivContainer-" + props.color}>
+                        <div>
+                            <FontAwesomeIcon style={{color: "#9dffb6"}} icon={faCheckCircle}/>
+                        </div>
                         <NavLink className={n.logo} to={'/content'}>
-                            <img style={{ margin: 'auto', marginTop: "0", width: "150px", maxWidth: "100%" }} src={logo}
+                            <img src={logo}
                                 alt="logo" />
                         </NavLink>
                     </div>
@@ -27,7 +32,7 @@ export const Navbar = (props) => {
                                     <a className={n.navElements} href="/#">
                                         <img className={n.home} src={home} alt="home" />
                                     </a>
-                                    <li><a href="/#">Main Stream</a></li>
+                                    <li><a className={"MainStream MainStream-" + props.MainStream} href="/#">Main Stream</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -35,14 +40,14 @@ export const Navbar = (props) => {
                         <div className={"centerNavbarColumn centerNavbarColumn-" + props.centerFlexNavbarContainer}>
                             <nav style={{ marginLeft: '20px' }}>
                                 <ul className={`${n.nav__links} ${n.center_links}`}>
-                                    <li><NavLink to={'/Bitcoin'}>News</NavLink></li>
-                                    <li><NavLink to={'/#'}>Profile</NavLink></li>
-                                    <li><NavLink to={'/Lessons'}>Lessons</NavLink></li>
+                                    <li className={"NavBarli NavBarli-" + props.LiItem}><NavLink to={'/Bitcoin'}>News</NavLink></li>
+                                    <li className={"NavBarli NavBarli-" + props.LiItem}><NavLink to={'/#'}>Profile</NavLink></li>
+                                    <li className={"NavBarli NavBarli-" + props.LiItem}><NavLink to={'/Lessons'}>Lessons</NavLink></li>
                                 </ul>
                             </nav>
                         </div>
 
-                        <div  className={"navbarSearchPage navbarSearchPage-" + props.navbarSearchPage}>
+                        <div className={"navbarSearchPage navbarSearchPage-" + props.navbarSearchPage}>
                             <div>
                                 <a className={`${n.navElements} ${n.search}`} href="/#">
                                     <img style={{ width: '20px' }} src={search} alt="search" />
@@ -50,7 +55,7 @@ export const Navbar = (props) => {
                             </div>
 
                             <div>
-                                <a className={n.cta} href="/#">Create Scene</a>
+                                <a className={n.cta} href="/#">Search</a>
                             </div>
 
                             <div>

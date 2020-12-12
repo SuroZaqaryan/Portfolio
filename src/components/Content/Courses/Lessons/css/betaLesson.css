@@ -1,5 +1,6 @@
 .LogoDivContainer-blue {
     display: flex;
+    align-items: center;
     padding-left: 20px;
 }
 
@@ -28,6 +29,60 @@
     align-items: center;
 }
 
-.centerHeadlineNavbarColumn-center {
-    width: 55%;
+.NavBarli-NavBarlii  {
+    padding: 0px 15px;
 }
+
+.MainStream-MainStream {
+    font-size: 14px;
+    line-height: 1.2;
+    font-family: 'Roboto';
+}
+
+.centerHeadlineNavbarColumn-center {
+    width: 50%;
+    margin: auto;
+    position: absolute;
+    top: 50%; left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+}
+
+@media only screen and (max-width: 1024px) {
+    .centerHeadlineNavbarColumn-center {
+        width: 70%;
+    }
+
+    .navbarHomePage-Home {
+        justify-content: flex-end;
+    }
+
+    .LogoDivContainer a img {
+        width: 130px;
+    }
+  }
+
+@media only screen and (max-width: 1325px) {
+    .NavBarli-NavBarli {
+        padding: 0px;
+    }
+  }
+
+  @media screen and (max-width: 1366px) and (min-width: 1326px) {
+    .NavBarli-NavBarli {
+        padding: 12px;
+    }
+  }
+
+  @media screen and (max-width: 1600px) and (min-width: 1024px) {
+    .centerHeadlineNavbarColumn-center {
+        width: 50%;
+        margin: auto;
+        position: absolute;
+        top: 50%; left: 50%;
+        -webkit-transform: translate(-35%,-50%);
+            -ms-transform: translate(-35%,-50%);
+                transform: translate(-35%,-50%);
+    }
+  }
