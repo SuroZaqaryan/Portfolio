@@ -8,13 +8,14 @@
 
 header {
   position: fixed;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: self-start;
   padding: 10px 0%;
   z-index: 90;
   width: 100%;
-  background: #ffffffed;
+  background: #fffffffc;
 }
 
 .LogoDivContainer {
@@ -141,6 +142,10 @@ header {
   font-size: 14px;
 }
 
+.LessonMobileNavbarIcon {
+  font-size: 20px;
+}
+
 .home {
   width: 20px;
   border-bottom: 2px solid #ff7b77;
@@ -157,10 +162,23 @@ header {
     right: 35px;
   }
 }
+/*.LessonMobileNavbarIconContainer {*/
+/*  display: none;*/
+/*}*/
 
 @media only screen and (max-width: 900px) {
   .nav__links,
   .cta {
+    display: none;
+  }
+
+  /*.LessonMobileNavbarIconContainer {*/
+  /*  display: flex;*/
+  /*  justify-content: center;*/
+  /*  margin-top: 10px;*/
+  /*}*/
+
+  .navbarSearchPage {
     display: none;
   }
   .menu {

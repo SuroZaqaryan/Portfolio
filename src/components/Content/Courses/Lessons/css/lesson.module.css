@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,13 +9,12 @@
     font-family: system-ui;
 }
 
-.wrapper{
-    display: flex;
+.wrapper {
     position: relative;
-    top: 70px;
+    top: 60px;
 }
 
-.wrapper .sidebar{
+.wrapper .sidebar {
     overflow: scroll;
     height: 100%;
     background: #ffffff;
@@ -23,11 +22,11 @@
     position: fixed;
 }
 
-.wrapper .sidebar ul li{
+.wrapper .sidebar ul li {
     padding: 10px 15px 10px 20px;
 }
 
-.wrapper .sidebar ul li a{
+.wrapper .sidebar ul li a {
     color: #bdb8d7;
     display: block;
     padding: 5px 15px;
@@ -35,20 +34,20 @@
     letter-spacing: 0.5px;
 }
 
-.wrapper .sidebar ul li:hover{
+.wrapper .sidebar ul li:hover {
     background-color: #d6d6d68c;
 }
 
-.wrapper .main_content{
+.wrapper .main_content {
     width: 100%;
 }
 
 .main_inside_content {
-    width: 50%;
+    width: 51%;
     margin: 5px auto;
 }
 
-.wrapper .main_content .header{
+.wrapper .main_content .header {
     padding: 20px 0px 20px 0px;
     background: #fff;
     color: #717171;
@@ -62,7 +61,7 @@
     font-size: 22px;
 }
 
-.wrapper .main_content .info{
+.wrapper .main_content .info {
     margin: 20px 0px 20px 0px;
     color: #717171;
     line-height: 25px;
@@ -156,14 +155,15 @@
         width: 50%;
         margin: auto;
         position: absolute;
-        top: 50%; left: 50%;
+        top: 50%;
+        left: 50%;
         -webkit-transform: translate(-35%, 0%);
-            -ms-transform: translate(-35%, 0%);
-                transform: translate(-35%, 0%);
+        -ms-transform: translate(-35%, 0%);
+        transform: translate(-35%, 0%);
     }
-  }
+}
 
-  @media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1024px) {
     .main_inside_content {
         width: 62%;
         margin: auto;
@@ -171,13 +171,20 @@
         top: 50%;
         left: 50%;
         transform: translate(-28%, 0%);
-    
-    }
-  }
 
-  @media only screen and (max-width: 900px) {
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .sidebar {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 900px) {
     .wrapper .sidebar {
         display: none;
+        z-index: 99;
     }
 
     .main_inside_content {
@@ -188,17 +195,17 @@
     .centerHeadlineNavbarColumn-center {
         transform: translate(0%, 0%);
     }
-  } 
+}
 
-  
-   @media only screen and (max-width: 900px) {
+
+@media only screen and (max-width: 900px) {
     .main_inside_content {
         width: 100%;
         -webkit-transform: translate(0%, 0%);
         -ms-transform: translate(0%, 0%);
         transform: translate(0%, 0%);
         left: 0;
-        padding: 0px 40px 0px 40px;
+        padding: 0px 20px 0px 20px;
     }
-  }
+}
 

@@ -8,6 +8,7 @@ import ReactHtmlParser from 'react-html-parser';
 import * as Icon from 'react-bootstrap-icons';
 import styled from "styled-components";
 
+
 const NextPage = styled.button`
     display: flex;
     align-items: center;
@@ -31,25 +32,53 @@ export class Lessons extends React.Component {
         this.state = {
             indexDescription: 1,
             listActiveIndex: 1,
+            mobileMenu: true,
         }
     }
 
+    componentDidMount() {
+        window.addEventListener("resize", this.resize.bind(this));
+        this.resize();
+    }
+    
+    resize() {
+        if (window.innerWidth > 900) {
+            this.setState({ mobileMenu: true })
+        } else {
+            this.setState({ mobileMenu: false })
+        }
+    }
+    
+    componentWillUnmount() {
+        window.removeEventListener("resize", this.resize.bind(this));
+    }
+
     changeDescription(index) {
-        this.setState({ indexDescription: index , listActiveIndex: index})
+        this.setState({ indexDescription: index, listActiveIndex: index })
     }
 
     nextPage() {
         // next page
-        this.setState({ indexDescription: this.state.indexDescription + 1,  listActiveIndex: this.state.indexDescription  + 1})
+        this.setState({ indexDescription: this.state.indexDescription + 1, listActiveIndex: this.state.indexDescription + 1 })
     }
 
     prevPage() {
         // next page
-        this.setState({ indexDescription: this.state.indexDescription - 1,  listActiveIndex: this.state.indexDescription  - 1})
+        this.setState({ indexDescription: this.state.indexDescription - 1, listActiveIndex: this.state.indexDescription - 1 })
     }
 
+    showMobileMenu = () => {
+        this.setState({ mobileMenu: !this.state.mobileMenu })
+    }
 
+    hideMenu() {
+        this.setState({ mobileMenu: false })
+    }
+
+        
+ 
     render() {
+
         const listLessons = this.props.lesson.map((item, index) => {
 
             // active link
@@ -88,44 +117,47 @@ export class Lessons extends React.Component {
             <>
                 <div className="abc">
                     <Navbar color="blue" bg="tomato" centerFlexNavbarContainer="flex" LiItem="NavBarli" MainStream="MainStream"
-                            navbarSearchPage="Search" navbarHomePage="Home" centerHeadlineNavbarColumn="center" />
+                        navbarSearchPage="Search" navbarHomePage="Home" NavbarMobileIconsBlock="mobile"
+                        centerHeadlineNavbarColumn="center" showMobileMenu={this.showMobileMenu} />
                     <div className={less.wrapper}>
 
                         <div>
-                            <div className={less.sidebar}>
+                            <div style={{ display: this.state.mobileMenu ? 'block' : 'none' }} className={less.sidebar}>
                                 <div>
-                                    <ul>
+                                    <ul onClick={this.hideMenu.bind(this)}>
                                         {listLessons}
                                     </ul>
                                 </div>
                             </div>
-                        </div>
+                        </div> 
 
-                        <div className={less.main_content}>
-                            <div className={less.main_inside_content}>
-                                <div className={less.header}>
-                                    <div className={less.header_next_page}>
-                                        <div>
-                                            <h2>{this.props.lesson[this.state.indexDescription]["heading"]}</h2>
+                        <div>
+                            <div className={less.main_content}>
+                                <div className={less.main_inside_content}>
+                                    <div className={less.header}>
+                                        <div className={less.header_next_page}>
+                                            <div>
+                                                <h2>{this.props.lesson[this.state.indexDescription]["heading"]}</h2>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div className={less.info}>
-                                    <div className={less.description}>
-                                        {
-                                            ReactHtmlParser(this.props.lesson[this.state.indexDescription]["data"]["description"])
-                                        }
-                                        <div className={less.btn_Next_Prev_Container}>
-                                            <div>
-                                                {
-                                                    this.state.indexDescription >= 2 ?
-                                                    <NextPage  onClick={this.prevPage.bind(this)} > <Icon.ArrowLeft className={less.arrowLeft}/> Back </NextPage>
-                                                    :
-                                                    null
-                                                }  
-                                            </div>
-                                            <div>
-                                                <NextPage  onClick={this.nextPage.bind(this)} > Next <Icon.ArrowRight className={less.arrowRight}/> </NextPage>  
+                                    <div className={less.info}>
+                                        <div className={less.description}>
+                                            {
+                                                ReactHtmlParser(this.props.lesson[this.state.indexDescription]["data"]["description"])
+                                            }
+                                            <div className={less.btn_Next_Prev_Container}>
+                                                <div>
+                                                    {
+                                                        this.state.indexDescription >= 2 ?
+                                                            <NextPage onClick={this.prevPage.bind(this)} > <Icon.ArrowLeft className={less.arrowLeft} /> Back </NextPage>
+                                                            :
+                                                            null
+                                                    }
+                                                </div>
+                                                <div>
+                                                    <NextPage onClick={this.nextPage.bind(this)} > Next <Icon.ArrowRight className={less.arrowRight} /> </NextPage>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

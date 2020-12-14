@@ -7,83 +7,98 @@ import search from './icons/search.png'
 import notification from './icons/notification.png'
 import { NavLink } from 'react-router-dom';
 import avatar from '../../backgrounds/tt_avatar_small.jpg'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faCheckCircle} from "@fortawesome/free-solid-svg-icons/faCheckCircle";
+import MenuOutlined from "@ant-design/icons/es/icons/MenuOutlined";
+import CodeOutlined from "@ant-design/icons/es/icons/CodeOutlined";
 
-export const Navbar = (props) => {
-    const style = props.style;
-    return (
-        <Fragment>
-            <div>
-                <header>
-                    <div style={style} className={"LogoDivContainer LogoDivContainer-" + props.color}>
-                        <div>
-                            <FontAwesomeIcon style={{color: "#9dffb6"}} icon={faCheckCircle}/>
+export class Navbar extends React.Component {
+
+    render() {
+        const style = this.props.style;
+        return (
+            <Fragment>
+                <div>
+                    <header>
+                        <div style={style} className={"LogoDivContainer LogoDivContainer-" + this.props.color}>
+                            <div>
+                                <NavLink className={n.logo} to={'/content'}>
+                                    <img src={logo} alt="logo" />
+                                </NavLink>
+                            </div>
+                            <div className={"ContentLessonMobileNavbarIconContainer LessonMobileNavbarIconContainer-" + this.props.NavbarMobileIconsBlock}>
+                                <div style={{ marginRight: "10px" }}>
+                                    <CodeOutlined title={"Open courses"} outline="none" onClick={() => { this.props.showMobileMenu() }} className={n.LessonMobileNavbarIcon} />
+                                </div>
+                                <div>
+                                    <MenuOutlined title={"Menu"} className={n.LessonMobileNavbarIcon} />
+                                </div>
+                            </div>
+
                         </div>
-                        <NavLink className={n.logo} to={'/content'}>
-                            <img src={logo}
-                                alt="logo" />
-                        </NavLink>
-                    </div>
-                    <div className={"centerHeadlineNavbarColumn centerHeadlineNavbarColumn-" + props.centerHeadlineNavbarColumn}>
-                        <div className={"navbarHomePage navbarHomePage-" + props.navbarHomePage}>
-                            <nav>
-                                <ul className={n.nav__links}>
-                                    <a className={n.navElements} href="/#">
-                                        <img className={n.home} src={home} alt="home" />
+                        <div
+                            className={"centerHeadlineNavbarColumn centerHeadlineNavbarColumn-" + this.props.centerHeadlineNavbarColumn}>
+                            <div className={"navbarHomePage navbarHomePage-" + this.props.navbarHomePage}>
+                                <nav>
+                                    <ul className={n.nav__links}>
+                                        <a className={n.navElements} href="/#">
+                                            <img className={n.home} src={home} alt="home" />
+                                        </a>
+                                        <li><a className={"MainStream MainStream-" + this.props.MainStream} href="/#">Main
+                                            Stream</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+
+                            <div className={"centerNavbarColumn centerNavbarColumn-" + this.props.centerFlexNavbarContainer}>
+                                <nav style={{ marginLeft: '20px' }}>
+                                    <ul className={`${n.nav__links} ${n.center_links}`}>
+                                        <li className={"NavBarli NavBarli-" + this.props.LiItem}><NavLink
+                                            to={'/Bitcoin'}>News</NavLink></li>
+                                        <li className={"NavBarli NavBarli-" + this.props.LiItem}><NavLink
+                                            to={'/#'}>Profile</NavLink></li>
+                                        <li className={"NavBarli NavBarli-" + this.props.LiItem}><NavLink
+                                            to={'/Lessons'}>Lessons</NavLink></li>
+                                    </ul>
+                                </nav>
+                            </div>
+
+                            <div className={"navbarSearchPage navbarSearchPage-" + this.props.navbarSearchPage}>
+                                <div>
+                                    <a className={`${n.navElements} ${n.search}`} href="/#">
+                                        <img width="20" src={search} alt="search" />
                                     </a>
-                                    <li><a className={"MainStream MainStream-" + props.MainStream} href="/#">Main Stream</a></li>
-                                </ul>
-                            </nav>
-                        </div>
+                                </div>
 
-                        <div className={"centerNavbarColumn centerNavbarColumn-" + props.centerFlexNavbarContainer}>
-                            <nav style={{ marginLeft: '20px' }}>
-                                <ul className={`${n.nav__links} ${n.center_links}`}>
-                                    <li className={"NavBarli NavBarli-" + props.LiItem}><NavLink to={'/Bitcoin'}>News</NavLink></li>
-                                    <li className={"NavBarli NavBarli-" + props.LiItem}><NavLink to={'/#'}>Profile</NavLink></li>
-                                    <li className={"NavBarli NavBarli-" + props.LiItem}><NavLink to={'/Lessons'}>Lessons</NavLink></li>
-                                </ul>
-                            </nav>
-                        </div>
+                                <div>
+                                    <a className={n.cta} href="/#">Search</a>
+                                </div>
 
-                        <div className={"navbarSearchPage navbarSearchPage-" + props.navbarSearchPage}>
-                            <div>
-                                <a className={`${n.navElements} ${n.search}`} href="/#">
-                                    <img style={{ width: '20px' }} src={search} alt="search" />
-                                </a>
-                            </div>
-
-                            <div>
-                                <a className={n.cta} href="/#">Search</a>
-                            </div>
-
-                            <div>
-                                <a className={`${n.navElements} ${n.notification}`} href="/#">
-                                    <img style={{ width: '20px' }} src={notification} alt="notification" />
-                                </a>
+                                <div>
+                                    <a className={`${n.navElements} ${n.notification}`} href="/#">
+                                        <img width="20" src={notification} alt="notification" />
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div className={"avatar_and_user_text avatar_and_user_text-" + props.bg}>
-                        <div>
-                            <p style={{ color: 'yellow' }} className="menu cta">
-                                {
-                                    props.isAuth ?
-                                        <NavLink to={"/profile/" + props.id}
-                                            className={n.user_name}>{props.login}</NavLink>
-                                        :
-                                        <NavLink to="/#">{"login"}</NavLink>
-                                }
-                            </p>
+                        <div className={"avatar_and_user_text avatar_and_user_text-" + this.props.bg}>
+                            <div>
+                                <p style={{ color: 'yellow' }} className="menu cta">
+                                    {
+                                        this.props.isAuth ?
+                                            <NavLink to={"/profile/" + this.props.id}
+                                                className={n.user_name}>{this.props.login}</NavLink>
+                                            :
+                                            <NavLink to="/#">{"login"}</NavLink>
+                                    }
+                                </p>
+                            </div>
+                            <div>
+                                <img style={{ width: '40px', borderRadius: '15px' }} src={avatar} alt="" />
+                            </div>
                         </div>
-                        <div>
-                            <img style={{ width: '40px', borderRadius: '15px' }} src={avatar} alt="" />
-                        </div>
-                    </div>
-                </header>
-            </div>
-        </Fragment>
-    );
+                    </header>
+                </div>
+            </Fragment>
+        );
+    }
 }

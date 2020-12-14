@@ -20,7 +20,7 @@
     display: flex;
     flex: 1;
     justify-content: flex-start;
-  }
+}
 
 .navbarSearchPage-Search {
     display: flex;
@@ -29,7 +29,7 @@
     align-items: center;
 }
 
-.NavBarli-NavBarlii  {
+.NavBarli-NavBarlii {
     padding: 0px 15px;
 }
 
@@ -43,10 +43,15 @@
     width: 50%;
     margin: auto;
     position: absolute;
-    top: 50%; left: 50%;
-    -webkit-transform: translate(-50%,-50%);
-        -ms-transform: translate(-50%,-50%);
-            transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.LessonMobileNavbarIconContainer-mobile {
+    display: none;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -59,30 +64,50 @@
     }
 
     .LogoDivContainer a img {
-        width: 130px;
+        width: 140px;
     }
-  }
+}
 
 @media only screen and (max-width: 1325px) {
     .NavBarli-NavBarli {
         padding: 0px;
     }
-  }
+}
 
-  @media screen and (max-width: 1366px) and (min-width: 1326px) {
+@media screen and (max-width: 1366px) and (min-width: 1326px) {
     .NavBarli-NavBarli {
         padding: 12px;
     }
-  }
+}
 
-  @media screen and (max-width: 1600px) and (min-width: 1024px) {
+@media screen and (max-width: 1600px) and (min-width: 1024px) {
     .centerHeadlineNavbarColumn-center {
         width: 50%;
         margin: auto;
         position: absolute;
-        top: 50%; left: 50%;
-        -webkit-transform: translate(-35%,-50%);
-            -ms-transform: translate(-35%,-50%);
-                transform: translate(-35%,-50%);
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-35%, -50%);
+        -ms-transform: translate(-35%, -50%);
+        transform: translate(-35%, -50%);
     }
-  }
+}
+
+@media only screen and (max-width: 900px) {
+    .navbarSearchPage-Search, .avatar_and_user_text-tomato, .navbarSearchPage  {
+        display: none;
+    }
+
+    .LogoDivContainer-blue {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 20px 0px 20px;
+    }
+
+    .LessonMobileNavbarIconContainer-mobile {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+}

@@ -3,10 +3,10 @@
 }
 
 .LogoDivContainer a img {
-  margin: auto;
-  margin-top: 0;
-  width: 150px;
-  max-width: 100%;
+    margin: auto;
+    margin-top: 0;
+    width: 150px;
+    max-width: 100%;
 }
 
 .avatar_and_user_text {
@@ -32,24 +32,41 @@
     display: flex;
     flex: 1;
     justify-content: center;
-  }
-  
-  .navbarSearchPage {
+}
+
+.navbarSearchPage {
     display: flex;
     flex: 1;
     justify-content: center;
     align-items: center;
-  }
+}
 
-  .NavBarli {
+.NavBarli {
     padding: 0px 20px;
-  } 
+}
 
-  .MainStream {
+.MainStream {
     /* font-family: "Montserrat", sans-serif; */
     font-size: 17px;
     font-weight: 500;
     color: #383838;
     text-decoration: none;
-  }
-  
+}
+
+/* navbar */
+
+.ContentLessonMobileNavbarIconContainer {
+    display: none;
+}
+
+/*.LessonMobileNavbarIconContainer {*/
+/*    display: none;*/
+/*}*/
+
+/*@media only screen and (max-width: 900px) {*/
+/*    .LessonMobileNavbarIconContainer {*/
+/*        display: flex;*/
+/*        justify-content: center;*/
+/*        margin-top: 10px;*/
+/*    }*/
+/*}*/
