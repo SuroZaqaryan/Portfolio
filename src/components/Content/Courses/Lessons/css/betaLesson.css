@@ -108,6 +108,17 @@
     .LessonMobileNavbarIconContainer-mobile {
         display: flex;
         justify-content: center;
+        align-items: center;
         margin-top: 10px;
+    }
+}
+
+.bm-burger-button {
+    display: none;
+}
+
+@media only screen and (max-width: 900px) {
+    .bm-burger-button {
+        display: block;
     }
 }

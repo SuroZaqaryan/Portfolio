@@ -7,7 +7,10 @@ import { Navbar } from "../../../Navbar/Navbar";
 import ReactHtmlParser from 'react-html-parser';
 import * as Icon from 'react-bootstrap-icons';
 import styled from "styled-components";
+import { slide as Menu } from 'react-burger-menu'
+import {FormClose} from "grommet-icons";
 
+import {faCheckCircle} from "@fortawesome/free-solid-svg-icons/faCheckCircle";
 
 const NextPage = styled.button`
     display: flex;
@@ -16,7 +19,7 @@ const NextPage = styled.button`
     font-weight: 500;
     letter-spacing: 0.2px;
     color: #ff7b77d9;
-    padding: 10px 23px;
+    padding: 9px 22px;
     outline: none;
     cursor: pointer;
     text-align: center;
@@ -40,7 +43,7 @@ export class Lessons extends React.Component {
         window.addEventListener("resize", this.resize.bind(this));
         this.resize();
     }
-    
+
     resize() {
         if (window.innerWidth > 900) {
             this.setState({ mobileMenu: true })
@@ -48,7 +51,7 @@ export class Lessons extends React.Component {
             this.setState({ mobileMenu: false })
         }
     }
-    
+
     componentWillUnmount() {
         window.removeEventListener("resize", this.resize.bind(this));
     }
@@ -75,8 +78,10 @@ export class Lessons extends React.Component {
         this.setState({ mobileMenu: false })
     }
 
-        
- 
+    showSettings(event) {
+        event.preventDefault();
+    }
+
     render() {
 
         const listLessons = this.props.lesson.map((item, index) => {
@@ -86,7 +91,6 @@ export class Lessons extends React.Component {
 
             return (
                 <Fragment key={index}>
-
                     {item.title && (
                         <li className={less.courseTitle}>
                             <div>
@@ -119,17 +123,19 @@ export class Lessons extends React.Component {
                     <Navbar color="blue" bg="tomato" centerFlexNavbarContainer="flex" LiItem="NavBarli" MainStream="MainStream"
                         navbarSearchPage="Search" navbarHomePage="Home" NavbarMobileIconsBlock="mobile"
                         centerHeadlineNavbarColumn="center" showMobileMenu={this.showMobileMenu} />
-                    <div className={less.wrapper}>
 
-                        <div>
-                            <div style={{ display: this.state.mobileMenu ? 'block' : 'none' }} className={less.sidebar}>
-                                <div>
-                                    <ul onClick={this.hideMenu.bind(this)}>
-                                        {listLessons}
-                                    </ul>
+                    <div className={less.wrapper}>
+                        <Menu isOpen={this.state.mobileMenu}>
+                            <main id="page-wrap">
+                                <div className={less.sidebar}>
+                                    <div>
+                                        <ul onClick={this.hideMenu.bind(this)}>
+                                            {listLessons}
+                                        </ul>
+                                    </div>
                                 </div>
-                            </div>
-                        </div> 
+                            </main>
+                        </Menu>
 
                         <div>
                             <div className={less.main_content}>

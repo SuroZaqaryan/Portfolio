@@ -175,15 +175,8 @@
     }
 }
 
-@media only screen and (min-width: 900px) {
-    .sidebar {
-        display: none;
-    }
-}
-
 @media only screen and (max-width: 900px) {
     .wrapper .sidebar {
-        display: none;
         z-index: 99;
     }
 

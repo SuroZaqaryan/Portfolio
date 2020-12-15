@@ -8,7 +8,7 @@ import notification from './icons/notification.png'
 import { NavLink } from 'react-router-dom';
 import avatar from '../../backgrounds/tt_avatar_small.jpg'
 import MenuOutlined from "@ant-design/icons/es/icons/MenuOutlined";
-import CodeOutlined from "@ant-design/icons/es/icons/CodeOutlined";
+import {Code} from "grommet-icons";
 
 export class Navbar extends React.Component {
 
@@ -26,7 +26,8 @@ export class Navbar extends React.Component {
                             </div>
                             <div className={"ContentLessonMobileNavbarIconContainer LessonMobileNavbarIconContainer-" + this.props.NavbarMobileIconsBlock}>
                                 <div style={{ marginRight: "10px" }}>
-                                    <CodeOutlined title={"Open courses"} outline="none" onClick={() => { this.props.showMobileMenu() }} className={n.LessonMobileNavbarIcon} />
+                                    {/*<CodeOutlined title={"Open courses"} outline="none" onClick={() => { this.props.showMobileMenu() }} className={n.LessonMobileNavbarIcon} />*/}
+                                    <Code title={"Open courses"} onClick={() => { this.props.showMobileMenu() }} className={`${n.LessonMobileNavbarIcon} ${n.mobileIcon}`} />
                                 </div>
                                 <div>
                                     <MenuOutlined title={"Menu"} className={n.LessonMobileNavbarIcon} />

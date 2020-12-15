@@ -46,27 +46,18 @@
 }
 
 .MainStream {
-    /* font-family: "Montserrat", sans-serif; */
     font-size: 17px;
     font-weight: 500;
     color: #383838;
     text-decoration: none;
 }
 
-/* navbar */
-
 .ContentLessonMobileNavbarIconContainer {
     display: none;
 }
 
-/*.LessonMobileNavbarIconContainer {*/
-/*    display: none;*/
-/*}*/
-
-/*@media only screen and (max-width: 900px) {*/
-/*    .LessonMobileNavbarIconContainer {*/
-/*        display: flex;*/
-/*        justify-content: center;*/
-/*        margin-top: 10px;*/
-/*    }*/
-/*}*/
+.dEeaTZ:hover {
+    cursor: pointer;
+    stroke: #485676;
+    transition: 0.1s;
+}

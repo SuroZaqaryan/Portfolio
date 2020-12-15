@@ -11,3 +11,24 @@
 .list_active div svg {
     color:  white;
 }
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+    position: fixed;
+}
+
+.bm-menu-wrap {
+    width: 260px;
+}
+
+.bm-overlay {
+    display: none;
+}
+
+#react-burger-cross-btn {
+    display: none;
+}
+
+.krSGuh {
+    display: none;
+}

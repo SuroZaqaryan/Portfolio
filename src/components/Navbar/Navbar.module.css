@@ -162,21 +162,12 @@ header {
     right: 35px;
   }
 }
-/*.LessonMobileNavbarIconContainer {*/
-/*  display: none;*/
-/*}*/
 
 @media only screen and (max-width: 900px) {
   .nav__links,
   .cta {
     display: none;
   }
-
-  /*.LessonMobileNavbarIconContainer {*/
-  /*  display: flex;*/
-  /*  justify-content: center;*/
-  /*  margin-top: 10px;*/
-  /*}*/
 
   .navbarSearchPage {
     display: none;
