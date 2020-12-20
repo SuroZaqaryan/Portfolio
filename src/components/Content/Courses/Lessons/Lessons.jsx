@@ -8,9 +8,8 @@ import ReactHtmlParser from 'react-html-parser';
 import * as Icon from 'react-bootstrap-icons';
 import styled from "styled-components";
 import { slide as Menu } from 'react-burger-menu'
-import {FormClose} from "grommet-icons";
 
-import {faCheckCircle} from "@fortawesome/free-solid-svg-icons/faCheckCircle";
+import { NavbarMobile } from '../../../Navbar/Mobile_Navbar/NavbarMobile';
 
 const NextPage = styled.button`
     display: flex;
@@ -35,7 +34,9 @@ export class Lessons extends React.Component {
         this.state = {
             indexDescription: 1,
             listActiveIndex: 1,
-            mobileMenu: true,
+            sidebarMobile: true,
+            menuMobileIsOpen: false,
+            background: 'rgb(140 140 140 / 32%)'
         }
     }
 
@@ -46,9 +47,10 @@ export class Lessons extends React.Component {
 
     resize() {
         if (window.innerWidth > 900) {
-            this.setState({ mobileMenu: true })
+            this.setState({ sidebarMobile: true })
+            this.setState({ menuMobileIsOpen: false })
         } else {
-            this.setState({ mobileMenu: false })
+            this.setState({ sidebarMobile: false })
         }
     }
 
@@ -70,12 +72,21 @@ export class Lessons extends React.Component {
         this.setState({ indexDescription: this.state.indexDescription - 1, listActiveIndex: this.state.indexDescription - 1 })
     }
 
-    showMobileMenu = () => {
-        this.setState({ mobileMenu: !this.state.mobileMenu })
+    showsidebarMobile = () => {
+        this.setState({ sidebarMobile: !this.state.sidebarMobile })
     }
 
+    menuMobileIsOpen = () => {
+        this.setState({ menuMobileIsOpen: !this.state.menuMobileIsOpen })
+    }
+
+    HideMenuMobileIsOpen = () => {
+        this.setState({menuMobileIsOpen: false})
+    }
+
+
     hideMenu() {
-        this.setState({ mobileMenu: false })
+        this.setState({ sidebarMobile: false })
     }
 
     showSettings(event) {
@@ -83,6 +94,12 @@ export class Lessons extends React.Component {
     }
 
     render() {
+
+        let DarkeningMobileBackground = 'DarkeningMobileBackground';
+
+        if (this.state.menuMobileIsOpen) {
+            DarkeningMobileBackground += '-Active';
+        }
 
         const listLessons = this.props.lesson.map((item, index) => {
 
@@ -120,12 +137,20 @@ export class Lessons extends React.Component {
         return (
             <>
                 <div className="abc">
-                    <Navbar color="blue" bg="tomato" centerFlexNavbarContainer="flex" LiItem="NavBarli" MainStream="MainStream"
-                        navbarSearchPage="Search" navbarHomePage="Home" NavbarMobileIconsBlock="mobile"
-                        centerHeadlineNavbarColumn="center" showMobileMenu={this.showMobileMenu} />
+                    <div>
+                        <Navbar color="blue" bg="tomato" centerFlexNavbarContainer="flex" LiItem="NavBarli" MainStream="MainStream"
+                            navbarSearchPage="Search" navbarHomePage="Home" NavbarMobileIconsBlock="mobile"
+                            centerHeadlineNavbarColumn="center" showsidebarMobile={this.showsidebarMobile} menuMobileIsOpen={this.menuMobileIsOpen} />
 
-                    <div className={less.wrapper}>
-                        <Menu isOpen={this.state.mobileMenu}>
+                        <div>
+                            {
+                                this.state.menuMobileIsOpen ? <NavbarMobile /> : null
+                            }
+                        </div>
+                    </div>
+                    
+                    <div className={`${less.wrapper} ${DarkeningMobileBackground}`}>
+                        <Menu isOpen={this.state.sidebarMobile} >
                             <main id="page-wrap">
                                 <div className={less.sidebar}>
                                     <div>
@@ -147,7 +172,7 @@ export class Lessons extends React.Component {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className={less.info}>
+                                    <div className={less.info} onClick={this.HideMenuMobileIsOpen.bind(this)}>
                                         <div className={less.description}>
                                             {
                                                 ReactHtmlParser(this.props.lesson[this.state.indexDescription]["data"]["description"])

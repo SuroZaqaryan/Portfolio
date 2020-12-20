@@ -12,6 +12,7 @@ import AppleContainer from "./components/News/NewsCategories/Apple/AppleContaine
 import TechCrunchContainer from "./components/News/NewsCategories/TechCrunch/TechCrunchContainer";
 import {ParallaxProvider} from "react-scroll-parallax";
 import LessonsContainer from "./components/Content/Courses/Lessons/LessonsContainer";
+import { NavbarMobile } from './components/Navbar/Mobile_Navbar/NavbarMobile';
 
 function App() {
     return (
@@ -26,6 +27,7 @@ function App() {
                 <Route path='/Apple' render={() => <AppleContainer/>}/>
                 <Route path='/TechCrunch' render={() => <TechCrunchContainer/>}/>
                 <Route path='/Lessons' render={() => <LessonsContainer/>}/>
+                <Route path='/NavbarMobile' render={() => <NavbarMobile/>}/>
             </div>
         </ParallaxProvider>
     );

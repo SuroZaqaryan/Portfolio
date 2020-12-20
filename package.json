@@ -61,6 +61,7 @@
     "react-syntax-highlighter": "^15.3.1",
     "react-time": "^4.3.0",
     "react-transition-group": "^4.4.1",
+    "reactjs-navbar": "^1.0.2",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
     "styled-components": "^5.2.1"

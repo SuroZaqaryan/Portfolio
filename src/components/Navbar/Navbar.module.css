@@ -175,4 +175,8 @@ header {
   .menu {
     display: initial;
   }
+
+  header {
+    position: inherit;
+  }
 }

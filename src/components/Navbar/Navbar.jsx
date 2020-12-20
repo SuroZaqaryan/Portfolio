@@ -26,11 +26,10 @@ export class Navbar extends React.Component {
                             </div>
                             <div className={"ContentLessonMobileNavbarIconContainer LessonMobileNavbarIconContainer-" + this.props.NavbarMobileIconsBlock}>
                                 <div style={{ marginRight: "10px" }}>
-                                    {/*<CodeOutlined title={"Open courses"} outline="none" onClick={() => { this.props.showMobileMenu() }} className={n.LessonMobileNavbarIcon} />*/}
-                                    <Code title={"Open courses"} onClick={() => { this.props.showMobileMenu() }} className={`${n.LessonMobileNavbarIcon} ${n.mobileIcon}`} />
+                                    <Code title={"Open courses"} onClick={() => { this.props.showsidebarMobile() }} className={`${n.LessonMobileNavbarIcon} ${n.mobileIcon}`} />
                                 </div>
                                 <div>
-                                    <MenuOutlined title={"Menu"} className={n.LessonMobileNavbarIcon} />
+                                    <MenuOutlined title={"Menu"} onClick={() => { this.props.menuMobileIsOpen() }} className={n.LessonMobileNavbarIcon} />
                                 </div>
                             </div>
 
