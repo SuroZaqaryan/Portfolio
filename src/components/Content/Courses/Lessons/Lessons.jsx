@@ -8,8 +8,7 @@ import ReactHtmlParser from 'react-html-parser';
 import * as Icon from 'react-bootstrap-icons';
 import styled from "styled-components";
 import { slide as Menu } from 'react-burger-menu'
-
-import { NavbarMobile } from '../../../Navbar/Mobile_Navbar/NavbarMobile';
+import NavbarMobileContainer from "../../../Navbar/Mobile_Navbar/NavbarMobile_Container";
 
 const NextPage = styled.button`
     display: flex;
@@ -54,6 +53,12 @@ export class Lessons extends React.Component {
         }
     }
 
+    hideMenu() {
+        if(window.innerWidth < 900) {
+            this.setState({ sidebarMobile: false })
+        }
+    }
+
     componentWillUnmount() {
         window.removeEventListener("resize", this.resize.bind(this));
     }
@@ -82,11 +87,6 @@ export class Lessons extends React.Component {
 
     HideMenuMobileIsOpen = () => {
         this.setState({menuMobileIsOpen: false})
-    }
-
-
-    hideMenu() {
-        this.setState({ sidebarMobile: false })
     }
 
     showSettings(event) {
@@ -144,7 +144,7 @@ export class Lessons extends React.Component {
 
                         <div>
                             {
-                                this.state.menuMobileIsOpen ? <NavbarMobile /> : null
+                                this.state.menuMobileIsOpen ? <NavbarMobileContainer /> : null
                             }
                         </div>
                     </div>

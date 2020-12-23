@@ -5,62 +5,72 @@ import lessons from './icons/lessons.png'
 import megaphone from './icons/megaphone.png'
 import profile from './icons/profile.png'
 import home from '../icons/home.png'
-import {MobileContainer, MobileDiv, AvatarBlock,
-    HomeBorderIcon, MobileImageBlock, UserName, TitleName,} from './css/NavbarMobile-Styled-Component'
+import {
+    MobileContainer, MobileDiv, AvatarBlock,
+    HomeBorderIcon, MobileImageBlock, UserName, TitleName,
+} from './css/NavbarMobile-Styled-Component'
 
 
 export class NavbarMobile extends React.Component {
+
     render() {
-        return <MobileContainer>
-            <AvatarBlock>
-                <MobileImageBlock>
-                    <img width="40" src={avatar} />
-                </MobileImageBlock>
 
-                <div>
-                    <UserName>Snoopka</UserName>
-                </div>
-            </AvatarBlock>
+        if(!this.props.profile) {
+            return "Loading..."
+        }
 
-            <MobileDiv>
-                <MobileImageBlock>
-                    <HomeBorderIcon width="30" src={home} />
-                </MobileImageBlock>
+        return (
+            <MobileContainer>
+                <AvatarBlock>
+                    <MobileImageBlock>
+                        <img width="40" src={avatar}/>
+                    </MobileImageBlock>
 
-                <div>
-                    <TitleName>Main Stream</TitleName>
-                </div>
-            </MobileDiv>
+                    <div>
+                        <UserName>{this.props.profile.fullName}</UserName>
+                    </div>
+                </AvatarBlock>
 
-            <MobileDiv>
-                <MobileImageBlock>
-                    <img width="30" src={megaphone} />
-                </MobileImageBlock>
+                <MobileDiv>
+                    <MobileImageBlock>
+                        <HomeBorderIcon width="30" src={home}/>
+                    </MobileImageBlock>
 
-                <div>
-                    <TitleName>News</TitleName>
-                </div>
-            </MobileDiv>
+                    <div>
+                        <TitleName>Main Stream</TitleName>
+                    </div>
+                </MobileDiv>
 
-            <MobileDiv>
-                <MobileImageBlock>
-                    <img width="30" src={profile} />
-                </MobileImageBlock>
+                <MobileDiv>
+                    <MobileImageBlock>
+                        <img width="30" src={megaphone}/>
+                    </MobileImageBlock>
 
-                <div>
-                    <TitleName>Profile</TitleName>
-                </div>
-            </MobileDiv>
+                    <div>
+                        <TitleName>News</TitleName>
+                    </div>
+                </MobileDiv>
 
-            <MobileDiv>
-                <MobileImageBlock>
-                    <img width="30" src={lessons} />
-                </MobileImageBlock>
+                <MobileDiv>
+                    <MobileImageBlock>
+                        <img width="30" src={profile}/>
+                    </MobileImageBlock>
 
-                <div>
-                    <TitleName>Lessons</TitleName>
-                </div>
-            </MobileDiv>
-        </MobileContainer>
+                    <div>
+                        <TitleName>Profile</TitleName>
+                    </div>
+                </MobileDiv>
+
+                <MobileDiv>
+                    <MobileImageBlock>
+                        <img width="30" src={lessons}/>
+                    </MobileImageBlock>
+
+                    <div>
+                        <TitleName>Lessons</TitleName>
+                    </div>
+                </MobileDiv>
+            </MobileContainer>
+        );
     }
 }
