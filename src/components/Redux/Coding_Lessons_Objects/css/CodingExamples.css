@@ -48,7 +48,7 @@
   }
   
   pre::after {
-      content: "double click to selection";
+      /*content: "double click to selection";*/
       padding: 0;
       width: auto;
       height: auto;

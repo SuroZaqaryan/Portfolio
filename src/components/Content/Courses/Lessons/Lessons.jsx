@@ -7,6 +7,8 @@ import { Navbar } from "../../../Navbar/Navbar";
 import ReactHtmlParser from 'react-html-parser';
 import * as Icon from 'react-bootstrap-icons';
 import styled from "styled-components";
+import classNames from "classnames";
+
 import { slide as Menu } from 'react-burger-menu'
 import NavbarMobileContainer from "../../../Navbar/Mobile_Navbar/NavbarMobile_Container";
 
@@ -33,7 +35,8 @@ export class Lessons extends React.Component {
         this.state = {
             indexDescription: 1,
             listActiveIndex: 1,
-            sidebarMobile: true,
+            sidebarMobile: false,
+            sidebarMobileChangeBackground: false,
             menuMobileIsOpen: false,
             background: 'rgb(140 140 140 / 32%)'
         }
@@ -53,9 +56,15 @@ export class Lessons extends React.Component {
         }
     }
 
+    showsidebarMobile = () => {
+        this.setState({ sidebarMobile: !this.state.sidebarMobile })
+        this.setState({ sidebarMobileChangeBackground: !this.state.sidebarMobileChangeBackground })
+    }
+
     hideMenu() {
-        if(window.innerWidth < 900) {
+        if (window.innerWidth < 900) {
             this.setState({ sidebarMobile: false })
+            this.setState({ sidebarMobileChangeBackground: false })
         }
     }
 
@@ -77,16 +86,12 @@ export class Lessons extends React.Component {
         this.setState({ indexDescription: this.state.indexDescription - 1, listActiveIndex: this.state.indexDescription - 1 })
     }
 
-    showsidebarMobile = () => {
-        this.setState({ sidebarMobile: !this.state.sidebarMobile })
-    }
-
     menuMobileIsOpen = () => {
         this.setState({ menuMobileIsOpen: !this.state.menuMobileIsOpen })
     }
 
     HideMenuMobileIsOpen = () => {
-        this.setState({menuMobileIsOpen: false})
+        this.setState({ menuMobileIsOpen: false })
     }
 
     showSettings(event) {
@@ -96,8 +101,13 @@ export class Lessons extends React.Component {
     render() {
 
         let DarkeningMobileBackground = 'DarkeningMobileBackground';
+        let visible = 'visible';
 
         if (this.state.menuMobileIsOpen) {
+            visible += '-Active'
+        }
+
+        if (this.state.menuMobileIsOpen || this.state.sidebarMobileChangeBackground) {
             DarkeningMobileBackground += '-Active';
         }
 
@@ -136,6 +146,7 @@ export class Lessons extends React.Component {
 
         return (
             <>
+                <div className="backgroundTrnasp"></div>
                 <div className="abc">
                     <div>
                         <Navbar color="blue" bg="tomato" centerFlexNavbarContainer="flex" LiItem="NavBarli" MainStream="MainStream"
@@ -143,12 +154,17 @@ export class Lessons extends React.Component {
                             centerHeadlineNavbarColumn="center" showsidebarMobile={this.showsidebarMobile} menuMobileIsOpen={this.menuMobileIsOpen} />
 
                         <div>
-                            {
-                                this.state.menuMobileIsOpen ? <NavbarMobileContainer /> : null
-                            }
+                            <div className={`${less.navigation_menu} ${visible}`}>
+                                {
+                                    this.state.menuMobileIsOpen ?
+                                        <NavbarMobileContainer />
+                                        :
+                                        null
+                                }
+                            </div>
                         </div>
                     </div>
-                    
+
                     <div className={`${less.wrapper} ${DarkeningMobileBackground}`}>
                         <Menu isOpen={this.state.sidebarMobile} >
                             <main id="page-wrap">
@@ -167,9 +183,7 @@ export class Lessons extends React.Component {
                                 <div className={less.main_inside_content}>
                                     <div className={less.header}>
                                         <div className={less.header_next_page}>
-                                            <div>
-                                                <h2>{this.props.lesson[this.state.indexDescription]["heading"]}</h2>
-                                            </div>
+                                            <h2>{this.props.lesson[this.state.indexDescription]["heading"]}</h2>
                                         </div>
                                     </div>
                                     <div className={less.info} onClick={this.HideMenuMobileIsOpen.bind(this)}>

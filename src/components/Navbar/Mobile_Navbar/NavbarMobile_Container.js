@@ -7,7 +7,6 @@ import { withRouter } from "react-router";
 class NavbarMobileContainer extends React.Component {
 
     componentDidMount() {
-        console.log('123')
         let userId = this.props.match.params.userId;
         if (!userId) {
             userId = 9344;

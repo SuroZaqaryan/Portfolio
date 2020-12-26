@@ -32,10 +32,8 @@ export class Navbar extends React.Component {
                                     <MenuOutlined title={"Menu"} onClick={() => { this.props.menuMobileIsOpen() }} className={n.LessonMobileNavbarIcon} />
                                 </div>
                             </div>
-
                         </div>
-                        <div
-                            className={"centerHeadlineNavbarColumn centerHeadlineNavbarColumn-" + this.props.centerHeadlineNavbarColumn}>
+                        <div className={"centerHeadlineNavbarColumn centerHeadlineNavbarColumn-" + this.props.centerHeadlineNavbarColumn}>
                             <div className={"navbarHomePage navbarHomePage-" + this.props.navbarHomePage}>
                                 <nav>
                                     <ul className={n.nav__links}>

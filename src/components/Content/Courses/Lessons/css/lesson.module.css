@@ -18,7 +18,7 @@
     overflow: scroll;
     height: 100%;
     background: #ffffff;
-    padding: 15px 0px;
+    padding: 10px 0px;
     position: fixed;
 }
 
@@ -49,14 +49,12 @@
 
 .wrapper .main_content .header {
     padding: 20px 0px 20px 0px;
-    background: #fff;
     color: #717171;
     border-bottom: 1px solid #e0e4e8;
 }
 
 .wrapper .main_content .header h2 {
     font-weight: 500;
-    font-family: emoji;
     color: #282c34;
     font-size: 22px;
 }
@@ -150,6 +148,17 @@
     margin: -20px;
 }
 
+.navigation_menu {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    transform: translate3d(0%, -100%, 0);
+    transition: transform 0.2s ease-in-out;
+    will-change: transform;
+    z-index: 99;
+}
+
 @media only screen and (max-width: 1600px) {
     .main_inside_content {
         width: 50%;
@@ -178,6 +187,8 @@
 @media only screen and (max-width: 900px) {
     .wrapper .sidebar {
         z-index: 99;
+        border-top: 1px solid #e4e4e4;
+        box-shadow: 8px 0 5px -2px #8888885e;
     }
 
     .main_inside_content {
