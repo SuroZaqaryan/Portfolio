@@ -12,7 +12,7 @@ class LessonsContainer extends React.Component {
 
     render() {
         return (
-            <Lessons {...this.props}/>
+            <Lessons {...this.props} value={this.props.value}/>
         );
     }
 }

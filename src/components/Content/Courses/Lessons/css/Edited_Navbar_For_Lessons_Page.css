@@ -1,7 +1,11 @@
 .LogoDivContainer-blue {
     display: flex;
     align-items: center;
-    padding-left: 20px;
+    margin-left: 20px;
+}
+
+.headlineHeader-headerMobileLessonsPage {
+    position: fixed;
 }
 
 .avatar_and_user_text-tomato {
@@ -40,7 +44,7 @@
 }
 
 .centerHeadlineNavbarColumn-center {
-    width: 50%;
+    width: 51%;
     margin: auto;
     position: absolute;
     top: 50%;
@@ -118,7 +122,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 0px 20px 0px 20px;
+        padding: 0px 20px 0px 0px;
     }
 
     .LessonMobileNavbarIconContainer-mobile {

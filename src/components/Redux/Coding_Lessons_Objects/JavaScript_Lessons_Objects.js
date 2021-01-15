@@ -8,11 +8,19 @@ import "./css/CodingExamples.css";
 import "./css/bbc.css"
 
 function JavaScriptLessonObject() {
-    const one = "Robby ";
+
+    const one = "Robby";
+
+    const getClassName = () => {
+        const classString = 'message';
+        alert('12')
+    }
+
     return (
+
         [
             {
-                title: [<div><p className={jsStyle.title}>Overview</p></div>],
+                title: [<p className={jsStyle.title}>Overview</p>],
             },
 
             {
@@ -187,7 +195,7 @@ function myFunction() {
                 </div>
 
 <div class="code_syntax">
-<pre class='code code-javascript'><label>JS</label><code  style="padding: 0px 0px 14px">
+<pre class='code code-javascript'><label>JS</label><code>
     console.log("Hello from console");
 </code></pre>
 
@@ -222,7 +230,7 @@ function myFunction() {
                 </p>
 
 <div class="code_syntax">
-<pre class='code code-javascript'><label>JS</label><code  style="padding: 0px 0px 14px">
+<pre class='code code-javascript'><label>JS</label><code>
    alert("This is an Alert box!");
 </code></pre>
 
@@ -256,7 +264,7 @@ function myFunction() {
                             </p>
 
 <div class="code_syntax">
-<pre class='code code-javascript'><label>JS</label><code  style="padding: 0px 0px 14px">
+<pre class='code code-javascript'><label>JS</label><code>
     /* This code
         creates an
         alert box */
@@ -298,7 +306,7 @@ function myFunction() {
                             </p>
 
 <div class="code_syntax">
-<pre class='code code-javascript'><label>JS</label><code  style="padding: 0px 0px 14px">
+<pre class='code code-javascript'><label>JS</label><code>
     // Change heading:
     document.getElementById("myH").innerHTML = "My First Page";
 
@@ -327,7 +335,7 @@ function myFunction() {
                             </p>
 
 <div class="code_syntax">
-<pre class='code code-javascript'><label>JS</label><code  style="padding: 0px 0px 14px">
+<pre class='code code-javascript'><label>JS</label><code>
     var x = 10;
 </pre>
 </div>
@@ -372,7 +380,7 @@ function myFunction() {
                     </p>
 
 <div class="code_syntax">
-<pre class='code code-javascript'><label>JS</label><code  style="padding: 0px 0px 14px">
+<pre class='code code-javascript'><label>JS</label><code>
     var x = 10;
     document.write(x);
 </pre>
@@ -388,7 +396,7 @@ function myFunction() {
                     </p>
 
 <div class="code_syntax">
-<pre class='code code-javascript'><label>JS</label><code  style="padding: 0px 0px 14px">
+<pre class='code code-javascript'><label>JS</label><code>
     var x = 100;
     console.log(x);
 
@@ -429,7 +437,7 @@ function myFunction() {
                  </p>
 
 <div class="code_syntax">
-<pre class='code code-javascript'><label>JS</label><code  style="padding: 0px 0px 14px">
+<pre class='code code-javascript'><label>JS</label><code>
     var x = 100;
     document.write(X);
 </pre>
@@ -485,7 +493,7 @@ function myFunction() {
                 iconName: faDotCircle,
                 data: {
                     description:
-                    `
+                        `
                     <div>
                     <p class="con">
                     The term <b class="hal">data type</b> refers to the types of values a program can work with.
@@ -498,7 +506,7 @@ function myFunction() {
                     Numbers can be written with or without decimals. Like this:
 
 <div class="code_syntax">
-<pre class='code code-javascript'><label>JS</label><code  style="padding: 0px 0px 14px">
+<pre class='code code-javascript'><label>JS</label><code>
     var num = 42; // A number without decimals
 
     var price = 55.55;
@@ -531,7 +539,7 @@ function myFunction() {
                         </p>
 
 <div class="code_syntax">
-<pre class='code code-javascript'><label>JS</label><code  style="padding: 0px 0px 14px">
+<pre class='code code-javascript'><label>JS</label><code>
     var name = 'John';
     var text = "My name is John Smith";
 </code></pre>
@@ -545,7 +553,7 @@ function myFunction() {
                         </div>
 
 <div class="code_syntax">
-<pre class='code code-javascript'><label>JS</label><code  style="padding: 0px 0px 14px">
+<pre class='code code-javascript'><label>JS</label><code>
     var text = "My name is 'John' ";
 </code></pre>
 </div>                       
@@ -571,7 +579,7 @@ function myFunction() {
                 </div>
 
 <div class="code_syntax">
-<pre class='code code-javascript'><label>JS</label><code  style="padding: 0px 0px 14px">
+<pre class='code code-javascript'><label>JS</label><code>
     var sayHello = 'Hello world! \'I am a JavaScript programmer.\' ';
     document.write(sayHello);
 </code></pre>
@@ -630,7 +638,7 @@ function myFunction() {
 
                     <div>
 <div class="code_syntax">
-<pre class='code code-javascript'><label>JS</label><code  style="padding: 0px 0px 14px">
+<pre class='code code-javascript'><label>JS</label><code>
     var isActive = true; 
     var isHoliday = false;
 </code></pre>

@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {Navbar} from '../Navbar/Navbar';
 import "./css/style.css"
+import "./css/Edited_Navbar_For_Profile_Page.css"
 import {AchievementsBeta} from "../Content/Achievements/BetaAchievements";
 import {UserSettings} from './ProfileContent/UserSettings/UserSettings';
 import {Calendar} from "react-calendar";
@@ -10,10 +11,11 @@ import {UserCertificates} from "./ProfileContent/UserCertificate/UserCertificate
 import {AboutFormUsers} from "./ProfileContent/AboutFormUser/AboutFormUsers";
 import {TopContent} from "./ProfileContent/topContent/topContent";
 import {UserAvatarBlock} from "./ProfileContent/UserAvatarBlock/UserAvatarBlock";
+import NavbarContainer from '../Navbar/NavbarContainer';
 
 export const Profile = (props) => {
 
-    const [value, onChange] = useState(new Date());
+    const [value, onChange] = useState(new Date()); 
 
     if (!props.profile) {
         return <p>Loading...</p>
@@ -22,7 +24,7 @@ export const Profile = (props) => {
     return (
         <div>
             <div>
-                <Navbar {...props}/>
+                <NavbarContainer {...props} headerMobile="HeaderMobileProfilePage" />
             </div>
 
             <div className="contentProfile">

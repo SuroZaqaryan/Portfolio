@@ -6,13 +6,21 @@ import JavaScript from "./LanguagesIcons/javascript.png"
 import ReactImage from "./LanguagesIcons/react.png"
 import Node from "./LanguagesIcons/nodejs.png"
 import swift from "./LanguagesIcons/swift.png"
-import php from "./LanguagesIcons/php.png"
-
+import styled from "styled-components";
 import ProgressBar from '@ramonak/react-progress-bar';
 
+const UserContainer = styled.div`
+  border-bottom: ${props => (props.value ? "1px solid #e3e3e30d" : "1px solid #e3e3e30d")};
+  display: flex;
+  justify-content: flex-start;
+  margin-right: 20px;
+  margin-bottom: 40px;
+  padding-bottom: 35px;
+`;
+
 export class Courses extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             CoursesPage: [
                 {
@@ -84,7 +92,7 @@ export class Courses extends React.Component {
     render() {
         const list = this.state.CoursesPage.map((item, index) => {
             return (
-                <div className={ContentStyle.languagesBlock} key={index}>
+                <UserContainer value={this.props.value} key={index}>
                     <div className={ContentStyle.programLanguages}>
                         <img src={item.img} alt="" />
                     </div>
@@ -97,17 +105,15 @@ export class Courses extends React.Component {
                                 height={14} labelSize="12px" borderRadius="2px" />
                         </div>
                     </div>
-                </div>
+                </UserContainer>
             );
         }
 
         )
         return (
-            <Fragment>
-                <div>
+                <div style={{marginTop: '40px'}}>
                     {list}
                 </div>
-            </Fragment>
         );
     }
 }

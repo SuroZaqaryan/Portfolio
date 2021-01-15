@@ -1,7 +1,7 @@
 import React from 'react';
-import {Content} from "./Content";
 import {AuthUserThunk, setProgressCount} from "../Redux/auth-reducer";
 import {connect} from "react-redux";
+import Content from "./Content";
 
 
 class ContentContainer extends React.Component {

@@ -1,101 +1,38 @@
-
 import React from "react";
 import cnStyle from "./ContentCourses.module.css"
-import python from "./Icons/pyhton.png"
-import cPlusPlus from "./Icons/c++.png"
-import JavaScript from "./Icons/JavaScript.png"
-import swift from "./Icons/swift.png"
-import HTML from "./Icons/HTML.png"
-import CSS from "./Icons/CSS.png"
+import styled from "styled-components";
+
+const Content_Container = styled.div`
+  background: ${props => (props.value ? "#282e3c" : "rgb(170 170 170 / 18%)")};
+  box-shadow: ${props => (props.value ? "0px 1px 10px rgb(24 24 24 / 45%)" : null)};
+  border: ${props => (props.value ? "1px solid #343b4b" : "1px solid #dbdbdb99")};
+  max-width: 100%;
+  margin: 15px;
+  max-width: 480px;
+
+`;
+
+const ContentHeadlineBlock = styled.div`
+  border-bottom: ${props => (props.value ? "1px solid #2f3747" : "1px solid #b0b0b04f")};
+  max-width: 450px;
+  padding: 20px;
+  padding-bottom: 17px;
+`;
 
 export class ContentCourses extends React.Component {
-
-    constructor() {
-        super();
-        this.state = {
-            languageInfo: [
-                {
-                    languageName: "Python 3",
-                    about: `
-                    Learn Python, one of today's most in-demand programming languages on-the-go!
-                    Practice writing Python code, collect points, & show off your skills now!`,
-                    Learners: 30045,
-                    Lessons: 87,
-                    Quizzes: 271,
-                    icon: python,
-                },
-
-                {
-                    languageName: "JavaScript",
-                    about: `
-                    Learn all the basic features of JavaScript, including making your website more interactive,
-                    changing website content, validating forms, and so much more.`,
-                    Learners: 42123,
-                    Lessons: 42,
-                    Quizzes: 321,
-                    icon: JavaScript,
-                },
-
-                {
-                    languageName: "C++",
-                    about: `
-                    Our C++ tutorial covers basic concepts, data types, arrays, pointers, conditional statements,
-                    loops, functions, classes, objects, inheritance, and polymorphism.`,
-                    Learners: 53241,
-                    Lessons: 23,
-                    Quizzes: 451,
-                    icon: cPlusPlus,
-                },
-
-                {
-                    languageName: "Swift",
-                    about: `
-                    Learn all the main concepts of Swift programming and apply your newly gained knowledge
-                    to create your own, fully functioning iOS app!`,
-                    Learners: 63211,
-                    Lessons: 54,
-                    Quizzes: 623,
-                    icon: swift,
-                },
-
-                {
-                    languageName: "HTML",
-                    about: `
-                    This FREE course will teach you how to design a web page using HTML.
-                    Complete a series of hands-on exercises and practice while writing real HTML code.`,
-                    Learners: 18024,
-                    Lessons: 32,
-                    Quizzes: 962,
-                    icon: HTML,
-                },
-
-                {
-                    languageName: "CSS",
-                    about: `
-
-                    Our CSS course will teach you how to control the style & layout of websites.
-                    Complete a series of exercises and practice while filling out actual CSS templates.`,
-                    Learners: 58932,
-                    Lessons: 46,
-                    Quizzes: 125,
-                    icon: CSS,
-                },
-            ]
-        }
-    }
 
     render() {
 
         const resultsRender = [];
 
-        for (var i = 0; i < this.state.languageInfo.length; i += 2) {
+        for (var i = 0; i < this.props.course.length; i += 2) {
             resultsRender.push(
                 <div className={cnStyle.clearfix}>
                     {
-                        this.state.languageInfo.slice(i, i + 2).map((item, index) => {
+                        this.props.course.slice(i, i + 2).map((item, index) => {
                             return (
-                                <div key={index} className={cnStyle.ContentVeryHeadlineBlock}>
-                                    <div className={cnStyle.ContentHeadlineBlock}>
+                                <Content_Container value={this.props.value} key={index} className={cnStyle.ContentVeryHeadlineBlock}>
+                                    <ContentHeadlineBlock value={this.props.value}>
                                         <div className={cnStyle.ContentCoursesBlock}>
                                             <div style={{ marginRight: '25px' }} className={cnStyle.courseIconBlock}>
                                                 <img className={cnStyle.courseIcon} src={item.icon} alt="" />
@@ -106,7 +43,7 @@ export class ContentCourses extends React.Component {
                                                     <h3>{item.languageName}</h3>
                                                 </div>
                                                 <div>
-                                                    <p style={{ color: 'dimgrey' }}>
+                                                    <p className={this.props.value ? cnStyle.courseDarkInfo : cnStyle.courseInfo}>
                                                         {item.about}
                                                     </p>
                                                 </div>
@@ -117,7 +54,7 @@ export class ContentCourses extends React.Component {
                                         <div className={cnStyle.buttonMoreBlock}>
                                             <button>More</button>
                                         </div>
-                                    </div>
+                                    </ContentHeadlineBlock>
                                     <div className={cnStyle.moreInformation}>
                                         <div>
                                             <p>Learners</p>
@@ -132,7 +69,7 @@ export class ContentCourses extends React.Component {
                                             <p className={cnStyle.learnQuantity}>{item.Quizzes}</p>
                                         </div>
                                     </div>
-                                </div>
+                                </Content_Container>
                             );
                         }
 

@@ -1,0 +1,20 @@
+.themeMode {
+    -webkit-appearance: none;
+    position: relative;
+    top: 1px;
+    width: 30px;
+    height: 30px;
+    background-image: url(../ThemeIcon/sun.png);
+    background-size: cover;
+    outline: none;
+    transition: background-image .70s;
+    /*box-shadow: 0px 2px 5px 1px grey;*/
+    max-width: 100%;
+}
+
+.themeMode:checked {
+    background-image: url(https://www.flaticon.com/svg/static/icons/svg/667/667421.svg);
+    transition: background-image .70s;
+    width: 25px;
+    height: 26px;
+}

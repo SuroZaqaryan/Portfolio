@@ -1,5 +1,7 @@
 .LogoDivContainer {
     flex: 1;
+    display: flex;
+    margin-left: 25px;
 }
 
 .LogoDivContainer a img {
@@ -9,9 +11,21 @@
     max-width: 100%;
 }
 
+.headlineHeader {
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: self-start;
+    padding: 10px 0%;
+    z-index: 90;
+    width: 100%;
+}
+
 .avatar_and_user_text {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    margin-right: 25px;
     align-items: center;
     flex: 1;
 }
@@ -45,12 +59,12 @@
     padding: 0px 20px;
 }
 
-.MainStream {
-    font-size: 17px;
-    font-weight: 500;
-    color: #383838;
-    text-decoration: none;
-}
+/*.MainStream {*/
+/*    font-size: 17px;*/
+/*    font-weight: 500;*/
+/*    color: #383838;*/
+/*    text-decoration: none;*/
+/*}*/
 
 .ContentLessonMobileNavbarIconContainer {
     display: none;

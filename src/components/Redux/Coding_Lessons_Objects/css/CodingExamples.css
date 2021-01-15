@@ -39,7 +39,7 @@
       font-family: 'Roboto';
       display: block;
       margin: 0 0 0 60px;
-      padding: 0px 16px 14px;
+      padding: 0px 15px 14px;
       border-left: 1px solid #555;
       overflow-x: auto;
       font-size: 13px;
@@ -76,6 +76,7 @@
   
   pre.code-css code {
       color: #91a7ff;
+      padding: 0px 0px 14px;
   }
   
   pre.code-html code {

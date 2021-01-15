@@ -4,10 +4,31 @@ import userStyle from "./users.module.css";
 import avatar from '../../backgrounds/20980408.png'
 import {NavLink} from "react-router-dom";
 import {MoreText} from "./ShowMoreText/ShowMoreText";
+import styled from "styled-components";
+
+const PopularUsers = styled.p`
+  color: ${props => (props.value ? "#ffffff" : "#343434")};
+  text-align: left;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: system-ui;
+  letter-spacing: 0.5px;
+`;
+
+const UserContainer = styled.div`
+  box-shadow: ${props => (props.value ? "-4px 7px 10px rgb(24 24 24 / 19%)" : "0px 15px 19px 0px rgb(255 154 154 / 37%);")};
+  border: ${props => (props.value ? null : null)};
+  background: ${props => (props.value ? "#262b36" : "#ffffff")};
+  margin-bottom: 20px;
+  border-radius: 30px;
+  padding: 20px;
+`;
 
 export let Users = ({currentPage, totalUsersCount, pageSize, onPageChanged, users, ...props}) => {
+
     const list = props.user.map((user, index) => {
-            return <div key={index} className={userStyle.userContainer}>
+            return <UserContainer value={props.value} key={index} className={props.value ? userStyle.userDarkContainer : userStyle.userContainer}>
                 <div>
                     {
                         user.followed ?
@@ -26,7 +47,7 @@ export let Users = ({currentPage, totalUsersCount, pageSize, onPageChanged, user
 
                         <div style={{marginLeft: '13px'}}>
                             <NavLink className={userStyle.userName} to={'/profile/' + user.id}>
-                                <p>{user.name}</p>
+                                <p className={props.value ? userStyle.user_dark_name : null}>{user.name}</p>
                             </NavLink>
                         </div>
                     </div>
@@ -54,17 +75,19 @@ export let Users = ({currentPage, totalUsersCount, pageSize, onPageChanged, user
                         </div>
                     </div>
                 </div>
-            </div>
+            </UserContainer>
         }
     )
 
     return (
         <>
             <div style={{padding: '15px'}}>
-                <div>
-                    <p style={{textAlign: 'left', fontWeight: '600'}}>Popular users</p>
+                <div style={{paddingLeft: '20px'}}>
+                    <PopularUsers value={props.value}>Popular users</PopularUsers>
                 </div>
-                {list}
+                <div style={{marginTop: '25px'}}>
+                    {list}
+                </div>
             </div>
             <div>
                 <Paginator currentPage={currentPage} onPageChanged={onPageChanged}

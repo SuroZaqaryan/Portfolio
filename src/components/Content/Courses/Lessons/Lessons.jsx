@@ -1,16 +1,15 @@
 import React, { Fragment } from 'react';
 import less from "./css/lesson.module.css";
 import "./css/activeLink.css";
-import "./css/betaLesson.css";
+import "./css/Edited_Navbar_For_Lessons_Page.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Navbar } from "../../../Navbar/Navbar";
 import ReactHtmlParser from 'react-html-parser';
 import * as Icon from 'react-bootstrap-icons';
 import styled from "styled-components";
-import classNames from "classnames";
 
 import { slide as Menu } from 'react-burger-menu'
 import NavbarMobileContainer from "../../../Navbar/Mobile_Navbar/NavbarMobile_Container";
+import NavbarContainer from '../../../Navbar/NavbarContainer';
 
 const NextPage = styled.button`
     display: flex;
@@ -28,6 +27,18 @@ const NextPage = styled.button`
     border: 1px solid #ff7b77d9;
     border-radius: 2px;
 `;
+
+const LessonParagraph = styled.p`
+  color: ${props => (props.value ? "#e4e4e4" : "#304455")};
+  line-height: 1.5;
+`;
+
+const LessonTitle = styled.h2`
+  color: ${props => (props.value ? "#ff7b77" : "#282c34")};
+  font-weight: 500;
+  font-size: 22px;
+`;
+
 
 export class Lessons extends React.Component {
     constructor(props) {
@@ -120,9 +131,7 @@ export class Lessons extends React.Component {
                 <Fragment key={index}>
                     {item.title && (
                         <li className={less.courseTitle}>
-                            <div>
-                                <p>{item.title}</p>
-                            </div>
+                            <p>{item.title}</p>
                         </li>
                     )}
 
@@ -149,9 +158,10 @@ export class Lessons extends React.Component {
                 <div className="backgroundTrnasp"></div>
                 <div className="abc">
                     <div>
-                        <Navbar color="blue" bg="tomato" centerFlexNavbarContainer="flex" LiItem="NavBarli" MainStream="MainStream"
+                        <NavbarContainer color="blue" bg="tomato" centerFlexNavbarContainer="flex" LiItem="NavBarli" MainStream="MainStream"
                             navbarSearchPage="Search" navbarHomePage="Home" NavbarMobileIconsBlock="mobile"
-                            centerHeadlineNavbarColumn="center" showsidebarMobile={this.showsidebarMobile} menuMobileIsOpen={this.menuMobileIsOpen} />
+                            centerHeadlineNavbarColumn="center" showsidebarMobile={this.showsidebarMobile}
+                            menuMobileIsOpen={this.menuMobileIsOpen} headerMobile="headerMobileLessonsPage" value={this.props.value} />
 
                         <div>
                             <div className={`${less.navigation_menu} ${visible}`}>
@@ -169,11 +179,9 @@ export class Lessons extends React.Component {
                         <Menu isOpen={this.state.sidebarMobile} >
                             <main id="page-wrap">
                                 <div className={less.sidebar}>
-                                    <div>
-                                        <ul onClick={this.hideMenu.bind(this)}>
-                                            {listLessons}
-                                        </ul>
-                                    </div>
+                                    <ul onClick={this.hideMenu.bind(this)}>
+                                        {listLessons}
+                                    </ul>
                                 </div>
                             </main>
                         </Menu>
@@ -183,14 +191,17 @@ export class Lessons extends React.Component {
                                 <div className={less.main_inside_content}>
                                     <div className={less.header}>
                                         <div className={less.header_next_page}>
-                                            <h2>{this.props.lesson[this.state.indexDescription]["heading"]}</h2>
+                                            <LessonTitle value={this.props.value}>{this.props.lesson[this.state.indexDescription]["heading"]}</LessonTitle>
                                         </div>
                                     </div>
                                     <div className={less.info} onClick={this.HideMenuMobileIsOpen.bind(this)}>
                                         <div className={less.description}>
-                                            {
-                                                ReactHtmlParser(this.props.lesson[this.state.indexDescription]["data"]["description"])
-                                            }
+                                            <LessonParagraph value={this.props.value}>
+                                                {
+                                                    ReactHtmlParser(this.props.lesson[this.state.indexDescription]["data"]["description"])
+                                                }
+                                            </LessonParagraph>
+
                                             <div className={less.btn_Next_Prev_Container}>
                                                 <div>
                                                     {

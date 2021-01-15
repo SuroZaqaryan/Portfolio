@@ -6,18 +6,6 @@
   padding: 0;
 }
 
-header {
-  position: fixed;
-  top: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: self-start;
-  padding: 10px 0%;
-  z-index: 90;
-  width: 100%;
-  background: #fffffffc;
-}
-
 .LogoDivContainer {
   flex: 1;
 }
@@ -39,14 +27,8 @@ header {
   color: #0088a9;
 }
 
-.center_links li a {
-  font-size: 15px;
-  color: rgb(0 0 0 / 65%);
-}
-
 .nav__links li a {
   display: block;
-  color: #666;
   text-align: center;
   padding: 14px 15px;
   text-decoration: none;
@@ -59,7 +41,7 @@ header {
 }
 
 .notification {
-  padding-left: 25px;
+  padding-left: 15px;
 }
 
 .search {
@@ -134,13 +116,13 @@ header {
   color: #edf0f1;
 }
 
-.user_name {
-  margin-right: 15px;
-  text-decoration: none;
-  color: black;
-  font-weight: 600;
-  font-size: 14px;
-}
+/*.user_name {*/
+/*  margin-right: 15px;*/
+/*  text-decoration: none;*/
+/*  color: black;*/
+/*  font-weight: 600;*/
+/*  font-size: 14px;*/
+/*}*/
 
 .LessonMobileNavbarIcon {
   font-size: 20px;

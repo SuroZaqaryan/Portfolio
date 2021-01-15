@@ -33,7 +33,7 @@ class UsersContainer extends React.Component {
         return(
             <>
                 <Users {...this.props} {...this.props.user} onPageChanged={this.onPageChanged}
-                       follow={this.props.followThunk} unfollow={this.props.unfollowThunk}/>
+                       follow={this.props.followThunk} unfollow={this.props.unfollowThunk} value={this.props.value}/>
             </>
         )
     }

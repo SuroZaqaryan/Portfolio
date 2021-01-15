@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap');
 
-.con {
-    line-height: 1.5;
-    color: #304455;
-}
-
 .hal {
     font-weight: 500;
     color: #fa726e;
@@ -25,7 +20,7 @@
 .title_description {
     margin-bottom: 15px;
     margin-top: 20px;
-    color: #282c35f0;
+    /*color: #282c35f0;*/
     font-size: 19px;
     font-family: 'Roboto';
     letter-spacing: 0.2px;

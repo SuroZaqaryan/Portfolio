@@ -7,12 +7,12 @@
     flex-wrap: wrap;
     line-height: 1.7;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .author {
     font-size: 14px;
-    color: #41a4ff;
+    color: #282c35;
 }
 
 .author p {
@@ -34,15 +34,14 @@
 .image_url {
     width: 100%;
     max-width: 100%;
-    border-radius: 2px;
-    border: 1px solid #adadad;
+    border-radius: 15px;
 }
 
 
 .bottom-left-title {
     position: absolute;
     bottom: 0px;
-    background: #000000a8;
+    background: #309ff7bf;
     padding: 6px 11px 6px 11px;
     font-size: 14px;
 }

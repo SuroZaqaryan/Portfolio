@@ -4,6 +4,7 @@ import lessons from './icons/lessons.png'
 import megaphone from './icons/megaphone.png'
 import profile from './icons/profile.png'
 import home from '../icons/home.png'
+import lightHome from '../icons/lightHome.png'
 import {
     MobileContainer, MobileList, AvatarBlock,
     MobileImageBlock, UserName, TitleName, StyledLink
@@ -18,7 +19,7 @@ export class NavbarMobile extends React.Component {
         this.state = {
             listItem: [
                 {
-                    icon: home,
+                    icon:  this.props.value ? lightHome : home,
                     item: <StyledLink to={'./login'}>Main Stream</StyledLink>
                 },
                 {

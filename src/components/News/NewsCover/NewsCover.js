@@ -42,12 +42,15 @@ export const NewsCover = (props) => {
 
             <div className="title_description">
                 <a href={props.url} target="_blank" className="title">{props.title}</a>
-                <p className="description">{props.description}</p>
+                <ShowMoreText lines={4} more='Show more' less='Show less' anchorClass='' expanded={false} width={280}>
+                    <div>
+                        <p className="description">{props.description}</p>
+                    </div>
+                    <div>
+                        <p>{props.content}</p>
+                    </div>
+                </ShowMoreText>
             </div>
-
-            <ShowMoreText lines={1} more='Show more' less='Show less' anchorClass='' expanded={false} width={280}>
-                {props.content}
-            </ShowMoreText>
         </>
     );
 }

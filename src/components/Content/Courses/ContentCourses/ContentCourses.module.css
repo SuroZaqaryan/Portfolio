@@ -3,22 +3,6 @@
     font-weight: 400;
 }
 
-.ContentVeryHeadlineBlock {
-    background: rgb(170 170 170 / 15%);
-    border: 1px solid #dbdbdb99;
-    max-width: 100%;
-    margin: 15px;
-    max-width: 480px;
-}
-
-.ContentHeadlineBlock {
-    max-width: 450px;
-    padding: 20px;
-    padding-bottom: 17px;
-    border-bottom: 1px solid #b0b0b04f;
-    border-radius: 5px;
-}
-
 .ContentCoursesBlock {
     display: flex;
 }
@@ -31,6 +15,14 @@
 
 .courseName {
     margin-bottom: 8px;
+}
+
+.courseInfo {
+    color: dimgray;
+}
+
+.courseDarkInfo {
+    color: #e4e4e4;
 }
 
 .courseName h3 {
