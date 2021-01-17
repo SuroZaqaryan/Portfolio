@@ -11,6 +11,10 @@ import { slide as Menu } from 'react-burger-menu'
 import NavbarMobileContainer from "../../../Navbar/Mobile_Navbar/NavbarMobile_Container";
 import NavbarContainer from '../../../Navbar/NavbarContainer';
 
+export const Test = styled.li`
+  color: green;
+`;
+
 const NextPage = styled.button`
     display: flex;
     align-items: center;

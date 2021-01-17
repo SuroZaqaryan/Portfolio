@@ -4,17 +4,18 @@ import {faDotCircle} from "@fortawesome/free-solid-svg-icons/faDotCircle";
 import Alert from "./Img/Examples/Screenshot_1.png";
 import StringExample from "./Img/Examples/Screenshot_3.png";
 import StringsList from "./Img/Examples/StringsList.jpg";
+
 import "./css/CodingExamples.css";
 import "./css/bbc.css"
+import styled from "styled-components";
+
+const Rar = styled.p`
+  color: green;
+`;
 
 function JavaScriptLessonObject() {
 
     const one = "Robby";
-
-    const getClassName = () => {
-        const classString = 'message';
-        alert('12')
-    }
 
     return (
 
@@ -30,11 +31,11 @@ function JavaScriptLessonObject() {
                 data: {
                     description: `
                     
-                    <p class="con"> JavaScript is a dynamic computer programming language.
+                    <Rar> JavaScript is a dynamic computer programming language.
                     It is lightweight and most commonly
                     used as a part of web pages, whose implementations
                     allow client-side script to interact with the user and make dynamic pages.
-                    It is an interpreted programming language with object-oriented capabilities.</p>
+                    It is an interpreted programming language with object-oriented capabilities.</Rar>
 
                     <br class="br_description" />
 
