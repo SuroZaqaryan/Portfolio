@@ -57,7 +57,7 @@ export class Navbar extends React.Component {
                 {
                     itemName: 'Lessons',
                     classNames: "NavBarli NavBarli-" + this.props.LiItem,
-                    href: '/Lessons',
+                    href: '/Lesson',
                 },
             ]
         }
@@ -112,8 +112,7 @@ export class Navbar extends React.Component {
                                             }
                                         </a>
                                         <li>
-                                            <MainStream value={this.props.value}
-                                                        className={"MainStream-" + this.props.MainStream} href="/#">Main
+                                            <MainStream value={this.props.value} className={"MainStream-" + this.props.MainStream} href="/#">Main
                                                 Stream</MainStream>
                                         </li>
                                     </ul>
