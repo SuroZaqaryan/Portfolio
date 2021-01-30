@@ -1,0 +1,273 @@
+* {
+    font-family: system-ui;
+}
+
+.headline-page-container {
+    background: white;
+    height: 100%;
+}
+
+.page-container {
+    width: 980px;
+    margin: auto;
+    max-width: 100%;
+    text-align: center;
+}
+
+.page-container h2 {
+    color: #2b2b2b;
+}
+
+/*----------------toggeled sidebar----------------*/
+
+.page-wrapper.toggled .sidebar-wrapper {
+    left: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .page-wrapper.toggled .page-content {
+        padding-left: 280px;
+    }
+}
+
+/*----------------show sidebar button----------------*/
+
+/*----------------sidebar-wrapper----------------*/
+
+.sidebar-wrapper {
+    width: 285px;
+    max-height: 100%;
+    position: fixed;
+    top: 0;
+    left: -300px;
+    z-index: 999;
+}
+
+html, body, article, .glass::before {
+    width: 100%;
+    height: 100%;
+}
+
+.sidebar-wrapper ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-wrapper a {
+    text-decoration: none;
+}
+
+/*--------------------sidebar-brand----------------------*/
+
+.sidebar-wrapper .sidebar-brand {
+    padding: 12px 20px 16px 15px;
+}
+
+.SideBar_Back_Theme_Container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.sidebar-brand-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebar-brand-container span:hover {
+    color: #42131b;
+}
+
+.sidebar-brand-container span {
+    cursor: pointer;
+    color: #512d33;
+    font-weight: 500;
+    font-family: system-ui;
+    font-size: 14px;
+}
+
+.Back_To_Content {
+    font-size: 14px;
+    color: #42131b;
+}
+
+.sidebar_back_to_home {
+    display: flex;
+    align-items: center;
+}
+
+.navbar_back_to_home, .sidebar_backIcon_container {
+    margin-right: 8px;
+}
+
+.sidebar_backIcon_container img {
+    width: 8px;
+    margin-top: 5px;
+}
+
+.SideBar_Theme_Default:hover {
+    cursor: pointer;
+}
+
+.SideBar_Theme_Default p {
+    font-size: 14px;
+    font-weight: 500;
+    font-family: system-ui;
+    color: #512d33;
+    text-decoration: underline;
+}
+
+/*--------------------sidebar-header----------------------*/
+
+.sidebar-wrapper .sidebar-header {
+    padding: 10px 20px 10px 0px;
+    overflow: hidden;
+}
+
+.sidebar-wrapper .sidebar-header .user-pic {
+    float: left;
+    width: 60px;
+    padding: 2px;
+    border-radius: 12px;
+    margin-right: 15px;
+    overflow: hidden;
+}
+
+.sidebar-wrapper .sidebar-header .user-pic img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.sidebar-wrapper .sidebar-header .user-info {
+    margin-top: 5px;
+    float: left;
+}
+
+.sidebar-wrapper .sidebar-header .user-info > span {
+    display: block;
+}
+
+.sidebar-wrapper .sidebar-header .user-info .user-status {
+    font-size: 11px;
+    margin-top: 4px;
+}
+
+.sidebar_user_name strong {
+    font-family: Roboto;
+    font-weight: 500;
+}
+
+/*----------------------sidebar-menu-------------------------*/
+
+.sidebar-wrapper .sidebar-menu {
+    padding-bottom: 10px;
+}
+
+.sidebar-wrapper .sidebar-menu .header-menu {
+    padding: 13px 10px 13px 15px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-wrapper .sidebar-menu .header-menu span {
+    font-weight: 500;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.course_Lesson_List_Link {
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+    position: relative;
+    padding: 8px 30px 8px 20px;
+    font-size: 13px;
+    color: #dfdfdfd6;
+}
+
+.sidebar-wrapper .sidebar-menu .sidebar-submenu {
+    display: none;
+}
+
+.sidebar-wrapper .sidebar-menu .sidebar-dropdown.active > a:after {
+    transform: rotate(90deg);
+    right: 17px;
+}
+
+/*--------------------------page-content-----------------------------*/
+
+.page-wrapper .page-content {
+    width: 100%;
+    padding-left: 0;
+}
+
+.page-wrapper .page-content > div {
+    padding: 20px 40px;
+}
+
+/*-----------------------------RadioButtons-------------------------------------------------*/
+
+.RadioButton_ThemeDoc {
+    margin-right: 8px;
+    color: #00000000;
+    overflow-x: hidden;
+    border-color: #00000000;
+    width: 14px;
+    height: 14px;
+}
+
+.k-radio:checked {
+    background-color: #00000000;
+    border-color: #00000000;
+    color: #00000000;
+}
+
+.k-radio:checked:focus {
+    border-color: #00000000;
+    box-shadow: 0 0 0 2px #00000000;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+
+.sidebar-header, .sidebar-menu {
+    border-top: 1px solid #ffffff12;
+}
+
+.courseLessonList {
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.courseLessonList:hover {
+    background: #6e2d4833;
+    margin-right: 15px;
+    margin-left: 15px;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.courseLessonList a:hover {
+    color: white;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+}
+
+.chiller-theme .sidebar-wrapper .sidebar-menu .header-menu span {
+    font-size: 14px;
+    letter-spacing: 0.2px;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+
+/* data-uri resources */
+.page-wrapper, .wrapped_comp::before {
+    background-image: url(https://media.idownloadblog.com/wp-content/uploads/2016/06/macOS-Sierra-Wallpaper-4k.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+

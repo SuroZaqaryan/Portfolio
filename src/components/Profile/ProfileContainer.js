@@ -2,8 +2,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {Profile} from './Profile';
 import {getProfileThunk, getStatusProfileStatusThunk, updateStatus} from "../Redux/profile-reduer";
-import withRouter from "react-router-dom/es/withRouter";
 import {followUsersThunk} from "../Redux/users-reducer";
+import {withRouter} from "react-router";
 
 class ProfileReducer extends React.Component {
     componentDidMount() {

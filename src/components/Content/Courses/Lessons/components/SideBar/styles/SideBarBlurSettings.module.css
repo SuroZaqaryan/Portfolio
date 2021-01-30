@@ -1,0 +1,52 @@
+.SideBarBlurEffect::before {
+    background-image: url('https://i.pinimg.com/originals/ef/6d/1b/ef6d1b6a3bde107a260f94f63be370d7.jpg');
+}
+
+.glass::before {
+    -webkit-filter: url('#blur');
+    filter: url('#blur');
+    -webkit-filter: blur(60px);
+    filter: blur(60px);
+    background-size: cover;
+    opacity: 0.5;
+}
+
+.glass.up, .glass.up::before {
+    transform: translateY(0) translateZ(0);
+}
+
+/* transitions */
+.glass, .glass::before {
+    transition: transform 0.5s ease-out;
+}
+
+.glass {
+    position: relative;
+}
+
+.glass::before {
+    z-index: -1;
+    display: block;
+    position: absolute;
+    content: ' ';
+}
+
+.SideBar_Page_Content::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+.SideBar_Page_Content::-webkit-scrollbar-thumb {
+    background-color: #a2272717;
+}
+
+@supports (backdrop-filter: none) {
+    .SideBar_Page_Content {
+        overflow-y: scroll;
+        backdrop-filter: blur(60px);
+    }
+}
+
+.SideBarContainer {
+    background: #ffffff75;
+    height: 100vh;
+}
