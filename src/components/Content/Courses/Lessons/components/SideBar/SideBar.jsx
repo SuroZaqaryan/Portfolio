@@ -1,14 +1,16 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import {CounterContext} from "../Theme/ThemeDoc";
 import SideBarMenu from "./SideBarMenu";
 import '../../css/Sidebar.css'
 import Blur from "./styles/SideBarBlurSettings.module.css"
 import SideBarWrapper from "./SideBar_Components/SideBar_Wrapper";
 import {BlurContext} from "./SideBar_Components/SideBar_BlueRange/SideBarBlurChange";
+import connect, { SideBarContext } from './SideBarContext';
 
-export default function SideBar(props) {
+function SideBar(props) {
     const [enabled, setEnabled] = useState(true)
-
+    const {someValue} = useContext(SideBarContext);
+    console.log('context value in sidebar',someValue)
     const {SideBarValue, SideBarWallpaperValue} = React.useContext(CounterContext);
 
     const [SideBarTheme] = SideBarValue;
@@ -33,3 +35,5 @@ export default function SideBar(props) {
         </div>
     );
 }
+//connect sidebar to the context
+export default connect(SideBar)
