@@ -136,10 +136,8 @@ export class Navbar extends React.Component {
                                     <a className={n.cta} href="/#">Search</a>
                                 </div>
 
-                                <div>
-                                    <a className={`${n.navElements} ${n.notification}`}>
-                                        <DarkModeToggle/>
-                                    </a>
+                                <div className={`${n.navElements} ${n.notification}`}>
+                                    <DarkModeToggle/>
                                 </div>
                             </div>
                         </div>

@@ -1,4 +1,3 @@
-import React from 'react';
 import python from "../Content/Courses/ContentCourses/Icons/pyhton.png";
 import JavaScript from "../Content/Courses/ContentCourses/Icons/JavaScript.png";
 import cPlusPlus from "../Content/Courses/ContentCourses/Icons/c++.png";

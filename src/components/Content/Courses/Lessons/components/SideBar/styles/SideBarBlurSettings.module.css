@@ -3,10 +3,10 @@
 }
 
 .glass::before {
-    -webkit-filter: url('#blur');
-    filter: url('#blur');
-    -webkit-filter: blur(60px);
-    filter: blur(60px);
+    /*-webkit-filter: url('#blur');*/
+    /*filter: url('#blur');*/
+    /*-webkit-filter: blur(60px);*/
+    /*filter: blur(10px);*/
     background-size: cover;
     opacity: 0.5;
 }
@@ -42,7 +42,6 @@
 @supports (backdrop-filter: none) {
     .SideBar_Page_Content {
         overflow-y: scroll;
-        backdrop-filter: blur(60px);
     }
 }
 

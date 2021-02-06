@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import {Route, Switch} from "react-router-dom";
 import {CounterContext} from "../Theme/ThemeDoc";
 import '../../css/Sidebar.css'
 import RoutesPage from "../../pages/Routes";
@@ -15,7 +14,7 @@ const PageContentDiv = styled.div`
 export default function PageContent(props) {
 
     const { PageContentValue } = React.useContext(CounterContext);
-    const [PageContentTheme, SetPageContentTheme] = PageContentValue;
+    const [PageContentTheme,] = PageContentValue;
 
     return(
         <PageContentDiv className="page-content">

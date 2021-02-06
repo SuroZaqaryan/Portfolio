@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import {Navbar} from '../Navbar/Navbar';
 import "./css/style.css"
 import "./css/Edited_Navbar_For_Profile_Page.css"
 import {AchievementsBeta} from "../Content/Achievements/BetaAchievements";

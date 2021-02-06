@@ -13,7 +13,7 @@ function RoutesPage(props) {
             component: () => <h2>Home</h2>
         },
         {
-            path: `${path}/Calendar`,
+            path: `${path}/Introduction`,
             component: () => <h2>Test123</h2>
         },
         {

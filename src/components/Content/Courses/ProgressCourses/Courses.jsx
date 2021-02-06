@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import ContentStyle from "./Courses.module.css";
 import HTML from "./LanguagesIcons/html.png"
 import CSS from "./LanguagesIcons/css-3.png"

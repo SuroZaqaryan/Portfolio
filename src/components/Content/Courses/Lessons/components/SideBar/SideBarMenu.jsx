@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 import {CounterContext} from "../Theme/ThemeDoc";
 import styled from "styled-components";
 import "./styles/Style.css"
-import Hashtag from './icons/icons8-hashtag-22.png'
+import Hashtag from './icons/SideBarIcons/icons8-hashtag-22.png'
 
 const CourseTopic = styled.span`
   color: #582f35;
@@ -13,7 +13,7 @@ const CourseTopic = styled.span`
 export default function SideBarMenu(props) {
 
     const {TextColorValue} = React.useContext(CounterContext);
-    const [TextColor, SetTextColor] = TextColorValue;
+    const [TextColor,] = TextColorValue;
 
     return (
         <ul>

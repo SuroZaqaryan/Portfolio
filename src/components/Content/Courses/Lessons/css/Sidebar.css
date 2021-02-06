@@ -18,8 +18,6 @@
     color: #2b2b2b;
 }
 
-/*----------------toggeled sidebar----------------*/
-
 .page-wrapper.toggled .sidebar-wrapper {
     left: 0;
 }
@@ -29,8 +27,6 @@
         padding-left: 280px;
     }
 }
-
-/*----------------show sidebar button----------------*/
 
 /*----------------sidebar-wrapper----------------*/
 
@@ -43,21 +39,6 @@
     z-index: 999;
 }
 
-html, body, article, .glass::before {
-    width: 100%;
-    height: 100%;
-}
-
-.sidebar-wrapper ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.sidebar-wrapper a {
-    text-decoration: none;
-}
-
 /*--------------------sidebar-brand----------------------*/
 
 .sidebar-wrapper .sidebar-brand {
@@ -68,24 +49,23 @@ html, body, article, .glass::before {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 10px;
+    margin-bottom: 13px;
 }
 
-.sidebar-brand-container {
+.sidebar-themes-container {
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
-.sidebar-brand-container span:hover {
+.sidebar-themes-container span:hover {
     color: #42131b;
 }
 
-.sidebar-brand-container span {
+.sidebar-themes-container span {
     cursor: pointer;
     color: #512d33;
     font-weight: 500;
-    font-family: system-ui;
     font-size: 14px;
 }
 
@@ -105,7 +85,6 @@ html, body, article, .glass::before {
 
 .sidebar_backIcon_container img {
     width: 8px;
-    margin-top: 5px;
 }
 
 .SideBar_Theme_Default:hover {
@@ -115,7 +94,6 @@ html, body, article, .glass::before {
 .SideBar_Theme_Default p {
     font-size: 14px;
     font-weight: 500;
-    font-family: system-ui;
     color: #512d33;
     text-decoration: underline;
 }
@@ -123,7 +101,7 @@ html, body, article, .glass::before {
 /*--------------------sidebar-header----------------------*/
 
 .sidebar-wrapper .sidebar-header {
-    padding: 10px 20px 10px 0px;
+    padding: 15px 20px 10px 0;
     overflow: hidden;
 }
 
@@ -153,11 +131,9 @@ html, body, article, .glass::before {
 
 .sidebar-wrapper .sidebar-header .user-info .user-status {
     font-size: 11px;
-    margin-top: 4px;
 }
 
 .sidebar_user_name strong {
-    font-family: Roboto;
     font-weight: 500;
 }
 
@@ -216,8 +192,8 @@ html, body, article, .glass::before {
     color: #00000000;
     overflow-x: hidden;
     border-color: #00000000;
-    width: 14px;
-    height: 14px;
+    width: 18px;
+    height: 18px;
 }
 
 .k-radio:checked {
@@ -264,10 +240,24 @@ html, body, article, .glass::before {
 /*-----------------------------------------------------------------------------------------*/
 
 /* data-uri resources */
-.page-wrapper, .wrapped_comp::before {
+.page-wrapper, .headline_sidebar_wrapper::before {
     background-image: url(https://media.idownloadblog.com/wp-content/uploads/2016/06/macOS-Sierra-Wallpaper-4k.jpg);
     background-size: cover;
     background-position: center;
 }
 
 
+/* Appearance */
+.SideBar_Appearance_Select_Icon {
+    margin-right: 14px;
+    border-radius: 5px;
+    transition: 0.2s;
+    box-shadow: 2px 2px 5px 0px #00000069;
+}
+
+.SideBar_Appearance_Select_Icon:hover {
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1);
+    cursor: pointer;
+}

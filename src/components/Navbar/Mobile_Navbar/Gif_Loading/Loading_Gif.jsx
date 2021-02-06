@@ -7,5 +7,5 @@ export default function LoadingMobile () {
         display: 'flex',
         width: '130px',
     }
-    return <img style={LoadingStyle} src={Loading} />
+    return <img style={LoadingStyle} src={Loading} alt={"Loading..."} />
 }

@@ -21,7 +21,7 @@ export const NewsCover = (props) => {
                 {
                     props.urlToImage ?
                         <>
-                            <a href={props.url} target="_blank">
+                            <a href={props.url}>
                                 <img className={"image_url"} src={props.urlToImage} alt=""/>
                             </a>
 
@@ -29,7 +29,7 @@ export const NewsCover = (props) => {
                         </>
                         :
                         <>
-                            <a href={props.url} target="_blank">
+                            <a href={props.url}>
                                 <LazyLoadImage style={{maxWidth: "100%"}} src={props.urlToImage} />
                             </a>
                             <div className="bottom-left-title dont-title-name">
@@ -41,7 +41,7 @@ export const NewsCover = (props) => {
             </div>
 
             <div className="title_description">
-                <a href={props.url} target="_blank" className="title">{props.title}</a>
+                <a href={props.url} className="title">{props.title}</a>
                 <ShowMoreText lines={4} more='Show more' less='Show less' anchorClass='' expanded={false} width={280}>
                     <div>
                         <p className="description">{props.description}</p>

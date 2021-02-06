@@ -1,0 +1,31 @@
+.SideBarModal_Appearance {
+    display: flex;
+    align-items: center;
+}
+
+.SideBarModal_Accept_Color {
+    display: flex;
+}
+
+.SideBarModal_Child_Appearance, .SideBarModal_Child_Color {
+    margin-right: 15px;
+}
+
+.SideBarModal_Child_Appearance p, .SideBarModal_Child_Color p {
+    font-family: 'Roboto';
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    font-size: 15px;
+    color: #171616;
+}
+
+.SideBarModal_Line_Container {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+hr.SideBarModal_Line {
+    display: block; height: 1px;
+    border: 0; border-top: 1px solid #d5d5d5;
+    margin: 1em 0; padding: 0;
+}

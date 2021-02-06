@@ -16,7 +16,7 @@ import avatar from '../../../backgrounds/tt_avatar_small.jpg'
 export const NavBarNews = (props) => {
 
     const [isNavVisible, setNavVisibility] = useState(false);
-    const [isSmallScreen, setIsSmallScreen] = useState(false);
+    const [, setIsSmallScreen] = useState(false);
 
     useEffect(() => {
         const mediaQuery = window.matchMedia("(max-width: 600px)");
