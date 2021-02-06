@@ -1,17 +1,18 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { getTrackBackground, Range } from "react-range";
+import { SideBarContext } from "../../SideBarContext";
 
 const STEP = 0.1;
 const MIN = 0;
 const MAX = 100;
 
 export default function SideBarBlurChange(props) {
-
-    const ls = parseInt(window.localStorage.getItem('values'));
-    const [values, SetValues] = useState(ls ? [ls] : [20]);
+    const {someValue,setSomeValue} = useContext(SideBarContext);
+    const [values, SetValues] = useState(someValue);
 
     const SaveChanges = () => {
-        localStorage.setItem('values', values);
+        //and set the context value
+        setSomeValue(values);
     }
 
     return (
