@@ -24,7 +24,7 @@ function Content(props) {
                     </div>
 
                     <div>
-                        <Courses/>
+                        <Courses />
                     </div>
                 </div>
 

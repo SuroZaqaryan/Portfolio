@@ -39,10 +39,19 @@
     background-color: #a2272717;
 }
 
-@supports (backdrop-filter: none) {
+/* Mozilla firefox */
+.SideBar_Page_Content {
+    scrollbar-color: #a2272717 rgba(255, 255, 255, 0);
+}
+
+/* @supports (backdrop-filter: none) {
     .SideBar_Page_Content {
         overflow-y: scroll;
     }
+} */
+
+.SideBar_Page_Content {
+    overflow-y: scroll;
 }
 
 .SideBarContainer {

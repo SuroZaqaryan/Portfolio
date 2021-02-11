@@ -1,12 +1,18 @@
-import React, { createContext, useState } from "react";
+import React, {createContext, useEffect, useState} from "react";
 export const SideBarContext = createContext();
+
 //connect component with context
 export default (Component) => (props) => {
-  const [someValue, setSomeValue] = useState([20]);
+
+  const ls = parseInt(window.localStorage.getItem('values'));
+  const [someValue, setSomeValue] = useState(ls ? [ls] : [50]);
+
+  useEffect(() => {
+    localStorage.setItem('values', someValue);
+  });
+
   return (
-    <SideBarContext.Provider
-      value={{ someValue, setSomeValue }}
-    >
+    <SideBarContext.Provider value={{ someValue, setSomeValue }}>
       <Component {...props} />
     </SideBarContext.Provider>
   );

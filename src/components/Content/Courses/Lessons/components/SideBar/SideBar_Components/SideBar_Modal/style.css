@@ -1,3 +1,9 @@
+.SideBarModal_Wrapper {
+    width: 500px;
+    max-width: 100%;
+    margin: auto;
+}
+
 .SideBarModal_Appearance {
     display: flex;
     align-items: center;
@@ -15,17 +21,19 @@
     font-family: 'Roboto';
     font-weight: 500;
     letter-spacing: 0.3px;
-    font-size: 15px;
+    font-size: 14px;
     color: #171616;
 }
 
 .SideBarModal_Line_Container {
     margin-top: 20px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 hr.SideBarModal_Line {
-    display: block; height: 1px;
-    border: 0; border-top: 1px solid #d5d5d5;
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #d5d5d596;
     margin: 1em 0; padding: 0;
 }

@@ -88,7 +88,7 @@ export default function ThemeDoc(props) {
 
     const SideBarWallpaperList = SideBarBackgrounds.map((theme, index) => {
         return (
-            <img key={index} width={"55"} height={"45"} src={theme.SideBarWallpaper} className={"SideBar_Appearance_Select_Icon"}
+            <img key={index} width={"52"} height={"42"} src={theme.SideBarWallpaper} className={"SideBar_Appearance_Select_Icon"}
                  onClick={() => ChangeSideBarWallpaper(theme.SideBarWallpaper)} alt={"Select Theme"} />
         );
     })

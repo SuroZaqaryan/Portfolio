@@ -1,26 +1,50 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import 'antd/dist/antd.css';
 import Modal from "antd/es/modal/Modal";
 import "./style.css";
 import SideBarBlurChange from "../SideBar_BlueRange/SideBarBlurChange";
-import SideBarBlurChangeContainer from '../SideBar_BlueRange/SideBarBlurChange';
+import { Button } from "antd";
+import ThemeSettings from './setting-theme.png';
 
 const DraggableDialog = (props) => {
     const [visible, setVisible] = useState(false);
-    const [count, setCount] = useState(25);
+
+    const handleOk = () => {
+        setVisible(false)
+    }
 
     return (
         <>
-            <span onClick={() => setVisible(true)}>
-                Themes
-            </span>
+
+            <div style={{ display: "flex", alignItems: "center", width: "100%",}}>
+                <div style={{ display: "flex" }}>
+                    <img width="17" height="17" src={ThemeSettings} />
+                </div>
+
+                <div style={{marginLeft: "10px"}}>
+                    <span onClick={() => setVisible(true)}>
+                        Themes
+                    </span>
+                </div>
+            </div>
+
             <Modal
                 title="Customize the theme to your liking"
                 centered
                 visible={visible}
                 onOk={() => setVisible(false)}
                 onCancel={() => setVisible(false)}
-                width={700}
+                width={670}
+
+                footer={[
+                    <Button
+                        key="submit"
+                        type="primary"
+                        onClick={() => handleOk()}
+                    >
+                        Apply
+                    </Button>
+                ]}
             >
                 <div className={"SideBarModal_Wrapper"}>
                     <div className={"SideBarModal_Appearance"}>
@@ -28,28 +52,34 @@ const DraggableDialog = (props) => {
                             <p>Appearance:</p>
                         </div>
 
-                        <div>
+                        <div style={{ marginLeft: "5px" }}>
                             {props.SideBarWallpaperList}
                         </div>
                     </div>
 
                     <div className={"SideBarModal_Line_Container"}>
-                        <hr className={"SideBarModal_Line"}/>
+                        <hr className={"SideBarModal_Line"} />
                     </div>
 
                     <div className={"SideBarModal_Accept_Color"}>
                         <div className={"SideBarModal_Child_Color"}>
-                            <p>Accent color:</p>
-                            <p>{count}</p>
+                            <p>Gradient color:</p>
                         </div>
 
                         <div>
                             {props.list}
                         </div>
                     </div>
-
+                    <div className={"SideBarModal_Line_Container"}>
+                        <hr className={"SideBarModal_Line"} />
+                    </div>
                     <div>
-                        <SideBarBlurChange {...props} count={count} />
+                        <div className={"SideBarModal_Child_Color"}>
+                            <p>Blur Change</p>
+                        </div>
+                        <div>
+                            <SideBarBlurChange {...props} />
+                        </div>
                     </div>
                 </div>
             </Modal>

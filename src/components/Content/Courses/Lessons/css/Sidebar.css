@@ -42,7 +42,7 @@
 /*--------------------sidebar-brand----------------------*/
 
 .sidebar-wrapper .sidebar-brand {
-    padding: 12px 20px 16px 15px;
+    padding: 12px 20px 13px 15px;
 }
 
 .SideBar_Back_Theme_Container {
@@ -54,8 +54,7 @@
 
 .sidebar-themes-container {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+
 }
 
 .sidebar-themes-container span:hover {
@@ -101,7 +100,7 @@
 /*--------------------sidebar-header----------------------*/
 
 .sidebar-wrapper .sidebar-header {
-    padding: 15px 20px 10px 0;
+    padding: 15px 20px 15px 0;
     overflow: hidden;
 }
 
@@ -109,15 +108,16 @@
     float: left;
     width: 60px;
     padding: 2px;
-    border-radius: 12px;
-    margin-right: 15px;
+    margin-right: 10px;
     overflow: hidden;
 }
 
 .sidebar-wrapper .sidebar-header .user-pic img {
     object-fit: cover;
     height: 100%;
-    width: 100%;
+    max-width: 100%;
+    width: 53px;
+    border-radius: 5px;
 }
 
 .sidebar-wrapper .sidebar-header .user-info {
@@ -135,6 +135,8 @@
 
 .sidebar_user_name strong {
     font-weight: 500;
+    font-family: 'Roboto';
+    letter-spacing: 0.2px;
 }
 
 /*----------------------sidebar-menu-------------------------*/
@@ -144,7 +146,7 @@
 }
 
 .sidebar-wrapper .sidebar-menu .header-menu {
-    padding: 13px 10px 13px 15px;
+    padding: 20px 10px 8px 13px;
     display: flex;
     align-items: center;
 }
