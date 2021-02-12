@@ -15,6 +15,7 @@ export default function ThemeDoc(props) {
     const [PageContentTheme, SetPageContentTheme] = useState(localStorage.getItem("PageContentKey"));
     const [TextColor, SetTextColor] = useState(localStorage.getItem("TextColorKey"));
     const [SideBarBackground, SetSideBarBackground] = useState(localStorage.getItem("BgKey"));
+    const [SideBarColorTheme, SetSideBarColor] = useState(localStorage.getItem("SideBarColorKey"));
 
     // SideBar Wallpapers
     const [SideBarBackgrounds,] = useState([
@@ -30,7 +31,7 @@ export default function ThemeDoc(props) {
     ])
 
     // Gradient Themes
-    const [themes,] = useState([
+    const [GradientThemes,] = useState([
         {
             SideBar: "linear-gradient(180deg, rgba(66, 116, 131, 1) 0%, rgba(69, 75, 88, 1) 100%)",
             PageContent: "linear-gradient(180deg,rgba(65,116,130,1) 0%, #353a4f 80%)",
@@ -54,10 +55,30 @@ export default function ThemeDoc(props) {
         },
     ])
 
+    // Gradient Themes
+    const [SideBarColor,] = useState([
+        {
+            SideBarColor: "red",
+            SideBarColorRadioButtonBackground: "#f0879e",
+            SideBarColorRadioButtonBorder: "1px solid #b05757",
+        },
+        {
+            SideBarColor: "yellow",
+            SideBarColorRadioButtonBackground: "#f0879e",
+            SideBarColorRadioButtonBorder: "1px solid #b05757",
+        },
+        {
+            SideBarColor: "green",
+            SideBarColorRadioButtonBackground: "#f0879e",
+            SideBarColorRadioButtonBorder: "1px solid #b05757",
+        },
+    ])
+
     useEffect(() => {
         localStorage.setItem("SideBarKey", SideBarTheme, "PageContentKey", PageContentTheme);
         localStorage.setItem("TextColorKey", TextColor);
         localStorage.setItem("BgKey", SideBarBackground);
+        localStorage.setItem("SideBarColorKey", SideBarColorTheme);
     })
 
     const ChangeSideBarWallpaper = (SideBarWallpaper) => {
@@ -73,15 +94,33 @@ export default function ThemeDoc(props) {
         SetTextColor(TextColor);
     }
 
-    const list = themes.map((theme, index) => {
+    const SideBarColorChange = (SideBarColor) => {
+        localStorage.setItem('SideBarColorKey', SideBarColor,);
+        SetSideBarColor(SideBarColor);
+    }
+
+    const sideBarColor = SideBarColor.map((sidebarColor, index) => {
         return (
             <RadioButton
                 key={index}
-                style={{background: theme.RadioButtonBackground, border: theme.RadioButtonBorderColor}}
+                style={{background: sidebarColor.SideBarColorRadioButtonBackground, border: sidebarColor.SideBarColorRadioButtonBorder}}
                 className={"RadioButton_ThemeDoc"}
                 name="group1"
                 value="first"
-                onChange={() => SideBarPageContent(theme.PageContent, theme.SideBar, theme.TextColor)}
+                onChange={() => SideBarColorChange(sidebarColor.SideBarColor)}
+            />
+        );
+    })
+
+    const gradientList = GradientThemes.map((gradTheme, index) => {
+        return (
+            <RadioButton
+                key={index}
+                style={{background: gradTheme.RadioButtonBackground, border: gradTheme.RadioButtonBorderColor}}
+                className={"RadioButton_ThemeDoc"}
+                name="group1"
+                value="first"
+                onChange={() => SideBarPageContent(gradTheme.PageContent, gradTheme.SideBar, gradTheme.TextColor)}
             />
         );
     })
@@ -100,8 +139,9 @@ export default function ThemeDoc(props) {
                 PageContentValue: [PageContentTheme, SetPageContentTheme],
                 TextColorValue: [TextColor, SetTextColor],
                 SideBarWallpaperValue: [SideBarBackground, SetSideBarBackground],
+                SideBarColor: [SideBarColorTheme, SetSideBarColor],
             }}>
-                <SideBar list={list} SideBarWallpaperList={SideBarWallpaperList} {...props} />
+                <SideBar gradientList={gradientList} SideBarWallpaperList={SideBarWallpaperList} sideBarColor={sideBarColor} {...props} />
                 <PageContent {...props} />
             </CounterContext.Provider>
         </div>
