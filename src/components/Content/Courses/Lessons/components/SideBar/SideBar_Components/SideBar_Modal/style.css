@@ -15,6 +15,7 @@
 
 .SideBarModal_Child_Appearance, .SideBarModal_Child_Color {
     margin-right: 15px;
+    margin-top: 2px;
 }
 
 .SideBarModal_Child_Appearance p, .SideBarModal_Child_Color p {

@@ -18,7 +18,7 @@ const DraggableDialog = (props) => {
 
             <div style={{ display: "flex", alignItems: "center", width: "100%",}}>
                 <div style={{ display: "flex" }}>
-                    <img width="17" height="17" src={ThemeSettings} />
+                    <img width="17" height="17" src={ThemeSettings} alt="Settings"/>
                 </div>
 
                 <div style={{marginLeft: "10px"}}>
@@ -67,7 +67,7 @@ const DraggableDialog = (props) => {
                         </div>
 
                         <div>
-                            {props.list}
+                            {props.gradientList}
                         </div>
                     </div>
                     <div className={"SideBarModal_Line_Container"}>

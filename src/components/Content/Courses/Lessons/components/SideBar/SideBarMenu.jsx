@@ -23,7 +23,7 @@ export default function SideBarMenu(props) {
                         {item.CourseTopic && (
                             <li className="header-menu">
                                 <img style={{width: "22px", marginRight: "5px"}} src={Hashtag} alt=""/>
-                                <CourseTopic style={{color: TextColor}}>{item.CourseTopic}</CourseTopic>
+                                <CourseTopic style={{color: TextColor.color}}>{item.CourseTopic}</CourseTopic>
                             </li>
                         )}
 
