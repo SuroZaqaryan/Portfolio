@@ -1,13 +1,22 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import 'antd/dist/antd.css';
 import Modal from "antd/es/modal/Modal";
 import "./style.css";
 import SideBarBlurChange from "../SideBar_BlueRange/SideBarBlurChange";
-import { Button } from "antd";
+import {Button} from "antd";
 import ThemeSettings from './setting-theme.png';
+import {CounterContext} from '../../../Theme/ThemeDoc';
+import {FaFontAwesome} from "react-icons/all";
+import {faPalette} from "@fortawesome/free-solid-svg-icons";
+import {ThemeIcon} from "./ThemeIcon";
 
 const DraggableDialog = (props) => {
     const [visible, setVisible] = useState(false);
+
+    const {SideBarValue,} = React.useContext(CounterContext);
+
+    const [SideBarTheme,] = SideBarValue;
+    const ItemColor = SideBarTheme && SideBarTheme.ItemColor;
 
     const handleOk = () => {
         setVisible(false)
@@ -16,13 +25,13 @@ const DraggableDialog = (props) => {
     return (
         <>
 
-            <div style={{ display: "flex", alignItems: "center", width: "100%",}}>
-                <div style={{ display: "flex" }}>
-                    <img width="17" height="17" src={ThemeSettings} alt="Settings"/>
+            <div style={{display: "flex", alignItems: "center", width: "100%",}}>
+                <div style={{display: "flex"}}>
+                    <ThemeIcon ItemColor={ItemColor}/>
                 </div>
 
-                <div style={{marginLeft: "10px"}}>
-                    <span onClick={() => setVisible(true)}>
+                <div style={{margin: '2px 0px 0px 10px'}}>
+                    <span style={{color: ItemColor}} onClick={() => setVisible(true)}>
                         Themes
                     </span>
                 </div>
@@ -52,13 +61,13 @@ const DraggableDialog = (props) => {
                             <p>Appearance:</p>
                         </div>
 
-                        <div style={{ marginLeft: "5px" }}>
+                        <div style={{marginLeft: "5px"}}>
                             {props.SideBarWallpaperList}
                         </div>
                     </div>
 
                     <div className={"SideBarModal_Line_Container"}>
-                        <hr className={"SideBarModal_Line"} />
+                        <hr className={"SideBarModal_Line"}/>
                     </div>
 
                     <div className={"SideBarModal_Accept_Color"}>
@@ -71,7 +80,7 @@ const DraggableDialog = (props) => {
                         </div>
                     </div>
                     <div className={"SideBarModal_Line_Container"}>
-                        <hr className={"SideBarModal_Line"} />
+                        <hr className={"SideBarModal_Line"}/>
                     </div>
                     <div>
                         <div className={"SideBarModal_Child_Color"}>

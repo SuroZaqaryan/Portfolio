@@ -13,12 +13,14 @@ const PageContentDiv = styled.div`
 
 export default function PageContent(props) {
 
-    const { PageContentValue } = React.useContext(CounterContext);
-    const [PageContentTheme,] = PageContentValue;
+    const {SideBarValue} = React.useContext(CounterContext);
+    const [SideBarTheme,] = SideBarValue;
+
+    const PageBackground = SideBarTheme && SideBarTheme.PageContent;
 
     return(
         <PageContentDiv className="page-content">
-            <div style={{background: PageContentTheme}} className={"headline-page-container"}>
+            <div style={{background: PageBackground}} className={"headline-page-container"}>
                 <div className="page-container">
                     <h2>Pro Sidebar</h2>
                     <hr/>

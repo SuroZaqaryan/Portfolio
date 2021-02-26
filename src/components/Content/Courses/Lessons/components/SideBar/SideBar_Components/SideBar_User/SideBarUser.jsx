@@ -1,7 +1,14 @@
 import React from "react";
 import "../../../../css/Sidebar.css"
+import { CounterContext } from "../../../Theme/ThemeDoc";
 
-export function SideBarUser(props) {
+export function SideBarUser() {
+
+    const {SideBarValue} = React.useContext(CounterContext);
+    const [SideBarTheme,] = SideBarValue;
+
+    const UserNameColor = SideBarTheme && SideBarTheme.UserNameColor;
+
     return (
         <div className="sidebar-header">
             <div className="user-pic">
@@ -14,12 +21,12 @@ export function SideBarUser(props) {
 
             <div className="user-info">
                 <span className="sidebar_user_name">
-                    <strong>Jhon Smith</strong>
+                    <strong style={{color: UserNameColor}}>Jhon Smith</strong>
                 </span>
 
                 <span className="user-status">
                     <i className="fa fa-circle"></i>
-                    <span>Online</span>
+                    <span style={{color: UserNameColor}}>Online</span>
                 </span>
             </div>
         </div>

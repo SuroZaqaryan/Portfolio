@@ -1,39 +1,47 @@
-import React from "react";
-import {CounterContext} from "../../../Theme/ThemeDoc";
-import {NavLink} from "react-router-dom";
+import React, { useContext, useState, useEffect } from "react";
+import { CounterContext } from "../../../Theme/ThemeDoc";
+import { NavLink } from "react-router-dom";
 import BackIcon from "../../icons/SideBarIcons/icons8-back.png"
+import BackButton from "./BackButton";
+import { SideBarContext } from "../../SideBarContext";
 
-export function SideBarBack(props) {
+export function SideBarBack() {
 
-    const {SideBarValue, PageContentValue, TextColorValue, SideBarWallpaperValue} = React.useContext(CounterContext);
+    const { SideBarValue, SideBarWallpaperValue } = React.useContext(CounterContext);
 
-    const [, SetSideBarTheme] = SideBarValue;
-    const [, SetPageContentTheme] = PageContentValue;
-    const [, SetTextColor] = TextColorValue;
+    const [SideBarTheme, SetSideBarTheme] = SideBarValue;
     const [, SetSideBarBackground] = SideBarWallpaperValue;
 
-    const AssignDefaultTheme = (SideBarKey, PageContentKey) => {
-        SetSideBarTheme(localStorage.removeItem(SideBarKey));
-        SetPageContentTheme(localStorage.removeItem(PageContentKey));
-        SetTextColor(localStorage.removeItem(TextColorValue));
+    const {someValue}  = useContext(SideBarContext);
+    const [BlurItem, setBlurItem] = useState(someValue);
+
+    const ItemColor = SideBarTheme && SideBarTheme.ItemColor;
+    const AssignDefaultTheme = () => {
+        // setBlurItem(BlurItem[0] = 7)
+        localStorage.removeItem("SideBarKey", SideBarTheme)
+        SetSideBarTheme("SideBarKey")
         SetSideBarBackground(localStorage.removeItem(SideBarWallpaperValue));
     }
 
-    return(
+    return (
         <div className={"SideBar_Back_Theme_Container"}>
-            <NavLink className={"Back_To_Content"} to={"/content"}>
-                    <div className={"sidebar_backIcon_container"}>
-                        <img src={BackIcon} alt=""/>
-                    </div>
+            {
+                ItemColor ?
+                    <BackButton />
+                    :
+                    <NavLink className={"Back_To_Content"} to={"/content"}>
+                        <div className={"sidebar_backIcon_container"}>
+                            <img src={BackIcon} alt="" />
+                        </div>
 
-                    <div>
-                        <p>Back</p>
-                    </div>
-            </NavLink>
+                        <div>
+                            <p style={{ marginTop: '1px' }}>Back</p>
+                        </div>
+                    </NavLink>
+            }
 
-            <div onClick={() => AssignDefaultTheme("SideBarKey", "PageContentKey")}
-                 className={"SideBar_Theme_Default"}>
-                <p>Theme Default</p>
+            <div onClick={() => AssignDefaultTheme()} className={"SideBar_Theme_Default"}>
+                <p style={{ color: ItemColor, fontWeight: ItemColor ? '400' : '500' }}>Theme Default</p>
             </div>
         </div>
     );

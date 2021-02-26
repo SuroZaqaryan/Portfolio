@@ -64,7 +64,6 @@
 .sidebar-themes-container span {
     cursor: pointer;
     color: #512d33;
-    font-weight: 500;
     font-size: 14px;
 }
 
@@ -79,7 +78,7 @@
 }
 
 .navbar_back_to_home, .sidebar_backIcon_container {
-    margin-right: 8px;
+    margin-right: 7px;
 }
 
 .sidebar_backIcon_container img {
@@ -91,10 +90,11 @@
 }
 
 .SideBar_Theme_Default p {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 500;
     color: #512d33;
     text-decoration: underline;
+    font-family: system-ui;
 }
 
 /*--------------------sidebar-header----------------------*/
@@ -162,7 +162,7 @@
     width: 100%;
     text-decoration: none;
     position: relative;
-    padding: 8px 30px 8px 20px;
+    padding: 8px 30px 8px 13px;
     font-size: 13px;
     color: #dfdfdfd6;
 }
@@ -216,6 +216,8 @@
 }
 
 .courseLessonList {
+    display: flex;
+    align-content: center;
     margin-right: 15px;
     margin-left: 15px;
 }
@@ -243,7 +245,8 @@
 
 /* data-uri resources */
 .page-wrapper, .headline_sidebar_wrapper::before {
-    background-image: url(https://media.idownloadblog.com/wp-content/uploads/2016/06/macOS-Sierra-Wallpaper-4k.jpg);
+    width: 280px;
+    background-image: url(../components/SideBar/Background/Mountain.jpg);
     background-size: cover;
     background-position: center;
 }
