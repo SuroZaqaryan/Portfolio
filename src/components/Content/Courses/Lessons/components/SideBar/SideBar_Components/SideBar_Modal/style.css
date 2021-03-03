@@ -1,16 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@500&display=swap');
 .SideBarModal_Wrapper {
-    width: 500px;
+    overflow-y: scroll;
+    height: 650px;
     max-width: 100%;
-    margin: auto;
+    padding: 20px 40px 0px 40px;
 }
 
 .SideBarModal_Appearance {
     display: flex;
     align-items: center;
-}
-
-.SideBarModal_Accept_Color {
-    display: flex;
 }
 
 .SideBarModal_Child_Appearance, .SideBarModal_Child_Color {
@@ -19,11 +17,9 @@
 }
 
 .SideBarModal_Child_Appearance p, .SideBarModal_Child_Color p {
-    font-family: 'Roboto';
-    font-weight: 500;
-    letter-spacing: 0.3px;
-    font-size: 14px;
-    color: #171616;
+    color: #343434;
+    font-size: 15px;
+    font-family: 'Archivo', sans-serif;
 }
 
 .SideBarModal_Line_Container {

@@ -1,9 +1,11 @@
 import React from 'react';
 
 export function ThemeIcon(props) {
-    return <svg style={{color: props.ItemColor && props.ItemColor ? props.ItemColor : '#2d2d2d'}}
-                xmlns="http://www.w3.org/2000/svg" width="18"
-                height="17" fill="currentColor"
+    const ItemColor = props.ItemColor && props.ItemColor ? props.ItemColor : '#2d2d2d';
+
+    return <svg style={{color: ItemColor}}
+                xmlns="http://www.w3.org/2000/svg" width="17"
+                height="16" fill="currentColor"
                 className="bi bi-sliders" viewBox="0 0 16 16">
         <path fill-rule="evenodd"
               d="M11.5 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM9.05 3a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0V3h9.05zM4.5 7a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM2.05 8a2.5 2.5 0 0 1 4.9 0H16v1H6.95a2.5 2.5 0 0 1-4.9 0H0V8h2.05zm9.45 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm-2.45 1a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0v-1h9.05z"/>
@@ -11,9 +13,12 @@ export function ThemeIcon(props) {
 }
 
 export function SideBarTitleIcon(props) {
+
+    const IconTitleColor = props.SideBarStyle.IconTitleColor && props.SideBarStyle.IconTitleColor ? props.SideBarStyle.IconTitleColor : '#ffffff91';
+
     return <svg style={{
         marginRight: '10px',
-        color: '#ffffff91',
+        color: IconTitleColor,
     }} xmlns="http://www.w3.org/2000/svg" width="18" height="20" fill="currentColor" className="bi bi-braces"
          viewBox="0 0 16 16">
         <path
@@ -22,7 +27,8 @@ export function SideBarTitleIcon(props) {
 }
 
 export function BackIcon(props) {
-    return <svg style={{color: props.ItemColor && props.ItemColor ? props.ItemColor : '#d1d6e2'}}
+    const ItemColor = props.ItemColor && props.ItemColor ? props.ItemColor : '#d1d6e2';
+    return <svg style={{color: ItemColor}}
     xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
     <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
   </svg>

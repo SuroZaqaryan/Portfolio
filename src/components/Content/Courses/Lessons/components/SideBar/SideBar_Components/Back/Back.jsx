@@ -10,7 +10,7 @@ export function SideBarBack() {
     const { SideBarValue, SideBarWallpaperValue } = React.useContext(CounterContext);
 
     const [SideBarTheme, SetSideBarTheme] = SideBarValue;
-    const [, SetSideBarBackground] = SideBarWallpaperValue;
+    const [,SetSideBarBackground] = SideBarWallpaperValue;
 
     const {someValue}  = useContext(SideBarContext);
     const [BlurItem, setBlurItem] = useState(someValue);
@@ -27,7 +27,7 @@ export function SideBarBack() {
         <div className={"SideBar_Back_Theme_Container"}>
             {
                 ItemColor ?
-                    <BackButton />
+                    <BackButton SideBarTheme={SideBarTheme} />
                     :
                     <NavLink className={"Back_To_Content"} to={"/content"}>
                         <div className={"sidebar_backIcon_container"}>

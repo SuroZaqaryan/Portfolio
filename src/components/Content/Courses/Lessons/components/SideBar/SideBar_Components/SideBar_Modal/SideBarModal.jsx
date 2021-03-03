@@ -4,12 +4,14 @@ import Modal from "antd/es/modal/Modal";
 import "./style.css";
 import SideBarBlurChange from "../SideBar_BlueRange/SideBarBlurChange";
 import {Button} from "antd";
-import ThemeSettings from './setting-theme.png';
 import {CounterContext} from '../../../Theme/ThemeDoc';
-import {FaFontAwesome} from "react-icons/all";
-import {faPalette} from "@fortawesome/free-solid-svg-icons";
 import {ThemeIcon} from "./ThemeIcon";
+import SeleceColorsTheme from "../../../Theme/SelectThemePictures/SeleceColorsTheme";
+import { Typography } from 'antd';
+import SelectGradientTheme from "../../../Theme/SelectThemePictures/SelectGradientTheme";
+import Paragraph from "antd/es/typography/Paragraph";
 
+const { Text } = Typography;
 const DraggableDialog = (props) => {
     const [visible, setVisible] = useState(false);
 
@@ -24,41 +26,53 @@ const DraggableDialog = (props) => {
 
     return (
         <>
-
             <div style={{display: "flex", alignItems: "center", width: "100%",}}>
                 <div style={{display: "flex"}}>
                     <ThemeIcon ItemColor={ItemColor}/>
                 </div>
 
                 <div style={{margin: '2px 0px 0px 10px'}}>
-                    <span style={{color: ItemColor}} onClick={() => setVisible(true)}>
+                    <span style={{color: ItemColor, fontFamily: "revert", fontWeight: "500"}}
+                          onClick={() => setVisible(true)}>
                         Themes
                     </span>
                 </div>
             </div>
 
             <Modal
-                title="Customize the theme to your liking"
+                title="Preferences"
                 centered
                 visible={visible}
                 onOk={() => setVisible(false)}
                 onCancel={() => setVisible(false)}
-                width={670}
-
+                width={"auto"}
+                style={{maxWidth: "100%"}}
                 footer={[
                     <Button
                         key="submit"
                         type="primary"
                         onClick={() => handleOk()}
+                        style={{background: "#dadadafc", borderColor: "#c7c7c7", color: "#2d2d2d"}}
                     >
-                        Apply
+                        <span style={{fontSize: '13px'}}>Apply</span>
                     </Button>
                 ]}
             >
                 <div className={"SideBarModal_Wrapper"}>
+
+                    <div>
+                        <Text strong>Colors</Text>
+                        <Paragraph style={{ color: "#565656"}}>
+                            Customize the look of your workspace. Feeling adventurous?
+                        </Paragraph>
+                    </div>
+                    <div className={"SideBarModal_Line_Container"}>
+                        <hr className={"SideBarModal_Line"}/>
+                    </div>
+
                     <div className={"SideBarModal_Appearance"}>
                         <div className={"SideBarModal_Child_Appearance"}>
-                            <p>Appearance:</p>
+                            <Text strong>Appearance:</Text>
                         </div>
 
                         <div style={{marginLeft: "5px"}}>
@@ -70,24 +84,43 @@ const DraggableDialog = (props) => {
                         <hr className={"SideBarModal_Line"}/>
                     </div>
 
-                    <div className={"SideBarModal_Accept_Color"}>
-                        <div className={"SideBarModal_Child_Color"}>
-                            <p>Gradient color:</p>
-                        </div>
-
-                        <div>
-                            {props.gradientList}
-                        </div>
-                    </div>
-                    <div className={"SideBarModal_Line_Container"}>
-                        <hr className={"SideBarModal_Line"}/>
-                    </div>
                     <div>
                         <div className={"SideBarModal_Child_Color"}>
                             <p>Blur Change</p>
                         </div>
                         <div>
                             <SideBarBlurChange {...props} />
+                        </div>
+                    </div>
+
+                    <div className={"SideBarModal_Accept_Color_Gradient"}>
+                        <div style={{marginTop: "20px"}}>
+                            <Text type="secondary" style={{
+                                fontSize: '13px',
+                                color: '#1d1c1db3',
+                                fontFamily: 'Roboto',}}>Gradients</Text>
+                        </div>
+                        <div>
+                            <SelectGradientTheme {...props} />
+                        </div>
+                    </div>
+
+                    <div className={"SideBarModal_Line_Container"}>
+                        <hr className={"SideBarModal_Line"}/>
+                    </div>
+
+                    <div className={"SideBarModal_Accept_Color"}>
+                        <div className={"SideBarModal_Child_Color"}>
+                            <div>
+                                <Text type="secondary" style={{
+                                    fontSize: '13px',
+                                    color: '#1d1c1db3',
+                                    fontFamily: 'Roboto',}}>Colors</Text>
+                            </div>
+                        </div>
+
+                        <div>
+                            <SeleceColorsTheme {...props} />
                         </div>
                     </div>
                 </div>
