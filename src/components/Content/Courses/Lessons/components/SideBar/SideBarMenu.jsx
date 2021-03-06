@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import SidebarItems from "../../pages/SidebarItems.js";
 import {Link} from "react-router-dom";
 import {CounterContext} from "../Theme/ThemeDoc";
@@ -7,9 +7,28 @@ import Hashtag from './icons/SideBarIcons/icons8-hashtag-22.png'
 
 export default function SideBarMenu(props) {
 
-    const {SideBarValue} = React.useContext(CounterContext);
+    const {SideBarValue, SideBarWallpaperValue} = React.useContext(CounterContext);
+
     const [SideBarTheme,] = SideBarValue;
     const SideBarStyle = SideBarTheme && SideBarTheme;
+
+    const [SideBarWallpaperTheme,] = SideBarWallpaperValue;
+    const SideBarWallpaperStyle = SideBarWallpaperTheme;
+
+    const SideBarThemeColor = SideBarTheme && SideBarStyle.ItemColor;
+    const WallpaperColor = SideBarWallpaperStyle && SideBarWallpaperStyle.color;
+
+    const [SideBarThemesColors, setSideBarThemesColors] = useState();
+
+    useEffect(() => {
+        if(SideBarThemeColor) {
+            setSideBarThemesColors(SideBarThemeColor)
+        } else if (WallpaperColor) {
+            setSideBarThemesColors(WallpaperColor)
+        } else {
+            setSideBarThemesColors("#383838")
+        }
+    });
 
     return (
         <ul>
@@ -31,7 +50,7 @@ export default function SideBarMenu(props) {
                                         <img style={{width: "22px", marginRight: "7px"}} src={Hashtag} alt="Hashtag"/>
                                 }
                                 <span style={{
-                                    color: SideBarTheme && SideBarStyle.TitleColor,
+                                    color: SideBarThemesColors,
                                     fontWeight: SideBarTheme && SideBarStyle.FontWeight
                                 }}>{item.CourseTopic}</span>
                             </li>
@@ -50,11 +69,8 @@ export default function SideBarMenu(props) {
                                         :
                                         null
                                 }
-                                <Link className="course_Lesson_List_Link"
-                                      style={{
-                                          color: SideBarTheme && SideBarStyle.ItemColor,
-                                          fontWeight: SideBarTheme && SideBarStyle.ItemFontWeight,
-                                      }}
+
+                                <Link style={{color: SideBarThemesColors}} className={"course_Lesson_List_Link"}
                                       to={`${props.path}` + item.route}>{item.name}</Link>
                             </li>
                         )}

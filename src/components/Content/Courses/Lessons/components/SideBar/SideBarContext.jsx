@@ -1,7 +1,6 @@
 import React, {createContext, useEffect, useState} from "react";
 export const SideBarContext = createContext();
 
-//connect component with context
 export default (Component) => (props) => {
 
   const ls = parseInt(window.localStorage.getItem('values'));

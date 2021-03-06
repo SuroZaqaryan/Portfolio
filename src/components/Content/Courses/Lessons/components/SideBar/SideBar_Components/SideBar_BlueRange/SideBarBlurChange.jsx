@@ -2,10 +2,10 @@ import React, {useContext, useEffect, useState} from "react";
 import {getTrackBackground, Range} from "react-range";
 import {SideBarContext} from "../../SideBarContext";
 
-const MIN = 0;
+const MIN = 1;
 const MAX = 100;
 
-export default function SideBarBlurChange(props) {
+export default function SideBarBlurChange() {
     const {someValue, setSomeValue} = useContext(SideBarContext);
     const [values, SetValues] = useState(someValue);
 
@@ -94,9 +94,6 @@ export default function SideBarBlurChange(props) {
                         </div>
                     )}
                 />
-                {/*<output style={{marginTop: "30px"}} id="output">*/}
-                {/*    {values[0].toFixed(1)}*/}
-                {/*</output>*/}
             </div>
         </>
     );

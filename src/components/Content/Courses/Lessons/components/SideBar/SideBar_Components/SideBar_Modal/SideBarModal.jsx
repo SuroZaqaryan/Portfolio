@@ -6,10 +6,11 @@ import SideBarBlurChange from "../SideBar_BlueRange/SideBarBlurChange";
 import {Button} from "antd";
 import {CounterContext} from '../../../Theme/ThemeDoc';
 import {ThemeIcon} from "./ThemeIcon";
-import SeleceColorsTheme from "../../../Theme/SelectThemePictures/SeleceColorsTheme";
 import { Typography } from 'antd';
 import SelectGradientTheme from "../../../Theme/SelectThemePictures/SelectGradientTheme";
 import Paragraph from "antd/es/typography/Paragraph";
+import SelectColorsTheme from "../../../Theme/SelectThemePictures/SelectColorsTheme";
+import SideBarWallpaperContainer from "../../../Theme/SideBarWallpaper/SideBarWallpaperContainer";
 
 const { Text } = Typography;
 const DraggableDialog = (props) => {
@@ -76,7 +77,7 @@ const DraggableDialog = (props) => {
                         </div>
 
                         <div style={{marginLeft: "5px"}}>
-                            {props.SideBarWallpaperList}
+                            <SideBarWallpaperContainer {...props} />
                         </div>
                     </div>
 
@@ -120,7 +121,7 @@ const DraggableDialog = (props) => {
                         </div>
 
                         <div>
-                            <SeleceColorsTheme {...props} />
+                            <SelectColorsTheme {...props} />
                         </div>
                     </div>
                 </div>

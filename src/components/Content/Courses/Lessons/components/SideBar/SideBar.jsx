@@ -11,21 +11,28 @@ function SideBar(props) {
     const {SideBarValue, SideBarWallpaperValue} = React.useContext(CounterContext);
 
     const [SideBarTheme] = SideBarValue;
-    const [SideBarBackground] = SideBarWallpaperValue;
+    const [SideBarBackgroundValue] = SideBarWallpaperValue;
+
+    const SideBarBackground = SideBarBackgroundValue && SideBarBackgroundValue.SideBarWallpaper;
+    const SideBarBackgroundColor = SideBarBackgroundValue && SideBarBackgroundValue.background;
 
     return (
         <div className={"headline_sidebar_wrapper"}>
             <article className={`${Blur.glass} ${Blur.up}`}>
                 <nav id="sidebar" className="sidebar-wrapper modal">
-                    <div style={{backgroundImage: `url(${SideBarBackground})`}}>
-                        <div style={{background: SideBarTheme && SideBarTheme.SideBar, backdropFilter: `blur(${someValue}px)`}}
-                             className={`${Blur.SideBar_Page_Content} ${Blur.SideBarContainer}`}>
-                            <SideBarWrapper {...props} />
-                            <div className="sidebar-menu">
-                                <SideBarMenu path={props.match.path}/>
+                        <div className={"sidebar_background"}>
+                            <div className={"background_theme_image"} style={{backgroundImage: `url(${SideBarBackground})`}}>
+                                <div style={{background: SideBarBackgroundColor}}>
+                                    <div style={{background: SideBarTheme && SideBarTheme.SideBar, backdropFilter: `blur(${someValue}px)`}}
+                                         className={`${Blur.SideBar_Page_Content} ${Blur.SideBarContainer}`}>
+                                        <SideBarWrapper {...props} />
+                                        <div className="sidebar-menu">
+                                            <SideBarMenu path={props.match.path}/>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
                 </nav>
             </article>
         </div>

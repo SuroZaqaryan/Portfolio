@@ -10,17 +10,18 @@ export function SideBarBack() {
     const { SideBarValue, SideBarWallpaperValue } = React.useContext(CounterContext);
 
     const [SideBarTheme, SetSideBarTheme] = SideBarValue;
-    const [,SetSideBarBackground] = SideBarWallpaperValue;
-
-    const {someValue}  = useContext(SideBarContext);
-    const [BlurItem, setBlurItem] = useState(someValue);
+    const [SideBarBackground,SetSideBarBackground] = SideBarWallpaperValue;
 
     const ItemColor = SideBarTheme && SideBarTheme.ItemColor;
+
     const AssignDefaultTheme = () => {
         // setBlurItem(BlurItem[0] = 7)
+
         localStorage.removeItem("SideBarKey", SideBarTheme)
         SetSideBarTheme("SideBarKey")
-        SetSideBarBackground(localStorage.removeItem(SideBarWallpaperValue));
+
+        localStorage.removeItem("BgKey", SideBarBackground)
+        SetSideBarBackground("BgKey");
     }
 
     return (

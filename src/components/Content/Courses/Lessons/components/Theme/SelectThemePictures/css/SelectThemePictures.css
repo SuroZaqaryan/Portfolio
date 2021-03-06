@@ -112,5 +112,7 @@
 }
 
 .prefs_radio_text {
+    color: #383838;
     font-size: 12px;
+    font-weight: 500;
 }

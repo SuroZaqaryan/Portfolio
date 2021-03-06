@@ -160,7 +160,6 @@
     text-decoration: none;
     position: relative;
     padding: 8px 8px 8px 13px;
-    color: #383838;
     font-size: 14px;
     font-weight: 400;
 }
@@ -233,15 +232,16 @@
 
 /*-----------------------------------------------------------------------------------------*/
 
-/* data-uri resources */
-.page-wrapper, .headline_sidebar_wrapper::before {
-    width: 100%;
+.sidebar_background {
     background-image: url(../components/SideBar/Background/Mountain.jpg);
-    background-size: contain;
-    background-position: left;
-    background-repeat: space;
+    background-size: cover;
+    background-position: center;
 }
 
+.background_theme_image {
+    background-size: cover;
+    background-position: center;
+}
 
 /* Appearance */
 .SideBar_Appearance_Select_Icon {

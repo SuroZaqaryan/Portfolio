@@ -2,7 +2,7 @@ import React from "react";
 import cnStyle from "./ContentCourses.module.css"
 import styled from "styled-components";
 
-const Content_Container = styled.div`
+const ContentContainer = styled.div`
   background: ${props => (props.value ? "#282e3c" : "rgb(170 170 170 / 18%)")};
   box-shadow: ${props => (props.value ? "0px 1px 10px rgb(24 24 24 / 45%)" : null)};
   border: ${props => (props.value ? "1px solid #343b4b" : "1px solid #dbdbdb99")};
@@ -31,7 +31,7 @@ export class ContentCourses extends React.Component {
                     {
                         this.props.course.slice(i, i + 2).map((item, index) => {
                             return (
-                                <Content_Container value={this.props.value} key={index} className={cnStyle.ContentVeryHeadlineBlock}>
+                                <ContentContainer value={this.props.value} key={index} className={cnStyle.ContentVeryHeadlineBlock}>
                                     <ContentHeadlineBlock value={this.props.value}>
                                         <div className={cnStyle.ContentCoursesBlock}>
                                             <div style={{ marginRight: '25px' }} className={cnStyle.courseIconBlock}>
@@ -69,7 +69,7 @@ export class ContentCourses extends React.Component {
                                             <p className={cnStyle.learnQuantity}>{item.Quizzes}</p>
                                         </div>
                                     </div>
-                                </Content_Container>
+                                </ContentContainer>
                             );
                         }
 

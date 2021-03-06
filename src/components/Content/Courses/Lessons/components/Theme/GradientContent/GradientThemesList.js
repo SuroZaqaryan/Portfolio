@@ -32,7 +32,6 @@ const GradientThemes = [
             ThemePalette: "#9bb9c5",
         }
     },
-
     {
         SideBar: "linear-gradient(180deg, rgb(146 93 116) 0%, rgb(71 75 88) 100%)",
         PreviewThemeSideBar: "#5f4055",
@@ -63,7 +62,6 @@ const GradientThemes = [
             ThemePalette: "#9bb9c5",
         }
     },
-
     {
         SideBar: "linear-gradient(180deg, rgb(96 110 150) 0%, rgb(69 75 88) 100%)",
         PreviewThemeSideBar: "#3e4964",
@@ -94,6 +92,7 @@ const GradientThemes = [
             ThemePalette: "#c7cee1",
         }
     },
+
 ].map((item) => {
     return {
         SideBar: item.SideBar,
