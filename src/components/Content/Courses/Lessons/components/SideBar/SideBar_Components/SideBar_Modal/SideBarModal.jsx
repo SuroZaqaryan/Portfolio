@@ -11,8 +11,8 @@ import SelectGradientTheme from "../../../Theme/SelectThemePictures/SelectGradie
 import Paragraph from "antd/es/typography/Paragraph";
 import SelectColorsTheme from "../../../Theme/SelectThemePictures/SelectColorsTheme";
 import SideBarWallpaperContainer from "../../../Theme/SideBarWallpaper/SideBarWallpaperContainer";
-
 const { Text } = Typography;
+
 const DraggableDialog = (props) => {
     const [visible, setVisible] = useState(false);
 
@@ -46,21 +46,19 @@ const DraggableDialog = (props) => {
                 visible={visible}
                 onOk={() => setVisible(false)}
                 onCancel={() => setVisible(false)}
-                width={"auto"}
+                width={"760px"}
                 style={{maxWidth: "100%"}}
                 footer={[
                     <Button
                         key="submit"
                         type="primary"
                         onClick={() => handleOk()}
-                        style={{background: "#dadadafc", borderColor: "#c7c7c7", color: "#2d2d2d"}}
                     >
                         <span style={{fontSize: '13px'}}>Apply</span>
                     </Button>
                 ]}
             >
                 <div className={"SideBarModal_Wrapper"}>
-
                     <div>
                         <Text strong>Colors</Text>
                         <Paragraph style={{ color: "#565656"}}>
@@ -72,11 +70,11 @@ const DraggableDialog = (props) => {
                     </div>
 
                     <div className={"SideBarModal_Appearance"}>
-                        <div className={"SideBarModal_Child_Appearance"}>
+                        <div className={"SideBarModal_Child_Appearance Appearance"}>
                             <Text strong>Appearance:</Text>
                         </div>
 
-                        <div style={{marginLeft: "5px"}}>
+                        <div style={{display: "flex", flexWrap: "wrap"}}>
                             <SideBarWallpaperContainer {...props} />
                         </div>
                     </div>

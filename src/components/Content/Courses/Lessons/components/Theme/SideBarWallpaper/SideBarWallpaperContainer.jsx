@@ -5,9 +5,9 @@ export default function SideBarWallpaperContainer(props) {
 
     const SideBarWallpaperList = SideBarBackgrounds.map((theme, index) => {
         return (
-            <img key={index} width={"70"} height={"55"}
-                 src={theme.SideBarWallpaper}
+            <div key={index}
                  className={"SideBar_Appearance_Select_Icon"}
+                 style={{background: theme.SideBarWallpaper}}
                  onClick={() => props.ChangeSideBarWallpaper(theme)} alt={"Select Theme"}/>
         );
     })

@@ -1,14 +1,13 @@
 .SelectThemePictures_Separator {
     display: flex;
-}
-
-.builtin_theme_preview_hover:hover {
-    cursor: pointer;
+    justify-content: space-between;
 }
 
 .builtin_theme_preview {
     width: 185px;
-    margin: 10px 15px 10px 0;
+    max-width: 100%;
+    cursor: pointer;
+    margin: 10px 15px 20px 0;
     border: 1px solid #d3d3d3c2;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;

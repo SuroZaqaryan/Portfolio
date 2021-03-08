@@ -21,7 +21,8 @@ function SideBar(props) {
             <article className={`${Blur.glass} ${Blur.up}`}>
                 <nav id="sidebar" className="sidebar-wrapper modal">
                         <div className={"sidebar_background"}>
-                            <div className={"background_theme_image"} style={{backgroundImage: `url(${SideBarBackground})`}}>
+                            <div className={"background_theme_image"}
+                            style={{background: SideBarBackground}}>
                                 <div style={{background: SideBarBackgroundColor}}>
                                     <div style={{background: SideBarTheme && SideBarTheme.SideBar, backdropFilter: `blur(${someValue}px)`}}
                                          className={`${Blur.SideBar_Page_Content} ${Blur.SideBarContainer}`}>

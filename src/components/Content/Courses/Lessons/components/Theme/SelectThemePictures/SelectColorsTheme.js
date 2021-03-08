@@ -2,9 +2,9 @@ import React, {useState} from "react";
 import SideBarColors from "../SideBarColors/SideBarColors"
 import "./css/SelectThemePictures.css"
 import SelectThemeContent from "./ThemeComponents/SelectThemeContent";
-import classNames from "classnames/bind";
 
 export default function SelectColorsTheme(props) {
+
     const groupSize = 3;
 
     const [selectedIndex, setSelectedIndex] = useState(false);
@@ -14,13 +14,7 @@ export default function SelectColorsTheme(props) {
     };
 
     const rows = SideBarColors.map(function (col, index) {
-        
-        const selectBorder = classNames({
-            'builtin_theme_preview': true,
-            'selectBorder': index === selectedIndex ? 'selectBorder' : null
-        });
-
-        return <SelectThemeContent {...props} selectBorder={selectBorder} col={col} setBorder={setBorder} key={index}/>
+        return <SelectThemeContent {...props} col={col} key={index} selectedIndex={selectedIndex} index={index} setBorder={setBorder}/>
     }).reduce(function (r, element, index) {
         index % groupSize === 0 && r.push([]);
         r[r.length - 1].push(element);

@@ -1,13 +1,30 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import "../../../../css/Sidebar.css"
 import { CounterContext } from "../../../Theme/ThemeDoc";
 
 export function SideBarUser() {
 
-    const {SideBarValue} = React.useContext(CounterContext);
+    const {SideBarValue, SideBarWallpaperValue} = React.useContext(CounterContext);
+
     const [SideBarTheme,] = SideBarValue;
 
+    const [SideBarWallpaperTheme,] = SideBarWallpaperValue;
+    const SideBarWallpaperStyle = SideBarWallpaperTheme;
+
     const UserNameColor = SideBarTheme && SideBarTheme.UserNameColor;
+    const WallpaperColor = SideBarWallpaperStyle && SideBarWallpaperStyle.color;
+
+    const [SideBarThemesColors, setSideBarThemesColors] = useState();
+
+    useEffect(() => {
+        if (UserNameColor) {
+            setSideBarThemesColors(UserNameColor)
+        } else if (WallpaperColor) {
+            setSideBarThemesColors(WallpaperColor)
+        } else {
+            setSideBarThemesColors("#2d2d2d")
+        }
+    });
 
     return (
         <div className="sidebar-header">
@@ -21,12 +38,12 @@ export function SideBarUser() {
 
             <div className="user-info">
                 <span className="sidebar_user_name">
-                    <strong style={{color: UserNameColor}}>Jhon Smith</strong>
+                    <strong style={{color: SideBarThemesColors}}>Jhon Smith</strong>
                 </span>
 
                 <span className="user-status">
                     <i className="fa fa-circle"></i>
-                    <span style={{color: UserNameColor}}>Online</span>
+                    <span style={{color: SideBarThemesColors}}>Online</span>
                 </span>
             </div>
         </div>

@@ -1,13 +1,13 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import SidebarItems from "../../pages/SidebarItems.js";
-import {Link} from "react-router-dom";
-import {CounterContext} from "../Theme/ThemeDoc";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
+import { CounterContext } from "../Theme/ThemeDoc";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Hashtag from './icons/SideBarIcons/icons8-hashtag-22.png'
 
 export default function SideBarMenu(props) {
 
-    const {SideBarValue, SideBarWallpaperValue} = React.useContext(CounterContext);
+    const { SideBarValue, SideBarWallpaperValue } = React.useContext(CounterContext);
 
     const [SideBarTheme,] = SideBarValue;
     const SideBarStyle = SideBarTheme && SideBarTheme;
@@ -17,11 +17,12 @@ export default function SideBarMenu(props) {
 
     const SideBarThemeColor = SideBarTheme && SideBarStyle.ItemColor;
     const WallpaperColor = SideBarWallpaperStyle && SideBarWallpaperStyle.color;
+    const ItemBackground = SideBarWallpaperStyle && SideBarWallpaperStyle.TitleColor;
 
     const [SideBarThemesColors, setSideBarThemesColors] = useState();
 
     useEffect(() => {
-        if(SideBarThemeColor) {
+        if (SideBarThemeColor) {
             setSideBarThemesColors(SideBarThemeColor)
         } else if (WallpaperColor) {
             setSideBarThemesColors(WallpaperColor)
@@ -36,7 +37,7 @@ export default function SideBarMenu(props) {
                 return (
                     <React.Fragment key={index}>
                         {item.CourseTopic && (
-                            <li className="header-menu">
+                            <li style={{ background: ItemBackground }} className="header-menu">
                                 {
                                     SideBarTheme && SideBarTheme.IconTitle ?
                                         <FontAwesomeIcon
@@ -47,7 +48,7 @@ export default function SideBarMenu(props) {
                                             icon={SideBarStyle.IconTitle}
                                         />
                                         :
-                                        <img style={{width: "22px", marginRight: "7px"}} src={Hashtag} alt="Hashtag"/>
+                                        <img style={{ width: "22px", marginRight: "7px" }} src={Hashtag} alt="Hashtag" />
                                 }
                                 <span style={{
                                     color: SideBarThemesColors,
@@ -63,15 +64,15 @@ export default function SideBarMenu(props) {
                                 {
                                     SideBarTheme && SideBarStyle.Icon ?
                                         <FontAwesomeIcon
-                                            style={{color: SideBarTheme && SideBarStyle.IconColor, fontSize: "12px"}}
+                                            style={{ color: SideBarTheme && SideBarStyle.IconColor, fontSize: "12px" }}
                                             icon={SideBarStyle.Icon}
                                         />
                                         :
                                         null
                                 }
 
-                                <Link style={{color: SideBarThemesColors}} className={"course_Lesson_List_Link"}
-                                      to={`${props.path}` + item.route}>{item.name}</Link>
+                                <Link style={{ color: SideBarThemesColors }} className={"course_Lesson_List_Link"}
+                                    to={`${props.path}` + item.route}>{item.name}</Link>
                             </li>
                         )}
                     </React.Fragment>

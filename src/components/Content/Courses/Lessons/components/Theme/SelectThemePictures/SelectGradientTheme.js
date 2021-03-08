@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./css/SelectThemePictures.css"
 import GradientThemes from "../GradientContent/GradientThemesList";
-import classNames from 'classnames/bind';
 import SelectThemeContent from "./ThemeComponents/SelectThemeContent";
+import SideBarColors from "../SideBarColors/SideBarColors";
 
 export default function SelectGradientTheme(props) {
     const groupSize = 3;
@@ -14,11 +14,7 @@ export default function SelectGradientTheme(props) {
     };
 
     const rows = GradientThemes.map(function (col, index) {
-        const selectBorder = classNames({
-            'builtin_theme_preview': true,
-            'selectBorder': index === selectedIndex ? 'selectBorder' : null
-        });
-        return <SelectThemeContent {...props} selectBorder={selectBorder} col={col} setBorder={setBorder} key={index} />
+        return <SelectThemeContent {...props} col={col} key={index} selectedIndex={selectedIndex} index={index} setBorder={setBorder}/>
     }).reduce(function (r, element, index) {
         index % groupSize === 0 && r.push([]);
         r[r.length - 1].push(element);
