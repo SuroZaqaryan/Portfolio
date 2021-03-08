@@ -2,25 +2,16 @@ import React, {useEffect, useState} from "react";
 import "../../../../css/Sidebar.css"
 import { CounterContext } from "../../../Theme/ThemeDoc";
 
-export function SideBarUser() {
+export function SideBarUser(props) {
 
-    const {SideBarValue, SideBarWallpaperValue} = React.useContext(CounterContext);
-
-    const [SideBarTheme,] = SideBarValue;
-
-    const [SideBarWallpaperTheme,] = SideBarWallpaperValue;
-    const SideBarWallpaperStyle = SideBarWallpaperTheme;
-
-    const UserNameColor = SideBarTheme && SideBarTheme.UserNameColor;
-    const WallpaperColor = SideBarWallpaperStyle && SideBarWallpaperStyle.color;
-
+    const {SideBarTheme, SideBarWallpaperTheme} = props;
     const [SideBarThemesColors, setSideBarThemesColors] = useState();
 
     useEffect(() => {
-        if (UserNameColor) {
-            setSideBarThemesColors(UserNameColor)
-        } else if (WallpaperColor) {
-            setSideBarThemesColors(WallpaperColor)
+        if (SideBarTheme.UserNameColor) {
+            setSideBarThemesColors(SideBarTheme.UserNameColor)
+        } else if (SideBarWallpaperTheme.color) {
+            setSideBarThemesColors(SideBarWallpaperTheme.color)
         } else {
             setSideBarThemesColors("#2d2d2d")
         }

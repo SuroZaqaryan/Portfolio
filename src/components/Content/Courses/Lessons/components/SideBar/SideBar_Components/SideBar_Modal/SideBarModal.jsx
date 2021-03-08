@@ -16,11 +16,6 @@ const { Text } = Typography;
 const DraggableDialog = (props) => {
     const [visible, setVisible] = useState(false);
 
-    const {SideBarValue,} = React.useContext(CounterContext);
-
-    const [SideBarTheme,] = SideBarValue;
-    const ItemColor = SideBarTheme && SideBarTheme.ItemColor;
-
     const handleOk = () => {
         setVisible(false)
     }
@@ -29,11 +24,11 @@ const DraggableDialog = (props) => {
         <>
             <div style={{display: "flex", alignItems: "center", width: "100%",}}>
                 <div style={{display: "flex"}}>
-                    <ThemeIcon ItemColor={ItemColor}/>
+                    <ThemeIcon ItemColor={props.SideBarTheme.ItemColor}/>
                 </div>
 
                 <div style={{margin: '2px 0px 0px 10px'}}>
-                    <span style={{color: ItemColor, fontFamily: "revert", fontWeight: "500"}}
+                    <span style={{color: props.SideBarTheme.ItemColor, fontFamily: "revert", fontWeight: "500"}}
                           onClick={() => setVisible(true)}>
                         Themes
                     </span>
