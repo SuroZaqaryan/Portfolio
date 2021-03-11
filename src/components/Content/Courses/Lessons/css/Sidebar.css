@@ -45,7 +45,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 13px;
+    margin-bottom: 5px;
 }
 
 .sidebar-themes-container {
@@ -88,7 +88,6 @@
 .SideBar_Theme_Default p {
     font-size: 13px;
     font-weight: 500;
-    color: #512d33;
     text-decoration: underline;
     font-family: system-ui;
 }
@@ -208,7 +207,7 @@
 /*-----------------------------------------------------------------------------------------*/
 
 .sidebar-header, .sidebar-menu {
-    border-top: 1px solid #ffffff12;
+    border-top: 1px solid #ffffff2b;
 }
 
 .courseLessonList {

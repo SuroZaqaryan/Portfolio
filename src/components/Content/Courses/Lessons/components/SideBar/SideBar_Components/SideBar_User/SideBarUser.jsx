@@ -1,31 +1,39 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "../../../../css/Sidebar.css"
 
 export function SideBarUser(props) {
-    const {SideBarThemesColors} = props;
+    const { SideBarThemesColors } = props;
     if (!props.profile) {
         return <p>Loading...</p>
     }
+    const { profile } = props;
     return (
         <div className="sidebar-header">
-            <div className="user-pic">
-                <img
-                    className="img-responsive img-rounded"
-                    src="https://scontent.fevn1-4.fna.fbcdn.net/v/t1.0-9/25552320_10155560223259678_8307290088032102953_n.jpg?_nc_cat=110&ccb=2&_nc_sid=09cbfe&_nc_ohc=1ksbXQO_NRoAX_6_07Z&_nc_ht=scontent.fevn1-4.fna&oh=8706cdd1415ef3c17b9b4b7c9d854438&oe=6039AA0A"
-                    alt="User picture"
-                />
-            </div>
+            
+                <div className="user-pic">
 
-            <div className="user-info">
-                <span className="sidebar_user_name">
-                    <strong style={{color: SideBarThemesColors}}>{props.profile.fullName}</strong>
-                </span>
+                    <img
+                        className="img-responsive img-rounded"
+                        src={profile.photos.small ? profile.photos.small : "https://cactusthemes.com/blog/wp-content/uploads/2018/01/tt_avatar_small.jpg"}
+                        alt="User picture"
+                    />
 
-                <span className="user-status">
-                    <i className="fa fa-circle"></i>
-                    <span style={{color: SideBarThemesColors}}>Online</span>
-                </span>
-            </div>
+                </div>
+
+                <div className="user-info">
+                <NavLink to={'/profile/' + profile.userId}>
+                    <span className="sidebar_user_name">
+                        <strong style={{ color: SideBarThemesColors }}>{profile.fullName}</strong>
+                    </span>
+                    </NavLink>
+                    <span className="user-status">
+                        <i className="fa fa-circle"></i>
+                        <span style={{ color: SideBarThemesColors }}>Online</span>
+                    </span>
+                </div>
+            
+
         </div>
     );
 }

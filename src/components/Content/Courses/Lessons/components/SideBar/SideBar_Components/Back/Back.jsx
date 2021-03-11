@@ -31,8 +31,8 @@ export function SideBarBack(props) {
     useEffect(() => {
         if (SideBarThemeValue && SideBarThemeValue.UserNameColor) {
             setSideBarThemesColors(SideBarThemeValue.UserNameColor)
-        } else if (SideBarWallpaperThemeValue && SideBarWallpaperThemeValue.color) {
-            setSideBarThemesColors(SideBarWallpaperThemeValue.color)
+        } else if (SideBarWallpaperTheme) {
+            setSideBarThemesColors(SideBarWallpaperTheme.color)
             setSideBarWallpaperBackButtonColor(SideBarWallpaperThemeValue.color)
         } else {
             setSideBarWallpaperBackButtonColor("#1c1c1c")

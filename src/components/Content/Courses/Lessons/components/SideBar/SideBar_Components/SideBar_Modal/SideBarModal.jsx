@@ -53,7 +53,7 @@ const DraggableDialog = (props) => {
                     </Button>
                 ]}
             >
-                <div className={"SideBarModal_Wrapper"}>
+                <div style={{overflowY: "scroll"}} className={"SideBarModal_Wrapper"}>
                     <div>
                         <Text strong>Colors</Text>
                         <Paragraph className={"sidebar_modal_title"}>
