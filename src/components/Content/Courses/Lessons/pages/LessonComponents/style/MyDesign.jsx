@@ -1,13 +1,12 @@
 import styled from "styled-components";
 
-
 export const LessonTitle = styled.h2`
   font-size: 22px;
   font-weight: 500;
   color: #273849;
   font-family: 'Roboto';
   border-bottom: 1px solid #ddd;
-  margin: 20px 0 0.8em;
+  margin: 10px 0 0.8em;
   padding-bottom: 0.7em;
   border-bottom: 1px solid #ddd;
 `;
@@ -18,7 +17,7 @@ export const LessonTypography = styled.p`
   padding-bottom: 1.2em;
   word-spacing: 0.05em;
   font-size: 15px;
-  font-family: system-ui;
+  font-family: 'Roboto';
   color: #304455;
 `;
 
