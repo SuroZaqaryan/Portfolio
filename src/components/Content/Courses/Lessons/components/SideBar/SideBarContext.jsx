@@ -4,7 +4,7 @@ export const SideBarContext = createContext();
 export default (Component) => (props) => {
 
   const ls = parseInt(window.localStorage.getItem('values'));
-  const [someValue, setSomeValue] = useState(ls ? [ls] : [50]);
+  const [someValue, setSomeValue] = useState(ls != null ? [ls] : [25]);
 
   useEffect(() => {
     localStorage.setItem('values', someValue);

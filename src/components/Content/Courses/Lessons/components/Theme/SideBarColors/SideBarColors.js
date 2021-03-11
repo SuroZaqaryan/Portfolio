@@ -1,11 +1,7 @@
 import {
     faBookmark,
-    faChevronDown,
-    faCircle,
     faCode,
-    faFire,
     faHashtag,
-    faTerminal
 } from "@fortawesome/free-solid-svg-icons";
 import { faDotCircle } from "@fortawesome/free-solid-svg-icons/faDotCircle";
 

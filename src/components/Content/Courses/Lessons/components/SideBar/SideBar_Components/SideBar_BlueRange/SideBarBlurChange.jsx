@@ -2,7 +2,7 @@ import React, {useContext, useEffect, useState} from "react";
 import {getTrackBackground, Range} from "react-range";
 import {SideBarContext} from "../../SideBarContext";
 
-const MIN = 1;
+const MIN = 0;
 const MAX = 100;
 
 export default function SideBarBlurChange() {

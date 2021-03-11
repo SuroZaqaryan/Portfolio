@@ -1,22 +1,11 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import "../../../../css/Sidebar.css"
-import { CounterContext } from "../../../Theme/ThemeDoc";
 
 export function SideBarUser(props) {
-
-    const {SideBarTheme, SideBarWallpaperTheme} = props;
-    const [SideBarThemesColors, setSideBarThemesColors] = useState();
-
-    useEffect(() => {
-        if (SideBarTheme.UserNameColor) {
-            setSideBarThemesColors(SideBarTheme.UserNameColor)
-        } else if (SideBarWallpaperTheme.color) {
-            setSideBarThemesColors(SideBarWallpaperTheme.color)
-        } else {
-            setSideBarThemesColors("#2d2d2d")
-        }
-    });
-
+    const {SideBarThemesColors} = props;
+    if (!props.profile) {
+        return <p>Loading...</p>
+    }
     return (
         <div className="sidebar-header">
             <div className="user-pic">
@@ -29,7 +18,7 @@ export function SideBarUser(props) {
 
             <div className="user-info">
                 <span className="sidebar_user_name">
-                    <strong style={{color: SideBarThemesColors}}>Jhon Smith</strong>
+                    <strong style={{color: SideBarThemesColors}}>{props.profile.fullName}</strong>
                 </span>
 
                 <span className="user-status">

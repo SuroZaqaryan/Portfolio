@@ -6,7 +6,7 @@ export function SideBarThemes(props) {
     return (
         <div className="sidebar-themes-container">
             <div>
-                <DraggableDialog {...props} />
+                <DraggableDialog {...props} SideBarThemesColors={props.SideBarThemesColors} />
             </div>
         </div>
     );

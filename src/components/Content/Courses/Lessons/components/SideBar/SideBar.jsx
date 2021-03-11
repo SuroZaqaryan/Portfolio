@@ -13,25 +13,23 @@ function SideBar(props) {
     const [SideBarThemeValue] = SideBarValue;
     const [SideBarBackgroundValue] = SideBarWallpaperValue;
 
-    const SideBarTheme = SideBarThemeValue && SideBarThemeValue;
-    const SideBarWallpaperTheme = SideBarBackgroundValue && SideBarBackgroundValue;
-
     return (
         <div className={"headline_sidebar_wrapper"}>
             <article className={`${Blur.glass} ${Blur.up}`}>
                 <nav id="sidebar" className="sidebar-wrapper modal">
                     <div className={"sidebar_background"}>
                         <div className={"background_theme_image"}
-                             style={{background: SideBarWallpaperTheme.SideBarWallpaper}}>
-                            <div style={{background: SideBarWallpaperTheme.background}}>
+                             style={{background: SideBarBackgroundValue && SideBarBackgroundValue.SideBarWallpaper}}>
+                            <div style={{background: SideBarBackgroundValue && SideBarBackgroundValue.background}}>
                                 <div style={{
-                                    background: SideBarTheme.SideBar,
+                                    background: SideBarThemeValue && SideBarThemeValue.SideBar,
                                     backdropFilter: `blur(${someValue}px)`
                                 }}
                                      className={`${Blur.SideBar_Page_Content} ${Blur.SideBarContainer}`}>
-                                    <SideBarWrapper {...props} SideBarWallpaperTheme={SideBarWallpaperTheme} SideBarTheme={SideBarTheme}/>
+                                    <SideBarWrapper {...props} SideBarWallpaperTheme={SideBarBackgroundValue}
+                                                    SideBarTheme={SideBarThemeValue}/>
                                     <div className="sidebar-menu">
-                                        <SideBarMenu path={props.match.path}/>
+                                        <SideBarMenu SideBarTheme={SideBarThemeValue} SideBarWallpaperTheme={SideBarBackgroundValue} path={props.match.path}/>
                                     </div>
                                 </div>
                             </div>

@@ -74,7 +74,7 @@
 }
 
 .navbar_back_to_home, .sidebar_backIcon_container {
-    margin-right: 7px;
+    margin-right: 3px;
 }
 
 .sidebar_backIcon_container img {
@@ -233,14 +233,10 @@
 /*-----------------------------------------------------------------------------------------*/
 
 .sidebar_background {
-    background-image: url(../components/SideBar/Background/Mountain.jpg);
+    background-image: url(../components/SideBar/Background/Screenshot_1.png); 
+    /* background-image: url(https://wallup.net/wp-content/uploads/2018/03/19/580176-colorful-blurred-vertical-portrait_display-748x1330.jpg); */
     background-size: cover;
     background-position: center;
-}
-
-.background_theme_image {
-    /* background-size: cover;
-    background-position: center; */
 }
 
 /* Appearance */

@@ -1,48 +1,63 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, {useState, useEffect} from "react";
 import { CounterContext } from "../../../Theme/ThemeDoc";
 import { NavLink } from "react-router-dom";
-import BackIcon from "../../icons/SideBarIcons/icons8-back.png"
 import BackButton from "./BackButton";
-import { SideBarContext } from "../../SideBarContext";
+import { LeftOutlined } from "@ant-design/icons";
 
-export function SideBarBack() {
-
+export function SideBarBack(props) {
+    const {SideBarTheme, SideBarWallpaperTheme} = props;
     const { SideBarValue, SideBarWallpaperValue } = React.useContext(CounterContext);
 
-    const [SideBarTheme, SetSideBarTheme] = SideBarValue;
+    const SideBarThemeValue = SideBarTheme && SideBarTheme;
+    const SideBarWallpaperThemeValue = SideBarWallpaperTheme && SideBarWallpaperTheme;
+
+    const [SideBarThemes, SetSideBarTheme] = SideBarValue;
     const [SideBarBackground,SetSideBarBackground] = SideBarWallpaperValue;
 
-    const ItemColor = SideBarTheme && SideBarTheme.ItemColor;
+    const ItemColor = SideBarThemes && SideBarThemes.ItemColor;
 
     const AssignDefaultTheme = () => {
-        // setBlurItem(BlurItem[0] = 7)
-
-        localStorage.removeItem("SideBarKey", SideBarTheme)
+        localStorage.removeItem("SideBarKey", SideBarThemes)
         SetSideBarTheme("SideBarKey")
 
         localStorage.removeItem("BgKey", SideBarBackground)
         SetSideBarBackground("BgKey");
     }
 
+
+    const [SideBarThemesColors, setSideBarThemesColors] = useState();
+    const [SideBarWallpaperBackButtonColor, setSideBarWallpaperBackButtonColor] = useState();
+
+    useEffect(() => {
+        if (SideBarThemeValue && SideBarThemeValue.UserNameColor) {
+            setSideBarThemesColors(SideBarThemeValue.UserNameColor)
+        } else if (SideBarWallpaperThemeValue && SideBarWallpaperThemeValue.color) {
+            setSideBarThemesColors(SideBarWallpaperThemeValue.color)
+            setSideBarWallpaperBackButtonColor(SideBarWallpaperThemeValue.color)
+        } else {
+            setSideBarWallpaperBackButtonColor("#1c1c1c")
+        }
+    }, [SideBarThemeValue && SideBarThemeValue.UserNameColor, SideBarWallpaperThemeValue && SideBarWallpaperThemeValue.color]);
+
     return (
         <div className={"SideBar_Back_Theme_Container"}>
             {
                 ItemColor ?
-                    <BackButton SideBarTheme={SideBarTheme} />
+                    <BackButton SideBarTheme={SideBarThemes}/>
                     :
                     <NavLink className={"Back_To_Content"} to={"/content"}>
                         <div className={"sidebar_backIcon_container"}>
-                            <img src={BackIcon} alt="" />
+                            <LeftOutlined style={{color: SideBarWallpaperBackButtonColor, fontSize: "12px"}} />
                         </div>
 
                         <div>
-                            <p style={{ marginTop: '1px' }}>Back</p>
+                            <p style={{color: SideBarThemesColors ? SideBarThemesColors : "#1c1c1c", marginTop: '1px', fontSize: "13px" }}>Back</p>
                         </div>
                     </NavLink>
             }
 
             <div onClick={() => AssignDefaultTheme()} className={"SideBar_Theme_Default"}>
-                <p style={{ color: ItemColor, fontWeight: ItemColor ? '400' : '500' }}>Theme Default</p>
+                <p style={{ color: SideBarThemesColors ? SideBarThemesColors : "#1c1c1c", fontWeight: ItemColor ? '400' : '500' }}>Theme Default</p>
             </div>
         </div>
     );

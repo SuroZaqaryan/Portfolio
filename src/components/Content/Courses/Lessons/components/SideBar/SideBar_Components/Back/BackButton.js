@@ -28,7 +28,7 @@ export default function BackButton(props) {
                     color: '#e2e6ef',
                     height: '28px',
                     }}
-                type="primary" icon={<LeftOutlined style={{ fontSize: "10px" }} />} size={"middle"}>
+                type="primary" icon={<LeftOutlined style={{ fontSize: "11px", paddingTop: "4px" }} />} size={"middle"}>
                 <span style={AndButtonText}>Back</span>
             </Button>
         </NavLink>

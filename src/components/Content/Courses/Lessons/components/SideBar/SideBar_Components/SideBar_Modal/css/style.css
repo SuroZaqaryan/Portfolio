@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@500&display=swap');
+
+.sidebar_themes_settings {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.sidebar_themes_settings div {
+    display: flex;
+}
+
+.sidebar_themes_settings_text {
+    margin: 2px 0 0 10px;
+}
+
+.sidebar_themes_settings_text span {
+    font-family: revert;
+    font-weight: 500;
+}
+
+.sidebar_modal_apply_button {
+    font-size: 13px;
+}
+
+.sidebar_modal_title {
+    color: #333333;
+}
+
+.SideBarModal_Accept_Color_Gradient_block {
+    margin-top: 20px;
+}
+
+.SideBarModal_Accept_Color_Gradient_block span {
+    font-size: 13px;
+    color: #1d1c1db3;
+    font-family: Roboto;
+}
+
+.SideBarModal_Child_Color div span {
+    font-size: 13px;
+    color: #1d1c1db3;
+    font-family: Roboto;
+}
+
+.SideBarModal_Wrapper {
+    overflow-y: scroll;
+    height: 650px;
+    max-width: 100%;
+    padding: 20px 30px 0 30px;
+}
+
+.SideBarModal_Appearance {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.Appearance{
+    margin-bottom: 15px;
+}
+
+.SideBarModal_Child_Appearance p, .SideBarModal_Child_Color p {
+    color: #343434;
+    font-size: 15px;
+    font-family: 'Archivo', sans-serif;
+}
+
+.SideBarModal_Line_Container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+hr.SideBarModal_Line {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #d5d5d596;
+    margin: 1em 0; padding: 0;
+}
+
+@media only screen and (max-width: 515px) {
+    .SideBarModal_Wrapper {
+        text-align: center;
+    }
+    .SideBarModal_Appearance {
+        justify-content: center;
+    }
+}

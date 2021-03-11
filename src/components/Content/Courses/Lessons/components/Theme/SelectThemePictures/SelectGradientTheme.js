@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./css/SelectThemePictures.css"
 import GradientThemes from "../GradientContent/GradientThemesList";
 import SelectThemeContent from "./ThemeComponents/SelectThemeContent";
-import SideBarColors from "../SideBarColors/SideBarColors";
 
 export default function SelectGradientTheme(props) {
     const groupSize = 3;

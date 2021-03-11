@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Hashtag from "../css/hashtag.png";
 import '../css/SelectThemePictures.css'
 import { RadioButton } from "@progress/kendo-react-inputs";

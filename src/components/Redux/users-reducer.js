@@ -81,7 +81,7 @@ export const followUsersThunk = () => {
 export const followThunk = (userID) => {
     return (dispatch) => {
         usersAPI.follow(userID).then(response => {
-            if (response.data.resultCode == 0) {
+            if (response.data.resultCode === 0) {
                 dispatch(follow(userID))
             }
         })
@@ -91,7 +91,7 @@ export const followThunk = (userID) => {
 export const unfollowThunk = (userID) => {
     return (dispatch) => {
         usersAPI.unfollow(userID).then(response => {
-            if (response.data.resultCode == 0) {
+            if (response.data.resultCode === 0) {
                 dispatch(unfollow(userID))
             }
         })
