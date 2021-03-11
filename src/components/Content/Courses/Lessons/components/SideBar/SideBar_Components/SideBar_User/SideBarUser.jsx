@@ -5,7 +5,7 @@ import "../../../../css/Sidebar.css"
 export function SideBarUser(props) {
     const { SideBarThemesColors } = props;
     if (!props.profile) {
-        return <p>Loading...</p>
+        return null
     }
     const { profile } = props;
     return (
@@ -29,7 +29,7 @@ export function SideBarUser(props) {
                     </NavLink>
                     <span className="user-status">
                         <i className="fa fa-circle"></i>
-                        <span style={{ color: SideBarThemesColors }}>Online</span>
+                        <span style={{ color: SideBarThemesColors, fontSize: "13px" }}>Online</span>
                     </span>
                 </div>
             

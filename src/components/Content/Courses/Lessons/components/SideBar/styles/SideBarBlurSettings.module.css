@@ -44,17 +44,10 @@
     scrollbar-color: #a2272717 rgba(255, 255, 255, 0);
 }
 
-/* @supports (backdrop-filter: none) {
-    .SideBar_Page_Content {
-        overflow-y: scroll;
-    }
-} */
-
 .SideBar_Page_Content {
     overflow-y: scroll;
 }
 
 .SideBarContainer {
-    /*background: #ffffff29;*/
     height: 100vh;
 }

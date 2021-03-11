@@ -64,9 +64,6 @@ textarea:focus, input:focus{
     margin-bottom: 40px;
     font-size: 30px;
     font-weight: 400;
-    /*background: linear-gradient(to right, #494964, #6f6f89);*/
-    /*-webkit-background-clip: text;*/
-    /*-webkit-text-fill-color: transparent;*/
 }
 
 .registerNow {

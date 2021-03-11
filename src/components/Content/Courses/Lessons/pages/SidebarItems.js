@@ -1,5 +1,5 @@
 const SidebarItems = [
-    { CourseTopic: "Overview" },
+    { CourseTopic: "Introduction" },
     "Introduction",
     "Creating Your First JavaScript",
     "Comments",

@@ -1,6 +1,7 @@
 import React from "react";
 import {Route, Switch} from "react-router-dom";
 import '../css/Sidebar.css'
+import Introduction from "./LessonComponents/Overview/Introduction";
 
 function RoutesPage(props) {
 
@@ -14,7 +15,7 @@ function RoutesPage(props) {
         },
         {
             path: `${path}/Introduction`,
-            component: () => <h2>Test123</h2>
+            component: () => <Introduction />
         },
         {
             path: `${path}/Guardian`,

@@ -1,20 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 
-/*.userContainer {*/
-/*    margin-bottom: 20px;*/
-/*    border-radius: 30px;*/
-/*    padding: 20px;*/
-/*    box-shadow: 0 0 0 #fbd7d24f, 0 15px 15px #fbd7d24f, 0 8px 110px #fbd7d24f, 0 110px 80px #fbd7d24f, 0 100px 125px #fbd7d200;*/
-/*}*/
-
-/*.userDarkContainer {*/
-/*    margin-bottom: 20px;*/
-/*    border-radius: 30px;*/
-/*    padding: 20px;*/
-/*    border: 1px solid #505562;*/
-/*    background: #ffffff04;*/
-/*}*/
-
 .avatar {
     width: 50px;
     border-radius: 15px;

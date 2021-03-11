@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {SideBarUser} from "./SideBarUser";
 import {connect} from "react-redux";
 import {getProfileThunk} from "../../../../../../../Redux/profile-reduer";
