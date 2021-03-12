@@ -3,3 +3,13 @@
     margin-bottom: 1.3rem;
 }
 
+.SyntaxHighlighter code span span {
+    min-width: 0em !important;
+    padding-right: 0.3em !important;
+    letter-spacing: -0.3px !important;
+}
+
+.ant-alert {
+    padding: 10px 15px !important;
+}
+

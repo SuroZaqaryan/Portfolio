@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+export const LessonContainers = styled.div`
+  margin: 3rem 0 3rem 0;
+`;
+
 export const LessonTitle = styled.h2`
   font-size: 22px;
   font-weight: 500;
@@ -17,7 +21,12 @@ export const LessonTypography = styled.p`
   padding-bottom: 1.2em;
   word-spacing: 0.05em;
   font-size: 15px;
-  font-family: 'Roboto';
+  font-family: system-ui;
   color: #304455;
+`;
+
+export const LessonMarkDown = styled.b`
+  background: #e6f7ff;
+  letter-spacing: -0.3px;
 `;
 
