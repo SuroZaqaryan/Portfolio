@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import SidebarItems from "../../pages/SidebarItems.js";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Hashtag from './icons/SideBarIcons/icons8-hashtag-22.png'
+import Hashtag from './icons/SideBarIcons/hashtag.png'
 
 export default function SideBarMenu(props) {
 
@@ -16,7 +16,7 @@ export default function SideBarMenu(props) {
         } else if (SideBarWallpaperTheme) {
             setSideBarThemesColors(SideBarWallpaperTheme.color)
         } else {
-            setSideBarThemesColors("#383838")
+            setSideBarThemesColors(window.$sideBarDefaultColor)
         }
     }, [SideBarTheme && SideBarTheme.ItemColor,SideBarWallpaperTheme && SideBarWallpaperTheme]);
 
@@ -37,7 +37,7 @@ export default function SideBarMenu(props) {
                 icon={SideBarWallpaperTheme.WallpaperIcon}
             />
         } else {
-            return <img style={{ width: "22px", marginRight: "7px" }} src={Hashtag} alt="Hashtag" />
+            return <img style={{ width: "21px", marginRight: "7px" }} src={Hashtag} alt="Hashtag" />
         }
     }
 
@@ -47,10 +47,10 @@ export default function SideBarMenu(props) {
                 return (
                     <React.Fragment key={index}>
                         {item.CourseTopic && (
-                            <li style={{ background: SideBarWallpaperTheme && SideBarWallpaperTheme.TitleColor }} className="header-menu">
+                            <li style={{ background: SideBarWallpaperTheme && SideBarWallpaperTheme.TitleColor, textShadow: "rgb(0 0 0 / 33%) 1px 1px 2px, rgb(255 255 255 / 0%) 0px 0px 1em" }} className="header-menu">
                                 {renderIcons()}
                                 <span style={{
-                                    color: SideBarThemesColors ? SideBarThemesColors : '#1c1c1c',
+                                    color: SideBarThemesColors ? SideBarThemesColors : window.$sideBarDefaultColor,
                                     fontWeight: SideBarTheme && SideBarTheme.FontWeight
                                 }}>{item.CourseTopic}</span>
                             </li>
@@ -70,8 +70,9 @@ export default function SideBarMenu(props) {
                                         null 
                                 }
 
-                                <Link style={{ color: SideBarThemesColors ? SideBarThemesColors : '#1c1c1c'}} className={"course_Lesson_List_Link"}
-                                    to={`${props.path}` + item.route}>{item.name}</Link>
+                                <Link style={{ color: SideBarThemesColors ? SideBarThemesColors :
+                                        window.$sideBarDefaultColor,
+                                }} className={"course_Lesson_List_Link"} to={`${props.path}` + item.route}>{item.name}</Link>
                             </li>
                         )}
                     </React.Fragment>

@@ -11,7 +11,7 @@ function RoutesPage(props) {
         {
             path: `${path}`,
             exact: true,
-            component: () => <h2>Home</h2>
+            component: () => <Introduction />
         },
         {
             path: `${path}/Introduction`,

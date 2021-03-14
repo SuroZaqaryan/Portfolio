@@ -9,6 +9,8 @@ export default function SideBarWrapper(props) {
 
     const {SideBarTheme, SideBarWallpaperTheme} = props;
 
+    window.$sideBarDefaultColor = "#ffffff"
+
     const SideBarThemeValue = SideBarTheme && SideBarTheme;
     const SideBarWallpaperThemeValue = SideBarWallpaperTheme && SideBarWallpaperTheme;
 
@@ -17,10 +19,8 @@ export default function SideBarWrapper(props) {
     useEffect(() => {
         if (SideBarThemeValue && SideBarThemeValue.UserNameColor) {
             setSideBarThemesColors(SideBarThemeValue.UserNameColor)
-        } else if (SideBarWallpaperThemeValue && SideBarWallpaperThemeValue.color) {
+        } else if (SideBarWallpaperThemeValue) {
             setSideBarThemesColors(SideBarWallpaperThemeValue.color)
-        } else {
-            setSideBarThemesColors("#2d2d2d")
         }
     }, [SideBarThemeValue && SideBarThemeValue.UserNameColor,SideBarWallpaperThemeValue && SideBarWallpaperThemeValue.color]);
 

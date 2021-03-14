@@ -24,12 +24,12 @@ export function SideBarUser(props) {
                 <div className="user-info">
                 <NavLink to={'/profile/' + profile.userId}>
                     <span className="sidebar_user_name">
-                        <strong style={{ color: SideBarThemesColors }}>{profile.fullName}</strong>
+                        <strong style={{ color: SideBarThemesColors ? SideBarThemesColors : window.$sideBarDefaultColor}}>{profile.fullName}</strong>
                     </span>
                     </NavLink>
                     <span className="user-status">
                         <i className="fa fa-circle"></i>
-                        <span style={{ color: SideBarThemesColors, fontSize: "13px" }}>Online</span>
+                        <span style={{ color: SideBarThemesColors ? SideBarThemesColors : window.$sideBarDefaultColor, fontSize: "13px" }}>Online</span>
                     </span>
                 </div>
             

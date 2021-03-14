@@ -9,11 +9,11 @@ export default function BackButton(props) {
         marginLeft: '1px',
         fontSize: '11px',
         letterSpacing: '0.4px',
-        color: '#e2e6ef',
+        color: '#ffffff',
         fontFamily: 'Rubik, sans-serif',
     }
 
-    const BackButtonBg = props.SideBarTheme && props.SideBarTheme.BackButtonBg ? props.SideBarTheme.BackButtonBg : "#00000016"
+    const BackButtonBg = props.SideBarTheme && props.SideBarTheme.BackButtonBg ? props.SideBarTheme.BackButtonBg : "#0000000d"
 
     return (
         <NavLink className={"Back_To_Content"} to={"/content"}>

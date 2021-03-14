@@ -16,7 +16,7 @@
 
 @media screen and (min-width: 768px) {
     .page-wrapper.toggled .page-content {
-        padding-left: 290px;
+        padding-left: 280px;
     }
 }
 
@@ -99,7 +99,6 @@
     float: left;
     width: 60px;
     padding: 2px;
-    margin-right: 7px;
     overflow: hidden;
 }
 
@@ -125,9 +124,10 @@
 }
 
 .sidebar_user_name strong {
-    font-weight: 500;
+    font-weight: 400;
     font-family: 'Roboto';
     letter-spacing: 0.2px;
+    text-shadow: rgb(0 0 0 / 33%) 1px 1px 2px, rgb(255 255 255 / 0%) 0px 0px 1em;
 }
 
 /*----------------------sidebar-menu-------------------------*/
@@ -137,6 +137,7 @@
 }
 
 .sidebar-wrapper .sidebar-menu .header-menu {
+    background: #0000000a;
     padding: 13px 10px 8px 13px;
     display: flex;
     align-items: center;
@@ -203,7 +204,7 @@
 /*-----------------------------------------------------------------------------------------*/
 
 .sidebar-header, .sidebar-menu {
-    border-top: 1px solid #ffffff2b;
+    /*border-top: 1px solid #ffffff2b;*/
 }
 
 .courseLessonList {
@@ -228,8 +229,7 @@
 /*-----------------------------------------------------------------------------------------*/
 
 .sidebar_background {
-    background-image: url(../components/SideBar/Background/Screenshot_1.png); 
-    /* background-image: url(https://wallup.net/wp-content/uploads/2018/03/19/580176-colorful-blurred-vertical-portrait_display-748x1330.jpg); */
+    background-image: url(https://colorlib.com/etc/bootstrap-sidebar/sidebar-10/images/bg_1.jpg);
     background-size: cover;
     background-position: center;
 }

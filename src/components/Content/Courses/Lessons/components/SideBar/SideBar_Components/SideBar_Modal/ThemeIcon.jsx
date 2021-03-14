@@ -1,7 +1,7 @@
 import React from 'react';
 
 export function ThemeIcon(props) {
-    const ItemColor = props.ItemColor && props.ItemColor ? props.ItemColor : '#2d2d2d';
+    const ItemColor = props.ItemColor && props.ItemColor ? props.ItemColor : '#ffffff';
 
     return <svg style={{color: ItemColor}}
                 xmlns="http://www.w3.org/2000/svg" width="17"

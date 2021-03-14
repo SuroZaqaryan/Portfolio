@@ -3,13 +3,59 @@
     margin-bottom: 1.3rem;
 }
 
+.SyntaxHighlighter {
+    padding: 2em 0.5em 0.5em 0px !important;
+}
+
 .SyntaxHighlighter code span span {
     min-width: 0em !important;
-    padding-right: 0.3em !important;
-    letter-spacing: -0.3px !important;
+    /*padding-right: 0.3em !important;*/
+    /*letter-spacing: -0.3px !important;*/
+
 }
 
 .ant-alert {
     padding: 10px 15px !important;
 }
 
+.LessonEmoji {
+    font-size: 24px;
+    padding-left: 6px;
+}
+
+.ant-steps-vertical {
+    margin: 2.5rem 0 0 0 !important;
+}
+
+.custom-block {
+    padding: .1rem 2rem;
+    border-left-width: .5rem;
+    border-left-style: solid;
+    position: relative;
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+    margin: 1rem 0;
+    margin-bottom: 2.5rem;
+}
+
+.custom-block.tip:before {
+    content: url(../icons/idea.png);
+    width: 25px;
+    height: 25px;
+    left: -15px;
+}
+
+.custom-block:before {
+    position: absolute;
+    top: 20px;
+    left: -14px;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 20px;
+    font-weight: 700;
+    font-family: Dosis,Source Sans Pro,Helvetica Neue,Arial,sans-serif;
+    font-size: 14px;
+}

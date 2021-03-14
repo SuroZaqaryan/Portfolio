@@ -1,7 +1,15 @@
 import styled from "styled-components";
 
 export const LessonContainers = styled.div`
-  margin: 3rem 0 3rem 0;
+  margin: 2rem 0 2rem 0;
+`;
+
+export const LessonSideBarTitle = styled.h1`
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #2c3e50;
+  font-family: 'Roboto';
+  margin-top: 1rem;
 `;
 
 export const LessonTitle = styled.h2`
@@ -10,9 +18,8 @@ export const LessonTitle = styled.h2`
   color: #273849;
   font-family: 'Roboto';
   border-bottom: 1px solid #ddd;
-  margin: 10px 0 0.8em;
+  margin: 0px 0 0.8em;
   padding-bottom: 0.7em;
-  border-bottom: 1px solid #ddd;
 `;
 
 export const LessonTypography = styled.p`

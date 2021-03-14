@@ -28,7 +28,7 @@ const DraggableDialog = (props) => {
                 </div>
 
                 <div className={"sidebar_themes_settings_text"}>
-                    <span style={{color: SideBarThemesColors}}
+                    <span style={{color: SideBarThemesColors ? SideBarThemesColors : window.$sideBarDefaultColor}}
                           onClick={() => setVisible(true)}>
                         Themes
                     </span>

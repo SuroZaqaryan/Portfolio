@@ -20,7 +20,7 @@ function SideBar(props) {
                     <div className={"sidebar_background"}>
                         <div className={"background_theme_image"}
                              style={{background: SideBarBackgroundValue && SideBarBackgroundValue.SideBarWallpaper}}>
-                            <div style={{background: SideBarBackgroundValue && SideBarBackgroundValue.background}}>
+                            <div style={{background: SideBarBackgroundValue && SideBarBackgroundValue.background ? SideBarBackgroundValue.background : "linear-gradient(343deg, rgb(19 192 54 / 75%) 0%, rgb(64 169 255 / 72%) 100%)"}}>
                                 <div style={{
                                     background: SideBarThemeValue && SideBarThemeValue.SideBar,
                                     backdropFilter: `blur(${someValue}px)`

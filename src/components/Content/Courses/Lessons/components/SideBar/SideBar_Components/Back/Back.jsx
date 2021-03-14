@@ -42,22 +42,12 @@ export function SideBarBack(props) {
     return (
         <div className={"SideBar_Back_Theme_Container"}>
             {
-                ItemColor ?
-                    <BackButton SideBarTheme={SideBarThemes}/>
-                    :
-                    <NavLink className={"Back_To_Content"} to={"/content"}>
-                        <div className={"sidebar_backIcon_container"}>
-                            <LeftOutlined style={{color: SideBarWallpaperBackButtonColor, fontSize: "12px"}} />
-                        </div>
 
-                        <div>
-                            <p style={{color: SideBarThemesColors ? SideBarThemesColors : "#1c1c1c", marginTop: '1px', fontSize: "13px" }}>Back</p>
-                        </div>
-                    </NavLink>
+                    <BackButton SideBarTheme={SideBarThemes}/>
             }
 
             <div onClick={() => AssignDefaultTheme()} className={"SideBar_Theme_Default"}>
-                <p style={{ color: SideBarThemesColors ? SideBarThemesColors : "#1c1c1c", fontWeight: ItemColor ? '400' : '500' }}>Theme Default</p>
+                <p style={{ color: SideBarThemesColors ? SideBarThemesColors : window.$sideBarDefaultColor, fontWeight: ItemColor ? '400' : '500' }}>Theme Default</p>
             </div>
         </div>
     );
