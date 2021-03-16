@@ -17,7 +17,7 @@ function RoutesPage(props) {
     const LessonSideBarTitle = styled.h1`
       font-size: 1.8rem;
       font-weight: 500;
-      color: ${(SideBarThemeValue.PageContentColor ? SideBarThemeValue.PageContentColor : "#2c3e50")};
+      color: ${(SideBarThemeValue && SideBarThemeValue.PageContentColor ? SideBarThemeValue.PageContentColor : "#2c3e50")};
       font-family: 'Roboto';
       margin-top: 1rem;
     `;
@@ -42,7 +42,7 @@ function RoutesPage(props) {
       word-spacing: 0.05em;
       font-size: 15px;
       font-family: system-ui;
-      color: ${(SideBarThemeValue.PageContentColor ? SideBarThemeValue.PageContentColor : "#304455")};
+      color: ${(SideBarThemeValue && SideBarThemeValue.PageContentColor ? SideBarThemeValue.PageContentColor : "#304455")};
     `;
 
     const LessonMarkDown = styled.b`

@@ -83,7 +83,7 @@ export default function Introduction(props) {
                     language="javascript"
                     customStyle={{paddingLeft: 0}}
                     className={"SyntaxHighlighter"}
-                    style={SideBarThemeValue.PageContentSyntax ? SideBarThemeValue.PageContentSyntax : atelierSulphurpoolLight}
+                    style={SideBarThemeValue && SideBarThemeValue.PageContentSyntax ? SideBarThemeValue.PageContentSyntax : atelierSulphurpoolLight}
                     wrapLines={true}
                     showLineNumbers={true}
                     codeTagProps={{style: {fontFamily: "inherit"}}}
