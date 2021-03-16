@@ -2,9 +2,48 @@
     font-family: system-ui;
 }
 
+@media only screen and (min-width: 765px) {
+    .bm-overlay {
+      display: none !important;
+    }
+}
+
+.bm-burger-button {
+    display: none !important;
+}
+
+.bm-overlay {
+    z-index: 1 !important;
+}
+
+
+.bm-menu-wrap {
+    z-index: 10 !important;
+}
+
+.showSideBarButton {
+    margin: 8px;
+    max-width: 100%;
+    width: 24px;
+}
+
+.showSideBarButton:hover {
+    cursor: pointer;
+}
+
+.showSideBarButtonContainer {
+    width: 100%;
+    height: 40px;
+    background-color: #fff;
+    z-index: 20;
+    display: block;
+    box-shadow: 0 0 2px rgb(0 0 0 / 36%);
+    margin-bottom: 1px;
+}
+
 .headline-page-container {
     background: white;
-    height: 100%;
+    /* height: 100%; */
 }
 
 .page-container {
@@ -178,6 +217,12 @@
 
 .page-wrapper .page-content > div {
     padding: 20px 40px;
+}
+
+@media only screen and (max-width: 765px) {
+    .page-wrapper .page-content > div {
+        padding: 20px 25px;
+    }
 }
 
 /*-----------------------------RadioButtons-------------------------------------------------*/

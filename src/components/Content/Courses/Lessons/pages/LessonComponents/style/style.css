@@ -4,15 +4,18 @@
 }
 
 .SyntaxHighlighter {
-    padding: 2em 0.5em 0.5em 0px !important;
+    padding: 0.5em 0.5em 0.5em 0px !important;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .SyntaxHighlighter code span span {
     min-width: 0em !important;
     /*padding-right: 0.3em !important;*/
     /*letter-spacing: -0.3px !important;*/
-
 }
+
+
 
 .ant-alert {
     padding: 10px 15px !important;

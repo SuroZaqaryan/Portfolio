@@ -1,5 +1,7 @@
 import { faHashtag } from "@fortawesome/free-solid-svg-icons";
 import { faDotCircle } from "@fortawesome/free-solid-svg-icons/faDotCircle";
+import {atomOneDark, paraisoDark, solarizedDark} from "react-syntax-highlighter/dist/cjs/styles/hljs";
+import nord from "react-syntax-highlighter/dist/cjs/styles/hljs/nord";
 
 const GradientThemes = [
     {
@@ -9,6 +11,11 @@ const GradientThemes = [
         RadioButtonBackground: "linear-gradient(40deg, #51adff, #10f4a0)",
         RadioButtonBorderColor: "1px solid #33b7de",
         RadioTitle: "Ochin",
+
+        PageContentStyles: {
+            PageContentColor: '#e8e8e8',
+            PageContentSyntax: atomOneDark,
+        },
 
         FontStyle: {
             FontWeight: "400",
@@ -40,6 +47,11 @@ const GradientThemes = [
         RadioButtonBorderColor: "1px solid #ff8185fa",
         RadioTitle: "Ochin",
 
+        PageContentStyles: {
+            PageContentColor: '#e8e8e8',
+            PageContentSyntax: paraisoDark,
+        },
+
         FontStyle: {
             FontWeight: "400",
             FontSize: '15px',
@@ -69,6 +81,11 @@ const GradientThemes = [
         RadioButtonBackground: "linear-gradient(40deg, rgb(48 137 198), rgb(161 186 255))",
         RadioButtonBorderColor: "1px solid #818db0",
         RadioTitle: "Ochin",
+
+        PageContentStyles: {
+            PageContentColor: '#e8e8e8',
+            PageContentSyntax: nord,
+        },
 
         FontStyle: {
             FontWeight: "400",
@@ -101,6 +118,9 @@ const GradientThemes = [
         RadioButtonBackground: item.RadioButtonBackground,
         RadioButtonBorderColor: item.RadioButtonBorderColor,
         RadioTitle: item.RadioTitle,
+
+        PageContentColor: item.PageContentStyles.PageContentColor,
+        PageContentSyntax: item.PageContentStyles.PageContentSyntax,
 
         // Font Style
         FontWeight: item.FontStyle.FontWeight,

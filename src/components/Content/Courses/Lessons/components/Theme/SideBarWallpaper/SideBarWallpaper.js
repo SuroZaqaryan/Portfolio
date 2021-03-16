@@ -1,4 +1,3 @@
-import {faSlack} from "@fortawesome/free-brands-svg-icons";
 import {faList} from "@fortawesome/free-solid-svg-icons";
 
 const SideBarBackgrounds = [

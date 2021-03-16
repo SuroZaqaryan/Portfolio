@@ -35,7 +35,7 @@ export default function ThemeDoc(props) {
                 SideBarWallpaperValue: [SideBarBackground, SetSideBarBackground],
             }}>
                 <SideBar ChangeSideBarWallpaper={ChangeSideBarWallpaper} SideBarPageContent={SideBarPageContent} {...props} />
-                <PageContent {...props} />
+                <PageContent SideBarTheme={SideBarTheme} {...props} />
             </CounterContext.Provider>
         </div>
     );

@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import {LessonContainers, LessonMarkDown, LessonTitle, LessonTypography, LessonSideBarTitle} from "../style/MyDesign.js";
 import 'antd/dist/antd.css';
 import {Alert} from 'antd';
 import "../style/style.css"
@@ -8,8 +7,9 @@ import SyntaxHighlighter from "react-syntax-highlighter";
 import {
     atelierSulphurpoolLight,
 } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-import { Steps } from 'antd';
-const { Step } = Steps;
+import {Steps} from 'antd';
+
+const {Step} = Steps;
 
 const codeString = ` <script>
        function roughScale(x, base) {
@@ -19,7 +19,9 @@ const codeString = ` <script>
         }
   </script>`;
 
-export default function Introduction() {
+export default function Introduction(props) {
+
+    const {LessonContainers,LessonTypography,LessonSideBarTitle,LessonTitle,LessonMarkDown,SideBarThemeValue} = props;
 
     const [stepInfo,] = useState([
         {
@@ -38,8 +40,9 @@ export default function Introduction() {
 
     return (
         <>
+
             <div className="custom-block tip" style={{borderLeft: "5px solid #6dbdff"}}>
-                <LessonSideBarTitle>Introduction</LessonSideBarTitle>
+                <LessonSideBarTitle {...props}>Introduction</LessonSideBarTitle>
             </div>
             <LessonTitle>Welcome to JavaScript <span className={"LessonEmoji"}>📝</span> </LessonTitle>
 
@@ -80,7 +83,7 @@ export default function Introduction() {
                     language="javascript"
                     customStyle={{paddingLeft: 0}}
                     className={"SyntaxHighlighter"}
-                    style={atelierSulphurpoolLight}
+                    style={SideBarThemeValue.PageContentSyntax ? SideBarThemeValue.PageContentSyntax : atelierSulphurpoolLight}
                     wrapLines={true}
                     showLineNumbers={true}
                     codeTagProps={{style: {fontFamily: "inherit"}}}
@@ -121,7 +124,7 @@ export default function Introduction() {
                 <Steps progressDot direction="vertical" size={"small"} current={1}>
                     {
                         stepInfo.map((item, index) => {
-                            return(
+                            return (
                                 <Step color={"error"} status="finish" title={item.title} key={index}
                                       description={item.description}/>
                             );
