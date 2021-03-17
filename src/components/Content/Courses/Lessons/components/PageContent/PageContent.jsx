@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import '../../css/Sidebar.css'
-import RoutesPage from "../../pages/Routes";
+import RoutesPage from "../../pages/RoutesLink/Routes";
 
 const PageContentDiv = styled.div`
   height: 100vh;

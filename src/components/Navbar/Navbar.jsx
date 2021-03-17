@@ -57,7 +57,7 @@ export class Navbar extends React.Component {
                 {
                     itemName: 'Lessons',
                     classNames: "NavBarli NavBarli-" + this.props.LiItem,
-                    href: '/Lesson',
+                    href: '/Lesson/Introduction',
                 },
             ]
         }

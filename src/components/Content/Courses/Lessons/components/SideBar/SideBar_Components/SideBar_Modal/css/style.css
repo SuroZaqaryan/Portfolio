@@ -4,11 +4,6 @@
     width: 15px;
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-    border-left: 1px solid #d0d0d091;
-}
-
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: #dcdcdc;
@@ -16,7 +11,7 @@
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #cccccc;
+    background: #00000012;
 }
 .sidebar_themes_settings {
     display: flex;

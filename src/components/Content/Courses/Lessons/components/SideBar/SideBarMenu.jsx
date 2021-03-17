@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import SidebarItems from "../../pages/SidebarItems.js";
+import SidebarItems from "../../pages/RoutesLink/SidebarItems.js";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Hashtag from './icons/SideBarIcons/hashtag.png'
@@ -47,7 +47,8 @@ export default function SideBarMenu(props) {
                 return (
                     <React.Fragment key={index}>
                         {item.CourseTopic && (
-                            <li style={{ background: SideBarWallpaperTheme && SideBarWallpaperTheme.TitleColor, textShadow: "rgb(0 0 0 / 33%) 1px 1px 2px, rgb(255 255 255 / 0%) 0px 0px 1em" }} className="header-menu">
+                            <li style={{ background: SideBarWallpaperTheme && SideBarWallpaperTheme.TitleColor,
+                                textShadow: SideBarWallpaperTheme ? null : "rgb(0 0 0 / 33%) 1px 1px 2px, rgb(255 255 255 / 0%) 0px 0px 1em" }} className="header-menu">
                                 {renderIcons()}
                                 <span style={{
                                     color: SideBarThemesColors ? SideBarThemesColors : window.$sideBarDefaultColor,

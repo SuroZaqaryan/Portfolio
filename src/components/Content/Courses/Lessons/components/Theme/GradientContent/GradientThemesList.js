@@ -15,6 +15,7 @@ const GradientThemes = [
         PageContentStyles: {
             PageContentColor: '#e8e8e8',
             PageContentSyntax: atomOneDark,
+            AlertBackground: '#385664',
         },
 
         FontStyle: {
@@ -50,6 +51,7 @@ const GradientThemes = [
         PageContentStyles: {
             PageContentColor: '#e8e8e8',
             PageContentSyntax: paraisoDark,
+            AlertBackground: '#5e4458',
         },
 
         FontStyle: {
@@ -85,6 +87,7 @@ const GradientThemes = [
         PageContentStyles: {
             PageContentColor: '#e8e8e8',
             PageContentSyntax: nord,
+            AlertBackground: '#47526f',
         },
 
         FontStyle: {
@@ -121,6 +124,7 @@ const GradientThemes = [
 
         PageContentColor: item.PageContentStyles.PageContentColor,
         PageContentSyntax: item.PageContentStyles.PageContentSyntax,
+        AlertBackground: item.PageContentStyles.AlertBackground,
 
         // Font Style
         FontWeight: item.FontStyle.FontWeight,

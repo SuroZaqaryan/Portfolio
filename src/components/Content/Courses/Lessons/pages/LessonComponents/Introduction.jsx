@@ -1,15 +1,24 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import 'antd/dist/antd.css';
-import {Alert} from 'antd';
-import "../style/style.css"
+import "./style/style.css"
 import ReactMarkdown from "react-markdown";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import {
     atelierSulphurpoolLight,
 } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-import {Steps} from 'antd';
+import { Steps } from 'antd';
+import {Alert} from "@material-ui/lab";
+import {
+    AlertStyle,
+    LessonSideBarTitle,
+    LessonTitle,
+    LessonTypography,
+    StepsDescription,
+    StepsTitle
+} from "./style/LessonsStyledDesign";
+import TaskIntroduction from "../Tasks/Tasks";
 
-const {Step} = Steps;
+const { Step } = Steps;
 
 const codeString = ` <script>
        function roughScale(x, base) {
@@ -21,7 +30,8 @@ const codeString = ` <script>
 
 export default function Introduction(props) {
 
-    const {LessonContainers,LessonTypography,LessonSideBarTitle,LessonTitle,LessonMarkDown,SideBarThemeValue} = props;
+    const {LessonContainers,LessonMarkDown, CustomBlockContainer,SideBarThemeValue,AlertStyleBG} = props;
+    const PageContentSyntax = SideBarThemeValue && SideBarThemeValue.PageContentSyntax ? SideBarThemeValue.PageContentSyntax : atelierSulphurpoolLight;
 
     const [stepInfo,] = useState([
         {
@@ -40,9 +50,8 @@ export default function Introduction(props) {
 
     return (
         <>
-
-            <div className="custom-block tip" style={{borderLeft: "5px solid #6dbdff"}}>
-                <LessonSideBarTitle {...props}>Introduction</LessonSideBarTitle>
+            <div className="custom-block tip" style={CustomBlockContainer}>
+                <LessonSideBarTitle>Introduction</LessonSideBarTitle>
             </div>
             <LessonTitle>Welcome to JavaScript <span className={"LessonEmoji"}>📝</span> </LessonTitle>
 
@@ -62,9 +71,8 @@ export default function Introduction(props) {
                 world’s your oyster with JavaScript.
             </LessonTypography>
 
-            <Alert message="Whether it’s client-side or server-side,
-                create the program of your dreams by unlocking the fundamentals of JavaScript." className={"ant_note"}
-                   type="info" showIcon/>
+            <Alert style={AlertStyleBG} severity="info"><AlertStyle>Whether it’s client-side or server-side,
+                create the program of your dreams by unlocking the fundamentals of JavaScript.</AlertStyle> </Alert>
 
             <LessonContainers>
                 <LessonTitle>Ready. Set. JavaScript!</LessonTitle>
@@ -75,25 +83,23 @@ export default function Introduction(props) {
 
                 <LessonTypography>
                     On the web, JavaScript code lives inside the HTML document, and needs to be enclosed by
-                    <LessonMarkDown><ReactMarkdown source={` <script> and </script> `}/></LessonMarkDown> here is a
+                    <LessonMarkDown><ReactMarkdown source={` <script> and </script> `} /></LessonMarkDown> here is a
                     simple example
                 </LessonTypography>
 
                 <SyntaxHighlighter
                     language="javascript"
-                    customStyle={{paddingLeft: 0}}
+                    customStyle={{ paddingLeft: 0 }}
                     className={"SyntaxHighlighter"}
-                    style={SideBarThemeValue && SideBarThemeValue.PageContentSyntax ? SideBarThemeValue.PageContentSyntax : atelierSulphurpoolLight}
+                    style={PageContentSyntax}
                     wrapLines={true}
                     showLineNumbers={true}
-                    codeTagProps={{style: {fontFamily: "inherit"}}}
+                    codeTagProps={{ style: { fontFamily: "inherit" } }}
                 >
                     {codeString}
                 </SyntaxHighlighter>
 
-                <Alert message="Heads up! You can put the script tag anywhere in the HTML document."
-                       className={"ant_note"}
-                       type="info" showIcon/>
+                <Alert style={AlertStyleBG} severity="info"><AlertStyle>Heads up! You can put the script tag anywhere in the HTML document.</AlertStyle></Alert>
             </LessonContainers>
 
             <LessonContainers>
@@ -105,13 +111,12 @@ export default function Introduction(props) {
 
                 <SyntaxHighlighter
                     language="javascript"
-                    customStyle={{paddingLeft: 0}}
+                    customStyle={{ paddingLeft: 0 }}
                     className={"SyntaxHighlighter"}
-                    style={atelierSulphurpoolLight}
+                    style={PageContentSyntax}
                     wrapLines={true}
                     showLineNumbers={true}
-                    codeTagProps={{style: {fontFamily: "inherit"}}}
-                    startingLineNumber={0}
+                    codeTagProps={{ style: { fontFamily: "inherit" } }}
                 >
                     document.write("Hello World!");
                 </SyntaxHighlighter>
@@ -125,13 +130,15 @@ export default function Introduction(props) {
                     {
                         stepInfo.map((item, index) => {
                             return (
-                                <Step color={"error"} status="finish" title={item.title} key={index}
-                                      description={item.description}/>
+                                <Step color="red" status="finish" title={<StepsTitle>{item.title}</StepsTitle>} key={index}
+                                    description={<StepsDescription>{item.description}</StepsDescription>} />
                             );
                         })
                     }
                 </Steps>
             </LessonContainers>
+
+            <TaskIntroduction />
         </>
     );
 }

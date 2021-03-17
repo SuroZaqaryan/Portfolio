@@ -1,7 +1,7 @@
 const SidebarItems = [
     { CourseTopic: "Introduction" },
     "Introduction",
-    "Creating Your First JavaScript",
+    "Creating Your First Javascript",
     "Comments",
     "Module 1 Quiz",
     "Variables",

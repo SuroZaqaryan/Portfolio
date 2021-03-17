@@ -41,11 +41,7 @@ export function SideBarBack(props) {
 
     return (
         <div className={"SideBar_Back_Theme_Container"}>
-            {
-
-                    <BackButton SideBarTheme={SideBarThemes}/>
-            }
-
+            <BackButton SideBarTheme={SideBarThemes}/>
             <div onClick={() => AssignDefaultTheme()} className={"SideBar_Theme_Default"}>
                 <p style={{ color: SideBarThemesColors ? SideBarThemesColors : window.$sideBarDefaultColor, fontWeight: ItemColor ? '400' : '500' }}>Theme Default</p>
             </div>
