@@ -1,3 +1,19 @@
+.MuiTypography-gutterBottom {
+    margin-bottom: 0.30em !important;
+}
+
+.MuiTypography-h6 {
+    font-weight: 400 !important;
+}
+
+.MuiAlert-outlinedInfo {
+    border: 1px solid #2196f394 !important;
+}
+
+.MuiAlert-root {
+    align-items: center;
+}
+
 .ant_note {
     margin-top: 1.3rem;
     margin-bottom: 1.3rem;

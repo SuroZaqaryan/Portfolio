@@ -1,6 +1,19 @@
 import styled from "styled-components";
 import React from "react";
 import {CounterContext} from "../../../components/Theme/ThemeDoc";
+import { makeStyles } from '@material-ui/core/styles';
+
+export const AlertTaskStyles = makeStyles((theme) => ({
+    alertRoot: {
+        marginBottom: "15px",
+    },
+}));
+
+export const useStyles = makeStyles({
+    root: {
+        color: "#1890ff",
+    },
+});
 
 export const LessonSideBarTitle = ({children}) => {
     const {SideBarValue} = React.useContext(CounterContext);
@@ -16,6 +29,14 @@ export const LessonSideBarTitle = ({children}) => {
     `;
 
     return <H1>{children}</H1>
+}
+
+export const TaskTitle = ({children}) => {
+    const TaskTitle = styled.h2`
+      font-size: 20px;
+      color: #313642;
+    `;
+    return <TaskTitle>{children}</TaskTitle>
 }
 
 export const LessonTitle = ({children}) => {
@@ -48,7 +69,7 @@ export const LessonTypography = ({children}) => {
       margin: 0.6em 0 -1.2em;
       padding-bottom: 1.2em;
       word-spacing: 0.05em;
-      font-size: 14px;
+      font-size: 15px;
       font-family: system-ui;
       color: ${(PageColor ? PageColor : "#304455")};
     `;
