@@ -2,14 +2,9 @@ import styled from "styled-components";
 import React from "react";
 import {CounterContext} from "../../../components/Theme/ThemeDoc";
 import { makeStyles } from '@material-ui/core/styles';
+import Idea from '../icons/idea.png'
 
-export const AlertTaskStyles = makeStyles((theme) => ({
-    alertRoot: {
-        marginBottom: "15px",
-    },
-}));
-
-export const useStyles = makeStyles({
+export const checkIconStyle = makeStyles({
     root: {
         color: "#1890ff",
     },
@@ -21,7 +16,7 @@ export const LessonSideBarTitle = ({children}) => {
     const PageColor = SideBarThemeValue && SideBarThemeValue.PageContentColor;
 
     const H1 = styled.h1`
-      font-size: 1.7rem;
+      font-size: 1.5rem;
       font-weight: 500;
       color: ${(PageColor ? PageColor : "#2c3e50")};
       font-family: 'Roboto';
@@ -29,14 +24,6 @@ export const LessonSideBarTitle = ({children}) => {
     `;
 
     return <H1>{children}</H1>
-}
-
-export const TaskTitle = ({children}) => {
-    const TaskTitle = styled.h2`
-      font-size: 20px;
-      color: #313642;
-    `;
-    return <TaskTitle>{children}</TaskTitle>
 }
 
 export const LessonTitle = ({children}) => {
@@ -54,6 +41,7 @@ export const LessonTitle = ({children}) => {
       font-family: 'Roboto';
       border-bottom: 1px solid #ddd;
       margin: 0px 0 0.8em;
+      margin-top: 1rem;
       padding-bottom: 0.7em;
     `;
     return <H2>{children}</H2>
@@ -76,16 +64,31 @@ export const LessonTypography = ({children}) => {
     return <P>{children}</P>
 }
 
+export const RadioTypography = ({children}) => {
+    const {SideBarValue} = React.useContext(CounterContext);
+    const [SideBarThemeValue] = SideBarValue;
+    const PageColor = SideBarThemeValue && SideBarThemeValue.PageContentColor;
+
+    const P = styled.p`
+      word-spacing: 0.05em;
+      font-size: 14px;
+      font-family: system-ui;
+      cursor: pointer;
+      color: ${(PageColor ? PageColor : "#304455")};
+    `;
+    return <P>{children}</P>
+}
+
 export const StepsTitle = ({children}) => {
     const {SideBarValue} = React.useContext(CounterContext);
     const [SideBarThemeValue] = SideBarValue;
     const PageColor = SideBarThemeValue && SideBarThemeValue.PageContentColor;
 
     const StepsTitle = styled.p`
-      line-height: 1.6em;
+      line-height: 1.4em;
       margin: 0em 0 -1.2em;
       padding-bottom: 1.2em;
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 500;
       font-family: revert;
       color: ${(PageColor ? PageColor : "#304455")};
@@ -121,3 +124,56 @@ export const AlertStyle = ({children}) => {
     `;
     return <AlertStyle>{children}</AlertStyle>
 }
+
+export const LessonContainers = styled.div`
+      margin: 2rem 0 2rem 0;
+`;
+
+export const Strong  = ({children}) => {
+    const {SideBarValue} = React.useContext(CounterContext);
+    const [SideBarThemeValue] = SideBarValue;
+    const AlertBg = SideBarThemeValue && SideBarThemeValue.AlertBackground;
+    const PageColor = SideBarThemeValue && SideBarThemeValue.PageContentColor;
+
+    const B = styled.b`
+      background: ${(AlertBg ? AlertBg : "#e6f7ff")};
+      color: ${(PageColor ? PageColor : "#304455")};
+      letter-spacing: -0.3px;
+    `;
+    return <B>{children}</B>
+}
+
+export const CustomBlockContainer  = ({children}) => {
+    const {SideBarValue} = React.useContext(CounterContext);
+    const [SideBarThemeValue] = SideBarValue;
+    const AlertBg = SideBarThemeValue && SideBarThemeValue.AlertBackground;
+
+    const CustomBlockContainer = styled.div`
+      border-left: ${(AlertBg ? `5px solid ${AlertBg}` : "5px solid #6dbeff")};
+      padding: .1rem 2rem;
+      position: relative;
+      border-bottom-right-radius: 2px;
+      border-top-right-radius: 2px;
+      margin: 1rem 0 2.5rem 0;
+      
+      &:before {
+        content: url(${Idea});
+        border: ${(AlertBg ? `4px solid ${AlertBg}` : "4px solid #ffffff")};
+        width: 25px;
+        height: 25px;
+        left: -15px;
+        position: absolute;
+        top: 20px;
+        color: #fff;
+        border-radius: 100%;
+        text-align: center;
+        line-height: 20px;
+        font-weight: 700;
+        font-family: Dosis,Source Sans Pro,Helvetica Neue,Arial,sans-serif;
+        font-size: 14px;
+      }
+    `;
+
+    return <CustomBlockContainer>{children}</CustomBlockContainer>
+}
+

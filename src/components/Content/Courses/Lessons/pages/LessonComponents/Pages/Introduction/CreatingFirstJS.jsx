@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import 'antd/dist/antd.css';
-import "./style/style.css"
+import "../../style/style.css"
 import ReactMarkdown from "react-markdown";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import {
@@ -9,13 +9,14 @@ import {
 import {Steps} from 'antd';
 import {Alert} from "@material-ui/lab";
 import {
-    AlertStyle,
+    AlertStyle, CustomBlockContainer, LessonContainers, Strong,
     LessonSideBarTitle,
     LessonTitle,
     LessonTypography,
-    StepsDescription,
-    StepsTitle
-} from "./style/LessonsStyledDesign";
+} from "../../style/LessonsStyledDesign";
+import {RadioButtonsHoc} from "../../../../../../../Hocs/TasksHoc/TasksHoc";
+import TaskWrapper from "../../TaskComponent/TaskBlock";
+import StepContainer from "../../StepsLogic/StepsContainer";
 
 const {Step} = Steps;
 
@@ -40,11 +41,21 @@ const codeString = ` <!DOCTYPE html>
 const codeLink = "<script src=\"https://www.w3schools.com/js/myScript1.js\"></script>";
 const secondLink = "<script src=\"/js/myScript1.js\"></script>";
 
-export default function CreatingFirstJS(props) {
+function Questions() {
+    const [QuestionTitle,] = useState('What will the code below output to the console and why?')
 
-    const {LessonContainers,LessonMarkDown, CustomBlockContainer,SideBarThemeValue, AlertStyleBG} = props;
-    const PageContentSyntax = SideBarThemeValue && SideBarThemeValue.PageContentSyntax ? SideBarThemeValue.PageContentSyntax : atelierSulphurpoolLight;
+    const [taskCode,] = useState(`<script src=\"https://www.w3schools.com/js/myScript1.js\"></script>`)
 
+    const [task,] = useState([
+        {value: 'correctly', question: 'isNan function returns true if the argument is not a number otherwise it is false.'},
+        {value: 'option_1', question: 'function returns false if the argument is not a string otherwise it is NaN.'},
+        {value: 'option_2', question: 'JavaScript is only for web apps'},
+    ]);
+
+    return <TaskWrapper QuestionTitle={QuestionTitle} task={task} value={task.value} taskCode={taskCode}/>
+}   const Introductions = RadioButtonsHoc(Questions);
+
+function StepsChild() {
     const [stepInfo,] = useState([
         {
             title: "How do I get JavaScript?",
@@ -59,25 +70,23 @@ export default function CreatingFirstJS(props) {
             description: "Get certified by completing the JavaScript course",
         },
     ])
+    return <StepContainer stepInfo={stepInfo}/>
+}
+
+export default function CreatingFirstJS(props) {
+
+    const {SideBarThemeValue, AlertStyleBG} = props;
+    const PageContentSyntax = SideBarThemeValue && SideBarThemeValue.PageContentSyntax ? SideBarThemeValue.PageContentSyntax : atelierSulphurpoolLight;
 
     return (
         <>
-            <div className="custom-block tip" style={CustomBlockContainer}>
-                <LessonSideBarTitle>Creating Your First JavaScript</LessonSideBarTitle>
-            </div>
+            <CustomBlockContainer>
+                <LessonSideBarTitle>Creating Your First JavaScript <span className={"LessonEmoji"}>💡</span> </LessonSideBarTitle>
+            </CustomBlockContainer>
 
-            <LessonTitle>Commonly Asked Questions <span className={"LessonEmoji"}>💡</span> </LessonTitle>
+            <LessonTitle>Commonly Asked Questions</LessonTitle>
 
-            <Steps progressDot direction="vertical" size={"small"} current={1}>
-                {
-                    stepInfo.map((item, index) => {
-                        return (
-                            <Step status="finish" title={<StepsTitle>{item.title}</StepsTitle>} key={index}
-                                  description={<StepsDescription>{item.description}</StepsDescription>}/>
-                        );
-                    })
-                }
-            </Steps>
+            <StepsChild />
 
             <Alert style={AlertStyleBG} severity="info"><AlertStyle>Whether it’s client-side or server-side,
                 create the program of your dreams by unlocking the fundamentals of JavaScript.</AlertStyle></Alert>
@@ -91,7 +100,7 @@ export default function CreatingFirstJS(props) {
 
                 <LessonTypography>
                     On the web, JavaScript code lives inside the HTML document, and needs to be enclosed by
-                    <LessonMarkDown><ReactMarkdown source={` <script> and </script> `}/></LessonMarkDown> here is a
+                    <Strong><ReactMarkdown source={` <script> and </script> `}/></Strong> here is a
                     simple example
                 </LessonTypography>
 
@@ -149,8 +158,9 @@ export default function CreatingFirstJS(props) {
                 >
                     {secondLink}
                 </SyntaxHighlighter>
-
             </LessonContainers>
+
+            <Introductions />
         </>
     );
 }

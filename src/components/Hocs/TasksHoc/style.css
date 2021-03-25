@@ -1,0 +1,11 @@
+.wrong {
+    color: red;
+}
+
+.success {
+    background: #4caf501f;
+    padding: 10px;
+    border: 1px solid #0080001f;
+    border-radius: 2px;
+    color: green;
+}

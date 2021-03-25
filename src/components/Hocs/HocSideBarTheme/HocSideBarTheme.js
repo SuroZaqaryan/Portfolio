@@ -1,5 +1,5 @@
 import React from "react";
-import {CounterContext} from "../Content/Courses/Lessons/components/Theme/ThemeDoc";
+import {CounterContext} from "../../Content/Courses/Lessons/components/Theme/ThemeDoc";
 
 export const HocSideBarTheme = (HocSideBarThemeComponent) => {
     return function HocSideBarValues() {
