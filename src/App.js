@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Switch } from "react-router-dom";
 import './App.css';
 import { Login } from './components/Login/Login';
-import { Header } from './components/Header/Header';
+import { Header } from './components/Login/Header/Header';
 import ContentContainer from './components/Content/ContentContainer';
 import ProfileContainer from "./components/Profile/ProfileContainer";
 import NewsContainer from "./components/News/NewsCategories/Bitcoin/BitcoinContainer";

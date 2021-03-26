@@ -1,49 +1,42 @@
 import React from 'react';
-import LoginStyle from "./Login.module.css";
-import ipad from "../../backgrounds/FAVPNG_graphic-design.png"
-import avatar from "../../backgrounds/man.png"
-import { Header } from '../Header/Header';
+import {Header} from './Header/Header';
+import login from "./login.module.css"
+import LoginForm from "./LoginForm/LoginForm";
 
-export const Login = (props) => {
+export const Login = () => {
     return (
-        <div className={LoginStyle.main}>
-            <Header />
-            <div>
-                <div className={LoginStyle.presentation}>
-                    <div className={LoginStyle.introduction}>
-                        <div className={LoginStyle.intro_text}>
-                            <div className={LoginStyle.avatarBlock}>
-                                <img className={LoginStyle.avatar} src={avatar} alt=""/>
-                            </div>
-                            <div style={{ marginBottom: '15px' }}>
-                                <h1>Register now and discover a new store of knowledge</h1>
-                            </div>
-                            <div>
-                                <input className={LoginStyle.loginInputStyle} placeholder="E-mail" type="text" />
-                                <input className={LoginStyle.loginInputStyle} placeholder="Password" type="text" />
-                            </div>
-                            <div className={LoginStyle.checkbox}>
-                                <input type="checkbox" className={`${LoginStyle.checkboxInput} ${LoginStyle.loginInputStyle}`} />                               
-                                <label style={{ fontSize: '16px' }} htmlFor="vehicle1"> Remember me</label><br />
-                            </div>
-                            <div>
-                                <button className={LoginStyle.btn}>Get Started</button>
-                            </div>
-                            <div className={LoginStyle.registerNow}>
-                                <div>
-                                    <p>Not registered yet? <span className={LoginStyle.register}><a href="/#">register</a></span></p>
-                                </div>
-                                <div>
-                                    {/* <NavLink to="/content" className={LoginStyle.withoutRegistration} href={"/#"}>Continue without registration</NavLink> */}
-                                </div>
-                            </div>
+        <>
+            <section className={login.showcase}>
+                <header>
+                    <Header />
+                </header>
+                <div className={login.overlay}></div>
+
+                <div className={login.formAndLogin}>
+                    <div>
+                        <div className={login.text}>
+                            <h2>Never Stop To </h2>
+                            <h3>Exploring The World</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat.</p>
+                            <a href="#">Explore</a>
                         </div>
                     </div>
-                    <div className={LoginStyle.cover}>
-                        <img src={ipad} alt="ipad" />
+
+                    <div>
+                        <LoginForm />
                     </div>
                 </div>
-            </div>
-        </div>
-    );
+
+                <ul className={login.social}>
+                    <li><a><img src="https://i.ibb.co/x7P24fL/facebook.png"/></a></li>
+                    <li><a><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"/></a></li>
+                    <li><a><img src="https://i.ibb.co/ySwtH4B/instagram.png"/></a></li>
+                </ul>
+            </section>
+
+        </>
+);
 }
